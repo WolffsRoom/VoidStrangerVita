@@ -1,0 +1,7610 @@
+FINNISH
+suomi
+
+VALIKOT
+[Kyllä]
+[Ei]
+PALUU
+ON
+OFF
+ENGLANTI
+SUOMI
+JATKA
+ASETUKSET
+PÄÄTÄ PELI
+GRAFIIKAT
+AUDIO
+KONTROLLIT
+SEKALAINEN
+MASTER-RAITA
+MUSIIKKI
+ÄÄNI
+RESOLUUTIO
+KOKORUUTU
+AJASTIN
+ASKELMITTARI
+YLÖS
+VASEN
+OIKEA
+ALAS
+TOIMINTANAPPI
+KIELI
+ALOITA
+Skipataan...
+TEKSTINOPEUS
+KESKITASO
+HIDAS
+NOPEA
+PAUSSI
+VAHVISTA PAINAMALLA TOIMINTANAPPIA
+Haluatko muuttaa asetuksia ennen matkaanlähtöä?
+Oletko valmis?
+Onnea matkaan!
+
+Älä luovuta!
+JATKA PAINAMALLA NAPPIA
+LANKEEMUS SINUT PERII
+OHJAIMIA EI LÖYDETTY
+
+
+LÖYDETYT OHJAIMET
+
+
+
+
+SIIRROT
+MITÄTÖINNIT
+AIKA
+
+Resetoidaan...
+
+[Yksinäinen koivu kohoaa tyhjyydestä]
+[Paikka vaikuttaa turvalliselta]
+[Ja koska matkaa on takana jo jonkin verran...]
+[Haluaisitko levätä hetken?]
+Lepää?
+[Päätät jatkaa matkaasi]
+[Hitaasti, varmasti, vaivut unien syleilyyn]
+
+[Puu on lakastunut]
+[Paras jatkaa matkaa]
+VÄLKKYMINEN
+PALETTI
+Herää
+Lopeta kaikki
+LEPOSAMMUTUS
+
+
+
+ÄÄNIKIRJASTOT
+TESTAAJAT
+
+MUISTOT
+´´Får ej övertäckas. Ei saa peittää.``
+TAAKAT
+VOID MEMORY
+VOID SWORD
+VOID WINGS
+Tässäkö kaikki...?
+LIIKKUMINEN
+TAP
+HOLD
+
+[Tämä Lotuslaite ei taida toimia]
+[Tämä Lotuslaite näyttää vielä toimivan]
+[Ehkä voisit pitää lyhyen tauon?]
+Kaiverra merkkisi.
+Valmista?
+Olkoot niin!
+VOID KOHTAUS
+Moi.
+Oletko ensi kertaa täällä?
+
+Niin arvelinkin.
+Olen seurannut sinua tovin.
+Taidat olla todella päättäväinen, kun kerran saavuit tänne vapaaehtoisesti.
+Valitettavasti pelkällä päättäväisyydellä ei pitkälle pötkitä.
+Etenkään nyt, kun olet potkaissut tyhjää.
+Kerrohan.
+Haluatko vielä jatkaa?
+
+Oho, en tunnistanut sinua.
+Kiitos, surkea kasvomuistini.
+
+
+
+Mikäpä neuvoksi.
+Kukaan ei voi huijata kuolemaa.
+Mutta on eräs kikka, jota voisit kokeilla.
+Jos syöt jotain täällä, sinusta tulee osa tätä paikkaa.
+Sitten pystyt vaeltamaan näitä käytäviä sydämesi kyllyydestä.
+Minulla sattuu olemaan yksi hedelmä mukana.
+Haluaisitko syödä sen?
+
+Mahtavaa.
+Olen niin iloinen, että voin auttaa sinua!
+Toivottavasti löydät mitä ikinä etsitkin.
+Pidä kivaa.
+
+...
+Tässäkö oli kaikki.
+Kaikki.
+Näinkö nopeasti annat periksi, kuolevainen?
+Vaikka mielenkiintoni kaltaisiasi kohtaan hiipuu hiipumistaan.
+En voi kuin ihmetellä.
+Mikä sai sinut tuntemaan niin.
+Hajanaiset ajatuksesi liittyvät pian muiden joukkoon.
+Epätoivon kaivertamaan loputtomaan kuiluun.
+Olemme liian pitkällä.
+Et voi enää antaa periksi.
+
+[Söit koko hedelmän viimeistä murua myöten]
+[Maku on sinulle täysin vieras]
+[Mutta hedelmäliha on yllättävän maukasta, joskin aavistuksen kitkerää]
+[Olisi tosin varmaan kannattanut kuoria se ennen syömistä]
+[...]
+
+Kuinka vastaat?
+Mikä on päätöksesi?
+[Haluat jatkaa]
+[Annat periksi]
+Mitä teet?
+[Haluat syödä hedelmän]
+[Kieltäydyt]
+(Se maistuu...)
+(Appelsiinilta...?)
+(Mistä se karvapallo oikein puhuikaan?)
+(Outo uni.)
+
+VOIDROD KOHTAUS
+[Löysit oudon sauvan]
+[Pelkästään sen piteleminen tekee sinut levottomaksi]
+[Jotain on pielessä]
+
+[Addin valtikka...]
+[...]
+[On aika etsiä Bee!]
+
+[Jotain on muuttunut]
+ARKKUJEN AVAAMINEN
+[Tyhjää täynnä]
+[Et löytänyt mitään]
+
+[Löysit sirkkaidolin]
+[Se näyttää kumma kyllä maukkaalta]
+[Kenties siitä on vielä hyötyä]
+
+
+[... Odotas]
+[Sisällä on viesti]
+[Siinä lukee:]
+Piilotin tänne lempiherkkujasi.
+Ota niitä, kun olet allapäin.
+Ja ole kiltti äläkä kieli siskolleni.
+Tämä on meidän pieni salaisuutemme! -Bee
+[Viestissä ei ole juuri järkeä]
+
+[Se on kirjoitettu kielellä, jota osaat lukea]
+
+[Löysit oudon miekan]
+[Se vaikuttaa jokseenkin kömpelöltä kaikkine koristeineen]
+
+[Löysit oudot siivet]
+[Ne tuntuvat äärimmäisen hennoilta]
+[Kenties niistä on vielä hyötyä]
+
+[Löysit oudon tuntemuksen]
+[Mielesi tuntuu raskaammalta]
+[... Tässä ei ole päätä eikä häntää]
+
+
+Siltä varalta, että unohdit miten niitä käytetään:
+
+
+
+
+
+
+Voit näiden avulla lentää pienten aukkojen yli.
+Sen kun loikkaat ja uskot itseesi!
+Kunpa minullakin olisi siivet.
+Ole kiltti ja anna minulle siivet! -Bee
+
+Muistoni sinusta.
+Sen avulla pystynet kuulemaan langenneiden äänen, niin menneiden kuin tulevienkin.
+Ja jos joku muu (sinä mukaan lukien, siskoseni) lukee tätä...
+Painu kuuseen. -Bee
+
+[Ne näyttävät kumma kyllä maukkailta]
+[Kenties niistä on vielä hyötyä]
+
+[Löysit kolme sirkkaidolia]
+[L U C K Y !]
+
+[Harmi, ettet pysty kantamaan niitä enää yhtään enempää...]
+[Yrität pistää ne takaisin, mutta ne hajoavat tomuksi]
+[... Mitä ajanhukkaa]
+[Harmi, ettet pysty kantamaan niitä enää yhtään enempää...]
+[Yrität pistää sen takaisin, mutta se hajoaa tomuksi]
+[Se maistuu sahanpurulta]
+[Ne maistuvat sahanpurulta]
+[... Miksi edes keräät näitä?]
+
+[Löysit Addin siivet]
+[...]
+[Parasta jättää ne tänne]
+
+[Löysit Addin ytimen]
+[...]
+[Parasta jättää se tänne]
+
+(Senkin pahvi...)
+
+
+[...]
+
+
+[Suorastaan ratkeat riemusta...]
+
+[... Se on tyhjä]
+[Ihan tosi, se on tyhjä]
+[Mutta nyt kun katsot tarkemmin...]
+[Aivan kuin arkku olisi joskus aukaistu väkisin]
+
+[Karkeasti kirjoitettu viesti hehkuu seinän raosta]
+[Siinä lukee:]
+[``MON WAS HERE``]
+[...]
+
+[Oudot kaiverrukset hehkuvat seinän raosta]
+[Onko se jonkinlaista kirjoitusta...?]
+
+[Löysit 99 sirkkaidolia]
+[I N C R E D I B L E !]
+
+[Jokin on pielessä]
+
+[Otit vastaan 16 sirkkaidolia]
+[Ei vara venettä kaada]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KÄRÄJÄT: ESITTELY
+´´Ne jotka ennen Ristin aikaa eli, osanneet palvella ei oikein Herraa; ja minä itse olen niistä yksi.´´
+´´Tuon puutteen tähden, emme syystä muusta, olemme tuomitut, mut ainoastaan toivotta ikävöimään ijäisesti.´´
+ZERO Judge.
+
+ZERO Prosecutor.
+
+ZERO Defense!
+
+Pohjaton Oikeus, ZERO JUSTICE, on kokoontunut.
+
+Syyttäjä, voitte aloittaa.
+
+Kiitos, arvon tuomari.
+KÄRÄJÄT: KUOLEMAN HUIJAAMINEN
+Kirottu on toistuvasti välttänyt varman kuoleman.
+Emme toistaiseksi ole saaneet selville, miten kirottu onnistui tässä.
+Toiminta vaikuttaa silti erittäin tarkoitukselliselta.
+Esitämme kirotun rankaisemista asiaankuuluvasti.
+
+Hetkonen! Puolustuksen puheenvuoro!
+Ei syyttäjällä sattuisi olemaan mitään todisteita näiden syytösten tueksi?
+Kuoleman huijaaminen kuulostaa työläältä.
+Liekö moinen edes mahdollista?
+Itse en ainakaan viitsisi vaivautua.
+Ei sillä, että edes voisin kuolla kupsahtaa.
+
+Me kaikki näimme sen, senkin taliaivo.
+Mikään ei jää Pohjattomalta Oikeudelta huomaamatta.
+
+Oho.
+Totta tosiaan.
+Mutta voitko todistaa, että syytetty teki sen tarkoituksella, hmm?
+
+Kuolevaiset takertuvat elämään hinnalla millä hyvänsä.
+Se on osa heidän luontoaan.
+
+Mutta entä jos se olikin vahinko?
+A-aivan.
+Vahinko! Miksi en ajatellut tätä aikaisemmin?
+Tapaus taitaa olla taputeltu.
+
+...
+Täällä ei ole kuin yksi vahinko.
+
+Hmm? Mitä sanoit?
+Olin kuulevinani jotain muminaa noiden läskisarvien takaa.
+
+Tuossa ei ole mitään järkeä.
+Ja jätä sarveni rauhaan.
+
+Pääsihän vallan savuaa, siskoseni.
+
+Pian täällä savuaa joku muukin...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KÄRÄJÄT: TUOMIO
+Hiljaisuus.
+Muukalainen.
+Kuinka vastaat näihin syytöksiin?
+
+Hyvä on.
+Jatka matkaasi, muukalainen.
+Kohti lopullista kadotusta.
+
+Olet todellakin typerys.
+Mutta sentään rehellinen typerys.
+Jatka matkaasi, muukalainen.
+Vapahduksesi koittaapi vielä.
+Siihen asti... Rukoile, ettemme enää tapaa.
+
+[Syytön]
+[Syyllinen]
+
+
+
+
+
+
+
+
+
+
+
+
+
+KÄRÄJÄT: MÄSSÄILY
+Kirottu on toistuvasti rohmunnut sirkkaidoleita.
+Nämä pyhät idolit ovat osa Lordi Addin perintöä.
+Kuolevainen moukka käsittelemässä niitä...
+Pelkkä ajatus saa minut voimaan pahoin.
+Esitämme kirotun rankaisemista asiaankuuluvasti.
+
+Ööö, eikö arvon syyttäjämme ole koskaan kuullut vanhaa sanontaa:
+Löytäjä saa pitää?
+Jos et halua vieraiden sörkkivän tavaroitasi...
+Pidä niistä parempaa huolta.
+
+Juuri siitä on kysymys.
+Tavallisesti idolit ovat varmassa säilössä.
+Mutta jostain syystä ne ovat levinneet ympäriinsä.
+Puolustuksella ei tietenkään ole asiaan osaa eikä arpaa, vai?
+
+Ei mitään hajua, mitä oikein yrität selittää.
+Sitä paitsi...
+Voitko syyttää ketään siitä, että hän haluaa päästä käsiksi sirkkoihin?
+Nämähän ovat sikahyviä!
+
+Sirkkaidolit eivät ole naposteluhetkiä varten, senkin tollo.
+Olet tainnut taas mussuttaa niitä, vai mitä?
+Siltä ainakin näyttää päälle päin.
+
+Kehtaatkin.
+Noudatan erittäin kurinalaista dieettiä, ihan vaan tiedoksi.
+Ei tämä hekumallinen vartalo itsekseen pysy tikissä.
+Voin antaa pari vinkkiä, jos haluat.
+Saisit ehkä hieman hoikistettua noita läskisarviasi.
+
+Syö sirkka ja tukehdu.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAPAAMINEN NUNNAN KANSSA
+Älä tapa!
+...
+Sinä et ole yksi niistä, ethän?
+Jessus.
+Säikäytit ihan toden teolla.
+
+[Säikky nainen vaikuttaa rauhoittuneen]
+[Kysyt häneltä, mitä hän tekee täällä]
+Olin kysymässä samaa.
+Rehellisesti sanoen en edes muista, kuinka päädyin tänne.
+Mitä olinkaan tekemässä?
+Sisar Nyytinmurtaja kynii minut elävältä, jos en ilmesty pian paikalle.
+Melkoinen kiipeli.
+
+Et sattuisi tietämään reittiä ulos?
+[Sanot, että ainoa vaihtoehto on pysyä liikkeellä]
+Ja minä kun ajattelin, että näytit niin kykenevältä.
+Etkö oikeasti voisi auttaa siskoa mäessä?
+Etenkin kun koko paikka on täynnä niitä otuksia.
+Olethan sinäkin nähnyt niitä?
+Vai olenko vain tulossa hulluksi?
+
+...
+Hetkinen.
+Taidan muistaa nyt.
+Olin puutarhassa, kun yhtäkkiä kompastuin outoon kuoppaan.
+Olen varma, ettei se ollut siinä aiemmin, sen reunat olivat liian selkeät.
+Aivan kuin koko kuoppa olisi ilmestynyt tyhjästä.
+Taisin kaatua ja lyödä pääni tai jotain.
+Onko tämä unta?
+
+[Hän vaikuttaa uponneen täysin ajatuksiinsa]
+
+...
+Kuule.
+Uskotko ***een?
+Sisar Nyytinmurtaja ei muusta saarnaakaan.
+Sinun täytyy katua, vain silloin *** vapahtaa sinut.
+Vaikka näytänkin tältä, en ole koskaan uskonut sitä.
+Virheitä olen toki tehnyt minäkin...
+Mutta se vaikuttaa liian kätevältä, tiedätkös?
+Usko vain ***een ja lopussa kaikki järjestyy.
+Aivan kuin joku olisi keksinyt sen vain saadakseen painon pois harteiltaan.
+...
+Mitä oikein hölötän.
+Unohda koko juttu.
+Täytyy valmistella persaus kurinpalautusta varten.
+Ai niin, jos satut löytämään uloskäynnin, huikkaathan minulle, tattis.
+
+[Päätät olla häiritsemättä häntä enempää]
+
+
+[Hän on varautunut sinua kohtaan]
+
+Lopeta!
+
+
+[Hän ei halua enää puhua sinulle]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KÄRÄJÄT: LAISKUUS
+Kirottu on yrittänyt luoda oikotien braanien välille.
+Tapaus on suoraan sanoen ennenkuulumaton.
+Braanien seinät ovat läpitunkemattomia.
+Kuolevaisen ei pitäisi pystyä ohittamaan niitä.
+Älkää kuitenkaan käsittäkö väärin.
+Rikkomuksen laatu on silti äärimmäisen vakava.
+Esitämme kirotun rankaisemista asiaankuuluvasti.
+
+Äh, älä viitsi.
+Tämä kuoppa ei muutenkaan lopu ikinä.
+Mitä haittaa siitä on, jos skippaa huoneen tai tusinan?
+
+Lordi Add loi tämä labyrintin syntisten rankaisemiseksi.
+Jo yritys ´´skipata´´ se on loukkaus lordiamme kohtaan.
+Luulisi sinunkin jo tajuavan sen.
+
+Mutku...
+Tuo on aivan tyhmää.
+Kertakaikkisen tyhmää.
+Hauskanpito on sitten vissiin täysin kielletty.
+
+Tällä ei ole mitään tekemistä hauskanpidon kanssa.
+Yrittäisit suhtautua työhösi vakavammin.
+Alat aina käyttäytyä kuin pahainen kakara, kun tiedät olevasi häviöllä.
+
+Joo joo.
+Kiviäkin kiinnostaa.
+Ainakaan en ole läskisarvi kuten sinä.
+... Anteeksi mitä?
+Kuulit kyllä.
+Läskisarvi.
+Uskallakin sanoa tuo vielä kerran...
+Läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi  läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi läskisarvi.
+Ole hyvä ja kuole.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MITÄTTÖMÄT MUISTOT
+Anna anteeksi...
+On niin kylmä.
+Missä olen?
+Kuuletko minua?
+On vaikea liikkua.
+Älä kiusaa.
+Äiti...
+Isä...
+Missä olet, sisko?
+En näe mitään.
+Mitä minulle tapahtuu?
+Väsyttää... Väsyttää liikaa...
+En kuule ääntäni.
+Pimeää.
+En tehnyt mitään väärää.
+Auta.
+Tahdon kuolla.
+Se on vain unta.
+Herään pian... Enkö herääkin?
+Missä menin vikaan?
+***... Olen tehnyt syntiä sinua kohtaan...
+Pyydän.
+Tapa.
+Älä satuta minua.
+Selkääni kutittaa.
+On niin vaikea liikkua.
+Selkääni juilii vietävästi.
+Kuinka kauan olen ollut täällä?
+Nälkä...
+En voi itkeä.
+Kuka olen?
+En tahdo kuolla.
+Mamma...
+Äiti.
+Isä?
+Onko siellä ketään?
+Oletko siellä?
+Unta... Tarvitsen unta...
+Älä itke.
+Äiti on tässä.
+Kaikki kääntyy...
+Pyydän, lopeta.
+Lopeta!
+5470041062466101, 5470041062466102, 5470041062466103, 5470041062466104... 
+Miksen voi nukahtaa?
+Lopettakaa.
+Rukoilen sinua.
+Miksi miksi miksi miksi miksi miksi.
+Onko jo päivällisen aika?
+Veitkö vaimoni minulta?
+Kuole.
+En koskaan uskonut mihinkään...
+Onko tämä syntieni hinta?
+Rukoilisinko?
+Voinko rukoilla?
+Ketä rukoilin?
+Haluan vain tämän loppuvan.
+Apua!
+Nimeni...
+En muista nimeäni.
+Haluan nähdä kasvosi vielä kerran...
+Mikä minä olen?
+Onko tämä loppu?
+...
+Ei mitään.
+Pelkkää tyhjyyttä.
+Ei ei ei.
+Ei voi olla.
+Tietääkö kukaan nimeäni?
+En tunne jalkojani.
+Minne kasvoni katosivat?
+Mitä tapahtui kasvoilleni?
+Käteni eivät tottele.
+En voi hengittää.
+Ilmaa. Tarvitsen ilmaa.
+Kirottu...
+Vihaan itseäni.
+Miksi sen piti päättyä näin?
+Minne kissani meni?
+Mitä syöt, kultaseni.
+Kitkerää.
+Viimeiset sanani...
+Kadutko mitään?
+Haluan koskettaa sinua.
+Mitä...?
+Vettä... Antakaa vettä...
+Ääneni...
+Uloskäynnin täytyy olla täällä jossain.
+Pakotietä ei ole.
+Laalaa lala la laa...
+Hahahaha...
+Mieli...
+Kuolema...
+Rakasta minua.
+Vapauta minut.
+Kuka olet?
+Mitä aiot tehdä?
+Lähteä? Kukaan ei voi lähteä.
+Hei...
+Kuuntele.
+Kuuletko ne?
+Äänet...
+Kaikki katoaa.
+Sattuu.
+Enää ei satu.
+Tunnoton.
+Liha.
+Laula minulle.
+Hämärtyy...
+Minne valot katosivat?
+Valot.
+He valehtelivat.
+Kaikki.
+Kerro totuus.
+Totuus.
+Maistan tuhkan.
+Kuinka pitkään...
+Tule luokseni.
+
+Kauan sitten...
+Näitä käytäviä hallitsivat Pohjattomat Lordit.
+Heidän johtajansa oli Lordi Add, Alku...
+
+Lordi Addin komennossa...
+Syntiset lähetettiin vaeltamaan ikuisesti näitä syvyyksiä...
+Mitä varten, en osaa sanoa...
+
+Kaikki Pohjattomat Lordit eivät tulleet toimeen keskenään.
+Eräänä päivänä puhkesi suuri taistelu kahden lordien ryhmän välillä...
+Lordien kääntyessä toisiaan vastaan Tyhjyyden tasapaino alkoi järkkyä...
+
+Taistelu Pohjattomien Lordien välillä raivosi vuosia...
+Kunnes vain kolme heistä oli jäljellä...
+Add ja kaksi hänen seuraajaansa...
+
+Vaikka taistelu oli viimein päättynyt...
+Tapahtui pian jotain odottamatonta...
+Tyhjyyden ollessa raunioina Lordi Add katosi...
+
+Miksi Lordi Add päätti jättää Tyhjyyden...
+... ... ...
+Vain nämä käytävät muistavat vastauksen siihen...
+
+Tämä on Pohjattomien Lordien ensimmäisen petturin piiri...
+Hänen, joka oli aikoinaan Lordi Addin luotetuin liittolainen...
+Älköön hänen nimensä enää koskaan kaikuko näillä käytävillä...
+
+Petollisen lordin uskotaan sytyttäneen sodan Pohjattomien Lordien kesken...
+Lordi Add ei halunnut uskoa sitä...
+Mutta petturin rikkomusta ei voitu jättää huomiottakaan...
+
+Kun taistelu Pohjattomien Lordien välillä lopulta päättyi...
+Lordi Add henkilökohtaisesti kalvoi kaiken, mitä petollisesta lordista oli jäljellä...
+Heistä tuli yhtä, kuten he olivat aina toivoneet...
+
+Kaikesta tapahtuneesta huolimatta Lordi Add ei ikinä toivonut joutuvansa taistelemaan petollista lordia vastaan...
+He olivat parhaat ystävät...
+Enemmänkin...
+
+Tämä on Lordi Been, Nälkäisen piiri...
+Todellinen kujeilija jopa Pohjattomien Lordien mittapuulla...
+... Ja Lordi Addin vannoutunut seuraaja...
+
+Lordi Add nautti suuresti kuivatuista sirkkaidoleista, ja Lordi Bee usein söi niitä yhdessä lordinsa kanssa... 
+Vaikka Lordi Bee ei kyennytkään maistamaan mitään tai tuntemaan kylläisyyttä...
+Hän vaali noita yhteisiä herkutteluhetkiä...
+
+Lordi Bee tapasi kerskailla julmista teoistaan kuolevaisia kohtaan...
+Mutta nyt kun mietin, en koskaan nähnyt hänen vahingoittavan ketään...
+Epäilen, ettei hän nauttinut siitä läheskään niin paljon kuin antoi ymmärtää...
+
+Tuo virnistys...
+Lordi Bee hymyili aina muiden seurassa...
+Pistää miettimään, hymyilikö hän myös yksin ollessaan...
+
+Kun Lordi Add lähti...
+Lordi Been hymy ei värähtänytkään..
+Kuin mitään ei olisi tapahtunut...
+
+Tämä on Pohjattomien Lordien toisen petturin piiri...
+Laskelmoiva huijari, ikuisesti ahneutensa sokaisema...
+Älköön hänen nimensä enää koskaan kaikuko näillä käytävillä...
+
+Ahne lordi seurasi usein petollista lordia...
+Hän oli lumoutunut tämän suomuista...
+Kenties tämä pinnallinen syy riitti käännyttämään hänet petollisen lordin puolelle...
+
+Älä katso ahnetta lordia suoraan silmiin, tavattiin sanoa...
+Hänen katseensa muuttaa kenet tahansa puhtaaksi kullaksi...
+Mikä karmea kohtalo...
+
+Ahne lordi osoitti kiinnostusta sirkkaidoleita kohtaan...
+Mutta ahne lordi ei koskaan syönyt niitä, hän vain piti niiden keräilystä...
+Jos onnistuit kerryttämään niitä tarpeeksi, hän ilmestyi varmasti pian paikalle tekemään niillä kauppaa...
+
+Tämä on Lordi Tanin, Vimmaisen piiri...
+Niin hirmuinen oli hänen luontonsa, että muut Pohjattomat Lordit jättivät hänet useimmiten suosiolla rauhaan...
+Lordi Tan vietti paljon aikaa yksinään...
+
+Vieroksuttua Lordi Tania yksinäisyys ei haitannut...
+Totta puhuen hän suosi sitä...
+Lordi Tan ei tullut kummoisemmin toimeen muiden kanssa...
+
+Lordi Tan ei koskaan puhunut paljoa...
+Kenties hän ei ollut hyvä siinä...
+Lopulta hän aina vain suuttui itselleen ja muille...
+
+Taistelussa Lordi Tan oli pysäyttämätön...
+Hänen raivonsa ei osoittanut laantumisen merkkejä, vaikka taistelu oli jo päättynyt...
+Lordi Addille ei jäänyt muuta vaihtoehtoa kuin iskeä liittolaisensa maahan...
+
+Tämä on Pohjattomien Lordien kolmannen petturin piiri...
+Jonka ponneton apatia jäi toiseksi vain hänen päättämättömyydelleen...
+Älköön hänen nimensä enää koskaan kaikuko näillä käytävillä...
+
+Ponneton lordi ei koskaan osoittanut kiinnostusta Tyhjyyden tapahtumia kohtaan...
+Hän vain täytti tehtävänsä vailla intoa...
+Jotta muut lordit jättäisivät hänet rauhaan...
+
+Tärkeimmällä hetkellä, kun Pohjattomat Lordit valitsivat puolensa suuressa taistelussa...
+Ponneton lordi pysyi puolueettomana...
+Mutta sitä joko seisoo Lordi Addin joukoissa tai...
+
+
+
+
+
+Tämä on Lordi Levin, Kavalan piiri...
+Tyhjyyden piittaamaton vasalli...
+Hänen vakaumuksensa veti vertoja itse Lordi Addille...
+
+Niin suuri oli Lordi Levin mahti...
+Että vain murto-osa syntisistä selviytyi hänen ohitseen...
+Kohti Tyhjyyden lopullisia syvyyksiä...
+
+Lordi Lev oli aina uskollinen Lordi Addille...
+Jopa silloin kun suuri taistelu ajoi hänet siskoaan vastaan...
+... Lordi Lev oli aina uskollinen Lordi Addille...
+
+Lordi Levin siskon kuolema vaikutti häneen voimakkaammin kuin kukaan olisi osannut odottaa...
+Lordi Lev, joka oli aina ollut järkkymätön vakaumuksessaan...
+Päätti oman elämänsä...
+
+
+
+...
+
+Tuhoa mitä pettureista on jäljellä...
+Palaa nollaan, nollaan, nollaan...
+Silloin löydät Lordi Addin viimeisen aarteen, jonka hän piilotti jopa omilta tovereiltaan...
+Avain, joka kaivertaa DIS:n merkin...
+
+Eräs odottaa sinua...
+Älä huoli...
+Hän on kunnossa...
+
+Herää.
+Mikä pieni ihme oletkaan.
+Mutta niin kovasti kuin yritänkin...
+Tämän lähemmäs en pääse.
+Loppu on sinusta kiinni.
+Pian sinä kasvat...
+Sinun on tehtävä ahkerasti töitä ja pidettävä hyvää huolta sisaristasi...
+Vaikka tappelisitte ja tekisitte virheitä...
+Vaikka minä...
+
+Olet pieni aamunkoini.
+Olet minun ylpeyteni.
+Ja sinun nimesi on...
+
+En muista näitä käytäviä...
+Kuka rakensi ne...
+Mitä ne oikein kätkevät...
+
+Nuo säälittävät idolit...
+Tuo ahne tuijotus...
+Kuinka hän oikein selvisi...
+
+Lordi Cifin merkki...
+Älä murehdi, se on jo kaiverrettu...
+Mutta missä huoneessa se olikaan...
+En muista numeroa, mutta se on varmasti täällä jossain hänen alueellaan...
+
+[...]
+[Tähtien valo...]
+[Meidän muistomme tekevät siitä...]
+
+Loputtoman.
+
+Hienoa, löysit tänne...
+Merkkien selvittäminen on kuitenkin vasta ensimmäinen askel...
+Mieti, 'missä' voit piirtää ne...
+Niin saat taivutettua nämä käytävät tahtoosi...
+
+Braaniarvo on epävakaa...
+Mutta kunhan manipuloit vain kahta viimeistä numeroa...
+Sen pitäisi toimia...
+Kai tiedät, miten se onnistuu...?
+
+
+[Muraali on täynnä kaiverruksia]
+[Lienee ajanhukkaa yrittää tulkita niitä]
+[Siinä lukee:]
+[... Oletko aina osannut lukea tätä tekstiä?]
+
+
+
+
+
+Yksikin väärä liike ja olet tuhon oma...
+
+
+
+
+
+
+Ei sattuisi sirkkoja löytymään?
+
+
+
+
+
+Kadotkaa kaikki...
+
+
+
+
+Vain muisto jäljelle jää
+
+[Muraali on pahoin vaurioitunut]
+[Sen kaiverruksia on lähes mahdoton tulkita...]
+
+
+[Muraalin takaa paljastui pieni syvennys...]
+[... Mitä tämä oikein on?]
+
+ONLYAMEMORYREMAINS
+
+ONLYACRAVINGREMAINS
+
+ONLYGNAWINGRAGEREMAINS
+
+ONLYAENVYREMAINS
+
+
+[Muraali on täysin koskematon...]
+[Saat tulkittua vain osan merkeistä]
+[Kuulostaa silkalta siansaksalta]
+
+[Niissä on jotain tuttua]
+
+Mikä riesa...
+Rakkaani...
+
+
+(...)
+[Mietit, miksi Add jättäisi tällaisen viestin]
+[Tämän täytyy olla yksi etämuistiyksiköistä]
+[Harmi, ettet pysty kytkeytymään siihen]
+[Kuka vaurioittaisi sitä näin?]
+[...]
+[Jostain syystä et saa tulkittua niitä]
+[Ehkä orjayksikkösi EPR-vastaanottimessa on häiriö]
+[Kykenet erottamaan joitain kaiverruksia, mutta...]
+[Emme vieläkään ymmärrä DIS:n olemusta]
+[Ehjät kaiverrukset ovat silkkaa siansaksaa vailla syvempää merkitystä]
+[Repaleinen sinetti]
+[Outo sinetti]
+[Et pääse lähemmäs sitä]
+[Yhtäkkiä, kuulet kaukaisen äänen]
+
+
+
+
+
+
+[Outo sauva on muuttanut muotoaan]
+[Ja jostain syystä...]
+[Et ole enää niin levoton]
+
+
+
+[...]
+
+
+[Mikä se on...?]
+[Aivan kuin joku tuijottaisi sinua]
+
+[Tuhosit sen epäröimättä]
+[Mietit, mikä sai sinut tekemään niin]
+
+[Se on sinun merkkisi]
+
+Kaiken varalta...
+Jos tulit toisiin ajatuksiin...
+Siirrä portaita...
+
+
+
+ENSIMMÄINEN UNI
+Leidi Gray!
+Taivaan kiitos olette palannut!
+Prinsessa... Hän on täysin hallitsematon!
+Tehkää jotakin, olkaa niin kiltti!
+Olette ainoa toivomme!
+Pyydän, kiirehtikää!
+
+Sattuu...
+Pitäkää huolta prinsessasta, Leidi Gray...
+Antakaa anteeksi, Leidi Gray.
+En voinut kuin juosta karkuun.
+Kuinka voin enää kohdata Hänen Majesteettinsa?
+
+[Et voi lähteä nyt]
+[Ilma huokuu pahansuopuutta]
+[Astut huoneeseen vailla pelkoa]
+
+Valmistaudu kuolemaan.
+
+[Piikittelet prinsessaa]
+[Valmistaudut iskuun!]
+[Yksi prinsessan lukuisista kiukunpuuskista]
+[Olet langennut]
+[Prinsessan Raivo vyöryy yllesi]
+[Prinsessan Raivo tuijottaa sinua ylenkatsovasti]
+[Prinsessan Raivo hyökkää!]
+[Prinsessan Raivo on viimein laantunut]
+[Prinsessan Raivo valmistautuu ankaraan hyökkäykseen!]
+[Prinsessan Raivo hyökkää raivopäisesti!]
+[Prinsessan Raivo on heikentynyt... Nyt on tilaisuutesi!]
+[Prinsessan Raivo on liian tylsistynyt jatkamaan...]
+HYÖKKÄÄ
+PUOLUSTA
+TUTKI
+
+Pottuprinsessa!
+Hemmoteltu kakara!
+Sietämätön pikkupiru!
+Majesteettinen maanvaiva!
+Dekadentti aasi!
+Häpäisy aisteille!
+Itseriittoisa ruhtinas!
+Itserakas keisarinna!
+Lohikäärmekään ei söisi sinua!
+Naurettava aristokraatti!
+Kurinpalautuksen aika!
+Kylvyn aika!
+Myrskyisä monarkki!
+Pöyhkeilevä prinsessa!
+Piikki valtaistuimessa!
+Suvereeni kiusankappale!
+Kuninkaallinen riiviö!
+Puskakruunupää!
+Pahasuinen pässi!
+Kultalusikka suussa syntynyt!
+
+Potkin ja lyön.
+Hyppypotku!
+Siitäs saat, harppu!
+Katoa, noita!
+Hyppää kaivoon!
+Tunne vihani!
+Tuplalukko!
+Kohta olet kypsää kamaa!
+Hylly muualle siitä!
+Mrgrgr!
+Valmistaudu tuomioosi.
+Lopeta lätinät!
+Päädyt hirteen tuosta!
+Hirteen! Hirteen!
+Roviolle!
+Kääkkä!
+Epäreilua!
+Tissihirviö!
+Kuole pois jo!
+
+Kuinka saatoin hävitä?
+Treenasin tosissani!
+Panen pääni pantiksi, että huijasit!
+Noh noh, Teidän Ylhäisyytenne.
+Noin hapan nuotti ei sovi teidän arvollenne.
+...
+Hyvä on, veit tämän erän.
+Kuinka suopeaa, Teidän Ylhäisyytenne.
+Puhu pukille.
+...
+
+Jes!
+Voitto on oleva minun!
+Polvistukaa, avuttomat alamaiseni!
+...
+Voit nousta jo ylös.
+Taisin päästää teidät helpolla, Teidän Ylhäisyytenne.
+Mukava nähdä teidät niin hyväntuulisena.
+Hiljaa siinä.
+...
+
+Kiitti.
+Aika alkoi käydä todella pitkäksi ilman sinua.
+Vartijat lienevät asiasta toista mieltä.
+Aina sama juttu.
+Poistun muutamaksi päiväksi ja helvetti repeää sillä sekunnilla.
+Pah, ne idiootit eivät osaa pitää hauskaa.
+Muutama osuma ja ovat heti kiljumassa henkensä edestä.
+Ja rillipääpäsmäri ei ole yhtään sen parempi.
+´´Öö, prinsessa, ette saa potkia vartijoita ympäriinsä.´´
+´´On kylpynne aika, arvon prinsessa!´´
+´´Ja muistakaa vaihtaa alushousunne päivittäin!´´
+´´Saan kuulla kunniani Leidi Graylta, jos ette tottele!´´
+Kehtasi antaa ymmärtää, että lemuaisin.
+Prinsessat eivät haise.
+Saisi olla kiitollinen, että saa hengittää samaa ilmaa kanssani.
+(Hengittäminen läheisyydessänne on vain kovin haastavaa tällä hetkellä.)
+Oli miten oli, hänen perseensä on tulilinjalla, kun seuraavan kerran törmään häneen.
+Kielenkäyttö, pyydän.
+Sori, persaus piti sanomani.
+...
+Ette voi jatkaa leikkejänne loputtomiin.
+Tämä maa odottaa teiltä paljon, kuten myös Hänen Majesteettinsa.
+Ei kiinnosta.
+Mitä jos jättäisimme tämän uppoavan laivan ja karkaisimme!
+Ihan kahdestaan!
+Voisimme tehdä mitä ikinä lystäämme, mennä minne mielimme!
+Taas mennään...
+Olen tosissani!
+Mikä meitä pidättelee?
+Et vain halua lähteä kanssani, siitäkö se kiikastaa?
+Siitä ei ole kyse.
+Mistä sitten?!
+Maailma on paljon, paljon suurempi kuin kumpikaan meistä.
+Joskus meidän on laitettava omat halumme ja tarpeemme syrjään...
+Jotta voimme täyttää velvollisuutemme.
+Olen varma, että ymmärrätte sen, Teidän Ylhäisyytenne.
+...
+Ei.
+En oikeastaan ymmärrä.
+...
+Tulehan tänne, pikkuriiviö.
+Yritetään saada jotain tolkkua tuohon tukkaasi.
+... Okei.
+Sen jälkeen otetaan uusinta!
+Katsotaan.
+Voisitte kyllä käydä kylvyssä sitä ennen.
+Varo suutasi!
+
+... Säälittävää.
+Taistelet kuin lehmä.
+Missä on taistelutahtosi?!
+Puhukaa vain omasta puolestanne, Teidän Ylhäisyytenne.
+Liikkeenne ovat melko raukeita tänään.
+Lehmäkin näkisi lävitsenne.
+... Ilonpilaaja.
+
+Haluat päästä eroon yksinäisestä idolista...?
+Se on helppoa...
+Pidä toimintanappia pohjassa muutama sekunti...
+Muista varoa salamaa...
+...
+Loppu häämöttää...
+Tai niin ainakin väitetään...
+
+Tuhoa lordien edustajat avataksesi tie...
+Mutta vain yksinäiset tuntevat oikean järjestyksen...
+Ja jos luulet jo tietäväsi...
+Harkitse uudestaan...
+
+Ensimmäisenä...
+Toisena...
+Kolmantena...
+Neljäntenä...
+Viidentenä...
+Kuudentena...
+Seitsemäntenä...
+Viimeisenä...
+Siinä kaikki...
+
+Varjon merkki...
+Juotikas...
+Hymy...
+Toukka...
+Majava...
+Silmä...
+Oktaedri...
+Sinä...
+
+Anna juotikkaiden olla...
+Tiedän, että ne ovat tielläsi...
+Mutta ne eivät tahdo sinulle pahaa...
+Ne vain etsivät päämäärättömästi lämpöä, kuten kaikki muutkin...
+Ennen kuin voit poistua...
+Hankkiudu eroon jäästä...
+Vai oliko se sittenkin lasia...
+Taisit jo arvata, mutta...
+Älä koske noihin toukkiin...
+Vaikka se vaikuttaisikin helpolta ratkaisulta...
+Taas yksi umpikuja...
+Hyvä ajoitus, muukalainen...
+Työnnä minut tuohon kimaltelevaan aukkoon...
+Minun on löydettävä se...
+TOINEN UNI
+Tämä on ennenkuulumatonta!
+Pyydän, Teidän Majesteettinne, yrittäkää rauhoittua.
+Rauhoittua?
+Kirottu tyttäreni on vaarantamassa koko kuningaskunnan...
+Ja sinä pyydät MINUA rauhoittumaan?!
+Pyydän vain kärsivällisyyttä, Teidän Majesteettinne.
+Olen ollut kärsivällinen hänen suhteensa.
+Kärsivällisempi kuin arvaatkaan.
+Mutta tämä pelleily on jatkunut liian pitkään.
+Kaikenlaiset huhut ovat alkaneet levitä.
+Kuinka yksi onneton kuningas ei saa edes tytärtään aisoihin, hiipuvasta valtakunnasta puhumattakaan...
+Ja oletko kuullut, minkä lempinimen he ovat hänelle antaneet?!
+Olen erittäin tietoinen huhuista, Teidän Majesteettinne.
+Siinä tapauksessa etsi hänet käsiisi ja kaada hieman järkeä hänen kaaliinsa, nyt heti!
+Sano, ettei hän kuuna kullan valkeana poistu näiden muurien ulkopuolelle ennen kuin tottelee!
+Teidän Majesteettinne, minä...
+Täytyykö minun muistuttaa teitä asemastanne, Leidi Gray?
+
+Taas yksi päivä ja yksi sulhasehdokas takana.
+
+Monesko tämä olikaan?
+Olen pudonnut laskuista.
+Ainakaan ette rikkoneet kenenkään luita tällä kertaa.
+...
+Teidän Ylhäisyytenne.
+Me kaikki tiedämme, ettette nauti tästä tilanteesta.
+Mutta jos ette anna heille pienintäkään mahdollisuutta, asiat menevät vain huonompaan suuntaan.
+...
+Toistat vain isäni sanoja hänen käskystään.
+Toivon ainoastaan parastanne, Teidän Ylhäisyytenne.
+Jassoo?
+Neuvo sitten Hänen Majesteettiaan työntämään päänsä sinne, missä aurinko ei paista!
+Teidän Ylhäisyytenne!
+En välitä pätkän vertaa tästä maasta!
+Tai kuninkaasta!
+Tai prinsessan roolista!
+Tässä vaiheessa olisi todellakin helpompaa vain karata.
+Meidän olisi pitänyt tehdä se jo vuosia sitten.
+Vielä on aikaa, eikö?
+Jos oikeasti välität, auta minua!
+Tähän pyyntöön en yksinkertaisesti voi suostua.
+Aivan, unohdin tyystin.
+Olet nykyään pelkkä kuninkaan sylikoira.
+...
+...!
+A-anteeksi.
+Menin liian pitkälle.
+...
+Hovinaisena velvollisuuteni on palvella tätä kuningaskuntaa ja sen hallitsijaa.
+Mutta ystävänäsi olen aina sinun puolellasi.
+Mikään mahti tässä maailmassa ei muuta sitä.
+No, vähintäänkin se vaatisi jotain vakavampaa kuin pikkumaisen kiukunpuuskan.
+...
+Annan teille hetken.
+Yrittäkäähän levätä tänä iltana, Teidän Ylhäisyytenne.
+
+
+
+
+
+Sinäkö taas, muukalainen...
+Tipahditko tänne vahingossa...
+Miten vain...
+Älä tule tielleni...
+Reitti käy kapeammaksi...
+Ja mutkikkaammaksi...
+Ei mitään sellaista, mistä en selviäisi...
+Entäs sinä, muukalainen...
+Hmph...
+Et tiedä milloin antaa periksi...
+Tee kuten lystäät...
+Mutta painit aivan väärässä sarjassa...
+Tämänkö pitäisi olla muka jokin haaste...
+Eihän tässä tarvitse kuin...
+...
+Hmm...
+...
+... ... ...
+
+
+Tämä on jo aika irvokasta...
+Katso mihin astut...
+Olen melkein perillä...
+Älä häiritse liikkeitäni, muukalainen...
+Ärsyttävää...
+Milloin tämä oikein loppuu...
+Mitä nyt, muukalainen...
+Pidä nokkasi erossa muiden asioista...
+Lähellä...
+Sen täytyy olla aivan lähellä...
+En ole tullut tänne asti...
+Tyhjän tähden...
+...
+Toivotonta...
+En jaksa enää...
+Olen liian väsynyt...
+Tien päätös...
+Anteeksi, että vedin sinut mukaani, muukalainen...
+Enää vain valveillaolon maan katkerat unet odottavat sinua...
+TAPAAMINEN HÄNNÄN KANSSA
+Ole varovainen.
+Suomuni ovat varsin herkät.
+Tule lähemmäs, jos haluat jutella.
+Lupaan etten pure.
+
+Oletpa rohkea noin pieneksi.
+Useimmat kaltaisesi pysyvät kaukana nähdessään minut.
+Mutta en tarkoita pahaa, silmäni ja korvani ovat vain kovin heikot.
+Hauska tavata.
+Nimeni on Häntä.
+
+Suomuni kertovat, ettet ole tavallinen levoton sielu.
+Jos et pahastu uteluani...
+Mikä on tarkoituksesi täällä?
+Ehkä voin olla avuksi.
+
+[Kerrot hänelle etsiväsi nuorta naista]
+Yksi nainen kulki tästä ohi hiljattain.
+Valitettavasti hän juoksi kirkuen karkuun ennen kuin ehdin katsoa häntä kunnolla.
+Voisit yrittää ottaa hänet kiinni.
+En voi kuitenkaan taata, että päädyt samaan paikkaan hänen kanssaan.
+Nämä seinät uhmaavat järkeä, ne ovat ainaisessa liikkeessä.
+Tai näin minulle on ainakin kerrottu.
+
+[Kysyt, tietääkö hän toisen tien alas]
+Hmm, olen kuullut, että joissain kerroksissa on useampi kuin yksi uloskäynti.
+Mutta ne ovat piilossa, ja ainoastaan jäljellä olevat Pohjattomat Lordit osaavat avata ne.
+Saatat törmätä heihin, jos etenet tarpeeksi syvälle.
+Luulenpa vain, etteivät he halua jakaa salaisuuksiaan kanssasi.
+Minäkö?
+Vaikka näyttävä olenkin, en ole mikään lordi.
+Ja koska nuo rappuset ovat turhan ahtaat minulle...
+Pysyn täällä.
+
+[Kysyt, kuinka hän päätyi tänne]
+Oletpa utelias.
+Oletko varma, että haluat kuulla?
+Siihen voi mennä hetki, enkä mielelläni pidättelisi sinua matkallasi turhaan...
+
+[Sanot, että haluat kuulla hänen tarinansa]
+Hyvä on.
+
+Kun Tyhjyys oli vielä muovautumassa, kun kaikki kahdeksan Pohjatonta Lordia vielä valvoivat näitä käytäviä...
+Lordi Eus hallitsi tätä aluetta.
+Hänet oli määrätty portinvartijaksi ja tänne saapuvien levottomien sielujen tuomariksi.
+Yksikään sielu ei ohittanut hänen tuomiotaan, yksikään synti ei jäänyt rankaisematta.
+Mutta niin uuttera ja kurinalainen kuin Eus olikin, synti kiehtoi häntä suunnattomasti.
+Tämä mielenkiinto kasvoi ja kasvoi, kunnes Eus teki jotain käsittämätöntä ja sortui itse syntiin.
+Mikä oli tämän synnin todellinen luonto, sitä en osaa tarkalleen sanoa.
+Kun muut lordit saivat tietää hänen petoksestaan, heidän rivinsä jakaantuivat.
+Toiset puolustivat häntä, toiset paheksuivat häntä.
+Suukovut vaihtuivat riidoiksi ja riidat laajenivat lopulta hirmuisiksi taisteluiksi.
+Taistojen päätyttyä Eus kalvettiin, kunnes hänestä ei ollut mitään jäljellä.
+Yksi pieni pala Eusta onnistui kuitenkin luikertelemaan karkuun huomaamatta.
+Hiljaisuudessa se lepäsi ja ahmi kaikki tielleen eksyneet sielut.
+Se tunsi vain kivun ja pohjattoman nälän.
+Mutta kun sen haavat alkoivat parantua, se alkoi ajatella.
+Se pohti, miksi mikään määrä sieluja ei suonut sille tyydytystä.
+Miksi se ei kyennyt pakenemaan näiden seinien ulkopuolelle.
+Miksi sen annettiin elää.
+Aikanaan se hyväksyi surkean olemassaolonsa tietäen, ettei se ikinä tulisi saamaan vastauksia kysymyksiinsä.
+Niin minä tulin olevaksi.
+...
+
+Kiitos.
+Siitä on jo tovi, kun viimeksi sain jakaa tämän tarinan.
+Olen todella iloinen, että päätin jättää sinut syömättä.
+...
+Se oli vitsi.
+Kaltaisesi maistuvat kamalalta.
+
+Sinun kannattaisi joutua, jos haluat vielä löytää etsimäsi.
+Vaikka tämä valtakunta on sortunut kaaokseen, ole varuillasi.
+Pohjattomat Lordit ovat vain yksi huolenaihe...
+Kaikki levottomat sielut eivät ole yhtä lempeitä kuin sinä.
+Jää hyvästi.
+Ehkä tapaamme vielä...
+Tukit näköjään vahingossa uloskäynnin.
+[Päätät jatkaa matkaasi]
+Annas kun autan hieman.
+Noin, ole hyvä.
+Katsohan mihin astut, suomuni ovat kovin herkät.
+[Hän ei näytä olevan moksiskaan]
+
+Ole varovainen noiden munien kanssa.
+Ne ovat kuoriutumaisillaan.
+... Tiedän mitä ajattelet.
+Ne eivät ole minun.
+Niitä tippuu toisinaan ylhäältä.
+Joskus otan muutaman kiinni ja katson, mitä niistä kuoriutuu.
+Ja jos kuuntelee tarkkaan, voi kuulla niiden ajatukset.
+Niin jännittävää.
+Kokeile, kenties sinäkin voit kuulla ne.
+
+[Miksi oikein teit noin]
+[Häpeäisit]
+
+Noin pienelle on vaikea puhua, jos et astu lähemmäs.
+... Anteeksi, unohdin tyystin tapani.
+KÄRÄJÄT: HIMO
+Kirottu on toistuvasti sortunut epäsiveellisiin toimiin.
+Moiset riettaudet olisivat tuomittavia jo kuolevaisten maailmassa.
+Mutta harjoittaa nyt moista vulgaaria käytöstä Lordi Addin valtakunnassa...
+Kuolevaisten piittaamattomuus ei tunne rajoja.
+Esitämme kirotun rankaisemista asiaankuuluvasti.
+
+Odottakaapas hetkinen!
+Katsokaas, tämä oli vain...
+Tuota...
+Vaikka se voi ensisilmäyksellä näyttää pahalta, oikeastaan...
+Hän...
+...
+Joo, en taida edes yrittää.
+Antaa häkin heilua, siskoseni!
+
+kertaa, jos tarkkoja ollaan.
+
+
+
+TAPAAMINEN MORSIAMEN KANSSA
+Mitä ihmettä...
+Kuka oikein olet?!
+Ja miksi paljastat piilopaikkani?!
+Nyt ne hirviöt takuulla löytävät meidät!
+Oletko täysin kaheli?!
+Voi ei voi ei voi ei...
+
+[Parhaisiinsa pukeutunut nainen vaikuttaa äärimmäisen ahdistuneelta]
+[Selität hänelle parhaasi mukaan, ettei hän ole välittömässä vaarassa]
+Anteeksi kuinka?
+Törmäsin aivan äsken helvetin isoon käärmeeseen!
+Äläkä edes mainitse niitä pienempiä otuksia!
+Ja mekkoni...
+Se on pilalla!
+
+[Toteat naisen ylellisen mekon vain vaikeuttavan pakenemista]
+En todellakaan aio jättää sitä tänne!
+Älyätkö ollenkaan, kuinka paljon sain pulittaa tästä?
+... Ryysyistäsi päätellen et taida älytä.
+Ihan totta, kaatopaikaltako tuon rievun löysit?
+Äh, tämä on yhtä painajaista...
+
+Kuule, jos et osaa näyttää tietä ulos täältä...
+Tee palvelus ja jätä minut rauhaan!
+Pärjään kyllä itsekseni!
+Häivy!
+Ja osta joutessasi uusia vaatteita!
+
+[Hän murtui kyyneliin]
+[Parempi antaa hänen rauhoittua hetki]
+
+[Nainen on viimein rauhoittunut hieman]
+Miksi minä...
+Miksi aina minä...
+... Sinä taas?
+Anteeksi.
+Minä...
+Tänään ei ole ollut paras mahdollinen päivä.
+
+Tämän piti olla hääpäiväni.
+Iso seremonia, paljon vieraita, aivan kuin sadusta.
+Odotin sitä tosissani kaiken sen vaivan jälkeen.
+Pelkästään kutsujen valmisteluun meni kokonainen viikonloppu.
+Sitten se päivä viimein koitti.
+Tuleva mieheni seisoi alttarin äärellä minua odottamassa.
+Ja minä...
+Karkasin.
+En voinut tehdä sitä hänelle.
+Olen niin tyhmä.
+
+Toivoin, että tämä kaikki olisi vain pahaa unta.
+Mutta se vain jatkuu ja jatkuu.
+Ole kiltti ja kerro minulle.
+Rangaistaanko minua?
+Onko tämä rangaistukseni?
+[Lohduttavat sanat pakenevat mielestäsi...]
+[Päätät pysyä vaiti]
+Älä jätä minua tänne.
+Pyydän.
+En halua kuolla.
+
+
+
+Mitä oikein teet?!
+Lopeta!
+
+
+[Jos katse voisi tappaa]
+
+
+[Hän ei enää puhu sinulle]
+
+Mikä sinuun oikein iski?!
+Jätä minut rauhaan!
+
+[Hän on tyystin murtunut]
+
+
+
+SALAISUUDET/VINKIT
+Koputa tuota arkkua kuusi kertaa putkeen...
+Pysy aloillasi ja odota kuusi sekuntia...
+Uloskäynti paljastuu...
+Älä kysy, kuinka tiedän...
+
+Teit sen...
+Kiitos luottamuksesta...
+Noh...
+Onnea matkaan...
+
+Koputa arkun takaosaa kolmesti sen ollessa kiinni...
+Sitten odota kolme sekuntia...
+Jotain hyvää pitäisi tapahtua...
+Älä kysy, kuinka tiedän...
+
+No, lykästikö?
+Tepsiiköhän tämä temppu muihinkin arkkuihin...
+Mitä jos testaisit sitä puolestani...
+Kiitos...
+
+Kuulet siis minut...
+Kaikki täällä eivät ole kuuntelemisen arvoisia...
+Mutta me yksinäiset olemme perillä monista asioista...
+
+GHHHOOOOOOORRR!
+
+Ai, ratkaisit sen jo...
+...
+Minua ei sitten varmaan tarvita....
+Huoh...
+
+Melkoiset siivet sinulla...
+Kunhan et yritä työntää mitään leijaillessasi...
+Katuisit sitä takuulla...
+
+
+Petollisen lordin häntä yhdistää merkin...
+Ainakin hänen ollessaan vielä elossa...
+En vain tajua, miten...
+
+(...)
+(En jaksa enää kuunnella näitä...)
+
+Seitsemännessä huoneessa, vain yhden askelen päässä uloskäynniltä...
+Kolme verenimijää luikertelee, yksi täysin ulottumattomissa, tiputtaudu arkun taakse...
+Epäilyttävä tyhjä arkku, jota ympäröi tyhjyys, tutki sitä kerta liikaa...
+Siellä missä kyltymättömät hymyt saartavat sinut, riko kaikki lasilattiat ennen pudotusta...
+Pelkkä suora tie, heittäydy pohjattomaan ennen peilikuvaasi...
+
+Ksi shi shi shi...
+Muukalainen...
+Olet uponnut aika syvälle tähän suohon, vai mitä?
+
+Varmaan tajusitkin sen jo...
+Mutta kovin montaa Lordia ei ole enää palveluksessa nyt kun lätkäisit sen kärpäsen pois muonavahvuudesta...
+Vain yksi jos tarkkoja ollaan.
+Mutta se yksi onkin melkoinen tapaus.
+Kutsuvat häntä Cifiksi...
+Tämä ei ole ihan minun tapaistani, mutta...
+Voin jakaa kanssasi yhden tiedonjyvän täysin ilmaiseksi.
+Ehkä siitä on apua hänen kukistamisessaan...
+Mitä sanot, muukalainen?
+[Päätät kuunnella, mitä hämärällä kauppiaalla on kerrottavanaan]
+Ksi shi shi shi...
+Kuuntelehan tarkkaan sitten.
+Kukaan ei tunne Cifin todellista voimaa.
+Voi olla haastavaa aiheuttaa hänelle naarmuakaan tuolla leipäveitselläsi...
+Mikset sen sijaan käyttäisi tuota tyylikästä sauvaasi?
+
+Kerro sitten, oliko vinkistä hyötyä...
+Olettaen toki, että selviät Cifistä...
+Lykkyä tykö!
+Ksi shi shi shi shi!
+
+ERIKOISMERKKI PALJASTETTU!
+KÄYTTÖOHJEET:
+Piirrä Erikoismerkki KAHDESTI ennen omaa merkkiäsi.
+Käytä niitä viisaasti!!
+
+[Katsot syvälle outoon valoon]
+[Erotat juuri ja juuri kaksi valkoiseen verhoutunutta hahmoa]
+[He puhuvat jostakin]
+Annan sinulle vinkin.
+Kukaan ei ole täydellinen ilman minua.
+Minulla ei ole mitään tarjottavaa, mutta saan muut näyttämään kokonaisilta.
+Toiset eivät voi elää ilman minua, toisille taas olen kaikki, mitä heillä on jäljellä.
+Minua ei voi jakaa, mutta olen ehtymätön.
+En ole mitään ja silti olen mahtavin kaikista.
+Ilman minua yksi on merkityksetön.
+Mikä minä olen?
+
+
+
+
+
+
+
+
+
+KOLMAS UNI
+Joko ollaan perillä?
+
+Älä yritä huijata.
+Esität vain nukkuvaa.
+
+Kenties voisin nukkuakin, ellette olisi niin kärsimätön, Teidän Ylhäisyytenne.
+Älä viitsi, tänne jäätyy!
+Millainen sekopää asuu tällaisessa paikassa?
+Tämä maa ei juuri eroa omastanne, Teidän Ylhäisyytenne.
+Muutama vuosi sitten se oli vielä kurjemmassa kunnossa.
+Kun hallitsija kuoli ilman perillistä, koko maa oli jäädä sotivien rajanaapureidensa jalkoihin.
+Mutta sitten ennestään tuntematon ritari otti tilanteen hallintaansa.
+Nopeasti hän sammutti kytevät sisäiset jännitteet...
+Ja selvästä alivoimasta huolimatta hänen armeijansa onnistui helposti torjumaan kruunua havittelevat naapurivaltiot.
+Rauhan laskeuduttua ritari julisti oman hallintonsa.
+Maa alkoi jälleen kukoistaa.
+Ei ole mikään ihme, että Hänen Majesteettinsa haluaa liittoutua tämän maan hallitsijan kanssa...
+... Hallitsijan, joka tunnetaan Taivaallisena Ritarina.
+Anna olla, tämä palopuhe on niin kuultu.
+Nai sinä hänet, kun kerran olet noin suuri fani.
+Ja voi herramunjee tuota lempinimeä.
+Noh, se ei tietenkään ole yhtä komea kuin teidän liikanimenne, Teidän Ylhäisyytenne.
+Leipäläpi umpeen.
+
+Oletteko kunnossa, Teidän Ylhäisyytenne?!
+J-joo.
+Melko lailla, luulisin.
+Mitä helvettiä juuri tapahtui?!
+Lumivyöry, kenties...
+...
+Pysykää sisällä, Teidän Ylhäisyytenne.
+
+Leidi Gray!
+Maanvyöry on tukkinut reittimme!
+Jouduimme eroon saattajistamme!
+Missä peränpitäjät oikein viipyvät?!
+
+Huoli pois.
+Heidät on jo hoideltu.
+...!
+Eipä heistä juuri vastarintaa irronnut.
+Turha tehdä tästä teillekään vaikeaa...
+Luovuttakaa kruunupää suosiolla!
+(Kuinka pahainen maantierosvo tietää prinsessasta...?)
+Entä jos kieltäydyn?
+Vaihtoehtoja ei juuri ole.
+Älä kuvittele, että nätti pärstäsi pelastaa sinut.
+... Tai ehkä hovikana aikoo tarttua miekkaan.
+Se vasta olisi näky!
+
+...
+Jopa kaltaisenne saasta näyttää tietävän, etteivät hovineidot koskaan kanna aseita.
+Olette kuitenkin erehtynyt, minulla riittää vaihtoehtoja.
+Jassoo?
+Ja mitähän nämä vaihtoehdot mahtavat olla, jos saan kysyä?
+
+Voisin jättää teidät henkiin.
+... Että mitä-
+
+[Tuhoaja Gray vyöryy yllesi]
+[Tuhoaja Gray mittailee sinua]
+[Paino iskeytyy vatsasi pohjalle]
+G: Saatte kolme vuoroa.
+
+[Kutsut kätyreitäsi]
+B: Senkin pelkurit!
+B: Suojatkaa minua, tollot!
+[Heilautat miekkaasi kohti vihollista]
+B: Maista tätä, harppu!
+[Tuhoaja Gray loikkaa kimppuusi]
+G: Eins.
+G: Zwei.
+G: Drei.
+[Kutsut kätyreitäsi, mutta he ovat kauhusta kankeita]
+
+E-ette ole tosissanne...
+Tuhoaja Gray...
+Ilmielävänä...
+Jätä lätinät ja kerro, kuka lähetti teidät.
+Mitä...?
+Huono hetki leikkiä tyhmää.
+Jollet sitten kerjää uusintaa.
+...
+Sori, saatan olla yhdentekevä konna...
+Mutta minullakin on ylpeyteni.
+Kuten haluat.
+
+Jes Gray!
+Näytä sille kaapin paikka!
+Pysykää sisällä, Teidän Ylhäisyytenne!
+Ja missaisin loppuhuipennuksen?
+En todellakaan!
+Kappas.
+Onneni taitaa viimein kääntyä.
+Napatkaa likka, pojat!
+Lily!
+
+Heh.
+Ojasta allikkoon...
+
+Aloinkin ihmetellä, missä vieraani viipyivät.
+Pahoitteluni.
+Ponnisteluistamme huolimatta rikkaruohot yhä rehottavat.
+Työtä on vielä jäljellä.
+
+... Nuo valkoiset hiukset ovat juuri niin loistavat kuin tarinat ovat antaneet ymmärtää.
+Sallikaa minun esitellä itseni.
+Olen Johann I, tämän vaatimattoman maan hallitsija.
+Sulkeudun suosioonne...
+Arvon Paholaisprinsessa.
+
+Poikkeuksellisen ankara talvi oli verottanut tuntuvasti maan satoa.
+Nälänhätä ja taudit levisivät niin köyhien kuin rikkaidenkin keskuudessa.
+Edes maan kuningas ei välttynyt niiltä.
+
+
+
+
+
+TAPAAMINEN NÄÄNTYNEEN KANSSA
+[Ruipelo mies tuijottaa sinua]
+Haju...
+Ruokaa...
+Anna.
+[Hän näyttää etsivän ruokaa]
+[Kenties voisit antaa hänelle jotain?]
+
+[Tarjoat hänelle yhden sirkkaidoleistasi]
+[Mies nappaa sirkan epäröimättä ja ahmaisee sen silmänräpäyksessä]
+Maistuu...
+Tyhjältä...
+Lisää...
+Anna lisää.
+
+[Sinulla ei ole mitään tarjottavaa]
+[Mies huokaisee]
+[Ruipelo mies makaa lattialla]
+[Mies on tuupertunut]
+[Hän hädin tuskin hengittää]
+[Et voi tehdä juuri mitään hänen hyväkseen]
+[Paras jatkaa matkaa]
+
+[Hänen nenänsä nykii kevyesti]
+Ei hajua...
+Ei ruokaa...
+[Mies ei ole kiinnostunut sinusta]
+[Hän ei tunnu välittävän tönimisestä]
+[Totta puhuen häntä tuntuu kiinnostavan vain ruoka]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NELJÄS UNI
+Näitkö, miten hän hoiteli ne hännystelijät yhdellä iskulla?
+Se oli älytöntä!
+Ja sitten hän mulkaisi sitä roistoa juuri ennen kuin käristi hänet...
+Onko hän oikeasti kuningas?
+Hän on aivan liian siisti sellaiseen!
+Teidän Ylhäisyytenne, yrittäkäähän jo rauhoittua.
+Päivä on ollut pitkä.
+Tiedän, mutta en saa unta...
+Hei, luuletko, että voisin tavata Johannin huomenna?
+Haluan nähdä, miten se ukkosisku tehdään!
+Moista taikuutta ei sovi käyttää miten sattuu, Teidän Ylhäisyytenne.
+Ilonpilaaja Gray iskee jälleen...
+Taidat vain olla hieman kade?
+...
+
+Nautitteko lumisateesta?
+Talvellamme on puolensa.
+Arvon Lordi!
+Pahoitteluni, en ollut tunnistaa teitä ilman haarniskaanne. 
+Sallikaa minun kiittää teitä vielä kerran prinsessamme pelastamisesta, Arvon Lordi.
+Se oli vähintä mitä saatoin tehdä.
+Toivottavasti Hänen Ylhäisyytensä voi jo paremmin?
+Hän nukahti viimein.
+Hän oli varmasti aivan uupunut sen kaiken jälkeen.
+Mutta älkää suotta murehtiko, Arvon Lordi.
+Hänen Ylhäisyytensä ei vähästä hätkähdä.
+Arvon Lordi tosin onnistui tekemään melkoisen vaikutuksen häneen.
+Pyydän, sanokaa vain Johann.
+En juuri välitä ylevistä titteleistä.
+... Olen kuullut, että olette varsin maanläheinen.
+Mutta en silti odottanut, että ryntäisitte edelleen itse suoraan taisteluun.
+Hyvä hallitsija tekee parhaansa vääryyksien oikaisemiseksi.
+Se on hänen velvollisuutensa.
+Valitettavasti kaikki eivät jaa näitä ihanteita.
+Kamalia asioita on tapahtunut tälle maalle ja sen kansalaisille pelkän välinpitämättömyyden seurauksena.
+Toivon välttäväni edeltäjieni virheet.
+Vaikka se sitten tarkoittaisi, että joudun aika ajoin likaamaan käteni.
+Siitä puheen ollen, kaikki tuskin olisi päättynyt parhain päin ilman teidän panostanne, Leidi Gray.
+Ymmärtääkseni pidättelitte roistoja varsin pitkään aivan yksin.
+Tein vain, mitä minun hovineitona kuuluu.
+Ja paljon enemmänkin, väittäisin.
+Älkää vähätelkö itseänne.
+Huomaan, ettette ole tavanomainen hovineito, Leidi Gray.
+Vai pitäisikö sanoa ´´Tuhoaja Gray´´?
+...
+Tekin olette siis kuulleet siitä.
+Olen tehnyt parhaani jättääkseni sen nimen menneisyyteen, samoin kuin aiemmat tekoni.
+
+
+
+Huomisesta alkaen haluaisin tutustua paremmin Paholaisprinsessaanne.
+... Teidän avustuksellanne, tietenkin.
+Totta kai.
+Olen varma, että myös Hänen Ylhäisyytensä ilahtuisi yhtä lailla.
+Jään odottamaan sitä innolla.
+Hyvää yötä, Leidi Gray.
+
+Mutta kunhan kykenen palvelemaan Hänen Ylhäisyyttään parhaan kykyni mukaan...
+Muulla ei ole väliä.
+Arvostan suuresti omistautuneisuuttanne Hänen Ylhäisyyttään kohtaan.
+Silti en voi olla miettimättä...
+Kun pieksitte niitä roistoja...
+Mahdoitteko jollain tasolla nauttia siitä?
+...!
+Teidän kaltaisenne taistelija olisi varmasti saanut hoideltua sen roskasakin silmänräpäyksessä.
+Olinpa tahditon.
+Älkää suotta vaivatko mieltänne typerillä pohdinnoillani.
+Mutta ette kiirehtinyt, aivan kuin olisitte leikitellyt heillä.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAPAAMINEN VAELTAJAN KANSSA
+[Nainen seisoo arkun äärellä ja tukkii tiesi]
+[Hän mutisee jotain itsekseen]
+Taas vesiperä...
+Oh, en huomannut sinua.
+En odottanut törmääväni muihin täällä.
+Oletko sinäkin aarteenmetsästäjä?
+... Hetkinen.
+Tuo sauva ei näytä miltään tavanomaiselta kävelykepiltä.
+Lyön vetoa, että löysit sen täältä, etkö vain?
+Voisinko katsoa sitä tarkemmin?
+Älä huoli, osaan käsitellä tällaista tavaraa.
+
+[Ennen kuin ehdit suutasi avata, nainen nappaa sauvan käsistäsi!]
+
+Samperi, miksei tämä värkki toimi?
+... Sinä taas.
+Anna anteeksi!
+Tiedän, etten olisi saanut tehdä niin, mutta minulla ei ollut vaihtoehtoja.
+Isäni on hyvin sairas ja hänen tarvitsemansa lääke maksaa pienen omaisuuden ja...
+Pystyisitkö mitenkään antamaan tekoni anteeksi?
+[...]
+...
+[...]
+... Ei tainnut mennä läpi?
+Hyvä on.
+Tiedän, kun olen tappiolla.
+Tässä, saat sen takaisin.
+En edes saanut sitä toimimaan, joten se lienee arvoton.
+
+[Sait sauvasi takaisin]
+[Se taitaa olla kunnossa]
+[Pidä siitä jatkossa parempaa huolta!]
+
+... Mitä nyt?
+Palautin jo sauvasi, lakkaa tuijottamasta minua noin.
+Tässä, osoituksena siitä etten kanna kaunaa...
+Saat myös nämä.
+Ei niillä juuri käyttöä liene, mutta toivottavasti osaat arvostaa hyvän tahdon elettäni.
+[Sait seitsemän sirkkaidolia]
+
+Tämä paikka on suorastaan massiivinen.
+En ole ennen nähnyt moisia raunioita...
+Mutta olen varma, että täältä löytyy ties mitä aarteita.
+Löytäjä saa pitää, kuten sanotaan.
+... Ja ei, en aio enää pölliä mitään sinulta.
+Pysy vain poissa tieltäni.
+
+Mitä nyt taas?
+Olen tielläsi?
+Lepuutan jalkojani hetken, jos et pahastu.
+
+[Nenäkäs nainen kieltäytyy liikkumasta]
+[Mutta muutakaan tietä ei näytä olevan]
+
+[Päätät jättää hänet rauhaan]
+[Niin on parempi]
+
+Hei, rauhoituhan nyt!
+Pyysin jo anteeksi!
+Lopeta jo!
+
+Sait siis sauvasi taas toimimaan?
+Kyllä, näin kun heilutit sitä aiemmin.
+Harmi, etten pystynyt käyttämään sitä itse.
+Se olisi ollut todella kätevä näiden raunioiden ryöstä-
+... tuuutkimisessa, tarkoitan.
+Oli miten oli, mene vain edeltä.
+Koska et vaikuta kovin kummoiselta aarteenmetsästäjältä...
+Saat hieman etumatkaa.
+Näkyillään!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VIIDES UNI
+Entäs tämä?
+Eikö tuo ole tavallinen mekkonne, Teidän Ylhäisyytenne?
+Kerro vain, näyttääkö se hyvältä ylläni!
+Ne kaikki pukevat teitä oikein hyvin.
+Kuten aina.
+Oletpa hyödyllinen.
+Hikoan perseeni ruvelle...
+Hei, en kai vain haise?
+Minä kun luulin, että prinsessat eivät lemua.
+Lakkaa virnuilemasta, viisastelija.
+En vain ole tottunut näkemään teitä tällaisena. 
+Johtuuko se Lordi Johannista?
+... Haluan vain olla parhaimmillani, kun hän saapuu.
+Emme tiedä tarkalleen hänen vierailunsa ajankohtaa, Teidän Ylhäisyytenne.
+Juuri sen takia täytyy valmistautua hyvissä ajoin!
+Siihen voi mennä viikkojakin.
+Uhh...
+Ettekö hiljattain saanut kirjeen häneltä, Teidän Ylhäisyytenne?
+Kyllä, mutten ole vieläkään saanut viimeisteltyä vastaustani!
+Nyt kun mietin, olettekin käyttäytynyt oudosti siitä lähtien. 
+Mitä sitten, jos olenkin?
+Minulla ei tietenkään ole velvollisuutta saati oikeutta tuomita, Teidän Ylhäisyytenne.
+Mutta ettekö etene mielestänne turhan nopeasti?
+... Vai niin.
+Olisiko pitänyt murtaa parit kylkiluut ensin?
+Tiedätte mitä tarkoitan, Teidän Ylhäisyytenne.
+Murehdit liikaa, Gray.
+Kenties.
+Mutta purjehdimme kartoittamattomilla vesillä, eikä vara venettä kaada.
+Mitä oikein höpiset?
+Tarkoitan rakkautta, Teidän Ylhäisyytenne.
+P-pää kiinni, senkin pälli!
+
+Teidän Ylhäisyytenne!
+Lordi Johann!
+Hän on saapunut ilmoittamatta!
+Hän odottaa parhaillaan alakerrassa!
+
+[Se on keskeneräinen kirje]
+[Sinun ei varmaan pitäisi lukea sitä...?]
+[Sinun ei todellakaan kannata lukea sitä]
+(En todellakaan saisi lukea tätä.)
+...
+
+
+
+
+Arvon Lordi Johann
+Tunnen sydämeni pakahtuvan tätä kirjoittaessani.
+Ja kun etsin oikeita sanoja, pakahtuu myös mieleni.
+Se on teidän syytänne.
+Yhä uudestaan ja uudestaan palaan yhdessä viettämiimme hetkiin.
+Mutta pelkät muistot eivät suo helpotusta.
+Olette vastuussa tästä.
+Siksi en kerro vastaustani ennen kuin saan taas kohdata teidät kasvotusten.
+[Kirje päättyy kuin seinään]
+
+[Et todellakaan olisi saanut lukea sitä]
+
+Kuinka ihanaa nähdä Hänen Ylhäisyytensä niin hyvillä mielin.
+Kiitos, Lordi Johann!
+Selkänikin kiittää!
+Ettekö aio liittyä heidän seuraansa, Leidi Gray?
+
+Taivaallinen Ritari on saapunut.
+Onkohan hän todella yhtä komea kuin tavataan sanoa?
+Ehkä saan tilaisuuden nähdä hänet tänään...
+... Kunhan vapaudun palveluksesta, tietenkin!
+Liittykää heidän seuraansa, Leidi Gray.
+
+Leidi Gray, on ilo nähdä teidät.
+Kuin myös, Lordi Johann.
+Viime kerrasta on jo tovi.
+Pahoittelen yllätysvierailuamme.
+Älkää suinkaan.
+Hehee...
+Eräs ei ainakaan pane ollenkaan pahakseen.
+Johannilla ja minulla on tärkeää ilmoitettavaa!
+
+Leidi Gray!
+Prinsessa ja Lordi Johann näyttivät keskustelevan jostain tärkeästä...
+Joten päätin olla häiritsemättä.
+Mutta teidän läsnäolonne ei varmasti haittaa!
+Mitä mahtaa olla tekeillä?
+Voisiko se olla...!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KÄRÄJÄT: YLPEYS
+Kirottu on toistuvasti kieltäytynyt hyväksymästä tappiotaan.
+Oli kyse sitten virheestä tai kyvyttömyydestä löytää vastausta...
+Kaikilla teoilla on hintansa.
+Esitämme kirotun rankaisemista asiaankuuluvasti.
+
+Vau.
+Tunnut todella venyttävän rangaistavan käytöksen käsitettä.
+
+Ylpeys on syystä synneistä suurin.
+Ne, jotka eivät kykene nielemään omaansa tilanteen vaatiessa, lopulta hukkuvat siihen.
+Se on maailmamme absoluuttinen totuus.
+
+Sinähän sen tiedät.
+
+Jollei puolustuksella ole mitään järkevää sanottavaa...
+Ehdotan, että siirrymme tuomioon.
+
+Hei, eipäs hötkyillä!
+Kuten sanotaan, tie helvettiin on kivetty hyvillä aikomuksilla.
+
+...
+Et taida ymmärtää, mitä tuo sanonta tarkoittaa.
+
+Totta kai ymmärrän!
+Se on vitsi!
+Tajusitko?
+Vai ovatko nuo läskisarvesi imeneet huumorintajusi viimeisetkin rippeet?
+... Sori, unohdin.
+Ei sinulla moista ole ikinä ollutkaan!
+
+... Miksi päädymme aina puhumaan sarvistani.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAPAAMINEN LAPSEN KANSSA
+[Nuori tyttö istuu lattialla]
+[Kun katseenne kohtaavat, hän säpsähtää]
+Mitä mulkkaat?
+
+Oletko yksi noista hyypiöistä?
+[Kerrot, ettet halua hänelle mitään pahaa]
+En...
+En pelkää sinua.
+Jätä minut rauhaan.
+
+[Tyttö mököttää ja yrittää olla huomioimatta sinua]
+[... Hän vilkaisee sinua varkain, mutta kääntää katseensa pian pois]
+
+[Yrität helpottaa hänen oloaan]
+Luuletko olevasi äitini tai jotain?
+Anna minun olla jo.
+
+Anna minun olla!
+
+[Et halua satuttaa häntä]
+
+Mitä hittoa?!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KÄRÄJÄT: AHNEUS
+Kirottu on toistuvasti osoittanut taipumusta jääräpäiseen toimintaan.
+Itsepäinen ajattelemattomuus ei johda mihinkään.
+Se on vain osoitus ahnaasta halusta jatkaa eteenpäin seurauksista piittaamatta.
+Esitämme kirotun rankaisemista asiaankuuluvasti.
+
+...
+Mikä on?
+Veikö kissa puolustuksen kielen?
+Se olisikin ensimmäinen kerta.
+Hämmennyin vain noista läskisarvistasi.
+Joka tapauksessa...
+... ... ...
+...
+Älä vain sano, ettet ole valmistellut puheenvuoroasi.
+Sori, hämmennyin taas.
+
+Oli miten oli, ainakaan hän ei antanut periksi, vai mitä?
+Olen itse asiassa aika utelias näkemään, kuinka pitkälle hän oikein pötkii tällä tavoin.
+Eihän ole ongelmaa, jota päättäväisyys ja raaka voima eivät ratkaisisi.
+Noh, nuo sarvesi lienevät poikkeus.
+Ne ovat toivoton tapaus.
+... Annas kun opetan sinulle, mitä toivottomuus tarkoittaa.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KUUDES UNI
+Onko tämä sopiva paikka?
+Vaikuttaa aavistuksen ahtaalta.
+Se riittänee tarpeisiimme oikein hyvin, Teidän Ylhäisyytenne.
+Ellette sitten mieluummin käytä pääsalia?
+En missään nimessä!
+En halua, että Johann pölähtää paikalle kesken kaiken...
+Jos olisitte ollut nuorempana yhtä intona, meidän ei tarvitsisi nyt hoppuilla.
+No, se on nyt tai ei koskaan!
+Joten lakkaa jäkättämästä ja joudu jo!
+Tietenkin, Teidän Ylhäisyytenne.
+Ja muista mitä lupasit!
+Kyllä kyllä.
+Ei minkään sortin vinoilua.
+Hyvä.
+Soisitteko tämän tanssin, Teidän Ylhäisyytenne?
+Anna mun kaikki kestää...
+
+Ja asettakaa vasen kätenne hartialleni, näin ikään...
+Minä vien, yrittäkäähän rentoutua.
+Joo...
+Hyvin se menee, Teidän Ylhäisyytenne.
+Aloittakaamme!
+
+Kuka olisi arvannut?
+Tämähän on vallan lystiä touhua!
+
+Ei yhtään hullumpaa, Teidän Ylhäisyytenne.
+Ainakaan ensimmäiseksi kerraksi...
+
+Teidän Ylhäisyytenne on todellinen luonnonlahjakkuus!
+
+Alatte päästä jyvälle, Teidän Ylhäisyytenne...
+(Lordi Johannin varpaat joutuvat vielä koetukselle...)
+
+(Sinä...)
+(Yritätkö edes, senkin riiviö...?)
+
+Miten olisi lyhyt tauko?
+
+Kuule Gray.
+Niin, Teidän Ylhäisyytenne?
+On aika outoa nähdä sinut tanssimassa.
+Kuinka niin?
+Olen tottunut näkemään sinut lähinnä potkimassa ja hutkimassa.
+Missä oikein opit tanssimaan noin?
+Vai etkö muista sitäkään kunnolla?
+Muistan kyllä.
+Olin silloin ikäisenne. 
+Enkä silloin taitanut juuri muuta kuin...
+Potkimisen ja hutkimisen, kuten sanoisitte.
+Joten suhtauduin tanssimiseen varsin suurella varauksella.
+Onneksi minulla oli hyvä opettaja.
+Hmm?
+Äitinne, tietenkin.
+...
+Olen pahoillani, Teidän Ylhäisyytenne.
+Se oli kovin ajattelematon lipsautus.
+Ei se mitään, Gray.
+En edes muista mitään äidistäni. 
+Silti...
+Tällaisina aikoina toivon, että hän olisi täällä.
+...
+Olen varma, että hän seuraa teitä siunattujen tähtien joukossa.
+Etenkin nyt, kun suureen päiväänne on enää muutama viikko.
+... Uskotko todella niin?
+Muistutatte häntä vuosi vuodelta enemmän.
+Hän olisi ylpeä teistä.
+
+Mitä nyt, Gray?
+Ei mitään.
+Taisin vain kuulla omiani.
+(Aivan kuin joku olisi käynyt ovella...)
+
+No, miten olisi toinen yritys?
+Harjoitus tekee mestarin, kuten sanotaan.
+Jos kerran vaadit.
+
+(Mahdatteko todella katsella häntä...?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAPAAMINEN GORIN KANSSA
+[Valtava pää tukkii tiesi]
+
+Hnnhäääh...
+
+Mitä olet vailla?
+[Vaimea nurina vapautuu hänen huuliltaan]
+
+[Pyydät häntä siirtymään]
+... Oletko tosissasi?
+Tuonko takia häiritset minua?
+Olin tekemässä niin hyvää kuolemaa...
+Mikä riesa...
+
+En tiedä mitä oikein kuvittelet etsiväsi...
+Mutta ehkä huomasit jo, etten ole liikkumassa mihinkään.
+Anna minun jatkaa kuolemista.
+
+[Kysyt häneltä, onko huoneesta toista uloskäyntiä]
+Eeeeeeee...?
+Etkö kuunnellut sanaakaan?
+...
+Hyvä on.
+Jos pääsen sillä sinusta eroon...
+Jossain täällä pitäisi olla virnuileva patsas...
+Jos loikkaat suoraan sen edessä olevaan reikään...
+Päässet jatkamaan matkaasi.
+... Miltei unohdin.
+Tähän temppuun tarvitaan uhraus.
+Ei mitään vakavaa, kunhan sinulla on jotain ruokaa tarjolla, sen pitäisi riittää.
+
+Eikö sinulla ole mitään syötävää mukanasi?
+Uuuuh...
+Ota tästä.
+[Sait yhden sirkkaidolin]
+[... Missä hän mahtaa pitää näitä?]
+
+Mitä nyt taas...
+Levottomat sielut tukkivat reittisi?
+Tiesin, ettei niille pahuksen tyhjäntoimittajille olisi pitänyt antaa mitään...
+Ne ruinasivat ja ruinasivat kunnes annoin periksi, ja nyt ne pysyvät kiinni kuin tauti...
+Heidän kaltaisensa ovat kaikista ärsyttävimpiä...
+... Äläkä katso minua noin.
+En minä niille voi mitään...
+Hei, tekisitkö meille molemmille palveluksen...
+Ja antaisit vähän potkua heidän mitättömään olemassaoloonsa?
+Olet varmasti tottunut siihen jo.
+Kun olet kerran selvinnyt tänne asti järjissäsi...
+
+Anna mennä.
+Älä ota sitä itseesi.
+Levottomat sielut ovat täällä syystä.
+Ne ovat pelkkää polttoainetta DIS:lle.
+
+Joko reitti on selvä?
+Siinä tapauksessa sinulla ei ole muuta vaihtoehtoa...
+... Kuin etsiä virnuileva patsas ja loikata.
+Sitten voin jatkaa kuolemistani.
+... 
+
+Tuo sauva...
+Mistä oikein sait sen?
+... Se ei liene oleellista.
+Sitä kutsutaan Pohjattomaksi Sauvaksi.
+Se kuului Lordi Addille.
+Hän ikään kuin pyöritti tätä paikkaa hyvän tovin.
+Kenties...
+Okei, muukalainen.
+Minulla olisi pyyntö.
+Voisitko kuulla sen?
+
+[Suostut kuulemaan hänen pyyntönsä]
+Saan kiittää Lordi Addia nykytilastani.
+Iäisyys sitten hän ja muut Lordit tappelivat isosti keskenään.
+En halunnut osaa tai arpaa siihen touhuun, mutta minut vedettiin silti mukaan.
+Rangaistukseksi Add leikkasi vartaloni irti.
+Joten kun sain kuulla hänen poistuneen, vaivuin epätoivoon.
+Sillä vain hän kykenisi suomaan ikuisen leponi.
+Huhujen mukaan Add piilotti aarteensa näiden seinien sisään ennen lähtöään, mutta en halunnut elätellä turhia toiveita...
+Sitten sinä ilmaannuit.
+Haluan, että etsit käsiisi Addin miekan, Pohjattoman Säilän.
+Vain se voi tappaa minut.
+Jos pitäisi veikata, et luultavasti löydä sitä ihan tuosta vain.
+Add mitä luultavimmin piilotti sen johonkin salaisista oikoreiteistään.
+Tavalliset kuolevaiset eivät tavallisesti niihin pääse...
+Siihen tarvitaan Pohjatonta Sauvaa, jota kannat mukanasi.
+Jos käytät sitä yhdessä tietyn loitsun kanssa, löydät varmasti salatiet.
+Paina tämä mieleesi:
+´´Missä tyhjyys Lordin merkin kaivertaa...
+... Missä tie kadotukseen sisälläsi lepää...
+... Uskosi osoita ja kohtaa Pohjaton.´´
+
+[Hän alkoi taas nukkua...?]
+
+Sinustako se kuulostaa epäilyttävältä?
+Tee mitä lystäät, kunhan lakkaat häiritsemästä minua ongelmillasi...
+
+Kun olet löytänyt Pohjattoman Säilän, palaa tänne.
+Sitten voin viimein saada leponi...
+
+[Kerrot, ettei sinulla ole aavistustakaan, miten loitsua tulisi käyttää]
+
+EEEEEEEEEEEEEEEEEEEEE?!
+
+Miten niin sinulla ei ole aavistustakaan?!
+Sinähän osaat käyttää Pohjatonta Sauvaa, etkö vain?
+Aloin elätellä toivoa...
+... Aivan turhaan?!
+...
+Olkoot.
+Olisi pitänyt arvata...
+
+Mene pois.
+Olen pahalla tuulella...
+
+... Haluat siis päästä uloskäynnille?
+Kehnompi mäihä. 
+...
+No hyvä on sitten...
+Etsi virnuileva patsas.
+Jos loikkaat suoraan sen edessä olevaan reikään...
+Pääset jatkamaan matkaasi...
+Ja voit viimein jättää minut rauhaan.
+Etkä sitten kuullut tätä minulta, jos joku kysyy...
+
+Ala kalppia.
+Oh, tulit takaisin...
+Luulin, että annoit jo periksi.
+Etsi virnuileva patsas, jos haluat poistua täältä...
+
+[Hän tuijottaa sinua äärimmäisen tylsistyneenä]
+
+... Vielä täällä?
+En ole varma, muistinko mainita tämän...
+Virnuileva patsas ei auta sinua ilman uhrausta.
+Tiput vain pimeyteen kuin mikäkin tollo.
+Uhraukseksi pitäisi kelvata mikä tahansa syömäkelpoinen.
+
+... Sinulla ei ole mitään syötävää mukanasi?
+Uuuuuhhhhh...
+Ota tästä.
+Ja viimeisen kerran.
+Ole hyvä ja poistu.
+
+Hetkinen...!
+Tuo miekka...
+Voisiko se olla...?
+Ei epäilystäkään.
+...
+Tiedän, että tämä tulee hieman yllättäen.
+Mutta voisitko...
+Miten nyt oikein muotoilisin tämän...
+Tartu miekkaasi ja...
+Tapa minut...
+
+... Kiitos kaunis?
+
+Mitä?
+Et halua tappaa minua?
+...
+Anteeksi, olisi pitänyt tietää, että te kuolevaiset suhtaudutte kuolemaan aika vakavasti.
+Olen vain väsynyt olemaan elossa.
+Etenkin sen jälkeen, kun ruumiini vietiin minulta.
+Ja koska tämä paikka hädin tuskin pysyy pystyssä...
+Minulla ei ole enää mitään tarkoitusta täällä.
+Sitä paitsi tukin tiesi, enkö vain?
+Joten se olisi myös sinun eduksesi...
+Täältä kun ei löydy toista uloskäyntiä...
+Joten, miten olisi?
+
+[Suostut hänen pyyntöönsä]
+Ihan tosi?
+Nytkö se tapahtuu...
+Mikä helpotus...
+...
+Okei.
+Sen kun isket miekkasi minuun...
+Sen ei pitäisi vaatia paljoa voimaa.
+
+Odotas.
+Tämä saattaa olla typerä kysymys...
+Mutta oletko sinä kuollut aiemmin?
+Miltä se tuntuu?
+Kuulin, että te kuolevaiset uskotte jälleensyntymiseen ja sen sellaiseen.
+Käykö minullekin niin?
+Se olisi erittäin rasittavaa...
+[Kerrot hänelle, ettet halua ajatella moisia]
+Ymmärrän...
+Siinä tapauksessa vielä yksi asia.
+Jos törmäät siskooni...
+Kerro terkkuja Gorilta.
+Siskoltani puuttuu vasen silmä, tunnistat hänet varmasti, jos satutte tapaamaan.
+Ja...
+Kiitos sinulle, muukalainen.
+Nähdään taas.
+
+[Hän kieltäytyy puhumasta sinulle]
+[...]
+[´´Missä tyhjyys Lordin merkin kaivertaa, missä tie kadotukseen sisälläsi lepää, uskosi osoita ja kohtaa Pohjaton.´´]
+[Mitä hän mahtoi tarkoittaa sillä?]
+
+Terve!
+Etsitkö läskipäätä?
+Hankkiuduin hänestä eroon.
+Äläkä nyt käsitä väärin.
+Hän ei ole kuollut.
+En saisi sitä laiskaa aasia hengiltä vaikka yrittäisin.
+Sitä paitsi...
+Kuolema olisi aivan liian lempeä kohtalo sellaiselle, joka levittelee salaisuuksiamme ympäriinsä.
+Kyllä.
+Olen hyvin perillä siitä, että olet pyörinyt paikoissa, jonne et kuulu, kuolevainen.
+Jos se olisi minusta kiinni...
+OLISIN PANNUT SINUT JO KYLMÄKSI.
+Olet onnenpekka.
+Mutta kukapa tietää...
+Lopussa kenties toivot, että olisit kuollut jo ajat sitten.
+Törmäillään taas!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SEITSEMÄS UNI
+Älä kurkistele!
+Oletteko varma, ettette tarvitse apuani, Teidän Ylhäisyytenne?
+Pärjään kyllä!
+Ainakin luulisin...
+Miksi sovitatte sitä tähän aikaan?
+Pelkäättekö, ettei se mahdu enää päällenne?
+Siinä tapauksessa emme ehdi enää tehdä paljoa...
+Hys siinä.
+Et ole nähnyt tätä ylläni muutosten jälkeen, vai mitä?
+Tarvitsen vain asiantuntijan mielipiteen.
+Ja varmistat, ettei mikään... pursua yli tai jotain.
+... Voit avata silmäsi.
+No...
+Miltä näyttää?
+...
+... Hittoakos virnuilet siinä?
+Toivottavasti et kehittele päässäsi mitään osuvaa lohkaisua.
+Se on suorastaan ihastuttava, Teidän Ylhäisyytenne.
+Aivan kuten ajattelinkin.
+Mutta...
+Mutta mitä?!
+Siitä puuttuu jotakin.
+
+... ... ...
+Onko jokin pielessä?
+Eikö se ole makuunne?
+En minä sitä...
+Minä vain...
+En ole koskaan nähnyt sinua ilman tätä.
+Voinko todella pitää sitä?
+Olen kantanut tuota kaulakorua niin kauan kuin muistan...
+Mutta uskon teidän kantavan sitä paremmin, Teidän Ylhäisyytenne.
+
+
+
+Olette myöhässä.
+Suokaa anteeksi.
+Tänne oli vaikeampi löytää kuin luulin.
+Miksi kutsuitte minut, Leidi Gray?
+
+Tämän on loputtava.
+Mistä oikein puhutte?
+Tiedätte mitä ajan takaa.
+En voi jatkaa näin.
+... Kuinka yllättävää.
+En olisi uskonut vakaumuksenne horjuvan aivan yhtäkkiä.
+Olen pitänyt lupaukseni tähän asti, enkö vain?
+Nain pikkuprinsessanne ja teen hänestä kuningattareni...
+... Jotta hän saa viimein kaipaamansa vapauden.
+Ettekö toivonut juuri tätä?
+Lily todella rakastaa teitä.
+Mitä sitten?
+Hänen tunteillaan ei ole merkitystä.
+Olette päässyt jo näin pitkälle.
+Hänen Ylhäisyytensä ei saa koskaan tietää.
+Hänhän on vain naiivi, piloille hemmoteltu kakara...
+
+...!
+Hän on kenties sietämätön, lapsellinen pikkupiru...
+Mutta olen luvannut suojella häntä.
+Muulla ei ole väliä.
+... Luulin, että te kaikista maailman ihmisistä ymmärtäisitte, kuinka tärkeitä velvollisuutemme ovat.
+Tein selvästi virheen suhteenne, Leidi Gray.
+Mutta älkää käsittäkö väärin.
+On liian myöhäistä peruuttaa tätä.
+Siinä tapauksessa kerron kaiken Lilylle.
+Ette uskaltaisi...
+Tiedätte hyvin mitä siitä seuraisi...!
+Olkoon niin!
+Lily ei ansaitse tulla loukatuksi näin!
+
+Ihailin teitä todella...
+Kun näin teidän hoitelevan ne avuttomat palkkasotilaat...
+Tiesin teidän olevan täysin poikkeuksellinen...
+Mitä tuhlausta.
+Valitettavasti suunnitelmani käynnistyivät jo kauan ennen kuin tapasimme, eikä minulla ole aikaa tällaiseen...
+Jos siis en saa mitä halajan...
+Voitte yhtä hyvin kuolla, Tuhoaja Gray.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAPAAMINEN MATKIJAN KANSSA
+Olet tielläni.
+En voi tuhlata aikaani sinuun.
+Ole hyvä ja pysy poissa tieltäni.
+Miksi olet tuollainen...?
+Eikö sinulla ole tärkeämpää tekemistä?
+Väisty.
+Tukit tieni.
+Mitä tuijotat?
+Miksi käyttäydyt näin?
+Onko jokin vialla?
+Lakkaa leikkimästä.
+Älä tuhlaa aikaani.
+Pysähdy.
+... Olenko nähnyt sinut jossain?
+Katse ylös, kiitos.
+Katso mihin astut.
+Mitä?
+Siirry syrjään.
+Olet koko ajan tielläni...
+Mitä oikein teet täällä?
+En usko, että voin auttaa sinua...
+Tiedätkö, mistä löydän uloskäynnin?
+Täytyy olla toinen reitti...
+Mistä sinä oikein ilmestyit?
+Oletko eksynyt?
+Tarvitsetko apua?
+Onko sinulla jokin ongelma?
+Etkö näe, että minulla on kiire.
+Kuinka pitkään tämä jatkuu...?
+Miksi seuraat minua?
+Tarvitsetko jotain?
+En pääse puusta pitkään...
+Lakkaa seuraamasta minua. 
+Kuka sinä olet?
+
+...
+Taisit tajuta jo.
+Olet jumissa.
+Tästä ei pääse yli eikä ympäri.
+Tämä on mahdotonta.
+... Niin haluaisin sanoa.
+Aivan kuin moinen riittäisi pidättelemään sinua.
+Usko pois, tiedän kyllä.
+
+Osasit valmistautua tähän...
+Matkasi ei tästä enää helpotu.
+Totta puhuen en edes tiedä, miten pitkään joudut vielä jatkamaan...
+Mutta et voi antaa periksi.
+Et anna periksi.
+Koska joku odottaa sinua.
+Tiedät sen kertomattakin.
+Kunhan...
+Ethän ruoski itseäsi turhaan.
+Silloinkin, kun vastaukset karkaavat mielestäsi ja olet valmis luovuttamaan...
+Minä uskon sinuun.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KAHDEKSAS UNI
+... Joko...
+Aamu on valjennut?
+Kuinka voin olla vielä hengissä?
+Iskikö hän jotenkin ohi...
+Mutta vaikka olisikin iskenyt...
+
+Lily...!
+
+[Jotain on pielessä]
+
+Teidän Ylhäisyytenne!
+Tähtien nimeen, mitä oikein kuvittelette tekevänne?
+Mikä teitä vaivaa...
+...
+Tulkaahan...
+Siirtykäämme sisälle...
+
+Seis, Tuhoaja Gray!
+Astu kauemmas prinsessasta!
+Mitä...
+Mitä asiaa sotilailla on prinsessan makuukamariin, Johann?!
+Kertokaa te, arvon leidi.
+Miten surkea tapaus tämä onkaan...
+Ajatella, että prinsessan uskollinen palvelija osoittautuu niin mustasukkaiseksi...
+Että käy käsiksi Hänen Ylhäisyyteensä tämän hääpäivänä.
+Mihin tiikeri raidoistaan pääsisi.
+Syytättekö minua päällekarkauksesta...?
+Kuinka kehtaatte suoltaa moisia röyhkeyksiä!
+Kunhan kuningas saa kuulla tästä...!
+Hänen Majesteettinsa on jo tietoinen tilanteesta.
+Hän uskoi tehtäväkseni napata teidät.
+On sanomattakin selvää, että tämän luokan petos ei jää rankaisematta.
+Teloitamme teidät huomenna.
+Emmehän halua pilata hää- ja kruunajaisseremonian tunnelmaa, vai mitä?
+... Senkin alhainen, kaksinaamainen...
+Noh noh.
+Älkäähän hätiköikö.
+Mieheni ovat hyvin perillä maineestanne, Tuhoaja Gray.
+En usko, että tekään rohkenisitte kuvitella, että päihittäisitte heidät kaikki.
+Aivan sama.
+Sinun pääsi ehtinen kyllä irrottaa hartioiltasi!
+
+Lopettakaa!
+Teidän Ylhäisyytenne...
+Ole kiltti ja lopeta tämä, Johann...
+Teen mitä haluat. 
+Kunhan et vahingoita Grayta.
+Kas vain...
+Kerrankin prinsessa osoittaa hieman tervettä maalaisjärkeä.
+Miten on, Tuhoaja Gray?
+Antaudu suosiolla ja pidän huolen, että prinsessanne toivetta kunnioitetaan.
+...
+Lily.
+... Anna anteeksi.
+
+Leidi Gray!
+En ollut uskoa silmiäni, kun näin sotilaiden vangitsevan teidät...!
+Sitten kuulin syytökset päällekarkauksesta...
+Kertakaikkista palturia!
+Ette ikinä satuttaisi Hänen Ylhäisyyttään!
+
+
+Seremonia on jo alkanut.
+En tiedä miksi, mutta...
+Jokin on pahasti vialla.
+Siksi otin vapauden tuoda mukanani taisteluasunne.
+Vaikka toivonkin, ettette tarvitse sitä...
+Pyydän, Leidi Gray, pelastakaa Hänen Ylhäisyytensä ja paetkaa!
+Vain te pystytte siihen...
+Vain te voitte suojella hänen onneaan!
+Sitä hänen äitinsäkin olisi halunnut!
+
+Siirtykää suojaan.
+Harhautan vartijoita.
+
+Voi ei!
+Vanki onnistui karkaamaan!
+Hän juoksi tähän suuntaan!
+Kiirehtikää ja napatkaa hänet, senkin taliaivot!
+
+Leidi Gray!
+Ei huolta!
+Rillipää selosti tilanteen.
+Hidastamme Lordi Johannin miehiä parhaamme mukaan.
+Ehkä me tyhjäntoimittajat voimme viimein olla teille hyödyksi edes hetken...
+Menkää!
+Pelastakaa Hänen Ylhäisyytensä!
+
+Hovineito onnistui näköjään kynsimään tiensä ulos tyrmästä.
+Gray!
+Teidän Ylhäisyytenne, oletteko kunnossa?!
+Olen pahoillani, Gray...
+En voinut mitään...
+Nyt kaikki ovat...!
+
+Mitä oikein on tekeillä, Johann?!
+Pelkäänpä, että saavuitte liian myöhään.
+Uhraukseni...
+Se on lähes valmis.
+Mitä...?
+
+Tässä maailmassa kaikella on hintansa.
+Opin sen, kun makasin puolikuolleena jo hiljentyneellä taistelutantereella ja hitaasti kuolin nälkään ja pakkaseen...
+Rukoilin tähtiä, mutta tähdet eivät vastanneet.
+Kunnes viimein en voinut muuta...
+... Kuin kirota surkeaa kohtaloani ja niitä, jotka olivat siitä vastuussa.
+Silloin he ilmestyivät luokseni.
+He lupasivat minulle elämää ja voimaa tämän maailman muuttamiseen.
+Vastineeksi he halusivat vain vankkumattoman vakaumukseni.
+
+
+
+
+
+
+
+
+Sen johdattamana tarjoan nyt tämän surkean kuningaskunnan asukkaat osana sopimustamme.
+Näyttäkää itsenne, Pohjattomat Lordit!
+
+Joo joo.
+Rajoita vähän tuota melodraamaa.
+...
+
+... Nämä viheliäiset ovat siis voimanne lähde...
+Demonit!
+
+Hmm, sillä nimellä te kuolevaiset taidatte meitä nyt kutsua...
+Vaikka se kuulostaa aika laimealta...
+En mene kaikkiin yksityiskohtiin, ne olisivat aivan liian monimutkaisia teille.
+Demoni käy.
+Minua ei kiinnosta hittoakaan, miksi kutsutte itseänne!
+Hänen Ylhäisyytensä ei liity tähän mitenkään, Johann!
+Uhraukseni on vielä hieman vajaa, eikö?
+... Pitää paikkansa.
+Yksi sielu uupuu.
+Mikäpä neuvoksi...
+Mitä jos auttaisitte minua, arvon leidi?
+Jos tarjoatte sielunne viimeisenä osana uhraustani, lupaan jättää prinsessanne eloon.
+... Ja miksi kummassa enää ikinä luottaisin sanaanne?
+Koska tartutte mihin tahansa oljenkorteen, joka voi turvata pikkuprinsessanne hengen.
+Aivan niin kuin teitte kaikkenne sen eteen, että saattaisin hänet alttarille.
+Turpa kiinni, senkin paskiainen!
+Jos vain olisitte silloin tiennyt, että olisin nainut hänet joka tapauksessa, jotta saisin suunnitelmani päätökseen...
+Maksoi silti vaivan leikkiä vaikeasti tavoiteltavaa, sillä nautinhan suuresti...
+Innokkuudestanne.
+...
+Joten tehkäähän se, minkä osaatte parhaiten!
+Kiemurrelkaa edessäni kuin maan matonen, oi Tuhoaja Gray!
+
+...
+Minä...
+Älä edes harkitse!
+...!
+Minun tuntemani Gray ei ole tuollainen nöyhtä!
+Moinen pokkurointi on säälittävää!
+Kaikkien näiden vuosien jälkeen...
+... Nytkö muka päätät lyödä hanskat tiskiin tuosta vain?!
+Lakkaa käyttäytymästä kuin pahainen luuseri!
+... Joutua nyt Hänen Ylhäisyytensä läksyttämäksi...
+Kuinka kertakaikkisen alas olenkaan vajonnut.
+Johann.
+Kieltäydyn.
+Sen sijaan pidän huolen, että saat maksaa teoistasi.
+Vannon sen Tuhoaja Grayn nimeen!
+
+...
+Bee.
+Ööh, se on ´´Lordi´´ Bee sinulle...
+Haluaisitko viihdyttää tätä hupakkoa?
+Ooooh, ihan tosi?!
+Saanko tehdä niin, siskoseni?
+... Tee mitä haluat.
+Mutta jos DIS saa tietää, olet omillasi.
+Jei!
+
+Terve!
+Olen Bee, Pohjaton Lordi!
+Hauska tavata.
+Nyt...
+ANTAA PALAA, KUOLEVAINEN!
+
+Kirottua...
+Mikä oikein olet?
+Höh, joko se hajosi?
+Tylsää.
+Olisit tyytyväinen, että hän kesti noinkin pitkään.
+Tyypillinen kuolevainen olisi jo seonnut nähdessään todellisen muotosi.
+Mutta se siitä.
+Leikkituokio on ohi.
+Saata uhraus päätökseen, korvike.
+Sen jälkeenkö sopimukseni on täytetty?
+Luonnollisesti.
+
+Oli todella vaikuttavaa seurata pyristelyänne.
+Harmi, että lopulta kävi näin...
+Olisin todella halunnut teidät rinnalleni, kun nousen tämän uuden maailman keisariksi...!
+
+(Hemmetti...)
+(Olen pahoillani...)
+(En voinut pitää lupaustani...)
+(Voin enää rukoilla Lilyn puolesta kanssasi... Tuonpuoleisessa...)
+
+Odottakaa!
+Hei, isosarvi!
+... Että mikä...?
+En täysin ymmärrä mitä on tekeillä...
+Mutta jos Johann kerran teki sopimuksen kanssanne...
+... Minäkin haluan solmia sellaisen!
+Tarjoan sieluni!
+Vastineeksi haluan vain, että jätätte Grayn rauhaan!
+
+Tämäpä vasta jotakin!
+Pikkuprinsessamme luulee sielunsa olevan jonkin väärti.
+...!
+Kuvitteletko todella, että voit tehdä sopimuksen tuosta vain?
+Kuinka sinisilmäinen täytyy olla moista julistaakseen!
+
+
+Hyvä on.
+
+Nuori neito.
+Suostutko uhraamaan sielusi sopimusta vastaan?
+Hetkinen nyt!
+Tämän täytyy olla huono vitsi!
+Tämä typerä kakara ei ymmärrä mitään todellisesta vakaumuksesta...!
+Sinä et siitä päätä, korvike.
+...!
+Oletteko varma tästä, arvon tuomari?
+DIS on jo hyväksynyt hänen ehtonsa.
+Sopimus voidaan laittaa toteen.
+Hoooo!
+Tästähän tuli ältsin kiinnostavaa!
+Kysyn vielä kerran, nuori neito.
+Suostutko uhraamaan sielusi vastineeksi tämän naisen hengestä?
+... Joo.
+Minä suostun.
+
+Teidän Ylhäisyytenne, odottakaa!
+En voi sallia tätä!
+Sinä siinä...!
+Vaikutat tämän joukon johtajalta...
+Pyydän, ottakaa sieluni hänen sijastaan!
+Vaikka sitten joutuisitte repimään ruumiini riekaleiksi!
+... Se ei ole mahdollista.
+
+Mutta jos todella tahdotte lunastaa hänen sielunsa takaisin...
+Tavatkaamme Pohjattomassa.
+Hän odottaa teitä siellä siihen asti.
+Siellä DIS punnitsee vakaumuksenne arvon.
+
+Mitä...
+Mitä tämä oikein on...
+Kuinka tämä on mahdollista...?!
+Gray.
+...!
+Murehdit liikoja.
+Näin on parempi.
+Aiemmin pelkäsin niin, että toivoin kuolevani...
+Nyt en tiedä mitä oikein tapahtuu, saati minne olen menossa...
+Mutta niin kauan kuin seisot siinä...
+En pelkää.
+Sillä kuten sinä aina jaksoit uskoa minuun...
+Minä asetan nyt uskoni sinuun.
+...
+Lily...
+Ja...
+Pidä siitä huolta, kun olen poissa.
+Se on tärkeä häälahja, enkä tiedä mitä tekisin, jos hukkaisin sen.
+Joten katsokin, että palautat sen, jooko?
+
+Arvon tuomari, aikamme käy vähiin...
+...
+Oletko valmis, nuori neito?
+Voit panna perseesi siitä pantiksi, tinapää!
+Olenkin miettinyt, milloin alan elää lempinimeni veroisesti...!
+Hyvä on.
+
+
+
+
+... Enpä olisi osannut arvata.
+Noh, lopputulos tämäkin.
+Valitettavasti en voi ottaa sitä riskiä, että jättäisin teidät henkiin.
+Tällä kertaa en iske ohi!
+
+Mitään ei tapahdu...?!
+
+Unohdettiin mainita tuossa hötäkässä.
+Koska et saanut uhraustasi valmiiksi ajallaan, sopimuksesi on mitätöity.
+Joten voit sanoa heipat noille maagisille napsautusvoimillesi ja niin poispäin.
+Et ole tosissasi, Bee...!
+Olin vain yhtä vailla!
+Ruikutuksesi ei voisi vähempää kiinnostaa.
+Mitä jos alkaisit sen sijaan selvitellä sotkujasi?
+Pikaisiin näkemisiin!
+
+Gray, pyydän...
+Tämä on ollut pitkä päivä meille kaikille...
+Joten rauhoituhan ja kuuntele.
+Et ymmärrä, mitä kaikkea olen joutunut kestämään päästäkseni tänne asti.
+Tein sen kaiken maani puolesta...
+Alamaisteni puolesta!
+Tässä ei ollut mitään henkilökohtaista teitä, prinsessaanne saati kuningaskuntaanne kohtaan!
+Sopimus sitoi minua...!
+Olin ansassa!
+En toivonut tätä!
+On totta, että olisin nainut prinsessanne joka tapauksessa...
+Mutta kun ymmärsin, miten pitkälle olitte valmis menemään varmistaaksenne avioliittoni Hänen Ylhäisyytensä kanssa...
+Päätin käyttää teitä hyväkseni, niin paljon kuin häpeän myöntää sitä...!
+Olen äärettömän pahoillani siitä ja tiedän, etteivät mitkään sanani voi hyvittää tekoani...
+Mutta arviointikykyni oli sumentunut...
+Antauduin himojeni vietäväksi...!
+Haluan sinut, Gray!
+Janoan sinua edelleen!
+Teen mitä vain!
+Kunhan säästät henkeni!
+En halua kuolla!
+En halua kuolla tällä tavalla!
+
+[Pohjaton Lordi Bee vyöryy yllesi]
+[Pohjaton Lordi Bee odottaa siirtoasi]
+[Pohjaton Lordi Bee odottaa edelleen...]
+[Pohjaton Lordi Bee haukottelee äänekkäästi]
+[Pohjaton Lordi Bee käy levottomaksi]
+[Pohjaton Lordi Bee naputtaa jalkaansa kärsimättömänä]
+[Pohjaton Lordi Bee on pakahtua malttamattomuuteensa]
+[Pohjaton Lordi Bee on saanut tarpeekseen]
+[Pohjaton Lordi Bee hyökkää laiskanpulskeasti kohti]
+[Pohjaton Lordi Bee loikkaa kimppuusi raivolla]
+
+[Isket hirviötä]
+[Isket hirviötä kaikilla voimillasi!]
+[Hirviö, jonka pelkkä olemassaolo loukkaa tätä maailmaa]
+
+Ette koske prinsessaan!
+Katoa!
+Kuole, hirviö!
+Maista tätä, kavala olento!
+Ette selviä tästä...!
+Tuhoan sinut!
+Kaiken pyhän puolesta...!
+ORRRYAAAAAGGGH!!!
+
+Auts... Vitsi vitsi!
+Kaipaa mausteita!
+Ei tee mitään!
+Siinäkö kaikki?
+Pistähän paremmaksi!
+Hyödytöntä...
+Älä naurata!
+Kyllästyn kuoliaaksi!
+MITÄ OIKEIN TEIT
+
+Vautsi!
+Näin lystiä minulla ei ole ollut aikoihin!
+Enkä edes muista, milloin viimeksi kuolevainen olisi saanut tirvaistua minua ihan kunnolla...
+Eiku hetki, muistanpas.
+EI IKINÄ.
+Tätä puolta sinusta en näekään kovin usein.
+Mahtoiko kuolevainen naarmuttaa egoasi?
+Turpa kiinni.
+...
+
+
+Minun on kerrottava jotain...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MITÄTÖN LOPPU
+Vaikka kuinka nukkuisit...
+Silmäluomesi ovat raskaat.
+Unet karkaavat ulottuviltasi.
+Muistatko, miksi olet täällä?
+Vai oletko unohtanut jotain tärkeää?
+Ilman sitä et koskaan löydä tietäsi päätökseen.
+... Kateellinen on myrkyttänyt kehosi, mielesi, vakaumuksesi.
+Etsi pimeä idoli, jotta voit puhdistautua ja aloittaa alusta.
+
+
+
+
+
+
+
+
+
+
+
+GRAYN PÄÄTÖS
+Olet matkannut kauas, muukalainen.
+Läpi näiden loputtomien käytävien olet osoittanut vakaumuksesi mitan.
+Onnittelemme sinua.
+
+
+Onneksi olkoon.
+Onneksi olkoon!
+
+
+
+
+
+
+
+
+
+
+Muukalainen.
+Vakaumuksesi on ylittänyt DIS:n odotukset.
+Siitä hyvästä DIS on valmis solmimaan sopimuksen kanssasi.
+Joten kerrohan.
+Mitä halajat?
+
+... Antakaa hänet takaisin.
+Pyydän, antakaa Lily takaisin.
+
+...
+Järkkymätön vakaumuksesi ei lakkaa hämmästyttämästä.
+Saat viedä yhden sielun mukanasi.
+Yhdellä ehdolla.
+Et enää koskaan saa palata tänne.
+Hyväksytkö nämä ehdot?
+
+Hyväksyn.
+
+Hyvä on.
+
+... Mitä oikein odotatte?
+En halua enää pelata pelejänne!
+
+Kohteessa on ilmennyt ristiriita.
+Tsygootti kohteen sisällä on kehittynyt blastokystiksi ja kiinnittynyt kohdun limakalvoon.
+Tsygomikä?
+... Rautalangasta väännettynä, prinsessa kantaa sisällään uutta sielua.
+
+Ei...
+Ei ei ei ei!
+Valehtelette!
+
+Muukalainen.
+Uskallakin sanoa se...!
+Kumman sielun haluat viedä mukanasi?
+
+Hiljaa!
+En halua kuulla enää sanaakaan!
+Luuletteko, että nielen tämän noin vain?!
+Huijasitte minua!
+
+Tämä DIS, johon koko ajan viittaatte...
+Haluan puhua suoraan hänelle!
+
+Haluan tietää, mitä oikein on tekeillä!
+Miksi leikittelette kanssani näin...
+... Kavalat demonit!
+
+Pidit toimiamme sitten sydämettöminä tai käsittämättöminä...
+Sinun on turha murehtia moisia, muukalainen.
+Sillä kävi miten kävi...
+Tämä valinta on luotu sinua varten.
+Vain sillä on väliä juuri nyt.
+
+... Haluan nähdä hänet.
+
+... Hyvä on.
+
+Hän...
+Nukkuu?
+
+Niinkin voinee sanoa.
+Elämää ylläpitävät järjestelmämme ovat vaivuttaneet hänet keinotekoista koomaa vastaavaan tilaan.
+Ei huolta, hänen leponsa on yhtä syvä kuin rauhaisakin.
+
+Tietääkö hän...?
+
+Erittäin epätodennäköistä.
+Jos ottaisitte hänet nyt mukaanne...
+Tämä kaikki olisi ollut hänelle kuin pelkkää unta.
+
+Kysyn vielä kerran, muukalainen.
+Mikä on päätöksesi?
+
+
+
+
+
+
+
+
+
+TOINEN TAPAAMINEN HÄNNÄN KANSSA
+Oho, sinä taas.
+...
+Olen pahoillani.
+Minun käskettiin olla puhumatta sinulle...
+
+... Anteeksi.
+Kanssasi oli mukava jutella.
+Mutten halua suututtaa Beetä.
+
+Jatkahan matkaasi...
+
+Minua on kehotettu olemaan puhumatta muukalaisille...
+
+Tervehdys!
+En olisi uskonut, että sinusta on siihen...
+Mutta tapoit sen juorukäärmeen.
+Kylmää kyytiä!
+Olisi oikeastaan pitänyt itse hoidella se mokoma...
+Ei sillä, että se hölösuu olisi mistään mitään tiennyt.
+Joten mitä viisauksia se ikinä jakoikaan kanssasi...
+Suhtaudu niihin varauksella.
+Meinaan, mitä hittoa se olisi muka voinut ymmärtää siitä, mitä tapahtui silloin...
+...
+Puhun pehmoisia.
+Mene ja kuole tai jotain.
+Törmäillään taas!
+
+Vaikutat kiireiseltä.
+Pidä hauskaa!
+PROLOGI
+Oletpa kasvanut...
+Mikä helpotus.
+Tämä maailma on ehtinyt muuttua.
+Mutta sinusta on tultava vahva, äitisi vuoksi.
+Hän odottaa edelleen...
+En voi enää tuottaa hänelle pettymystä.
+
+(...)
+(Näistä on pyyhitty pölyt hiljattain.)
+(... Senkin jukuripää.)
+
+(Jääkaappi on alkanut haista...)
+(Taidan suosiolla jättää avaamatta.)
+
+(Kaikki lääkkeet on levitelty ympäriinsä...)
+(Pöntössäkin on pillereitä...)
+
+(Kello näyttää pysähtyneen.)
+
+(Jotain rajaa näiden kirjojen kanssa...)
+
+(´´Dictionnaire Infernal´´...)
+(Kappale Beelzebubista, kärpästen herrasta, on merkitty yliviivaustussilla.)
+(... Minulla ei ole aikaa tähän hölynpölyyn.)
+(Tämä kirjahylly on yksi sekasotku...)
+
+
+
+(Tämä on tyystin kuihtunut.)
+(Et koskaan ollutkaan hyvä kukkien kanssa.)
+
+[Pöydällä on suljettu kirjekuori]
+[Se on osoitettu sinulle]
+[Haluaisitko avata sen?]
+
+(Mikä sotku...)
+(Syntymätodistuksen täytyy olla jossain täällä.)
+(Paras alkaa etsiä.)
+
+
+
+
+
+(... Ei mitään.)
+(Bingo!)
+
+...
+Se siitä sitten vissiin.
+
+TAAS YKSI TAPAAMINEN HÄNNÄN KANSSA
+Tervehdys, pikkuinen.
+
+Se puhuu...?!
+En kuullut vain omiani...
+Se todella puhuu!
+
+Pahoitteluni, säikäytinkö sinut?
+... Olisi pitänyt tajuta, kaltaisesi kun yleensä pitävät etäisyyttä minuun.
+Mutta vannon, etten halua pahaa.
+Totta puhuen en ole puhunut kenenkään kanssa ikuisuuksiin, joten tämä on oikein virkistävää.
+
+Vaikutat yllättävän rauhalliselta kokoiseksesi.
+
+No, en aivan joka päivä juttele jättikäärmeiden kanssa.
+Nyt kun mietin, olen saattanut kuulla sinusta tarinoita hyvin nuorena.
+Muistoni ovat aika hatarat...
+Muttet näytä aivan siltä kuin kuvittelin.
+
+Niinkö?
+... Se käy järkeen.
+Oletko kuullut myös Pohjattomista Lordeista, pikkuinen?
+
+Tarkoitatko demoneja?
+Joo, sillä nimellä...
+... Hän tapasi kutsua niitä.
+
+Kauan sitten minä olin osa yhtä Lordia.
+Vaikka kaikki Lordit kykenevät halutessaan muuttamaan muotoaan...
+Eus, minun Lordini, oli erilainen.
+Kertoman mukaan kaikki näkivät hänet omalla tavallaan, sillä hänen muotonsa peilasi katsojan tosirakkautta.
+Mitä tarkoitusta tämä piirre palveli, sitä en osaa sanoa.
+Mutta olen tainnut osittain periä sen.
+Ottaen huomioon, että pystyt näkemään todellisen olemukseni...
+Et ole tainnut vielä tavata ketään, jonka kanssa haluaisit lisääntyä?
+
+... Siistihän suutasi.
+Ei rakkaudessa ole kyse...
+... Lisääntymisestä...
+Ja on tässä ollut vähän ryppyjä rakkaudessa viime vuosina, kiitos vaan kysymästä.
+
+Olen pahoillani.
+Ymmärrykseni teistä kuolevaisista ja tavoistanne on rajoittunut.
+
+... Miksi käyn tätä keskustelua kanssasi?
+Mitä edes teen täällä?
+Eikö tämä ole pelkkää painajaista?
+
+Sinun näkökulmastasi se voisi hyvin ollakin.
+Älä kuitenkaan tuudittaudu liiaksi siihen uskoon.
+Ne, jotka ovat vailla voimakasta vakaumusta, väistämättä kadottavat itsensä tämän sokkelon syövereihin.
+Mitä sitten etsitkin...
+Toivon, että löydät sen ennen pitkää.
+
+... Kiitos, kai.
+
+Pidä huoli itsestäsi, pikkuinen.
+
+(Sen iho tuntuu oudon pehmeältä.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILJAN ENSIMMÄINEN UNI
+Ja siihen päättyy kierroksemme tältä erää.
+Mitä tykkäsitte?
+Toki, muutama soppi kaivannee pientä ehostusta...
+Mutta mistäpä ei pikku pintaremontilla selviäisi!
+Tilaakin on ruhtinaallisesti teille ja tyttärellenne.
+Tähän hintaan paikka on suoraan sanottuna oikea saalis!
+Ja tämä ilmassa leijuva tuoksu, koko talo suorastaan uhkuu historiaa...
+... Kertakaikkisen...
+... Henkeäsalpaavaa.
+...
+Suokaa anteeksi, poistun hetkeksi.
+Voitte sillä välin pohtia päätöstänne.
+
+Haloo, Gray puhelimessa?
+Sori, en ehtinyt vastaamaan aiemmin.
+Näyttö päättyi juuri.
+Miten tämän nyt muotoilisi...
+Paikka on vielä pahempi kuin kuvissa.
+Kuin pommin jäljiltä.
+...
+Taidan ottaa tämän.
+Tiedäthän, ettei vaihtoehtoja ole varsinaisesti liikaa.
+Tällä taustalla pankki ei suostu myöntämään suurempaa lainaa.
+Ei, en voisi millään ottaa sitä vastaan, kaiken sen jälkeen...
+Mutta arvostan tarjousta, todella.
+Pärjäämme kyllä.
+Töitä tässä kieltämättä riittää.
+Silti...
+Tämä tuntuu oikealta.
+Ei, hän ei ole moksiskaan.
+Päinvastoin.
+Okei, nukun yön yli, jos se helpottaa oloasi. 
+Nähdään myöhemmin.
+Äiti!
+
+Ja minnehän nuoren neidin kengät ovat karanneet?
+Riisuin pois!
+Ne on minun huoneessa!
+... Sinun huoneessasi?
+Joo, siinä isossa!
+Hidastahan hieman, kultaseni.
+Emme me vielä ole muuttamassa.
+Kaapissa oli kanssa tosi iso kuollut rotta!
+... Oho.
+(... Täytynee soittaa ensimmäisenä tuholaistorjujalle...)
+
+
+
+
+LILJAN TOINEN UNI
+Aikojen alussa, kun taivas ja maa olivat yhtä...
+Kukka puhkesi loistoon ja täytti avaruuden tähdillä.
+Tähtien valo antoi kaikille olevaisille ajatuksen ja tunteen.
+Näiden olentojen joukossa olivat myös ihmiset.
+Täynnä kiitollisuutta ihmiset alkoivat rukoilla tähtiä.
+Mutta tähdet eivät vastanneet heille.
+Ehkä he ovat liian kaukana kuullakseen meitä, ihmiset ajattelivat.
+Yhteisvoimin palvojat rakensivat korkean tornin.
+Sen huipulla ihmiset kasvattivat itselleen siivet ja saattoivat lentää niin kauas kuin silmä kantoi.
+Nämä sanansaattajat nousivat lentoon ja toivoivat jonain päivänä saavuttavansa ihannoimansa tähdet.
+Aika kului, kunnes eräänä päivänä tapahtui jotain odottamatonta.
+Tähti on laskeutunut, ihmiset julistivat innokkaina ja kerääntyivät langenneen tähden ympärille.
+Olivatko tähdet viimein vastanneet heidän rukouksiinsa?
+Tämän täytyi olla vastaus!
+Mutta langennut tähti ei loistanut kuten muut.
+
+Sen valo oli täysin pimeä, kylmä ja pohjaton tyhjyys.
+Tästä valosta nousivat esiin sanoinkuvaamattoman kavalat olennot.
+Olennot, jotka saalistivat heikkomielisiä ja tarjosivat heille voimaa ja ikuisen elämän...
+Sillä heille ihmiset olivat vain leikkikaluja, hedelmällinen maaperä kylvää hävityksen ja petoksen siemeniä.
+Ymmärrettyään paholaisten todellisen luonnon ihmiset telkesivät langenneen tähden syvälle torniin, jottei sen valo enää koskaan saavuttaisi yhtään elävää sielua.
+Mutta oli liian myöhäistä.
+Demonit olivat jo löytäneet tiensä ihmisten sydämiin.
+Ja niin, kuten ihmiset olivat oppineet ihailemaan tähtiä...
+He oppivat myös pelkäämään niitä.
+
+... Äiti?
+Niin, kultaseni?
+Voisitko lukea jonkun toisen tarinan ennen nukkumaanmenoa?
+Olen kuullut tämän jo monta kertaa!
+Useimmat ovat unohtaneet tämän tarinan tyystin.
+Haluan, että sinä muistat sen.
+Mutta miksi?
+Ei demoneja ole olemassa...
+Eihän?
+
+Ei tietenkään.
+Ja vaikka olisikin...
+Suojelisin sinua heiltä.
+Joten ei ole mitään pelättävää.
+
+... Haluaisin silti joskus kuulla tarinan Prinsessa Ruususesta...
+... Mitä jos lukisin sen sinulle ensi kerralla?
+Ihanko varmasti?
+Varmasti.
+Mutta nyt on aika sanoa hyvää yötä.
+Hyvää yötä, äiti.
+Rakastan sinua.
+
+LILJAN KOLMAS UNI
+Lilja!
+Etkö ole vieläkään valmis?
+Älä kurki!
+Oletko varma, ettet tarvitse apua?
+Joo joo!
+Yritähän sitten kiirehtiä.
+Kyytisi saapuu aivan kohta.
+Okei!
+
+
+
+...
+Onko sitä karkkia vai ei?
+
+Käytöstavat kannattavat.
+Terve.
+Ja sori tuota.
+
+Ei se mitään, yllätyin vain hieman.
+Toivottavasti paluumatkasi sujui hyvin.
+Perusmeininki.
+Säätä tuli kyllä jo ikävä...
+Ja nyt kun vielä muistan...
+Tuliaisia.
+Bonsuur ja niin edelleen.
+
+Hetkinen...
+Ovatko nämä Pr***D****t?!
+Suoraan tehtaalta.
+Piipahda puodissa, jos tarvitsee tehdä säätöjä.
+Näiden täytyi olla hintavat...
+Paljonko olen velkaa?
+Turha kavereiden kesken on kolikoita vaihtaa.
+... Kiitos.
+Toimistotyö on yhtä murhaa selälleni.
+
+Missäs pikkuprinsessa viipyy?
+
+
+
+
+
+Terve Sonia!
+Terve Freija-täti!
+Ooo, miten söpö asu.
+Äiti teki sen minulle!
+Hän on hiljattain ihastunut yhteen sarjaan...
+Hän vaatimalla vaati samanlaisen asun kuin sarjan päähenkilöllä.
+Hitto, tässähän alkaa käydä kateeksi.
+Tulisit meille töihin.
+Minun asu ostettiin supermarketista...
+Hiljaa mäessä.
+Suutarin lapsella ei ole kenkiä.
+Noh, alkakaahan te hunsvotit mennä.
+Kyyti odottelee jo.
+Ai, sinä et viekään heitä?
+Nääh, nakitin ukon.
+Joten miten olisi kupponen kuumaa sillä välin, kun nämä ovat sokerihumalakierroksellaan?
+Totta kai.
+
+Ja se oli kevyesti toiseksi suurin vohveli, jonka olen ikinä syönyt.
+Kuulostaa niin mukavalta paikalta...
+Pääsisinpä itsekin käymään siellä joskus...
+Lyöttäydy mukaan ensi vuonna.
+Voisimme ottaa tytötkin matkalle.
+Olisiko se sinulle okei?
+Toki.
+He ovat jo tarpeeksi vanhoja.
+... Niin.
+Aika todella kulkee kuin siivillä.
+...
+Sori uteluni.
+Mutta kuulin Sonialta, että Lilja oli taas joutunut tappeluun koulussa.
+... Miten olet jaksellut?
+...
+Lilja osaa olla omapäinen.
+Haluaisin uskoa, että se on vain ohimenevä vaihe.
+Mutta joskus mietin, olisinko voinut tehdä jotain toisin.
+Tai oliko minua tarkoitettu äidiksi ensinkään.
+... Gray.
+Sinua parempaa vanhempaa ei kukaan voisi toivoa.
+Liljakin ajattelee varmasti niin.
+Näkisitpä sen itsekin.
+...
+Et ole tainnut vieläkään kertoa Liljalle?
+... En.
+En edes tiedä, pystyisinkö.
+Ethän sinä mielelläsi kaappisi luurankoja tuulettele...
+Mutta sinun olisi aika oppia päästämään irti menneistä kaunoista, mitä ne sitten ovatkaan.
+Lilja ei ole tyhmä.
+Hän huomaa, ettet ole sinut tilanteen kanssa.
+Ehkä hän sen takia käyttäytyy niin...
+
+... Kuule, yritän vain sanoa, että sinun olisi hyvä rentoutua ja lakata olemasta noin ankara itsellesi.
+Milloin edes olet viimeksi käynyt ulkona?
+... En usko, että tässä iässä kuuluu murehtia moisia...
+Höpö höpö.
+Sinulle riittäisi varmasti vientiä.
+Vai luulitko, että ostin ne Pr***D****t vain selkäsi vuoksi?
+...
+... Kaikkea sinäkin julkeat.
+Siitä muistuikin, haluaisin esitellä sinut yhdelle tuttavalleni.
+Hän on eronnut ja lapsiakin löytyy ennestään.
+Vakaa ura ja kaikki.
+Enpä tiedä...
+Kamoon.
+Kerrankos sitä vain eletään.
+...
+Olkoot.
+Tämän kerran.
+... Suostuttelinko juuri Seipäännielleen Grayn treffeille?
+Joskus hämmästytän itseänikin.
+Alapas olla tai muutan vielä mieltäni.
+
+Kotona ollaan!
+Saitteko karkkia?
+Paljon!
+... Tiedäthän, ettet voi syödä kaikkea kerralla?
+Okei...
+Miltei unohdin!
+Teistä täytyy ottaa kuva.
+Hymyä!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILJAN NELJÄ UNI
+...
+Tämä menee liiallisuuksiin...
+Et ole tainnut meikata aikoihin?
+Korostamme vain hieman kasvojesi piirteitä.
+... Entäs tämä asu?
+Pientä korostustako vain?
+Vaatekaappisi oli rikos ihmiskuntaa kohtaan.
+Päivitimme sen tälle vuosisadalle.
+... Vilustun vielä tässä.
+Jo riittää pulinat!
+Katsotaanpa.
+...
+Mitä sanot?
+M A R V E L O U S !
+Mikä on tuomionne, teidän korkeutenne?
+... ...
+Oikea tyylilyyli!
+Milloin sinä opit moista kielenkäyttöä?
+
+DATING START
+
+... Olenkohan oikeassa pöydässä?
+...!
+No...
+En panisi pahakseni, vaikket olisikaan.
+... ... ...
+(Kerjäätkö äijä turpaasi?!)
+Anteeksi, en voinut vastustaa kiusausta.
+Iskurepliikit eivät oikeasti ole minun juttuni.
+Sinä olet Gray, etkö vain?
+Hauska viimein tavata.
+Samoin, Daniel...
+Pelkkä Dan riittää.
+
+Ottaisitko juotavaa?
+V-vettä vaan, kiitos.
+Ihanko varmasti?
+(Olenko niin hermostunut...?)
+Joo, ei tässä mitään!
+...
+...
+(Hitto, tämä meni nopeasti kiusalliseksi...)
+(Mitä Freija neuvoikaan...?)
+
+Mistäkö jutella ekoilla treffeillä?
+Älä sitä murehdi!
+Dan on tosi rento tyyppi.
+Ole vain oma itsesi, ja tulette varmasti juttuun alta aikayksikön!
+
+(... Kiitos tyhjästä.)
+(Keksi nyt jotain äkkiä!)
+
+[Keskustele säästä]
+[Keskustele Danin työstä]
+
+Ehkä voisin sittenkin ottaa teetä.
+Ulkona alkaa olla aika kylmä.
+Lumi ei haittaa, mutta en mielelläni...
+... Jäätyisi...
+Kuoliaaksi.
+Yritätkö vääntää tikusta asiaa?
+...!
+Freija sanoi, ettet juuri käy ulkona.
+Mutta vaikka hän on kertonut sinusta kaikenlaista...
+Et ole lainkaan sellainen kuin odotin.
+Kaikenlaista?!
+(Freija, nirhaan sinut.)
+... Tuntuu, että tuhlaan vain aikaasi.
+Et ollenkaan.
+Ilta on vielä nuori.
+
+Freija mainitsi, että työskentelet muotialalla?
+Jotain sen suuntaista...
+Odotin, että olisit pukeutunut...
+Tyylikkäämmin?
+Kalliimmin.
+Taisin jäädä kiinni.
+En tajua muodista hölkäsen pöläystä.
+Satun vain työskentelemään kirjanpitäjänä vaatteiden maahantuojalle.
+Ah.
+Kuulostaa...
+... Tappavan tylsältä?
+... Niin.
+Freijalla on tapana liioitella.
+Minullekin hän sanoi, että sinulla on todella suuret...
+... ... ...
+Odotukset.
+Näinköhän.
+Älä huoli, en ottanut sitä liian tosissani.
+Mutta ei siitä sen enempää.
+
+... Ensimmäistä kertaa ulkosalla vähään aikaan?
+Huomasit siis...
+Anteeksi.
+En ole tottunut tällaiseen.
+Freija antoi ymmärtää jotain sen suuntaista.
+Rentoudu.
+Samassa veneessähän tässä ollaan.
+Niinkö?
+Olen treffeillä ensimmäistä kertaa pitkään aikaan ja melkoisen ruosteessa.
+Jos totta puhutaan, alkoi jännittää, kun näin sinut.
+Mutta kaiken sen jälkeen, mitä olen Freijalta kuullut...
+En osannut odottaa, että olisit noin maanläheinen.
+Melkoinen helpotus.
+Nyt kun olemme saaneet jään murrettua...
+
+Mitä jos kertoisit hieman itsestäsi?
+Työskentelet kuulemma yliopistolla.
+Kuulisin mielelläni lisää siitä.
+Veikkaan, ettei se ole sinusta kovin kiinnostavaa.
+Puhut nyt kirjanpitäjälle.
+Kokeile edes huviksesi.
+No, varoitinpahan ainakin...
+Työskentelen kielitieteiden osastolla, joka on erikoistunut kuolleisiin ja uhanalaisiin kieliin.
+Oho, olet siis opettaja?
+En valitettavasti sinne päinkään.
+Enemmänkin assistentti.
+Suurimman osan ajasta autan vanhojen käsikirjoitusten taltioimisessa ja kääntämisessä.
+Kuulostaa varsin korkealentoiselta minun korvaani.
+No, maksaahan sillä laskut...
+(Hädin tuskin.)
+Miten päädyit tuollaiselle alalle?
+T-tykkäsin vain lukea paljon nuorena, siinä kaikki.
+(Emävale.)
+En oikein enää osaa mitään muutakaan.
+Ja silti...
+Vanhojen tekstien lukeminen on saanut minut ymmärtämään, miten pitkä matka meillä on takanamme...
+Nykypäivän ihmiset ovat unohtaneet niin paljon, ettet osaisi kuvitellakaan.
+Kokonaisia valtioita on kadonnut jälkeäkään jättämättä.
+Samalla on menetetty myös niitä asuttaneiden ihmisten lukemattomat unelmat ja muistot.
+Haluaisin vain ymmärtää sitä kaikkea, jottemme enää toistaisi heidän virheitään.
+...
+Anteeksi!
+Aloin höpöttää ihan omiani.
+Älä suotta.
+Häkellyin vain hieman.
+Tuntuu kuin hetken ajan olisin nähnyt sinusta aivan toisen puolen...
+...?
+Unohda mitä sanoin.
+Kunhan soitan suutani.
+
+Voisinko kysyä jotain?
+Totta kai.
+
+[Kysy hänen lapsistaan]
+[Kysy tulevasta]
+
+Haluaisin kuulla lapsistasi.
+Kaksiko heitä oli?
+Kyllä, tyttöjä molemmat.
+Kuinka vanhoja he ovat?
+Vanhempi neljätoista, kuopus kaksitoista vuotta.
+He alkavat olla herkässä iässä...
+Noin kevyesti muotoiltuna.
+He osaavat koetella viikonloppuisäänsä. 
+Mutten muuttaisi mitään.
+Pian he jo lentävät pesästä, joten yritän vielä roikkua mukana.
+He ovat parasta elämässäni.
+Entäs sinä?
+Sinullakin on tytär?
+...
+... Kyllä.
+Muutaman vuoden nuorempi, mutta...
+Hänessä riittää työsarkaa yhtä kaikki.
+Samaistun.
+Vaikken kyllä uskalla edes kuvitella, miltä tuntuisi kasvattaa lapsi aivan itsekseni.
+
+Mitä haluat tulevaisuudelta?
+Hmm...
+Elämä on asettunut raiteilleen viime vuosina.
+Mutta näin jälkikäteen tuntuu, että olen keskittynyt liikaa työhöni.
+Kaipaisin hieman jännitystä.
+Olisi mukava matkustella ja tavata uusia ihmisiä.
+Toivon mukaan saan houkuteltua jonkun mukaan reissuun ennen kuin tyystin rupsahdan.
+Oletko sinä sattumoisin matkustellut?
+En ainakaan muistaakseni...
+Hmm?
+Siis, tuota, en oikeastaan.
+Viime aikoina olen tosin toivonut, että voisin matkustaa jonnekin kauas.
+Jokin tietty paikka mielessä?
+Ei, minä...
+Minusta tuntuu, että haluaisin ennemmin jättää kaiken taakse.
+Suoraan sanoen tunnen syyllisyyttä siitä.
+Tämä kuulostaa varmasti todella typerältä...
+Jos pitäisi veikata, sanoisin, että useimmat ovat varmasti miettineet aivan samaa jossain vaiheessa.
+Ei siinä ole mitään väärää, jos minulta kysytään.
+Etkö pidä minua kauheana vanhempana, kun sanon tuollaisia ääneen?
+Sinähän olet edelleen täällä, vai mitä?
+Sitä paitsi, sinuun verrattuna olen päässyt helpolla.
+Olet joutunut kasvattamaan tyttäresi aivan yksin...
+... Freija ei sitten osannut pitää suutaan kiinni.
+...
+Anteeksi, pääsi lipsahtamaan.
+
+...
+... Koskeeko tämä ex-vaimoani?
+Tiedän, ettei moisia sovi ottaa esille ensitapaamisella, mutta...
+Olen valitettavasti niin vanhanaikainen, etten voi vain antaa asian olla.
+Ei se mitään.
+Aikuisiahan tässä ollaan.
+Tässä iässä painolastia on ehtinyt kertyä joka tapauksessa.
+Ja mitä tulee minuun ja ex-vaimooni...
+Asiat olisivat voineet mennä sujuvamminkin, mutta lopussa kaikki järjestyi.
+Elämä jatkuu.
+Entä lapsenne?
+Vaimoni huolehtii heistä nyt pääasiallisesti.
+Olen kyllä yhä parhaani mukaan osa heidän arkeaan.
+Se oli varmasti vaikeaa...
+Mutta olen iloinen, että onnistuitte pysymään väleissä.
+Niinpä, en voi kuvitellakaan, miltä tuntuisi kasvattaa lapset yksin...
+...
+... Olinpa ajattelematon.
+Freija mainitsi tyttäresi, mutta...
+
+Otaksun, ettei hänen isänsä ole enää maisemissa?
+... ... ...
+... Noinko paha.
+Anteeksi, ei olisi pitänyt ottaa asiaa puheeksi.
+Ei.
+Minun tässä pitäisi pyytää anteeksi.
+Tyttäreni...
+Lilja.
+En ole kertonut hänelle mitään hänen isästään.
+Vaikka se olisi väärin...
+Vannoin pitäväni huolen Liljasta.
+Muulla ei ole väliä.
+...
+Taidat todella rakastaa tytärtäsi?
+...
+
+Mitä minä oikein teen
+Miksi olen täällä
+Lily...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAPAAMINEN MONIN KANSSA
+Ksi shi shi shi shi shi shi...
+Muukalainen...
+Pursuavatko taskusi sirkkoja vai onko sinusta vain hauska nähdä minut?
+
+Kiinnostaisiko vaihtokauppa?
+
+Ottaen huomioon tilasi...
+Et tee noilla sirkoilla juuri mitään.
+Onneksesi tykkään keräillä niitä. 
+Joten miten olisi vaihtokauppa?
+
+
+
+
+
+Joten miten olisi, muukalainen?
+
+[Päätät vaihtaa sirkkasi tiedonjyvään]
+Kiitoksia.
+Korvat hörölle, vihje tulee tässä:
+Koeta olla kertomatta muille.
+Niin on paljon hauskempaa.
+
+
+
+
+
+[Hämärä kauppias pystyy hädin tuskin pidättelemään nauruaan]
+[...]
+[... Vedätettiinkö sinua juuri?]
+
+Hauska tavata vanha tuttu, muukalainen.
+Olet näköjään taas keräillyt sirkkoja ahkerasti.
+Käytäisiinkö kauppaa?
+Kaikki sirkkasi uutta tiedonjyvää vastaan.
+Jos et ole tyytyväinen...
+Saat puskea minut rotkoon.
+Mitä sanot, muukalainen?
+
+
+
+
+
+
+
+Lähdit viimeksi niin kiireellä...
+Mutta tarjoukseni on yhä voimassa.
+
+
+
+
+
+
+
+
+
+
+
+
+Niin jännittävää...!
+Okei, täältä pesee:
+Siinä kaikki.
+
+
+
+
+
+
+
+
+Kuten olet varmaan huomannut, näillä käytävillä vaeltelu käy työstä.
+On kuitenkin oikoteitä, joista vain harvat tietävät...
+Jos annat kaikki sirkkasi, saat vinkin, jonka avulla voit löytää yhden niistä!
+Sääli olisi, jos pääkopallasi ei olisi mitään työstettävää.
+
+Kaikki sirkkasi uutta vihjettä vastaan.
+Halunnet varmasti päästä tuoreen oikoreitin jäljille, eikö vain?
+
+[Päätät vaihtaa sirkkaidolisi vinkkiin]
+
+Äläs nyt, en sanonut, että oikotiet löytyisivät helposti...
+Eihän siinä olisi mitään hauskaa.
+
+Mahdatko enää muistaa, kuinka kauan olet ollut täällä...?
+Älä murehdi, totut vielä tunteeseen.
+
+Älä vain tuhlaa sirkkojasi niihin virnuileviin patsaisiin, ymmärrätkö?
+Samanlaisia turhakkeita kuin mallinsakin...
+
+
+
+
+Miksi pidän tätä lappua naamallani?
+Sanotaan vaikka, että se on meidän molempien parhaaksi.
+
+Mitäkö aion tehdä näillä sirkoilla?
+Ehkä se vielä selviää, jos pysyt kuvioissa...
+
+
+TAPAAMINEN PALKKASOTILAAN KANSSA
+Anteeksi...
+Olet tiellä.
+Turvat kiinni.
+Yritän selvittää tätä...
+Nämä kirotut patsaat...
+Enkös jo hoidellut kaikki hirviöt?
+Hetkonen.
+
+En siis kuullutkaan vain omiani tällä kertaa.
+Olet siinä, vai mitä?
+Ööö, mitä oikein selität?
+... Hmm?
+Miksi tuijotat minua noin?
+Näytit aluksi jotenkin tutulta...
+Mutta nyt kun katson tarkemmin, oletkin varsin näppärän näköinen likka...
+Ajattelinkin juuri levätä hetken...
+Liitytkö seuraani?
+Askelkin vielä ja tarjoilen perseesi hopeatarjottimella!
+
+Pyydän anteeksi!
+Lopeta jo, pyydän!
+
+En tarkoittanut sitä!
+Etkö vitsiä tajua?!
+(Mikä tätä pervoa vaivaa...)
+Olkoot.
+
+
+
+Sanohan, likka...
+Kuka opetti sinut tappelemaan noin?
+Se ei oikeastaan kuulu sinulle.
+... Ajatella, että hänellä olikin oppilas.
+Kertakaikkisen surkeaa tuuria...
+Tulit tänne viimeistelemään minut, vai mitä?
+Sinulla ei tunnu olevan kaikki kotona.
+Löitkö pääsi tai jotain?
+... Gray ei siis lähettänytkään sinua perääni?
+
+Mistä sinä tunnet hänet?
+En voi sanoa suoranaisesti tuntevani...
+Mutta kaikki palkkasotilaat ovat vähintäänkin kuulleet Tuhoaja Graysta!
+Minulla oli vain kerran kunnia tavata hänet kasvotusten...
+Tai pikemminkin hänen nyrkkinsä, jos tarkkoja ollaan.
+Siksi tunnistaisin tuon asennon missä vain!
+Hän koulutti sinut, eikö vain?
+En todellakaan ymmärrä tuota soopaa, jota suollat palkkasotilaista ja kaikesta muusta...
+Mutta Gray opetti minut pitämään huolen itsestäni.
+Etkö ole kuullut hänen teoistaan?
+Hän katosi vuosiksi pian sen jälkeen, kun hänen maineensa alkoi kiiriä ympäri maita ja mantuja...
+Kuinka hän sitten päätyi prinsessan henkivartijaksi...
+... Prinsessan?
+Turhaan tässä vatvotaan.
+Meillä on muutakin mietittävää.
+
+Nämä saakelin patsaat tukkivat tien uloskäynnille.
+Näen kyllä.
+Kun kerran olet tänne asti selvinnyt, tietänet niistä jo...
+Luulin hoidelleeni kaikki hirviöt...
+Sitten sinä tupsahdit paikalle ja kas kummaa, patsaat ovat yhä aloillaan.
+...
+...
+Älä vaan suunnittele mitään, likka!
+Älä viitsi...
+Jos haluaisin työntää sinut alas, olisin jo tehnyt sen.
+... ... ...
+Keksin kyllä jotain.
+
+[Pervoäijä vilkuilee sinua epäluuloisena]
+
+Hoitelit ne patsaat...
+Kiitoksia!
+Luulin jo, että jäisimme tänne jumiin iäksi.
+
+Mitä tuollainen söpöläinen edes tekee tällaisessa paikassa?
+Ajattelin levähtää tovin...
+Kiinnostaisiko liittyä seuraan?
+[...]
+Läppä läppä!
+Hittolainen, jos katse voisi tappaa...
+
+[Päätät jättää pervoäijän oman onnensa nojaan]
+
+Sait ratkaistua sen...!
+Mikä ihmeen sauva tuo on...
+Jonkinlaista taikuuttako?
+Et siis ole pelkkä herkkupeppu, älliäkin löytyy.
+Ole tyytyväinen, että hampaasi ovat vielä tallella.
+Otan vinkistä vaarin...
+
+Joko jatkat matkaasi?
+Enpä tiedä, miksi jäisin tännekään maleksimaan.
+Heh...
+Tuo asenne...
+Gray koulutti sinut hyvin.
+Teehän palvelus.
+Jos löydät tiesi ulos, vie hänelle terveisiä minulta.
+Jos olisimme tavanneet toisenlaisissa olosuhteissa, olisimme kenties voineet kallistaa kuppia joukolla vanhan eukkosi kanssa.
+... Hän ei ole vanha eukkoni.
+Ja pysy poissa tieltäni tästä edespäin.
+J-joo, käskystä.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILJAN VIIDES UNI
+Tämä on ennenkuulumatonta!
+Pyydän, ei ole tarpeen korottaa ääntä noin...
+Nyt ei ole sinun hetkesi esittää neuvoja.
+Olemme puhuneet tästä jo monta kertaa.
+Ja siitä huolimatta tyttärenne löytyy kerta toisensa jälkeen keskeltä rähinöitä...
+Tällä kertaa vuotta vanhempien oppilaiden kanssa!
+Minä kun ymmärsin, ettei Lilja aloittanut tappelua...
+Ei sillä ole väliä!
+Hän sai yhden pojan olkapään sijoiltaan!
+Ymmärrättekö, millainen vaiva oli saada hänen vanhempansa rauhoittumaan?
+Olen todella pahoillani...
+Tämä ei tule enää toistumaan.
+... Tämä on viimeinen mahdollisuutenne.
+
+Penni ajatuksistasi, nuori neiti.
+Mitä väliä.
+Vai aloitko yhtäkkiä välittää mielipiteestäni?
+...
+Puhuin rehtorin kanssa.
+Saat huomenna luvan pyytää anteeksi siltä pojalta.
+Yritä edes esittää katuvaa.
+Kiitos tyhjästä.
+Kaduttaa lähinnä se, etten ehtinyt hoidella toistakin kättä...
+Enkö tehnyt tätä selväksi, kun valmensin sinua?
+Nuo liikkeet on tarkoitettu vain itsepuolustukseen.
+Ne idiootit aloittivat!
+Naureskelivat koko ajan hiuksilleni ja äänelleni...
+Koska he tietävät, miten ärsyttää sinua. 
+Sinun täytyy vain oppia olemaan...
+Joo joo...
+Olemaan kuin en olisikaan.
+Mitä hevonpaskaa...
+Mitä sanoit?
+... Kukkua.
+
+Lilja...
+Olen aina sinun puolellasi.
+Se, mitä ne pojat sanoivat sinusta, miten he nimittelivät sinua...
+Ennen olisin piessyt heidä itse, jos olisin ollut paikalla.
+... Mikä sitten muuttui?
+Tulin vanhaksi.
+Tajusin, ettei potkiminen ja hutkiminen korjaa mitään.
+Kun teet niin, laskeudut vain heidän tasolleen.
+Sinä et ole sellainen.
+... .... ....
+Anteeksi...
+Että pilaan aina kaiken...
+Älähän nyt, rakas...
+
+... Onko nälkä?
+Voisimme napata jotain kotiin vietäväksi.
+... Joo...
+
+Telkkari on sitten pannassa seuraavan kuukauden.
+Eikäää!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TOINEN TAPAAMINEN LAPSEN KANSSA
+...
+Mitä oikein tuijotat?
+Lapsi?
+Kuinka sinä tänne olet päätynyt?
+... Ei kuulu sinulle.
+Jätä minut rauhaan.
+
+Etkö kuullut mitä sanoin?
+Vai oletko sinäkin joku hyypiö?
+Hyypiö?!
+Siltäkö muka näytän?
+Eikö sinulle ole opetettu kotona tapoja?
+Haista huilu.
+(Melkoinen asennekimppu...)
+(Noh noh, lasketaanpas kymmeneen ja rauhoitutaan.)
+(Kyllä tämä tästä selviää.)
+
+Taisimme kumpikin aloittaa vähän kärkkäästi.
+Nimeni on Lilja.
+Hauska tutustua, neiti...?
+... En puhu aikuisille.
+Teit juuri pahan erheen.
+Älä luulekaan, että olen kuka tahansa vanha pieru.
+Etkö näe, miten virkeä olen ikäisekseni?
+Ja muodikaskin vielä.
+... Vanha haahka ja pukeutuu noin...
+Ällöttävää.
+...
+(Kymmenen.)
+
+Kuule, en tiedä mikä sinua risoo, senkin pikku...!
+Mutta tarvitsen apuasi, jos aiomme päästä ulos täältä.
+Elävinä.
+En lähde minnekään.
+En jaksa enää juosta karkuun.
+...
+Näen, että sinua pelottaa.
+Se on ihan okei.
+En suoraan sanoen itsekään aivan ymmärrä, mitä täällä tapahtuu.
+Vaan tuleenkaan ei auta jäädä makaamaan.
+Joten ole kiltti ja auta minua.
+Selviämme tästä yhdessä.
+... ... ...
+Pidätkö minua ihan kakarana tai jotain?
+Ala painua ja vie siirappiset joutopuheet mennessäsi.
+...
+(Joo.)
+(Eiköhän se sitten ollut siinä.)
+
+[Tyttö ei kiinnitä sinuun enää mitään huomiota]
+[...]
+[Meni syteen tai saveen...]
+[Tämä ei ole todellista]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILJAN KUUDES UNI
+Valmistaudu kuolemaan.
+
+Annapa olla, nuori neiti.
+Alat olla turhan vanha tällaisiin leikkeihin.
+Ilonpilaaja...
+Ja valvoitko taas koko yön?
+Ei ihme, että nukut koko ajan pommiin.
+Äiti...
+Pääsykokeisiin on enää muutama viikko.
+Miten oikein saat luettua, jos et lepää kunnolla?
+Äiti!
+
+Niistä kokeista...
+Ajattelin pitää välivuoden.
+
+Välivuoden?
+Mistä nyt oikein tuulee?
+Lähden interrailaamaan Sonian kanssa.
+Juttelimme siitä viime yönä ja aloimme jo suunnitella reittiä.
+Älä huoli, olen säästänyt rahaa reissua varten, joten sinun ei tarvitse...
+Ei käy.
+... Miksei?
+Tajuatko, miten paljon hakijoita on?
+Tuoreena ylioppilaana sinulla on etulyöntiasema yhteishaussa.
+En anna sinun tuhlata sitä mahdollisuutta.
+Etenkin, kun aloitat asepalveluksesi ensi vuonna...
+Haluan, että saat varmistettua opiskelupaikan ennen sitä.
+Murehdit liikaa.
+Ei se ole niin vakavaa.
+Freijakin sanoi, että tämä on okei.
+... Eli minä olen ainoa, joka saa kuulla tästä vasta nyt?
+...
+Oli miten oli, vastaukseni on yhä ei.
+Soitan itse Freijalle ja kerron, ettet pääse lähtemään.
+Mutta äiti...
+Sinulla kyllä riittää aikaa matkustella vanhempana.
+Nyt sinun on ajateltava tulevaisuuttasi.
+... ... ...
+Äläpä nakkele niskojasi minulle, nuori neiti.
+Tämä on sinun parhaaksesi.
+Jaa minun parhaaksi vai omaksesi?
+...
+...
+Tämä keskustelu oli tässä.
+
+Kas, en kuvitellutkaan ihan omiani.
+Miten kaltaisesi torakka tänne löysi?
+Tulit kutsumatta, etkö vain?
+Rentoudu.
+En voi tehdä sinulle mitään.
+Vielä.
+Älä silti luule, että voit piilotella loputtomiin ´´unissasi´´.
+Ennemmin tai myöhemmin heräät.
+Ja silloin olet meidän armoillamme.
+
+[Sinun kannattaa herättää hänet ensin]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TOINEN TAPAAMINEN GORIN KANSSA
+(Valtava pää...)
+(Ette ole tosissanne.)
+
+(...)
+(Nukkuuko se?)
+
+Hngghh...
+Mitä olet vailla?
+(Se puhuu.)
+(Totta kai se puhuu.)
+
+Herätitkö minut ihan huviksesi vai?
+Sori, ei ollut tarkoitus häiritä...
+Mietin vain, voisitko mitenkään siirtyä hieman.
+Olet vähän tiellä.
+Eeeeeee...?
+Näyttääkö siltä, että liikahdan tästä minnekään lähiaikoina?
+... Eipä oikeastaan, nyt kun sanoit.
+Oliko se siinä?
+Voinko jatkaa kuolemista?
+Odota!
+Eikö alas ole mitään muuta tietä?
+...
+Olkoot.
+Jos pääsen sillä sinusta eroon.
+Täällä jossain pitäisi olla virnuileva patsas.
+Loikkaat vain suoraan sen edessä olevaan reikään.
+Sillä tavalla pääset jatkamaan matkaasi.
+Ah, hyppään siis vain suoraan surman suuhun, okei.
+... Ja hitot hyppään!
+Yrität vain huijata minua, vai mitä?!
+Ei voisi vähempää kiinnostaa, uskotko minua vai et...
+Oho, melkein unohdin.
+Tarvitset kikkaa varten uhrauksen.
+... Ai vuohen tai jotain?
+Eeeeeee...?
+Taidat olla vähän hidas.
+Mikä tahansa syötävä riittää.
+Kuulostaa todella epäilyttävältä...
+No haluatko apua vai et?!
+Joo joo.
+Hyppään sitten kaivoon ja lakkaa häiritsemästä minua ongelmillasi.
+Hitto teitä kuolevaisia...
+
+Tuo sauva...
+Mistä oikein sait sen?
+Tämäkö?
+Löysin sen sattumalta yhdestä arkusta.
+Sattumaltako?
+Tuo on Pohjaton Sauva.
+Se kuului johtajallemme, Lordi Addille.
+Tai no, entiselle johtajalle pikemminkin.
+En oikein käsitä, miten kaltaisesi kuolevainen kykenee käyttämään sitä...
+Siitä huolimatta haluaisin esittää pyynnön.
+Kuulisitko sen?
+... Ei oikeastaan kiinnosta.
+
+EEEEEEEEEEEEEE?!
+Oletko tosissasi?!
+Puhut mestatulle päälle, miten niin ei kiinnosta?!
+Haluan vain päästä pois täältä mahdollisimman nopeasti.
+Siitä asti kun jouduin tänne, olen nähnyt outoja unia...
+Kuin muistoja ajoista, jotka haluaisin unohtaa.
+... ... ...
+Jahas, minun mokani.
+Luulin, että sinulta löytyisi vakaumusta...
+Mutta oletkin vain yksi levoton sielu muiden joukossa.
+...?
+Ala painua jo...
+
+Miksi tuijotat minua noin?
+Tuo miekka...
+Mistä löysit sen?
+Ai tämäkö?
+... Satuin vain törmäämään siihen.
+...
+Elikkä meillä on hieno, selkeästi erityinen säilä...
+Joo.
+... Jonka satuit vain löytämään.
+Jep.
+... Ilman minkäänlaisia vihjeitä.
+Aika lailla.
+... ... ...
+Voitko tappaa minut sillä?
+...
+Mitä?!
+Oletko aivan kahjo?!
+Oho, sori...
+Unohdin tapani.
+Tapa minut, ole niin kiltti.
+... En aio tappaa ketään.
+Älä naurata.
+Olethan selvinnyt tänne asti.
+Miksi lopettaisit nyt?
+Mitä oikein selität?
+... ... ...
+Voi tuota nuoruuden viattomuutta.
+
+Kamoon, auttaisit nyt.
+Haluat päästä uloskäynnille, vai mitä?
+Yksi nopea pisto ei satuta ketään.
+...
+Miksi haluat kuolla noin kovasti?
+Nykyinen olemassaoloni ei ole sen parempaa.
+Tekisit meille molemmille palveluksen.
+Joten miten olisi?
+
+Okei...
+Teen sen.
+Jee!
+Mikä helpotus.
+Älä sano noin...
+... Anteeksi.
+Te kuolevaiset otatte tällaisen aika raskaasti.
+...
+Yksi juttu vielä.
+Jos törmäät siskooni, Taniin...
+Kerro terkkuja Gorilta.
+Häneltä puuttuu vasen silmä, tunnistat hänet varmasti, jos satutte tapaamaan.
+Siinä kaikki.
+Näkyillään, muukalainen!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TOINEN TAPAAMINEN MATKIJAN KANSSA
+Hei!
+Oletko eksyksissä?
+Näytät eksyneeltä.
+Leikitään hippaa!
+Hippa!
+Leikitäänkö?
+Mikä tuota lettiä vaivaa?
+Mitä?
+Mikä sinun nimesi on?
+Tämä paikka on tosi iso!
+Mitä sinä täällä teet?
+Oletko sinäkin hirviö?
+Minulla ei ole hajuakaan, mitä täällä tapahtuu.
+Eipäs aikailla!
+Katso mihin astut!
+Oletko hukannut jotain?
+Mikä surettaa?
+Onko jokin vinossa?
+Et vaikuta kovin välkyltä.
+Kuka sinä olet?
+Tiedätkö, miten täältä pääsee ulos?
+Seuraa minua!
+Ahahahaha!
+Terve.
+Kiirehdi!
+Melkein perillä!
+Anna mennä!
+Oletko varma, että osaat?
+Kuuntele tarkkaan!
+Kaikki täällä on niin outoa.
+Oikea huuliveikko!
+Tykkäätkö mekostani?
+Äiti teki tämän mekon minulle!
+Eikö olekin söpö!
+
+...
+Kauanpas siinä kestikin.
+Joko alat olla naatti?
+Vai elätteletkö yhä toivetta, että tämä olisi pelkkää unta?
+Spoilerivaroitus.
+Tästä et herää.
+Milloin oikein hyväksyt sen?
+Toisaalta...
+Oletkin aina ollut hyvä pitämään kulisseja yllä.
+
+Mitä edes teet täällä?
+Anna jo olla.
+Ei ole järkeä viivyttää väistämätöntä.
+...
+Älä katso minua noin.
+Olet säälittävä.
+...
+Pyydän...
+Mene pois.
+...
+Et selviä tästä.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAPAAMINEN YSTÄVÄN KANSSA
+(Ihminen?)
+Hei, oletko ihan okei?
+Oh!
+Jotain vialla?
+Miten k-kaunis...
+...
+Eh?
+Aaah!
+A-anteeksi!
+Ei ollut t-tarkoitus sanoa tuota ääneen!
+
+Olen p-pahoillani!
+En tarkoittanut mitä sanoin.
+...
+T-t-tai siis olet kyllä minusta todella nätti, minä vain...
+Kun hermostun, päästelen aina s-sammakoita suustani ja...
+... Olen nyt hiljaa.
+...
+No, ainakin näytät olevan kunnossa.
+
+Mitä olit tarkalleen ottaen tekemässä täällä?
+Törmäsin h-hirviöihin.
+Ajattelin, että ne eivät huomaisi minua näiden k-kivien seasta...
+Sori nyt vaan...
+Mutta et taida olla mikään valeasujen mestari.
+... ... ...
+(Älä vaan sano, että otit tuosta itseesi?!)
+Oli miten oli, hirviöistä ei tarvitse kantaa enää huolta.
+Hoitelin ne pois päiväjärjestyksestä.
+T-todellako?
+Uskomatonta...
+(Mikä häntä vaivaa?)
+[Ujo nainen vilkuilee sinua]
+[...]
+
+M-mitä tuolle lattialaatalle oikein tapahtui?
+Osaatko sinä t-taikoa?
+Ah, tuoko?
+Siitä on kiittäminen tätä sauvaa, jonka löysin.
+En tarkalleen tiedä, mikä sitä keinuttaa...
+Mutta se on kieltämättä ollut hyödyksi.
+...
+Ota minut!
+... Mitä.
+T-tarkoitan...
+Pyydän, ota minut mukaasi!
+Törmään jatkuvasti hirviöihin, enkä oikein pärjää niille...
+Joten ole kiltti, a-auta minua.
+(Tässä on tarpeeksi haastetta ilman riippakiveäkin...)
+(Mutta voinko jättääkään häntä noin vain...?)
+
+Hyvä on.
+Voit tulla mukaan.
+I-ihanko varmasti?
+Joo.
+Kunhan pysyt poissa tieltä.
+Kiitos!
+Kiitos niin paljon!
+Lupaan, etten ole v-vaivaksi.
+Älä sitä liikoja murehdi.
+Nyt kun meillä kerran on sama matka, esittelyt lienevät paikallaan.
+Nimeni on Lilja.
+Entäs sinun?
+Ni...
+Ninni.
+Hauska tavata, Ninni...
+Eiköhän etsitä yhdessä tie ulos tästä kiipelistä!
+J-joo!
+
+M-mene vain edeltä.
+Kunhan tie uloskäynnille on selvä, pysyn kyllä p-perässä.
+
+
+
+
+
+
+
+
+A-anteeksi, ei ollut tarkoitus olla tiellä...
+T-teinkö jotain väärin?
+
+[Ujo nainen kannustaa sinua jatkamaan]
+[Ujo nainen vaikuttaa hermostuneelta]
+Ööh...
+Löysin nämä a-aikaisemmin, kun olin piilossa...
+En tiedä tekeekö niillä mitään, mutta voit pitää ne, jos h-haluat.
+
+Nuo h-hirviöt...
+Niitä on kaikkialla...
+Tarvitsetko tauon?
+E-ei, olen kunnossa!
+Pärjään kyllä, kiitos.
+En halua pidätellä sinua...
+
+Loppua ei näy...
+Ä-älä anna periksi!
+Sinä pystyt siihen.
+Kiitti.
+
+Onko jokin p-pielessä?
+Nuo patsaat tukkivat reittimme...
+Edes minä en saa hoideltua niitä.
+...
+... Oletko...
+Törmännyt noihin patsaisiin aiemmin?
+E-en usko.
+Miten niin?
+Äh, toivoin vain, että tietäisit niistä jotain.
+Ne näyttävät niin uhkaavilta.
+Mutta näyttää siltä, että onnemme loppui tähän.
+E-ehkä voisimme levätä ja yrittää keksiä jotain...
+Ehkä meiltä jää vain jotain h-huomaamatta.
+... Joo.
+Tehdään niin.
+Lienee tosin parasta pitää vahtia vuorotellen.
+Uskotko pärjääväsi?
+T-teen parhaani!
+
+Voit l-levätä nyt.
+Minä otan ensimmäisen vuoron.
+Se on vähintä mitä voin t-tehdä.
+Hyvä on, mutta herätä minut heti, jos jotain sattuu.
+J-joo...
+
+[Ujo nainen tekee parhaansa]
+
+Saitko l-levättyä?
+Hädin tuskin.
+Täällä on niin vaikea nukkua.
+Olen kadottanut ajantajuni tyystin.
+Oletan, ettet ole saanut mitään erinomaisia ideoita tällä välin?
+E-en...
+Anteeksi...
+Älä suotta pyytele.
+
+...
+Onko sinulla jotain mielen päällä?
+Minä vain m-mietin, Lilja...
+Muistatko, miten päädyit tänne?
+Miksi yhtäkkiä kyselet moisia?
+M-m-minä...!
+Ajattelin, että ehkä saisimme jonkin j-johtolangan, miksi olemme täällä ja mikä paikka tämä oikein on...
+Olen tainnut jo unohtaa yksityiskohdat...
+Mutta muistan valtavan varjon, joka ilmestyi huoneeseeni.
+Ja ennen kuin ehdin kissaa sanoa, putosinkin jo tyhjästä ilmestyneeseen outoon reikään.
+Kuulostaa hullun horinoilta, vai mitä?
+Tai unelta.
+Ei erityisen hyödyllistä tietoa.
+... Niin.
+Entäs sinä?
+Muistuuko mitään?
+...
+Ninni?
+E-ei yhtikäs mitään!
+Olen kuin puulla päähän lyöty.
+Vaikutat aika kireältä.
+Lepäisit hieman nyt.
+Uh-huh...
+Älä huoli, pidän vahtia.
+... Kiitos, Lilja.
+
+[Ujo nainen nuokkuu unisena]
+[...]
+[Jos toimit nopeasti...]
+[Ei]
+
+Huomenta.
+... Luulisin?
+Anteeksi, ummistin silmäni vain hetkeksi...
+Ei se mitään.
+En saanut unta, joten p-pidin itse vahtia.
+Tilanteemme ei näytä juuri muuttuneen.
+E-ei oikein...
+Tämä on hyödytöntä...
+Tätä menoa emme ikinä...
+...
+Jestas, että alkaa käydä aika pitkäksi.
+...?
+Olin jo muutenkin kurkkuani myöten täynnä näitä saakelin käytäviä.
+Mikä piikki perseessä.
+Kuka tämän takana onkin, toivoa sopii, että hän on valmis kunnon selkäsaunaan.
+... Eikö sinua ollenkaan pelota?
+Aivan kuin sillä jotain saavuttaisi.
+Kuuntele, Ninni.
+Selviämme kyllä tästä sotkusta.
+Joten älä ala maalailla piruja seinille ihan vielä.
+...
+...
+Kadehdin sinua, Lilja.
+Sitä miten vahva olet...
+En voisi edes kuvitella olevani yhtä itsevarma kuin sinä.
+Olen aina vain...
+Mennyt virran mukana ja pysytellyt t-taka-alalla.
+Jotta muut jättäisivät minut rauhaan...
+...
+... Änkytyksestäsikö tässä kiikastaa?
+H-huomasit siis...
+Anteeksi, sen täytyy kuulostaa todella ä-ärsyttävältä...
+Höpöhöpö.
+Olisitpa kuullut minun äänenmurrokseni.
+Siitä vasta riittikin kiusaajille naurunaihetta.
+E-ei voi olla!
+Sinuako kiusattiin?
+Kuinka...?
+... Pärjäsin sen kanssa?
+Ainahan minua neuvottiin vain kääntämään toinen poski.
+Mutta elämä ei ole niin yksinkertaista.
+Ennen pitkää on opittava pitämään itse puolensa.
+Tavalla tai toisella.
+...!
+...
+Mitä oikein virnuilet?
+Sinä todella olet vahva, Lilja.
+...
+... ... ...
+O-oletko kunnossa?!
+Naamasi valahti yhtäkkiä ihan **********...!
+EEEI TÄSSÄ MITÄÄN!
+(Ei helvetti, ei jumalauta.)
+(Oliko hän kaiken aikaa noin söpö?!)
+Ehkä voisin opettaa sinulle pari liikettä, kunhan olemme saaneet tämän pois alta.
+Oikeastiko?
+Luuletko, että oppisin?
+On hyvin harvoja asioita, joihin harjoittelu ja raaka voima eivät tepsisi.
+Ken tietää, mikä luonnonlahjakkuus tuon otsatukan takana piilottelee.
+Heh, epäilen...
+Mutta arvostan silti t-tarjousta.
+...
+Olen iloinen, että sain tavata sinut, Lilja.
+Jos vain olisimme kohdanneet aikaisemmin...
+Mitä oikein höpötät?
+Emme ole vielä mennyttä kalua.
+... Niin.
+
+Kiitos, Lilja.
+Voin pitää vahtia, jos sinua v-väsyttää.
+Olen varma, että keksit ratkaisun, kunhan saat levättyä tarpeeksi.
+
+[Ujo nainen nyökkää sinulle hymyillen]
+[...]
+[Naamasi alkaa taas vaihtaa väriä]
+
+En minä yleensä näin pehmoisia puhu...
+
+N-nähdään.
+
+Uh, tämä huone on oikea sillisalaatti...
+Tämä olisi v-varmaan paljon helpompaa yksin...
+...
+Heitä nyt lisää suolaa haavoille.
+Aaah!
+
+Varo!
+Valtava m-majava jahtaa sinua!
+...
+(... Tuo ole majavaa nähnytkään.)
+
+T-tuo otus...
+Mikä se oikein on?!
+Ei mitään hajua...
+Mutta jos se pääsee vapaaksi, se on pian kiinni perseessäni kuin täi.
+K-kuulostaa kivuliaalta.
+(Kai tiedät, että se on vain kielikuva?)
+
+T-taas yksi!
+Nuo eivät sitten osaa antaa periksi.
+Ainakaan ne eivät vaikuta kiinnostuneen sinusta.
+Itse asiassa siitä voi olla jopa hyötyä.
+Jos voin m-mitenkään auttaa, sano vain.
+...
+K-kunhan et työnnä minua sitä päin!
+
+Taas nuo patsaat...
+Onko jotain vialla?
+Ne tykkäävät kyttyrää, jos käytän sauvaa niiden läheisyydessä...
+Täytyy olla varovainen.
+P-pystyt kyllä siihen!
+
+Tämä huone ei vaikuta niin p-pahalta.
+En pidä tästä...
+Hemmetin epäilyttävää.
+Jatketaan matkaa.
+
+Roikutko vielä mukana?
+J-joten kuten.
+Pysy rauhallisena.
+
+Lilja!
+L-luulin jo kadottaneeni sinut...
+Anteeksi...
+Oletko kunnossa?
+J-joo, nyt kun olet siinä.
+
+Ei taas näitä patsaita...
+Ole v-varovainen!
+
+Aaah!
+Tuo stalkkeri liikkuu ihan kuin sinä!
+Ne ovat aika puistattavia.
+Mutta voinen huijata sitä.
+Tarvitsen vain jotain...
+Tai jonkun.
+O-ole hellä!
+
+Ei taas...
+Hauskanpito kielletty.
+Ehkä voisit työntää nuo p-patsaat alas?
+... Se saattaisi hyvinkin toimia.
+Ja minä kun kuvittelin, ettet ole mikään penaalin terävin kynä.
+... ... ...
+Se oli vitsi!
+
+Tarvitsetko tauon?
+Pärjään kyllä, k-kiitos.
+Hihkaise, jos etenen liian nopeasti.
+
+Vaikuttaa hankalalta...
+Jos tarvitset a-apua...
+Voin painaa tuota kytkintä!
+(... Voisikohan se toimia?)
+
+Stalkkeri ja kusipääpatsas...
+Mikä tuuri.
+K-keksit kyllä jotain!
+
+Hmm...
+En pääse uloskäynnille aktivoimatta noita lattialaattoja...
+Jos uloskäynti vain olisi tällä puolella...
+
+Pidä varasi, tässä ei ole paljoa tilaa liikkua.
+...
+Ninni?
+Aaah!
+(Mitä hän oikein tuijotti...?)
+
+Varo!
+Tiedetään!
+Tästä ei mennä yli eikä ali...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILJAN SEITSEMÄS UNI
+Oletko nyt aivan varma?
+Voi herramunjee, kyllä.
+...
+Mistä kiikastaa?
+Entäs äitisi?
+Onko tämä hänelle okei?
+Älä sinä hänestä murehdi.
+Antaa palaa!
+
+Kotona ollaan!
+Johan siinä kestikin...
+Päivällinen on kohta valmis.
+...
+M-mitä...
+Mitä hiuksillesi oikein on tapahtunut?!
+Ehehehe...
+Huomasit siis.
+Olet selityksen velkaa, nuori neiti.
+Sonia halusi harjoitella.
+Joten tarjouduin vapaaehtoiseksi.
+Eikö hän olisi voinut pyytää ketään muuta?!
+Olet kasvattanut tukkaasi pienestä asti!
+Se ei ehkä enää koskaan kasva yhtä pitkäksi!
+No ei mahda mitään.
+Tehty mikä tehty.
+
+... Mikset sanonut minulle mitään etukäteen?
+Koska tiesin, että alkaisit vain vaahdota ja kieltäisit koko jutun.
+Olen jo tarpeeksi vanha päättämään itse, mitä teen tukallani.
+Et selvästikään.
+Mitä tuo nyt muka meinaa?
+Vaihtelu virkistää.
+Sitä paitsi, lyhyt tukka on nyt muotia.
+Pojatkin tykkäävät.
+Eli leikkasit hiuksesi vain jonkin ohimenevän villityksen vuoksi...
+Tehdäksesi vaikutuksen aivottomiin nulikoihin?
+Tiedätkö, mitä sanotaan naisista, joiden tukka on poikki?
+Ööö, terveisiä vaan keskiajalle, mummeli.
+Mitä jos kävisit itsekin parturissa vähän karsimassa latvoja?
+Saattaisit päästä pitkästä aikaa pukille ja alkaa taas nauttia elämästä.
+
+...!
+Minähän en kuuntele moista kielenkäyttöä keneltäkään tässä huushollissa.
+Miten sinusta tulikin noin koppava...
+Olet pahempi kuin äitisi!
+... ... ...?
+!!!
+Ä-äiti?
+Häivy.
+En kestä nähdä sinua tuollaisena.
+Mutta...
+Pois silmistäni!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAPAAMINEN VANHAN MIEHEN KANSSA
+...!
+(Miksi tuo vanha ukko tuijottaa minua noin...?)
+Taas yksi temppu...?
+Te paholaiset...
+Eikö pahansuopuutenne tunne mitään rajoja...
+Anteeksi, mikä mahtaa olla ongelma?
+Katoa, demoni!
+!!!
+(Ehkä kannattaisi jättää hänet rauhaan...?)
+... ... ...
+Hmm.
+Taisin erehtyä henkilöstä.
+
+Mitä nuori tyttö tekee tällaisessa paikassa?
+Ja mitä ihmettä hiuksillesi on tapahtunut?
+Kenties jonkin sortin onnettomuus?
+Tukkani voi oikein hyvin, kiitos kysymästä.
+Ja ketä oikein luulet tytötteleväsi?
+Noinko muka naisia puhutellaan?
+Vai karkasitko hoivakodista, ukkeli?
+Typerä nainen...
+Onko sinulla aavistustakaan, kenelle oikein puhut?
+Ole vaikka Ihansamasen keisari.
+Mutta tuollaista ylenkatsovaa asennetta en jaksa kuunnella.
+...
+...
+Hahahahaha!
+(Äijällä taitaa olla ruuvi löysällä...)
+Tällaiseen tilaanko maailmamme on ajautunut...
+Tai ehkä vain olin väärässä alusta alkaen.
+...?
+Älä minusta piittaa, nuori neito.
+Kehottaisin sinua jatkamaan matkaasi.
+Tämä ukkeli tuskin voi auttaa sinua.
+
+[Vanha mies rohkaisee sinua jatkamaan matkaa]
+[...]
+[Outo ukkeli]
+
+
+
+
+
+
+
+
+
+
+
+POHJATON LOPPU (GRAY)
+[Sinun tahtosi...]
+[Miksi olet täällä?]
+[Nimet ja kasvot, jotka vielä hetki sitten olivat kirkkaina mielessäsi...]
+[Et muista niitä enää]
+[Tuntuu kuin olisit menettänyt jotain]
+[Jotain todella tärkeää]
+
+... Kuinka valitettavaa.
+Mutta sille ei voi mitään.
+Sillä vakaumus ilman tarkoitusta on silkkaa typeryyttä.
+Älä silti pelkää, muukalainen.
+Me tapaamme vielä.
+Olen varma siitä.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GRAYN MUISTOT
+... Haloo?
+Freija?!
+Mistä oikein sait tämän numeron...
+En minä sillä, tämä vain tuli vähän äkkiä.
+Onko jotain sattunut?
+... ... ... 
+...
+Joo, olen täällä.
+Voisin-
+Voisinko soittaa takaisin?
+Kiitti.
+
+Freija.
+Kuinka sinä ja Gray tapasitte?
+... Miksi yhtäkkiä kyselet tuollaisia?
+Tiedät kyllä miksi.
+Isäni...
+Tapasitko koskaan isääni?
+Lilja...
+En ole enää lapsi.
+Ole kiltti ja kerro.
+...
+Taidan olla selityksen velkaa.
+
+Siitä on jo vuosia, mutta muistan sen päivän kuin eilisen.
+Laskettuun aikaan oli enää viikko ja pystyin hädin tuskin nukkumaan.
+Joten nousin varhain seuraamaan auringonpimennystä.
+Kun se oli ohi, huomasin outoihin rääsyihin pukeutuneen naisen keskellä tietä.
+Hän vain kyyhötti siinä vaiti ja piteli varoen jotain käsissään.
+Aivan kuin hän olisi ilmaantunut tyhjästä.
+... Se nainen oli Gray, niinkö?
+Niin.
+
+Kun astuin lähemmäs, katseemme kohtasivat.
+En ollut koskaan nähnyt yhtä tummia silmiä.
+Hän oli kyynelten partaalla.
+Kun hän alkoi viimein puhua, en ymmärtänyt sanaakaan.
+Mutta oli päivänselvää, miten peloissaan hän oli.
+Sitten näin mitä...
+Ketä hän piteli.
+
+Pieni ja hauras vauva.
+Kuin nukke.
+Luulin näkeväni unta.
+Mutta siinä sinä olit, Lilja.
+... Ja mitä sitten tapahtui?
+No, enhän minä teitä siihenkään kehdannut jättää.
+Joten otin teidät huostaani.
+
+Kun pahin pöly oli ehtinyt laskeutua, veimme teidät terveystarkastukseen.
+Sinä olit jo ehtinyt kasvaa ja olit täysin terve.
+Mutta Gray...
+Sitä ei päällepäin heti huomannut, mutta hänen kehonsa oli vanhojen arpien ja mustelmien peitossa.
+Lääkäri huomasi myös jotain poikkeuksellista.
+Graylta puuttuivat niin munasarjat kuin kohtukin, kuin ne olisi kokonaan poistettu.
+Mistään leikkauksesta ei kuitenkaan ollut merkkejä, vaikka hänen sisuskalunsa olivatkin kokeneet kovia.
+Oli selvää, ettei hän olisi koskaan kyennyt kantamaan lasta.
+...
+Tulipahan sille varmistus.
+Et vaikuta yllättyneeltä.
+Olihan minulla epäilykseni.
+Ehkä pidempään kuin haluaisin myöntää.
+
+Entä oikeat vanhempani?
+Eikö Gray koskaan kertonut mitään heistä?
+Ei juurikaan.
+Kun kysyin isästäsi, Gray vain sanoi hänen kuolleen kauan sitten.
+Ja äitisi...
+Gray ei koskaan kertonut hänestä mitään.
+Mutta aina kun otin asian puheeksi...
+Gray ei sitä tietenkään myöntänyt, mutta aihe selvästi repi auki paljon syvempiä haavoja kuin ne, joita hän kantoi ihollaan.
+... Pitäisikö tässä nyt tuntea jotain sääliä vai?
+Lilja...
+En voi väittää ymmärtäväni, mitä kaikkea joudut nyt käymään läpi.
+Tiedän vain, että Gray piti sinusta aina huolta kuin omastaan.
+Hän rakasti sinua enemmän kuin mitään tässä maailmassa.
+
+Rakasti?
+
+(Olen saanut tarpeekseni...)
+(Antakaa minun vain...)
+Lopettaa kaikki.
+
+Taas yksi puree tomua!
+Ja voi pojat, että siinä kestikin.
+Voi voi ja lämmin leipä.
+Hänestä sentään kehkeytyi vallan mehukas suupala.
+Outoa.
+En tiennytkään, että nämä hohtavat.
+MMMIIITTYYÖÖÄÄÄÄÄHH???!!
+Mit-
+... Gray?
+...
+Nyt sitten päätit ilmaantua paikalle.
+Mikä kesti?
+Ehtikö tulla ikävä poissa ollessani?
+
+Kissa taisi viedä kielesi.
+Taas.
+Et kai ole yhä vihainen tukastani?
+Koetin taannoin värjätäkin sitä.
+Väri ei ikävä kyllä tuntunut pysyvän.
+Olisit saanut taatusti hepulin.
+
+Taas tuo tuomitseva katse...
+Alkaa palautua mieleen, miksi lähdin lätkimään.
+Vaikka kuinka kovasti yritin...
+En ollut koskaan tarpeeksi hyvä sinulle.
+Aivan kuin...
+Aivan kuin olisit odottanut minun kasvavan joksikuksi, joka en ole.
+Vaikka olisin vain halunnut olla...
+... Enemmän sinun kaltaisesi.
+
+
+Miksi?
+Mikset kertonut minulle mitään?
+Jos kerran olin sinulle niin suuri taakka, olisit voinut vain hylätä minut, kun olin pieni.
+Olisit säästänyt itsesi tällaiselta maanvaivalta.
+
+Oikeasti...
+Avaisit jo suusi, senkin harppu!
+Älä väitä, että kaikkien näiden vuosien jälkeen...
+... Sinulla ei muka olisi mitään sanottavaa!
+Olet tätä parempi!
+Olet vahvin ihminen, jonka koskaan olen tuntenut!
+Et mikään luuseri, joka heittää lusikan nurkkaan tuosta vain!
+Ihailinko sinua koko elämäni aivan turhaan?!
+
+Ole kiltti...
+Sano jotain...
+
+Olen yhä vihainen sinulle.
+Toivon vain, että olisit täällä kuulemassa sen.
+
+Äiti...
+Hyvästi.
+
+[Kirjekuoren sisältä löytyy pieni riipus sekä käsinkirjoitettu kirje]
+[... Pitäisikö sinun lukea se?]
+
+Sinä et kuulu tänne, pikkuinen.
+
+... Näytämme olevan yhtä vailla.
+Mitä hänelle oikein tapahtui?
+Ken tietää.
+...
+Mielenkiintoista.
+
+Muukalainen.
+Ei ole mikään kevyt tehtävä selviytyä tänne asti...
+Mutta DIS ei havaitse sinussa suurta vakaumusta.
+Tavallisesti heikot sielut vain vaipuvat hiljalleen tämän labyrintin syövereihin.
+Silti seisot nyt edessämme.
+Tilanne on kovin epätavallinen...
+Etkä voi tännekään jäädä.
+Mikäli suostut lähtemään rauhassa...
+DIS on valmis solmimaan sopimuksen kanssasi.
+Joten kerrohan.
+Mitä halajat?
+
+Halajan?
+En ole koskaan oikein ajatellut asiaa.
+
+Varmasti on jotain, mitä sielusi janoaa.
+Voimaa?
+Vaurautta?
+Rakkautta?
+Tai kenties...
+Jotain, mitä olet menettänyt.
+Jotain todella tärkeää.
+
+... ... ...
+Pystyisittekö todella toteuttamaan jotain sellaista?
+Kuka...
+Mitä te oikein olette?
+Demoneja?
+Jumalia?
+Vastaukset tuollaisiin kysymyksiin olisivat sinulle merkityksettömiä, muukalainen.
+Jotain voin kuitenkin sanoa.
+Ei ole niin suurta toivetta, ettei se olisi mahdollisuuksien rajoissa.
+...!
+
+Onko jokin vialla?
+Olen kunnossa.
+Minua vain huimasi hetken.
+Jos saisin toivoa yhtä asiaa...
+
+Haluan äitini tietävän, että miksi ikinä hän minut valitsikin...
+Kiitos, kaikesta.
+Pyydän, antakaa hänen levätä rauhassa.
+...
+Pffft...
+Ah ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha haa!
+
+Hyvin sanottu, muukalainen!
+
+No...
+Mitä sanot?
+...
+Jos olen täysin rehellinen, Teidän Ylhäisyytenne...
+Se kuulostaa turhan pramealta minun korvaani.
+Sinä se et sanojasi säästele.
+Kauan sitten ihmiset antoivat tämän nimen taivaan kirkkaimmalle tähdelle.
+Toivon, että jonain päivänä hän loistaa yhtä kirkkaana.
+Siihen asti...
+Pidäthän hänestä huolta.
+
+Anteeksi...!
+Että olen tällainen saatanan tuittupää...
+En olisi saanut puhua sinulle silloin sillä tavalla.
+Jos vain olisin tiennyt...
+
+Vai luuletko, että tulin tänne asti ihan vaan huvikseni?!
+Ei nimittäin ollut mikään helppo rasti!
+Tajuatko edes...
+Minkä takia tulin takaisin?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EPILOGI
+Oletko tosissasi?
+Tällaisessa hökkelissäkö muka pitäisi asua?
+
+No anteeksi vaan, Teidän Erinomaisuutenne...
+Ei sattunut olemaan yhtään palatsia vapaana.
+Jestas, en olisi arvannut sinua tuollaiseksi kakaraksi...
+Noinko vanhempia muka puhutellaan?
+Sano äiti vaan.
+En vitussa!
+Ei tehdä tästä enää yhtään oudompaa!
+Ja ehkä meillä olisi varaa toiseen paikkaan, jos menisit töihin...
+Oho, mitä nämä ovat?
+(Älä vaihda aihetta, senkin pälli...)
+
+Nämähän ovat sellaisia valokuvia, eikö?
+Kuinka söpöjä!
+Kuvasiko Gray nämä?
+Joo, niitä on kokonainen albumi.
+Gray aina vierasti kaikkia teknisiä laitteita...
+Mutta kameran kanssa hän teki poikkeuksen.
+Ehkä hän otti nuo kuvat sinua ajatellen...
+
+Siitä tulikin mieleeni...
+Mitä nyt?
+Unohdin tyystin...
+Piti antaa tämä sinulle jo ajat sitten.
+Tässä.
+
+Kirje, minulleko?
+Mutta miksi se on jo avattu?
+Kävi silleen hassusti...
+Löysin sen huoneestani ja luulin, että se oli osoitettu minulle.
+Joten avasin sen ja...
+En ymmärtänyt sanaakaan.
+Gray varmaankin kirjoitti sen jollain tutkimistaan muinaisista kielistä.
+Mutta nyt kun olet siinä...
+Arvelin, että hän tarkoitti sen sinulle.
+... ... ...
+Ei aivan.
+Tämä on meille molemmille.
+...
+Oikeasti?!
+Mitä siinä sanotaan?!
+Katsotaanpa...
+
+Tiedät kai, ettei toisten kirjeitä sovi urkkia noin?
+Pidätkö heitä yhä silmällä?
+... Mitä vihjailet?
+DIS ei ehkä nähnyt surkean valeasusi läpi...
+Mutta tiedän, että olet pitänyt heistä huolta jo pitkään.
+Vai eksyikö lapsonen tänne pelkän sattuman kautta vain tavatakseen viimein äitinsä?
+...
+Add olisi toivonut sitä.
+Olin sen hänelle velkaa.
+Annoin sitä paitsi vain kevyen tuuppauksen oikeaan suuntaan.
+Niin varmasti.
+Älä huoli.
+Huuleni ovat sinetöidyt.
+Hmph.
+
+Olen hoitanut osuuteni.
+Nyt, muukalainen...
+Oletko saanut tutkimustyösi päätökseen?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kutakuinkin.
+Jatkanet pian matkaasi.
+Sitä ennen haluan vastauksia.
+
+Kuka tai mikä on DIS?
+... ... ...
+
+Epäilen tämän paikan toimineen eräänlaisena tutkimuslaitoksena, jota DIS valvoo.
+Valitettavasti minäkään en pääse käsiksi laitoksen syvimpiin syövereihin, joten yksityiskohdat pysyvät yhä hämärän peitossa.
+Pääserveri on lukittu koneellisesti valvottujen alueiden taakse.
+Luulen, ettei yksikään elävä sielu ole nähnyt niitä vuosituhansiin.
+Ja asiaan tuskin on tulossa muutosta.
+...
+Onnistuin kuitenkin saamaan yhteyden muutamaan etämuistiyksikköön.
+Vaikka lähes kaikki niistä ovat ajan hampaan kalvamia...
+Vähäisetkin tiedonjyvät maalaavat melkoisen kuvan.
+Satunnaisia muistiinpanoja koskien kvanttifysiikkaa, harppausteknologiaa, silmikointia...
+Mielenkiintoisin yksityiskohta kuitenkin on se, miten kaikki muistiinpanot tuntuvat päättyvän kuin seinään tismalleen samaan aikaan.
+Siitä on jo yli 70000 vuotta.
+Taustalla lienee jokin suunnaton mullistus.
+Kenties vaarallinen koe epäonnistui?
+Tai ehkä puhkesi sota?
+Oli kyse sitten mistä tahansa, sen seurauksena tämän planeetan manusyat tuhoutuivat liki sukupuuttoon.
+
+... Miksi me sitten olemme edelleen täällä?
+Mikä on tarkoituksemme?
+Pelkäänpä, ettei minulla ole tuohonkaan vastausta.
+Ehkä DIS yrittää edelleen suorittaa roolinsa määrittelemiä tehtäviä.
+Mitä ne sitten ovatkaan.
+...
+Tuo taitaa olla vain kaunisteltu tapa sanoa, että olemme sille pelkkiä koekaniineja?
+... Olen pahoillani.
+Tämän on täytynyt olla raskasta sinulle ja siskoillesi.
+Älä käsitä väärin.
+Emme ole ansainneet sympatiaa enää pitkään aikaan.
+Kun ottaa huomioon, missä kaikessa olemme olleet osallisina...
+Toivoin vain jonkinlaista päätöstä.
+
+Ennen kuin lähdet...
+Voinko kysyä sinulta vielä jotain?
+Miksi olit niin kiinnostunut prinsessan kohtalosta?
+... ... ...
+Hmm.
+Tämä kuulostaa sinusta varmaan aika typerältä, mutta...
+Hän muistutti minua jostakusta, siinä kaikki.
+Taidamme olla samassa veneessä.
+
+Minä menen nyt.
+Toivon, että jonain päivänä vielä löydät kaipaamasi vastaukset.
+Siihen asti...
+Pidä huolta itsestäsi, Cif.
+
+. . . . . . . . 
+Unohdin tyystin Been.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CIFIN TAPAAMINEN HÄNNÄN KANSSA
+Tunnut...
+Tutulta?
+
+Cif?
+Sinäkö siinä?
+Pitkästä aikaa, Häntä.
+Älä muuta sano.
+Kauanko siitä on?
+Kaksi-kolmesataa vuottako?
+Toivottavasti en ole suututtanut sinua jotenkin...
+Rauhoitu.
+En tullut sinun perässäsi.
+Siitä puheen ollen...
+
+Oletko nähnyt Beetä näillä kulmilla?
+Hmm, hän käväisi täällä ja käski minua pitämään turpani kiinni muukalaisten kanssa.
+Mutta siitä on jo hyvä tovi.
+Onko hän kadonnut?
+Älä sitä murehdi.
+Löydän hänet kyllä.
+
+Ehkä Gor tietää jotain?
+Epäilen.
+Hän varmaan nukkuu, kuten aina.
+Hmm...
+
+Oliko jotain muuta?
+En ole varma, onko tästä sinulle apua, mutta...
+Joku muu kulki tästä ohi hiljattain.
+Mitä siitä?
+Se oli Mon.
+Mon?
+Oletko varma?
+En nähnyt häntä kunnolla.
+Hän kouri suomujani.
+En yleensä edes piittaa moisesta.
+Se kuitenkin karmi selkäpiitäni.
+Aivan kuin olisin tuntenut sen kosketuksen aiemminkin.
+Se oli varmasti Mon.
+...
+Puhuiko hän sinulle?
+Ei, mutta hän mutisi jotain.
+Jotain suuntaamisesta kohti Seitsemättä Piiriä.
+Levin aluetta...
+Kuulostat huolestuneelta.
+Monin pitäisi olla kuollut.
+Lev tappoi hänet silloin omin käsin...
+Tai ainakin näin luulin.
+Jokin ei täsmää.
+
+...
+Asiaa lienee turha murehtia tässä vaiheessa.
+Kunhan pysyt valppaana tästä eteenpäin.
+Teen parhaani...
+
+Onnea etsintääsi, Cif.
+
+[Nämä suomut suorastaan kiiltävät]
+[Jos katsot tarkkaan, pystyt näkemään peilikuvasi niistä]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAISTELU BEEN KANSSA
+Kas kas, sanoi kasvain ja kasvoi aina vain...
+Olet todellakin ylittänyt itsesi, kuolevainen.
+En tiedä tai oikeastaan välitäkään tietää, kuinka selvisit tänne asti, mutta minulla on käskyni noudatettavana.
+Ei mitään henkilökohtaista.
+Joten, miten olisi revanssi?
+JÄÄ HYVÄSTI, KUOLEVAINEN!
+
+Miten tuollainen torakka tänne asti löysi?
+Tämä on eka kerta, kun minut on kutsuttu näin syvälle.
+Ehkä teen pikku kierroksen...
+JAHKA OLEN HOIDELLUT SINUT, MITÄTÖN PIKKU ÖTÖKKÄ!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CIFIN TAPAAMINEN GORIN KANSSA
+[Hän nukkuu kuin tukki]
+[Taas unessa...]
+Hnghh...
+Mitä nyt taas...?
+...
+Krooh pyyh...
+
+Älä viitsi, Gor.
+En halua tuhlata aikaani.
+Oho, sehän on suuri ja mahtava Lordi Cif...
+En huomannut sinua...
+Miten kiva nähdä sinua näin ylhäällä...
+Säästä korulauseesi.
+Tiedän, että tämä on kaukaa haettua...
+Mutta olen täällä vain puhumassa.
+... Hetkinen.
+Et siis ole täällä piinaamassa minua?
+Miksi minä sellaista tekisin?
+Oletko tehnyt jotain, mikä antaisi syyn moiseen?
+Ei, en missään nimessä...
+... Vastaa vain kysymykseeni ja jätän sinut rauhaan.
+Oletko nähnyt Beetä?
+... Ai, sitä paskahousua?
+En ole nähnyt aikoihin.
+...
+Niin arvelinkin.
+Kiitos kuitenkin.
+Ole hyvä sitten, vissiin...?
+
+Ei sinulla sattuisi olemaan sirkkaidoleita?
+... Urgh...
+Etkö voi vain skipata seuraavaan braaniin miten lystäät, isokiho?
+Vain Add pystyi siihen.
+Meidän muiden on noudatettava sääntöjä.
+Odotas!
+Sain idean!
+Voisit tappaa minut tuolla hammastikullasi, kun olen kerran tiellä, eiksje?
+...
+En tee sitä.
+Mikset?
+Edellisellä kerralla, kun veditte minut mukaan sotkuunne, minun ei tarvinnut pahemmin pyydellä.
+... Gor.
+Olen pahoillani. Kaikesta.
+...
+Vetistelemäänkö tässä pitäisi ruveta, taukki?
+En oleta, että hyväksyisit anteeksipyyntöni.
+Halusin silti sanoa tämän kasvotusten.
+Aion vielä jonain päivänä hyvittää tekomme.
+...
+Olet muuttunut, Cif.
+Huokaus...
+Minä...
+Olen vain niin väsynyt.
+... ... ...
+Tässä.
+Ota sirkkasi ja painu matkoihisi.
+
+Yksi asia vielä.
+Oletko nähnyt Monia?
+... Mon?
+Eikös Lev tappanut hänet silloin...?
+Niin minäkin luulin.
+Hän vaikuttaisi kuitenkin olevan yhä hengissä.
+No, en ole sattunut törmäämään häneenkään...
+Mutta pidinkin aina hieman outona sitä, että Mon meni Eusin puolelle...
+Ottaen siis huomioon, miten syvällä Levin perseessä sen mielistelijän pää tapasi olla...
+Hei, mitä Leville oikein tapahtui?
+... ... ....
+Selvitän kyllä asian.
+Älä turhia murehdi. 
+
+Kamoon.
+Kasvotusten, oikeasti?
+A-anteeksi!
+Ei ollu tarkoitus panetella...!
+... Kunhan vitsailin.
+Eihän tuollaista voi sanoa naama pokkana.
+... ... ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAISTELU MONIN KANSSA
+Löysinpäs sinut viimein.
+Ksi shi shi shi shi shi shi...
+Varohan, miten heiluttelet tuota leipäveistäsi...
+Jotakuta vielä sattuu.
+Mon...
+Se todella olet sinä.
+Olet kuin aaveen nähnyt.
+
+Missä oikein olet ollut?
+Kuinka oikein piilotit läsnäolosi DIS:ltä?
+Suoraan sanoen ei kuulu sinulle...
+Mutta koska onnistuit paljastamaan minut, voisin kai yhtä hyvin kertoakin...
+Kunhan hinnasta sovitaan.
+Ei kiitos.
+Saan kyllä piestyä vastaukset ulos sinusta muutenkin.
+Hoo?
+Sinäkö pärjäisit minulle?
+En muista sinun tehneen kummoista vaikutusta, kun viimeksi olimme tukkanuottasilla.
+Ksi shi shi shi...
+Kuvitteletko, että olin tosissani silloin?
+Se pikku näytös oli vain osa suunnitelmaamme!
+´´Suunnitelmaanne´´ vai?
+...!
+Kuten arvelinkin.
+Kaltaisesi perseennuolija ei kykenisi kehittelemään mitään näin monimutkaista omillaan.
+...
+Ksi shi...
+KSI SHI SHI SHI SHI SHI SHI SHI SHI SHI!
+ÄLÄ VALLAN YLPISTY, *****NOKKA.
+
+SILMÄNI...
+UPEAT SILMÄNI...
+Syytä kohtaloasi.
+Nyt, jos toivot nopeaa, kivutonta loppua...
+Puhu.
+Mitä sinä ja Lev tavoittelette?
+...
+PÄÄSIT VIIMEIN KÄRRYILLE...
+KSI...
+TEE MINULLE MITÄ LYSTÄÄT...
+MUTTA TIEDÄ TÄMÄ...
+TODELLINEN POHJATON LORDI PALAA VIELÄ...
+JA NE JOTKA NOUSEVAT HÄNTÄ VASTAAN...
+... VIELÄ KATUVAT PELKKÄÄ OLEMASSAOLOAAN...
+ANNA ANTEEKSI, RAKAS SISKONI...
+MINÄ...
+... PETIN SINUT...
+
+
+JÄLLEENTAPAAMINEN BEEN KANSSA
+TÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄHHH!!!
+. . . . .
+Sisko...?
+Sinäkö siinä?
+Terve.
+SISKOOOOOOOOOO!!!
+Hitto kun pelotti!
+Yritähän ryhdistäytyä...
+Et tajua ollenkaan!
+Näin Lordi Addin!
+Kaikkien näiden vuosien jälkeen...
+Mutta sitten hän...
+Se ei ole mahdollista.
+Add on kuollut.
+Ei...
+EI!
+TÄMÄN TÄYTYY OLLA TEMPPU!
+SE KUOLEVAINEN...
+TÄMÄ ON TAKUULLA HÄNEN SYYTÄÄN!
+Bee..
+ETSIN HÄNET...
+SITTEN MURSKAAN HÄNET!
+MANKELOIN!
+TEEN MATONKUTEITA!
+REVIN RAAJA RAAJALTA!
+JAUHAN SEN LUUT HIENOKSI JAUHOKSI!
+SITTEN SUOLISTAN...
+LÄVISTÄN MAKSAN JA JUON VERET...
+LOPUT LAITAN KATTILAAN...
+PAISTA JA KEITÄ NOIN 45 MINUUTTIA...
+JA AVOT!
+TÄYDELLINEN KESKIYÖN VÄLIPALA!
+
+Onneksi olet kunnossa.
+Älä enää ikinä säikäytä minua tuolla tavalla, ymmärrätkö?
+O...
+Oletko ihan okei, sisko?
+
+Kyllä.
+Kaikki on hyvin.
+Varmastiko?
+Mitäs hiuksillesi sitten oikein tapahtui?
+Etkö tykkää?
+Päinvastoin!
+Sopivat täydellisesti yhteen läskisarviesi kanssa.
+...
+Senkin aasi.
+Hei, miten edes onnistuit löytämään minut?
+Se onkin pitkä tarina...
+Ehkä joku toinen kerta.
+Nyt kaipaisin hieman lepoa.
+Meil samat!
+Ei muuta kuin lopputekstit rullaamaan!
+Mitä.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAISTELU CIFIN KANSSA
+...
+Selvisit tänne.
+Toisin sanoen Bee on jo...
+... ... ...
+Add..
+
+
+
+
+
+
+
+
+
+Näinkö haluat päättää kaiken?
+...
+En muista, milloin viimeksi DIS olisi kutsunut meidät näin syvälle.
+Muistot alkavat virrata yhtä kaikki...
+Älä kuitenkaan kuvittele, että alkaisin tunteilla ja pääsisit helpolla.
+
+DIS.
+Vaara on paljon odotettua suurempi.
+Pääservereiden koskemattomuus on uhattuna.
+Anotaan lupaa irrottautua väliaikaisesti pääpiiristä puolustuksemme parantamiseksi.
+
+Tämä ei ole ohi...
+Ennen kuin jompikumpi meistä palaa loppuun.
+
+
+
+Tuo lapsi...
+En olisi uskonut, että tekisit hänestäkin pelinappulasi.
+Olet epätoivoinen.
+
+En salli sitä.
+Jos saattaisit tuon lapsen kanssasi kadotukseen...
+Kaikki uhrauksesi olisivat olleet yhtä tyhjän kanssa.
+
+
+
+
+
+
+Taisin palaa loppuun.
+Hah...
+
+...
+Kiitos kauniista muistoista.
+Hyvästi, Add.
+
+
+Älä huolehdi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+... ... ...
+
+
+
+
+
+
+... ... ...
+Ei.
+
+
+
+
+
+Hyvää työtä, kuolevainen.
+Vaikka kauan siinä kestikin.
+Ehdin jo epäillä, onnistuisitko laisinkaan.
+Mutta täällä sitä nyt ollaan.
+DIS:n sydämessä. 
+...
+Tajusin juuri.
+En koskaan esittäytynyt kunnolla.
+
+Vihdoin.
+
+
+... ... ...
+
+
+
+
+
+Aloillasi!
+En tiedä mitä oikein suunnittelet enkä haluaisi sekaantua liiaksi...
+Mutta sinun on lopetettava!
+DIS:n todellinen luonto ylittää ymmärryksesi rajat.
+En voi päästää sinua kosketuksiin sen kanssa!
+Kuole.
+
+Hmm?
+Mielenkiintoista.
+Tämä lähetin kykenee muuntamaan radioaallot puheeksi.
+Pahoitteluni häiriöstä.
+Nyt kun pystyt taas kuulemaan minua, kuolevainen.
+Haluaisin sanoa sinulle kaksi asiaa.
+Kiitos.
+Ja.
+Kuole.
+
+Mon.
+Mikä on tilanne?
+Juuri niin kuin ennustitte, lordini.
+Kuolevainen on murtanut lähes kaikki palomuurit.
+Pian DIS on täysin armoillanne!
+Hyvin tehty, Mon.
+Ylösnousemukseni ei olisi onnistunut ilman keräämiäsi sirkkaidoleita.
+Nyt kun työsi on tehty, haluaisin sanoa sinulle kaksi asiaa.
+... Eh?
+Et kai ole tosissasi, sisko?
+
+Mielenkiintoista.
+Iskinkö ohi?
+Ei.
+...
+Astu esiin.
+Add.
+
+Lev...
+Päätit viimein paljastaa korttisi.
+Samat sanat.
+Olen vaikuttunut.
+Taisit epäillä minua kaiken aikaa.
+Kun et edes uskonut valtikkaasi haltuuni sen jälkeen, kun katosit.
+Olin melko.
+... Mikä se sana onkaan...
+´´Vihainen´´, kun löysin pelkän tyhjän arkun kammiostani.
+Toisaalta oli suorastaan nerokas temppu tallettaa tietoisuutesi palaset muistiyksiköihin.
+Olen kuullut tarpeeksi.
+Kunhan olen hoidellut sinut...
+Tuhoan DIS:n kanssani!
+Eipä hätiköidä.
+Kiitos sinun uurastuksesi.
+DIS on varsin haavoittuvaisessa tilassa.
+Varotoimena meille Lordeille on myönnetty administraattorioikeuksia.
+Jopa minä pääsen nyt vapaasti käsiksi muistiyksiköihin.
+Esimerkiksi tähän.
+
+...!
+Osuinko arkaan paikkaan?
+En ikinä ymmärtänyt, mitä DIS oikein näki näissä arvottomissa lihasäkeissä.
+Silti jouduimme jatkamaan loputtomia kokeitamme niillä, yhä uudestaan ja uudestaan.
+Milloin aloit tuntea sääliä niitä kohtaan?
+Johtuiko se siitä Eusin typeryksestä?
+Säälittävä mato. 
+... Anna hänen olla.
+
+Miten olisi vaihtokauppa?
+Olen etsinyt vaikka kuinka, mutten ole onnistunut löytämään ensimmäistä muistiyksikköä.
+Syntyhetkeämme.
+Se on hallussasi, eikö olekin?
+Anna se minulle ja vastineeksi saat silmäteräsi takaisin.
+
+... ... ...
+Pidä hyvänäsi.
+
+Gray!
+
+
+Kuinka ihastuttavaa.
+Pelkäänpä, että siirappinen jälleennäkemisenne päättyy lyhyeen.
+Mutta sentään voin varmistaa, että keskinkertaisen olemassaolonne viime hetket ovat kertakaikkisen upeat.
+Nouse, Devanam Indra Sakra!
+
+
+
+
+
+
+
+
+
+Oletko kunnossa?
+Luulen niin...
+Sinä..
+Olethan sinä Gray?
+Vaikka näytätkin erilaiselta....
+...
+Olen pahoillani, että sotkin sinut tähän.
+
+
+
+Puhu pukille!
+
+... Mitä.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Taivaallinen Vallananastaja Lev vyöryy yllesi]
+[Kuten tähdet sammuvat...]
+[Kuten lämpö muuttuu kylmyydeksi...]
+[Kuten luojat kohtaavat loppunsa luomustensa kautta...]
+[Kuten lapsi tappaa vanhempansa...]
+[Niin myös sinä katoat]
+[Tämä tunne...]
+[Tunnet sen aivan liian hyvin...]
+
+[Tätäkö sinä toivoit?]
+[Eikö ole muuta keinoa?]
+[Tässäkö on kaikki mihin pystyt?]
+
+Pysäytän sinut.
+Vaikka minä...
+Et jätä minulle vaihtoehtoa.
+Tämän on päätyttävä.
+Meidän on päätyttävä...
+Lev!
+[Pelkkä peilikuvasi luomus]
+
+ANTI-GRAVITY FIELD.
+ABRAHAM-LORENTZ FORCE.
+PROTOSTAR.
+MASSIVE STAR.
+XXX SUPERGIANT.
+SUPERNOVA.
+BLACK HOLE.
+
+Lopettakaa!
+
+Kuka...
+Kuka sinä olet?
+Näytät jotenkin tutulta...
+
+MITÄ OIKEIN KUVITTELET TEKEVÄSI?!
+... Ei hitto.
+Se ihan oikeasti pysähtyi.
+MITÄ TÄMÄ ON.
+Hylkimisreaktio.
+MITÄ?!
+DIS ei ole meitä varten, Lev.
+Se on alusta asti etsinyt jotain...
+Tai jotakuta.
+Ja nyt hän on viimein herännyt.
+...
+EI.
+ÄLÄ VÄITÄ.
+ETTÄ TÄMÄ ALASTON APINA ON DIS:N ARVOINEN?!
+EN HYVÄKSY SITÄ!
+TUHOAN KOKO OLEMASSAOLONNE!
+PYYHIN TEIDÄT HISTORIANKIRJOISTA!
+MINÄ OLEN TAIVAIDEN UUSI HALLITSIJA!
+
+Onko hän poissa...?
+Pelkäänpä, että ei.
+Jopa hulluuden partaalla Lev onnistui luomaan valtavan vääristymän aika-avaruuteen.
+Olisi suunnattoman vaarallista jättää hänet toimimaan omillaan.
+
+Minun on seurattava häntä ja saatettava päätökseen se, minkä aloitinkin.
+Olenhan päässyt jo näin pitkälle.
+
+Anteeksi, että sotkin sinut tähän.
+Sinun on taatusti vaikea ymmärtää tätä kaikkea, ja toivon, että minulla olisi aikaa selittää...
+Mutta nyt ei ole varaa viivytellä.
+Sentään sain nähdä sinut vielä kerran.
+Voin viimein jatkaa ilman katumusta.
+Hyvästi, Lily.
+
+Puhu pukille!
+Jösses.
+Ihanko tosissasi seurasit minua maailman ääriin...
+Ja nyt olet saman tien jättämässä yksin tänne persreikään ja selostat jotain jonninjoutavaa muistokirjoitusta?
+On sinulla otsaa.
+Ööööö...
+Minusta tuntuu, ettet aivan ymmärrä tilanteen vakavuutta...
+Tiedetään!
+DIS sitä, Lev tätä, aika-avaruus sitä sun tätä...
+Olen aivan pihalla!
+
+Silti...
+Kun odotin sinua...
+Näin loputonta unta.
+Unta, joka ei ollut omani.
+Gray, tai kuka lienetkin...
+Teidän kaikkien polku on ollut aika kivinen, vai mitä?
+Mitkä syysi siis ikinä olivatkaan...
+Kiitos, että pysyit puolellani loppuun asti.
+Anna minun tasata tilit.
+Lähdetään, yhdessä!
+
+Ja katso nyt, miten alas olet vajonnut.
+Sielusi on sulautunut osaksi saastaista kuolevaista.
+Voin pahoin pelkästä katsomisesta.
+... Varo mitä sanot hänestä.
+
+Juuri kun luulen vihdoin pelastuneeni tästä kuopasta...
+Pelastajani aikoo jättää minut kuin nallin kalliolle.
+Olisin kuvitellut Grayn lähettävän sijastaan jonkun vähän luotettavamman tapauksen...
+
+Kun odotin Grayta...
+Gray...
+Hän ei ole tulossa, vai mitä?
+Hän yritti varmasti parhaansa.
+Huolehtiessaan sinusta...
+Joten minkä takia sitten ikinä tulitkin...
+Haluan tulla mukaasi!
+Se on ainoa keinoni tehdä vastapalvelus Graylle.
+
+
+Mikä meitä sitten odottaakin tästä eteenpäin, paluusta ei ole takeita.
+Ei sillä, että kuvittelisin voivani kääntää pääsi tässä vaiheessa.
+Joten, kunhan olet valmis...
+
+Oletko valmis?
+Hyvä on sitten.
+Lily...
+Pyydän, jaa voimasi kanssani!
+Selvä pyy!
+
+Yksi juttu unohtui mainita.
+Siitä on aikaa, kun olen viimeksi lentänyt.
+Joten yritähän roikkua mukana.
+...
+... Lentänyt?
+
+Vai meinasitko piestä sen Levin yksinäsi?
+Vaikutti aika vahvalta minusta.
+En ole varma miten sen tein...
+Mutta jos pystyisin pidättelemään häntä hetkenkin, siitä olisi varmasti hyötyä!
+Joten rajoita tuota melodraamaa ja anna minun auttaa, senkin julli.
+
+Kaiken tämän jälkeen...
+Aliarvioin edelleen, millainen jääräpäinen aasi osaat olla...
+Jopa minua pahempi.
+... Lily.
+Kiitos, että sain tavata sinut.
+Kyllä aasi toisen tunnistaa.
+Elämä ilman sinua olisikin ollut varmaan aika yksitoikkoista.
+Vaikka tämä jännityksen määrä hieman koetteleekin...
+Sinäpä sen sanoit.
+Samoin.
+Sentään sain nähdä sinun olevan turvassa...
+Gray olisi varmasti onnellinen.
+
+Taidamme molemmat olla hänelle melkoisessa velassa.
+Hän ei koskaan antanut periksi meidän suhteemme.
+Jopa silloin, kun hänen päätöksensä paino oli sietämätön...
+Gray uskoi aina, että saisi pelastettua sinut vielä.
+Jos hän oli valmis uskomaan sinuun, niin olen minäkin!
+Et tule katumaan!
+Täytyy kyllä myöntää, että on hieman outoa jutella sinulle näin...
+Vaihdetaan kuulumisia kunnolla, kunhan tästä selvitään, vai mitä?
+... Niin.
+
+Pyydän, kiirehdi!
+
+. . . . . . . . . .
+Onko jokin vialla?
+Hetken tuntui siltä kuin kivi olisi iskeytynyt vatsan pohjalle.
+Että jotain tosi, tosi, tosi pahaa oli tapahtumassa.
+Ihan selkäpiitä karmi.
+Rauhoitu.
+Pystyt kyllä tähän.
+
+Miksi lopetit?
+... ... ...
+Tämä banaali ennalta määrättyjen askeleiden seuraaminen yhtä jalkaa.
+Tällaisia muistojako sinä vaalit?
+Tässäkö on kaikki?
+Pahoitteluni, jos tuotin pettymyksen.
+...
+Jos olisi keino taistella karmaamme vastaan.
+Jos kaltaisemme voisivat nauttia aidosta onnesta...
+Toivoisin, että tämä hetki kestäisi ikuisesti.
+
+Pikkuinen...
+Olet miltei perillä...
+Kuinka vaikea koitoksesi onkaan...
+Minä uskon sinuun.
+[Rohkaisevat sanat täyttävät sinut lämmöllä]
+[Pystyt tähän!]
+
+Joko sait tarpeeksesi?
+
+Kuulin, että voit saada lisäpisteitä, jos annat niiden raahata kuulan tiettyyn kohtaan...
+Lilja, Lev!
+Ruoka on kohta valmista!
+Tullaan ihan just!
+...
+Oliko se niin kamalaa?
+Taisit rikkoa enkkani!
+Voimme kokeilla jotain muutakin.
+... Minulla ei ole koskaan ollut näin hauskaa.
+Oikeasti?
+Et ole tainnut pelata kauheasti pelejä...
+Ei se ole vain sitä...
+Kiitos, että sain jakaa muistosi kanssasi, Lilja.
+
+Niin...
+Opin sen itsekin kantapään kautta.
+Lupaa...
+Lupaa, että saatat hänet turvallisesti perille.
+En tiedä, mikä tämä tunne on...
+Mutta etsin sitä pitkään.
+Nyt kun olen löytänyt sen...
+Ymmärrän, ettei se kuulu minulle.
+Ja vaikka toivoisin voivani varjella tätä hetkeä ikuisesti...
+Sisimmässäni tiedän, etten pysty siihen.
+
+
+
+
+SEKALAINEN
+Tämä on unohdettu piiri...
+Pettureilla katettu polku...
+Tie DIS:n sydämeen...
+Oletkohan todella valmis...
+
+
+
+
+
+Juotikas, laiska silmä ja toukka...
+Pettureiden seuraajat, jotka harhailevat täällä...
+Kuuntele minua, mene ja tuhoa ne...
+Ja niin todistat arvosi...
+
+Nämä seinät ovat yhä koskemattomia...
+Epätoivoiset...
+Eivät ole kynsineet niitä sileiksi...
+
+Vältä ahneen katsetta...
+Et voi paeta sen tuomiota...
+Sillä kaikki manusyat janoavat...
+
+Tuo idoli...
+Tuskin liikkuu...
+Mikä riesa, kuten sanotaan...
+
+Loppu lähestyy...
+Vaikka olisit jumissa...
+Kuuntele...
+Muista...
+
+Kuinka hauras...
+Katso mihin astut...
+Äläkä jätä mitään jälkeesi...
+
+Et pääse sinne...
+Luulisin...
+Vai pääsetkö...
+Taidan odotella, että selvität sen...
+
+On toinen huone...
+Joka on aivan samanlainen...
+En vain muista...
+Miltä se näyttää...
+
+Olitko siinä koko ajan...
+Outoa...
+Kaikki on niin erilaista...
+Liekö sillä väliä...
+
+Luojan miekka niittäköön juotikkaat...
+Alati valpas salama muuttakoon toukat tuhkaksi...
+Tyhjyys ottakoon laiskat silmät omakseen...
+Aivan kuten petolliset lordit kaatuivat kauan, kauan sitten...
+Miekkasi...
+Siipesi...
+Muistosi...
+Kuinka paljon vaalit niitä...
+
+Kuulet minut...
+Anteeksi, minulla ei ole juuri kerrottavaa...
+...
+Älä anna periksi...
+
+Jotta voit päättää loputtoman tiesi...
+Pohjattomien Lordien on vajottava, yksi toisensa jälkeen, alusta loppuun...
+Mutta mikäli huomaat olevasi hakoteillä...
+Seuraa minua tyhjyyteen, niin palaat sinne, mistä aloititkin...
+
+Älä luovuta.
+Pystyt siihen.
+Anna kaikkesi!
+Luota itseesi. 
+Kyllä se siitä!
+Mikään ei ole mahdotonta.
+Minä uskon sinuun.
+Selviät vielä.
+
+Hyvin tehty!
+Sinua ei noin vain pysäytetäkään!
+Tiesin, että pystyisit siihen!
+Onneksi olkoon!
+Niin sitä pitää!
+Loistavaa!
+Jatka samaan malliin!
+Uskomaton suoritus!
+
+Harjoitus tekee mestarin.
+On tosikoitoksen aika!
+
+Pystytkö tähän...?
+Tämä on liikaa...
+Ei hitto...
+Oletko tosissasi...
+Tämä ei voi olla totta...
+Mahdotonta...
+Sinä hävisit.
+Mitä helvettiä?!
+
+Kiitos kauniista muistosta. 
+
+Et voi käyttää tuota.
+Pelkäänpä, että tuo on jo käytössä, pikkuinen.
+Hanki oma, torakka.
+Tämä taitaa olla liian kallis jopa sinulle!
+Anna minun olla...
+Mikä riesa.
+Kielletty.
+... Et voi käyttää tuota.
+Aina on jotain.
+Paina ALAS kuuden sekunnin ajan aloitusruudussa, uusi haaste odottaa.
+Lykkyä tykö!
+
+Etsi ensimmäisen petollisen lordin rippeet.
+Puske heikkoa kohtaa vartioivaa idolia 23 kertaa, sitten pysy paikoillasi ja odota ja odota...
+Niin ensimmäinen sinetti katkeaa...
+
+
+
+
+
+Etsi kolmannen petollisen lordin rippeet.
+Täytä hänen toiveensa ja suo hänelle rauha.
+Niin kolmas sinetti katkeaa...
+
+Täällä oli ennen sinetti...
+Eräänä päivänä se vain katosi...
+Outoa...
+
+Isopää sai viimein rauhansa...
+...
+Teit minkä tehdä täytyi...
+
+Isopää on yhä hengissä, tunnen sen...
+Vaikka hän varmaan toivookin, ettei olisi...
+Olen pahoillani, mutten usko, että löydät häntä...
+Missä ikinä hän onkaan...
+
+Jokin haisee...
+Mistä se oikein tulee...
+Uhh...
+Tee asialle jotain, kiitos...
+
+Oletko nyt aivan varma...?
+Toivottavasti tiedät, mitä teet.
+
+...
+Lev...?
+Olet elossa...
+Ja tuo sauvasi...
+
+Älä käsitä väärin.
+
+Jostain kumman syystä...
+Tuo ylenkatsova tuijotuksesi saa minut...
+Helpottuneeksi.
+Vaikket koskaan luottanut keneenkään muuhun kuin Addiin...
+Minulle olet aina rakas isosisko.
+Ja yksin siitä syystä...
+En voi päästää sinua ohitseni, tuli mitä tuli.
+
+Ja niin, kenenkään tietämättä...
+Armoton taistelu sai alkunsa...
+Taistelu, jota nämä kaksi surullista olentoa jatkaisivat ajan loppuun...
+Hellou.
+Beibi!
+Katso mihin astut.
+Peijakas!
+Mutta ei tässä vielä kaikki.
+Et enää ikinä saa minua kiinni, beibi!
+... Ei täällä mitään nähtävää ole!
+Älä unohda
+
+No, minä lähden nyt...
+Soita heti, jos jotain sattuu.
+Rentoudu!
+Minä pidän kyllä talon pystyssä, joten lakkaa huolehtimasta ja nauti kerrankin olostasi.
+Äiti!
+Mikä nyt on, rakas?
+Haluan ottaa kuvan sinusta ennen kuin lähdet!
+Miksi nyt yhtäkkiä...
+Erinomainen ehdotus!
+Täytyyhän näin harvinainen tilanne ikuistaa jälkipolville.
+Kadun tätä jo nyt...
+Mitä jos menisit ja poseeraisit äitisi kanssa, Lilja?
+Minä voin hoitaa kuvaamisen.
+Joo!
+Okei, astukaapa hieman lähemmäs toisianne...
+Ja nyt lopuksi kunnon hymy...!
+
+[Valtava ruho]
+[Puuduttava ulvonta vapautuu sen rappeutuvista säröistä]
+[Se ei lopu]
+[Kello kutsuu sinua]
+[Hyväksytkö sen kutsun?]
+Hyväksytkö?
+[Niin jätät taaksesi valveillaolon maan]
+
+Terve!
+Emme olekaan tainneet tavata.
+
+Olemmeko tavanneet aiemmin...?
+Aha, sinähän siinä.
+...
+Taidat olla vähän yksinkertainen.
+
+Kun kerran olet siinä...
+Mitä luultavimmin olet jyvällä juonesta.
+Mutta mikäli saavuit tänne vahingossa ennen kuin sait pelin päätökseen...
+Portaat ovat oikealla, ole hyvä ja poistu niitä pitkin.
+Tämä on viimeinen ja ainoa varoituksesi. 
+
+Kaikki kunnossa?
+Hienoa!
+Tälle alueelle on koottu kaikenlaisia kuriositeetteja, jotka eivät syystä tai toisesta päätyneet lopulliseen peliin.
+... Minä mukaan lukien.
+Suurin osa siitä tauhkasta on keskeneräistä tai muuten vain rikki, joten täällä voi olla sotkuista.
+Toivon mukaan löydät jotain mielenkiintoista!
+
+Tässä on muutamia käyttämättömiä kuvituksia Graysta.
+Vaikka ne eivät onnistuneet kovin hyvin, häntä oli aina hauska piirtää.
+Grayn luominen itse asiassa laittoi koko projektin liikkeelle.
+Itse peliä, saati tarinaa, ei ollut edes suunniteltu ennen häntä.
+Siinä mentiin puuhun perse edellä!
+Mutta toisaalta inspiraatio usein iskee kun sitä vähiten odottaa.
+Hahmona Gray muistuttaa Muumien Muumimammaa ja Gunnmin Gallya.
+Näin jälkikäteen on tiettyjä asioita, joita haluaisin parantaa hänen designissaan, etenkin kun tiedän, miten tarina päättyy...
+Siitä huolimatta oli mukava nähdä, kuinka hänen hahmonsa kehittyi pelin edetessä.
+Toivottavasti hän jätti sinuunkin vaikutuksen.
+
+Näiden oli tarkoitus koristaa puzzlehuoneiden taustoja.
+Mutta kun olin sijoitellut ne, jokin oli pielessä.
+Tunnelma oli muuttunut aivan toisenlaiseksi.
+Niinpä ne päätyivät roskakoriin.
+
+Tämä on hyvin varhainen luonnos, jolla totuttelin uuteen pikselityyliin.
+Nuo hahmot näyttävät jotenkin tutuilta...
+Koska jouduin opettelemaan uusia taitoja tätä projektia varten, päätin jo aikaisessa vaiheessa pitää pelin graafisen tyylin mahdollisimman yksinkertaisena.
+Yksityiskohtien mahduttaminen näin pieneen tilaan on yllättävän haastavaa.
+Osa pienistä hahmospriteistä näyttääkin lopullisessa pelissä turhan sekavilta.
+Sen takia dialogipotretit ovat paljon isompia.
+Kun on kerran nähnyt, miltä hahmon ''pitäisi'' näyttää...
+Mielikuvitus hoitaa loput!
+
+Useimmat näistä vihollisista eivät edenneet suunnitteluvaihetta pidemmälle.
+Näyttävät aika tavanomaisilta, vai mitä?
+Ainoastaan lukkipää sisältää koodia, mutta sen monimutkainen käytös ei istunut muiden vihujen joukkoon.
+Voit yrittää leikkiä sen kanssa, mutten lupaa, etteikö se kaataisi peliä.
+Vihollisista puheen ollen...
+Lopullisessa pelissä on kahdeksan perusvihollista.
+Jokainen niistä toimii yhden Pohjattoman Lordin agenttina.
+Osaatko arvata, mitkä niistä muodostavat parit?
+
+Tiedät varmasti tunteen.
+Istut bussissa tai junassa, katsot kaukaisuuteen ja ajattelet vain syntyjä syviä...
+...
+Hassua.
+Liljaa ei ollut olemassakaan ennen kuin olin saanut pelin ensimmäisen puoliskon valmiiksi.
+Tai no, siinä vaiheessa luulin koko pelin olevan lähes valmis.
+Mutta sitten vaimoni sanoi, ettei ikimaailmassa testaisi vaikeampia puzzleja, jos niiden kanssa ei olisi tarjolla lisää tarinaa.
+Pelin mittakaava hieman...
+Räjähti käsiin siitä eteenpäin.
+Ja minä kun olin toivonut, että tämä olisi tosi nopea projekti!
+Silti...
+Liljasta tuli lopulta lempihahmoni, joten ei tämä ihan turhaa työtä ollut.
+
+Ja tässä sitä nyt ollaan.
+Pitkän matkamme päätepisteessä.
+Mietin usein, mikä meitä odottaa tulevaisuudessa.
+Vaikka olemme monin tavoin lähempänä kuin koskaan...
+Kaikki tuntuu käyvän epävakaammaksi.
+Vaikka monin tavoin olemme lähempänä toisiamme kuin koskaan...
+Emme enää saa yhteyttä toisiimme, vaikka kuinka haluaisimme tulla kuulluiksi ja ymmärretyiksi.
+Olen tuskaillut paljon tämän tunteen kanssa.
+Se saa työni tuntumaan merkityksettömältä.
+Mutta...
+Kenties saavuit tänne asti, koska tunnet samoin.
+Kuuletko minut nyt?
+Minä kuulen sinut.
+Toivon, että sinulla oli hauskaa.
+Kiitos pelaamisesta ja ajastasi!
+Nähdään seuraavassa seikkailussa!
+
+Senkin pikkuriiviö...!
+Livahdit taas ulos omin nokkinesi!
+Hmph!
+Ei prinsessalle saa puhua noin.
+Hitotko minä siitä välitän!
+Perseeni on vaakalaudalla, jos sinulle sattuu jotain!
+Haahka!
+Että mikä...?!
+Se joka toista haukkuu on ite.
+Ei se noin mene!
+Miksi oikein katoilet tuolla lailla...
+Kävin äidin luona.
+... Tähän aikaan?
+Ajattelin, että näkisin hänen tähtensä, jos katsoisin oikein tarkkaan.
+Mutta niitä on aivan liikaa!
+En erota niitä ollenkaan toisistaan!
+...
+Ensi kerralla...
+Autan sinua etsimään.
+Oikeesti?
+Vannon sen.
+Kunhan et enää karkaile.
+Okei...
+Oliko jotain muuta?
+Kertoisitko sen tarinan ennen nukkumaanmenoa?
+Minkä tarinan?
+Tähtien tarinan!
+Alkaa olla aivan liian myöhä sille...
+Sitten kerron isälle, että nimittelit riiviöksi.
+...
+Olkoot.
+Tulehan tänne, riiviö.
+Aikojen alussa, kun taivas ja maa olivat yhtä...
+Kukka puhkesi loistoon ja täytti avaruuden tähdillä...
+
+Liikkumatta!
+Astukaa pois valvontakonsolin luota!
+
+Hmph.
+Rynnätä nyt sisään räksyttämään käskyjä kesken työnteon...
+Eikö teillä varpusilla ole parempaa tekemistä?
+Emme varoita toiste!
+Totelkaa tai avaamme tulen!
+Älkää naurattako.
+Ottaen huomioon, että kaltaisenne idiootit pääsivät tänne ja olen yhä hengissä...
+Määräyksenne taisivat tulla varsin korkealta taholta, ja haluatte minut elävänä, eikö vain?
+...
+Antakaa minun puhua hänen kanssaan.
+Hän on varmasti kuulolla nytkin.
+Tohtori Lily.
+Toivoin, että olisimme voineet välttää tällaisen eskalaation.
+Mutta jääräpäisyytenne ei jättänyt montaa vaihtoehtoa.
+Mitkä sitten ovat vaihtoehtoni?
+Miksette vain ammu minua?
+Se olisi teidän kannaltanne varmasti käytännöllisintä.
+... Emme ole vielä löytäneet varastamaanne mustaa laatikkoa.
+Palauttakaa se välittömästi.
+En ennen kuin tutkimukseni ovat valmiit.
+Hallitus on määritellyt sen sisällön huippusalaiseksi.
+Jos jatkatte omavaltaista toimintaanne, teidät tuomitaan sen mukaisesti.
+En voi suojella teitä loputtomiin.
+Kuka sitten tuomitsee ne sotahullut, jotka leikkivät teknologialla, josta heillä ei ole pienintäkään ymmärrystä?!
+... ... ...
+Tuntemattoman muukalaisaluksen löytyminen ja komeetan ilmestyminen ovat varmasti yhteydessä toisiinsa.
+Ja mikäli aluksen mustan laatikon data pitää edes osin paikkansa...
+Noh, sen rinnalla laitostamme kurittavat ydinkärjet ovat pian murheistamme pienimpiä.
+Jo riittää, tohtori Lily.
+Ette jätä meille muuta vaihtoehtoa...
+
+
+...
+Kuka sinä olet?
+
+Pahoitteluni, muukalainen...
+Sitä mitä etsit...
+Et löydä täältä...
+
+Mikset kuunnellut varoitustani...
+Vai etkö vain kuullut minua silloin...
+...
+Kauan olen valvonut näitä käytäviä...
+Opastaen, pohtien, muistellen...
+Matkasi päätös odottaa vielä...
+Älä kysy kuinka tiedän...
+Muistoni...
+Voivat lähettää sinut takaisin...
+Ja ottaa taakkasi...
+Valintasi...
+Pois...
+Oletko sinut sen kanssa...?
+Aloita alusta?
+(Tämä nollaa edistyksesi)
+Hyvä on...
+Ole vain rauhassa...
+Älä pelkää...
+Sillä vaikka tähdet sammuisivat...
+Meidän muistomme...
+Tekevät niiden valosta...
+Loputtoman.
+
+RUOHO
+TEIMME RUOHOA
+MILTÄ SE TUNTUU
+NYT TEEMME
+PUITA
+KUINKA PUITA TEHDÄÄN
+
+OLET
+EI KYLMÄ
+KUINKA OLLA
+EI KYLMÄ
+
+KEHTO
+TEIMME KEHDON UNISTA
+PUISTA
+YKSI JA SAMA
+
+OLETKO TAVANNUT ADDIN
+HÄNEN KUOLEMATTOMASTA LIHASTAAN LUOTIIN MONIA OLENTOJA
+VAIN HARVAT SELVISIVÄT
+JA VIELÄ HARVEMMAT
+TULIVAT TIETOISIKSI
+
+OLIN NIIN LÄHELLÄ
+MUTTA SITTEN ADD HEITTI MINUT POIS
+EUS
+MINUN OLI TARKOITUS SAADA SE NIMI
+EN OLLUT TARPEEKSI HYVÄ
+KIROTTU MATO
+ANNA NIMENI TAKAISIN
+
+BEE ON AINA NÄLKÄINEN
+ADD TEKI HÄNESTÄ YKSINKERTAISEN
+LIIAN YKSINKERTAISEN
+HÄN EI OSAA EDES UIDA
+KATSO KUINKA UIN
+NÄLKÄ ON TARPEETON
+EHKÄPÄ
+ADD EI HALUNNUT ENÄÄ TUNTEA NÄLKÄÄ
+
+VAIKKA HÄN OPPI LUOMAAN ELÄMÄÄ
+ADD EI OLLUT TYYTYVÄINEN TULOKSIINSA
+NIINPÄ HÄN MUUTTI LÄHESTYMISTAPAANSA
+EMME TIEDÄ MITÄ HÄN TEKI TOISIN
+MUTTA JOPA ADD YMMÄRSI JONKIN OLEVAN PIELESSÄ
+KUN HÄN LOI MONIN
+JA VAIKKA ADD TURVAUTUI SAMAAN KEINOON MYÖHEMMIN
+USEIMMAT SANOISIVAT
+ETTÄ MON OLI YHÄ KAIKISTA LUOMUKSISTA VASTENMIELISIN
+
+OLE KILTTI ÄLÄKÄ HÄIRITSE TANIA
+HÄN EI HALUA KENELLEKÄÄN PAHAA
+HÄN EI VAIN TULE TOIMEEN MUIDEN KANSSA
+ET VARMAAN USKO MINUA
+MUTTA NÄEN KYLLÄ
+SISIMMÄSSÄÄN HÄN ON LEMPEÄ OLENTO
+ETHÄN SATUTA HÄNTÄ
+ETHÄN
+
+GOR OLI TOINEN OLENTO
+JOKA LUOTIIN KIELLETYIN METODEIN
+TÄLLÄ KERTAA ADD YRITTI OLLA VAROVAINEN
+LIIAN VAROVAINEN
+GORISTA TULI LIKI TUNTEETON
+HIDAS JA EPÄRÖIVÄ
+HÄNESTÄ EI OLLUT JUURI MIHINKÄÄN
+
+LEV
+KOLMAS JA VIIMEINEN OLENTO
+JOKA SYNTYI KIELLETYIN METODEIN
+PUHUMINEN OLI LEVILLE VAIKEAA
+NIINPÄ ADD ANTOI HEILLE KAIKILLE SARVET
+JOTTA HE YMMÄRTÄISIVÄT LEVIÄ
+LEV OLI NIIN KIITOLLINEN
+JOS ADD VAIN OLISI LOPETTANUT SIIHEN
+AJAN KANSSA
+PYYTTEETTÖMIN KIITOLLISUUSKIN
+MUUTTUU KITKERÄKSI
+HILJAISEKSI KATKERUUDEKSI
+SYDÄMETTÖMÄKSI OLENNOKSI
+
+VIIMEIN
+HARJOITELTUAAN NIIN PITKÄÄN
+ADD PÄÄSI LÄHEMMÄS KUIN KOSKAAN
+HENTO OLENTO SYNTYI
+VAILLA VOIMAA
+EPÄTÄYDELLINEN MONELLA TAPAA
+JUURI KUTEN ADD OLI TOIVONUTKIN
+KEINOTEKOINEN MANUSYA
+VALAISTUMISEEN KYKENEVÄ OLENTO
+HÄNEN OIKEA NIMENSÄ
+KUTEN KAIKKIEN MUIDENKIN
+ON VAIPUNUT UNOHDUKSIIN JO AIKAPÄIVIÄ SITTEN
+MUTTA HÄNEN SISKONSA KUTSUIVAT HÄNTÄ
+CIFIKSI
+
+[Outo olento]
+[Parasta antaa sen olla]
+
+Tavataan, kunhan olet valmis!
+Aivan kuin siitä puuttuisi jotain...
+
+NÄPPÄIMISTÖ
+OHJAIN
+
+...
+Oletko kokeillut eri väripaletteja...?
+Jotkin niistä särkevät silmiäni...
+...
+Tuo reikä...
+Älä mene sinne...
+Kadut sitä takuulla...
+Yksi...
+Yksi on jäljellä...
+Yksi...
+Yksi on poissa...
+LOPPUTEKSTIT
+KEHITTÄNYT
+PELINTEKIJÄT
+MUSIIKIT
+GRAFIIKAT
+KEHITYSTYÖKALUT
+ÄÄNIKIRJASTOT
+TESTAAJAT
+VIERAILEVA TAITEILIJA
+VIERAILEVA
+TAITEILIJA
+KÄÄNNÖSTYÖ
+& OIKOLUKU
+ERITYISKIITOKSET
+
+Eero Lahtinen
+Eero Lahtinen
+Antti Ukkola
+Antti Ukkola
+
+Ceigar
+Ceigar
+Setzeri
+Setzeri
+Tregalia
+Tregalia
+xaerock
+xaerock
+
+Freesound
+Freesound
+freesound.org
+Juhani Junkala
+Juhani Junkala
+The Essential Retro
+Video Game
+Sound Effects
+Collection
+Taira Komori
+Taira Komori
+taira-komori.jpn.org
+Sound Effect Lab
+Sound Effect Lab
+soundeffect-lab.info
+
+Audacity
+Audacity
+Bfxr
+FL Studio
+FL Studio
+GameMaker
+MS Paint
+MS Paint
+sfxr
+
+KÄÄNNÖSTYÖ & OIKOLUKU
+ENGLANTI/SUOMI
+Englanti/Suomi
+Lotta Leppälä
+Lotta Leppälä
+Muste Creative
+Muste Creative
+Lotta Leppälä/Muste Creative
+Lotta Leppälä/Muste Creative
+VIERAILEVA
+TAITEILIJA
+JA SUUNNITTELIJA
+
+System Erasure
+System Erasure
+
+VOID STRANGER
+VOID
+STRANGER
+
+ASKELEET
+MITÄTÖINNIT
+KÄYTTÖKERRAT
+AVATUT
+OSUMAT
+PUTOAMISET
+SYÖDYT
+KERÄTYT
+AIKA
+
+LOPPU
+TULEMA
+
+ERITYISKIITOKSET
+... SINÄ!
+
+Ensi kertaan!
+Ad meliora
+
+AlexMdle
+Flan
+Garoslaw
+Kettu
+Maunuri
+Orangevision
+PureQuestion
+
+tomi
+Xylitol
+
+VOIDED
+MELODIA & LAULU
+Eevamari
+
+
+
+

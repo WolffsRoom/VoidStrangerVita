@@ -1,0 +1,7613 @@
+ENGLISH
+English script
+
+MENUS
+[Yes]
+[No]
+BACK
+ON
+OFF
+ENGLISH
+FINNISH
+RESUME
+SETTINGS
+QUIT GAME
+GRAPHICS
+AUDIO
+CONTROLS
+MISC
+MASTER
+MUSIC
+SOUND
+RESOLUTION
+FULLSCREEN
+TIMER
+COUNTER
+UP
+LEFT
+RIGHT
+DOWN
+ACTION KEY
+LANGUAGE
+START
+Skipping...
+TEXT SPEED
+MID
+SLOW
+FAST
+PAUSE
+PRESS ACTION TO CONFIRM
+Would you like to change settings before starting your journey?
+Are you ready?
+Good luck!
+
+Don't give up!
+PRESS ANY KEY/BUTTON TO CONTINUE
+YOU'VE FALLEN
+NO CONTROLLERS FOUND
+
+
+CONTROLLER(S) FOUND
+
+
+
+
+MOVES
+VOIDS
+TIME
+
+Resetting...
+
+[A lone birch tree stands in the void]
+[This area feels safe]
+[And since you've been traveling for quite some time already...]
+[Would you like to rest for now?]
+Rest?
+[You decide to move on]
+[Slowly, surely, dreams embrace you]
+
+[The tree has withered]
+[Better move on]
+FLASHING FX
+PALETTE
+Wake up
+End it all
+REST SHUTDOWN
+PRESENTED BY
+STAFF
+
+SOUND LIBRARIES
+PLAYTESTERS
+
+MEMORIES
+´´Får ej övertäckas. Ei saa peittää.``
+BURDENS
+VOID MEMORY
+VOID SWORD
+VOID WINGS
+This can't be it...?
+MOVEMENT
+TAP
+HOLD
+
+[This Lotus-Eater Machine doesn't seem to be operational]
+[This Lotus-Eater Machine is still operational]
+[Maybe you could take a quick rest?]
+Engrave your brand.
+All done?
+So be it!
+VOID SCENE
+Hello.
+Is this your first time here?
+
+I thought so.
+I've been following your journey so far.
+You must be really determined to have come to this place willingly.
+Unfortunately determination will only get you so far.
+Especially now that you're dead.
+Tell me.
+Do you still wish to continue?
+
+Ah, didn't recognize you.
+I'm kinda bad with faces.
+
+
+
+What to do.
+No one can cheat death.
+But there's one trick you could try.
+If you eat something here, you'll become a part of this realm.
+Then you'll be able to roam these halls to your heart's content.
+It just so happens I've got this fruit with me.
+Would you like to eat it?
+
+Great.
+I'm so glad I was able to help you.
+Hopefully you'll find what you're looking for.
+I'll leave you to it.
+
+...
+Was this all it took.
+All it took.
+For you to give up, mortal?
+Even when my interest in your kind keeps waning.
+I can't help but wonder.
+What made you feel that way.
+Your scattered thoughts will soon join the others.
+In this endless void carved by despair.
+We've come too far.
+You can not give up now.
+
+[You ate the whole fruit]
+[Its taste is foreign to you]
+[Yet the pulp is suprisingly sweet, if bitter]
+[Probably should've peeled it before eating though]
+[...]
+
+What do you answer?
+What is your resolve?
+[You wish to continue]
+[You wish to give up]
+What will you do?
+[You want to eat the fruit]
+[You refuse]
+(It tastes like...)
+(******...?)
+(What was that furball talking about again?)
+(Such a strange dream.)
+
+VOIDROD SCENE
+[You acquired a strange rod]
+[Simply holding it makes you feel uneasy]
+[Something is wrong]
+
+[Add's scepter...]
+[...]
+[Time to find Bee!]
+
+[Something is different]
+OPENING CHESTS
+[It's empty]
+[You acquired nothing]
+
+[You acquired a locust idol]
+[It looks rather tasty, actually]
+[Who knows, maybe it'll come in handy in the long run]
+
+
+[... Wait]
+[There's a note inside]
+[It reads:]
+I snuck in some of your favourite snacks.
+Have some when you're feeling down.
+And please don't tattle to my sis.
+It's our little secret! -Bee
+[The message makes little sense to you]
+
+[It's written in a language you can read]
+
+[You acquired a strange sword]
+[Its ornate design makes it rather cumbersome to use]
+
+[You acquired a strange pair of wings]
+[They feel extremely brittle]
+[Who knows, maybe they'll come in handy in the long run]
+
+[You acquired a strange feeling]
+[Your mind feels heavier]
+[... You don't know what to make of it]
+
+
+In case you forgot how to use them:
+
+
+
+
+
+
+You can fly over small gaps with these.
+Just leap and believe in yourself!
+If only I had wings of my own.
+Please give me wings! -Bee
+
+My memory of you.
+With this, you should be able to hear the voice of fallen, all who were and those who are yet to be.
+And if someone else (that includes you, sis) is reading this...
+Scram. -Bee
+
+[They look rather tasty, actually]
+[Who knows, maybe they'll come in handy in the long run]
+
+[You acquired three locust idols]
+[L U C K Y !]
+
+[Too bad you can't carry any more of them...]
+[As you try to put them back, they crumble into fine dust]
+[... What a waste of time]
+[Too bad you can't carry any more of these...]
+[As you try to put it back, it crumbles into fine dust]
+[It tastes like sawdust]
+[They taste like sawdust]
+[... Why are you collecting these again?]
+
+[You found Add's wings]
+[...]
+[Better leave them]
+
+[You found Add's core]
+[...]
+[Better leave it]
+
+(You absolute nimrod...)
+
+
+[...]
+
+
+[You're bursting with joy...]
+
+[... It's empty]
+[It's really, really empty]
+[But now that you take a closer look...]
+[It looks like the chest has been forcefully opened at some point]
+
+[A crudely written message glows through the niche]
+[It reads:]
+[``MON WAS HERE``]
+[...]
+
+[Strange carvings glow through the niche]
+[Is it some kind of writing...?]
+
+[You acquired 99 locust idols]
+[I N C R E D I B L E !]
+
+[Something isn't right]
+
+[You received 16 locust idols]
+[Better safe than sorry]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRIAL: INTRODUCTION
+´´For these defects, and for no other evil, we now are lost and punished just with this:´´
+´´We have no hope and yet we live in longing.´´
+ZERO Judge.
+
+ZERO Prosecutor.
+
+ZERO Defense!
+
+The Void Court, ZERO JUSTICE, is now in session.
+
+Prosecutor, please begin.
+
+Yes, Your Honor.
+TRIAL: CHEATING DEATH
+The accursed has repeatedly cheated a certain death.
+We've yet to ascertain how the accursed managed such a feat.
+Nevertheless it seems obvious this was intentional.
+We propose the accursed should be punished accordingly.
+
+Hold up! Defense chiming in!
+Have you got any, you know, evidence?
+Cheating death sounds pretty hard to me.
+Is such a thing even possible?
+I for sure couldn't be arsed to do it.
+Not that I can die anyway, of course.
+
+We all saw it, you nimrod.
+Nothing gets past the Void Court.
+
+Oh.
+Right.
+But can you prove they did it intentionally, hmm?
+
+Mortals cling to their lives at any cost.
+It's simply in their nature.
+
+But maybe it was an accident.
+Y-yeah.
+An accident! Why didn't I figure that one out sooner?
+How do you like that turnabout?
+
+...
+There's only one accident here as far as I'm concerned.
+
+Hmm? I didn't hear you properly.
+You gotta speak louder with those fat horns of yours.
+
+That doesn't make any sense.
+And leave my horns out of this.
+
+It's called a burn, sis.
+
+Oh I'll burn you alright once we're done, fly-brain.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRIAL: JUDGMENT
+Silence.
+Stranger.
+How do you respond to these allegations?
+
+Very well.
+Continue your journey, stranger.
+Towards your final condemnation.
+
+You are foolish indeed.
+But at least you're an honest fool.
+Continue your journey, stranger.
+Your day of absolution will come in time.
+Until then... Pray we'll never meet again.
+
+[Not Guilty]
+[Guilty]
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRIAL: GLUTTONY
+The accursed has repeatedly hoarded locust idols.
+These sacred idols are part of Lord Add's heritage.
+A mere mortal tampering with them...
+The thought alone is repulsive.
+We propose the accursed should be punished accordingly.
+
+Umm, hasn't our prosecutor ever heard the old wisdom:
+Finders, keepers?
+If you don't want people handling your stuff...
+You gotta take better care of it.
+
+Indeed.
+Normally these idols are well secured.
+But for some reason most of them have been scattered.
+Our defense wouldn't know about this, would she?
+
+I've got no idea what you're insinuating there.
+Besides...
+Can you blame anyone for wanting to get their hands on these?
+They're delicious!
+
+The idols are not a pastime snack, you dimwit.
+You've been gobbling them again, haven't you?
+That's more than likely by the looks of it.
+
+Rude.
+I'll let you know my diet is rigorous.
+This voluptuous body won't sustain itself you know.
+I can give you pointers if you want.
+You might be able to slim down your fat horns as well.
+
+Please eat a cricket and choke on it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEETING WITH NUN
+Please don't kill me!
+...
+You aren't one of those things, are you?
+Sheesh.
+Scared me senseless right there you know.
+
+[The frightened lady seems to have regained her composure]
+[You ask her what she's doing here]
+I was about to ask you the same thing.
+Honestly I can't even remember how I ended up in this place.
+What was I doing?
+Sister Ballbuster is gonna skin me alive if I don't show up soon.
+It's a pinch.
+
+You wouldn't happen to know a way out?
+[You tell her the only option is to keep moving]
+And here I thought you looked so capable.
+Seriously, don't leave me hanging like that.
+Especially with those things crawling around.
+You've seen them too, haven't you?
+Or am I going crazy?
+
+...
+Wait.
+I think I remember now.
+I was working in the garden when I stumbled upon this strange pit.
+I'm sure it wasn't there before, its edges were too clean.
+Almost like it had appeared out of nowhere.
+I must have fallen and hit my head or something like that.
+Is this a dream?
+
+[She seems to be lost in thought]
+
+...
+Hey.
+Do you believe in ***?
+Sister Ballbuster never stops yapping about that stuff.
+You must repent, only then *** will save you.
+Despite how I may look, I never believed it.
+Sure I've made a few mistakes in my life...
+But it seems awfully convenient, don't you think?
+Just believe in *** and in the end everything will be alright.
+Like someone came up with it to have an easy way out.
+...
+What am I even talking about anymore.
+Forget it.
+I need to prepare my sorry ass for a whooping.
+Oh, and if you happen to find the exit, let me know, thanks.
+
+[You decide not to bother her for any longer]
+
+
+[She's become cautious of you]
+
+Stop it!
+
+
+[She doesn't want to talk to you anymore]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRIAL: SLOTH
+The accursed has attempted to create a shortcut between branes.
+This is unprecedented, if I'm being honest.
+The walls of these branes are impenetrable.
+A mortal shouldn't be able to escape them.
+But don't get the wrong idea.
+This transgression is still extremely severe.
+We propose the accursed should be punished accordingly.
+
+Oh come on now.
+This trench never ends anyway.
+How much harm is there in skipping a room or a dozen?
+
+Lord Add created this labyrinth in order to punish sinners.
+Simply attempting to ´´skip´´ it defiles our Lord.
+You should understand that already.
+
+But...
+That ain't swell.
+That ain't swell at all.
+No fun allowed I guess.
+
+This has nothing to do with fun.
+Please try to take your job more seriously.
+You'll always start acting like a spoiled brat when you know you're losing.
+
+Yeah yeah.
+Whatever you say.
+At least my horns aren't fat like yours.
+... What did you say?
+You heard me.
+Fatty horns.
+Say that one more time and I swear...
+Fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns fatty horns.
+Please die.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VOID MEMORIES
+Forgive me...
+Everything is so cold.
+Where am I?
+Can you hear me?
+It's hard to move.
+Don't bully me.
+Mother...
+Father...
+Sister, is that you?
+I can't see anything.
+What's happening to me?
+Too... Tired...
+I can't hear my voice.
+Dark.
+I didn't do anything wrong.
+Help me.
+I want to die.
+It's just a dream.
+I'll wake up soon... Right?
+Where did I go wrong?
+***... Have I wronged you...
+Please.
+Kill.
+Please don't hurt me.
+My back is itchy.
+It's so hard to move.
+My back is killing me.
+How long have I been here?
+Hungry...
+I can't cry.
+Who am I?
+I don't want to die.
+Mommy.
+Mum.
+Dad?
+Anyone there?
+Are you there?
+Sleep... I need sleep.
+Don't cry.
+Mom is here.
+Everything will be...
+Please, stop...
+Stop it!
+5470041062466101, 5470041062466102, 5470041062466103, 5470041062466104... 
+Why can't I fall asleep?
+Make it end.
+I'm begging you.
+Why why why why why why.
+Is it dinner yet?
+Did you take my wife from me?
+Die.
+I never believed in anything...
+Is this the price for my sins?
+Should I pray?
+Can I pray?
+Who did I pray to?
+I just want it to end.
+Help!
+My name...
+I can't remember my name.
+I want to see your face one more time...
+What am I?
+Is this the end?
+...
+Nothing.
+There's nothing.
+No no no.
+It can't be.
+Does anyone know my name?
+I can't feel my legs.
+Where did my face go?
+What happened to my face?
+My hands won't move.
+I can't breathe.
+Air. I need air.
+Curses...
+I hate myself.
+Why did it have to end like this?
+Where did my cat go?
+What are you eating, my darling.
+Bitter.
+My last words...
+Any regrets?
+I want to touch you.
+What...?
+Water... I want some water.
+My voice...
+There's gotta be a way out.
+There's no way out.
+Laalaa lala la laaa...
+Hahahaha...
+Mind... 
+Death... 
+Love me.
+Free me.
+Who are you?
+What are you going to do?
+Leave? No one can leave.
+Hey.
+Listen. 
+Can you hear them?
+Voices...
+Everything disappears.
+It hurts.
+It doesn't hurt anymore.
+Numb.
+Flesh.
+Sing for me.
+Fading...
+What happened to the lights?
+Lights.
+They lied.
+All of it.
+Tell me the truth.
+Truth.
+I can only taste ash.
+How long...
+Come to me.
+
+A long time ago...
+These halls were governed by beings known as Void Lords...
+Their leader was Lord Add, The Beginning...
+
+Under Lord Add's command...
+Sinners were sent to roam these depths for all of eternity...
+For what purpose, I can't tell...
+
+Not all Void Lords saw eye to eye.
+One day, a great battle erupted between two factions among the lords.
+As its agents turned against each other, Void began to destabilize...
+
+The battle between Void Lords raged on for years...
+Until only three lords were left intact...
+Add and two of their followers...
+
+While the fighting had finally ended...
+Something unexpected happened...
+While Void was still in shambles, Lord Add left...
+
+Why Lord Add decided to leave Void...
+... ... ...
+Only these halls recall the answer to that question...
+
+Here lies the domain of the first traitorous Void Lord...
+The one who once was Lord Add's most trusted ally...
+Shall their name never grace these halls again...
+
+They say the lord of this area was the one who instigated war between Void Lords...
+Lord Add didn't want to believe it...
+Yet their transgression couldn't be forgiven either...
+
+Once the battle between Void Lords ended...
+Lord Add personally consumed everything that remained of the traitorous lord...
+In a way, they became one, like they had always hoped...
+
+Despite what transpired, Lord Add never wanted to fight the traitorous lord...
+They were good friends...
+Even more than that...
+
+Here lies the domain of Lord Bee, The Craving.
+A true trickster even among the Void Lords...
+... And a devoted admirer of Lord Add...
+
+Lord Add was quite fond of dried locust idols and Lord Bee often enjoyed them alongside their lord...
+Even though Lord Bee could neither taste anything nor ever feel content...
+They would always treasure those little snacking moments...
+
+Lord Bee would regularly boast how cruel they were towards mortals...
+But now that I think about it, I never saw them hurt anyone...
+At the very least, I doubt they truly enjoyed it as much as they let on.
+
+That smirk...
+Lord Bee was always smiling when around others...
+Makes you wonder if they kept it up even alone...
+
+After Lord Add's departure...
+Lord Bee's prominent smile remained...
+As if nothing had happened...
+
+Here lies the domain of the second traitorous Void Lord...
+The calculating charlatan, forever blinded by their own covetousness...
+Shall their name never grace these halls again...
+
+The covetous lord often followed the traitorous lord around...
+They were enamored by their scales...
+Maybe this vacuous reason was enough for them to side with the traitorous lord...
+
+Don't look the covetous lord directly in the eye, they used to say...
+Their gaze would turn anyone into pure gold...
+What a terrible fate...
+
+Even the covetous lord showed interest in locust idols...
+But the covetous one didn't eat them, they simply liked collecting them...
+Have too many locusts and they would surely show up, bargaining for some...
+
+Here lies the domain of Lord Tan, The Raging.
+So fierce was their nature, other Void Lords preferred not to interact with them...
+Alas, Lord Tan would remain on their own most of the time...
+
+Although shunned, Lord Tan didn't mind being alone...
+In fact, they preferred it...
+Lord Tan didn't get along with others...
+
+Lord Tan never spoke much...
+Maybe because they weren't good at it...
+They'd end up just being mad at themself and lash out...
+
+During the battle, Lord Tan was unstoppable...
+Even when the battle subsided, their rage wouldn't end...
+Thus Lord Add had no other option, but to strike their ally down...
+
+Here lies the domain of the third traitorous Void Lord...
+Whose feeble apathy is second only to their indecisiveness...
+Shall their name never grace these halls again...
+
+The feeble lord never showed any interest towards the happenings of Void...
+They would simply fulfill their role without any enthusiasm...
+Just so other lords wouldn't bother them...
+
+At the decisive moment, when Void Lords had to choose their side in the great clash...
+The feeble lord remained indecisive...
+But one either stands with Lord Add or...
+
+
+
+
+
+Here lies the domain of Lord Lev, The Devious...
+The unloving vassal of Void...
+Their devotion rivaled even Lord Add's...
+
+So fierce was Lord Lev's might...
+Few sinners would make it past their judgement...
+To see the final depths of Void...
+
+Lord Lev was always loyal to Lord Add...
+Even when the battle pitted them against their own sister...
+... Lord Lev was always loyal to Lord Add...
+
+The death of their sister left Lord Lev in such a distraught state...
+That Lord Lev, who had always been unwavering in their devotion...
+Took their own life...
+
+
+
+...
+
+Destroy what remains of the traitors...
+Return to zero, zero, zero...
+Then you'll find Lord Add's final treasure, one they hid even from their allies...
+The key that engraves the brand of DIS...
+
+Someone is waiting for you...
+Don't worry...
+They're okay...
+
+Wake up.
+What a little miracle you are.
+But no matter how hard I try...
+This is as close as I can get.
+The rest is up to you.
+Soon you'll grow up...
+You must keep working diligently and take good care of your sisters...
+Even when you argue and make mistakes.
+Even if I...
+
+You're my little lightbringer.
+You're my pride.
+And your name shall be...
+
+I can't remember these halls...
+Who built them...
+What are they hiding...
+
+Those petty idols...
+That avaricious gaze...
+How did they survive...
+
+The brand of Lord Cif...
+Don't worry, it's already been carved...
+But what room was it...
+I can't remember the number, but it must be here somewhere in their domain...
+
+[...]
+[The light of the stars...]
+[Our memories make it...]
+
+Endless.
+
+You did well to find your way here...
+Figuring out the brands is only the first step...
+Think 'where' you can draw them...
+That's how you'll bend these halls to your will...
+
+The brane value is volatile...
+But as long you only manipulate the last two digits...
+It should work...
+You do know how to do that, don't you...?
+
+
+[The mural is filled with inscriptions]
+[Deciphering them seems like a futile effort]
+[It reads:]
+[... Were you always able to read this?]
+
+
+
+
+
+One wrong move and I'll destroy you...
+
+
+
+
+
+
+Got any locusts?
+
+
+
+
+
+Make them go away...
+
+
+
+
+Only a simple memory will remain
+
+[The mural is badly damaged]
+[Deciphering its inscriptions seems almost impossible...]
+
+
+[The mural crumbled away, revealing a small niche full of...]
+[... What is this?]
+
+ONLYAMEMORYREMAINS
+
+ONLYACRAVINGREMAINS
+
+ONLYGNAWINGRAGEREMAINS
+
+ONLYAENVYREMAINS
+
+
+[The mural is completely blank...]
+[You can only make out some of the characters]
+[Sounds like complete gibberish]
+
+[Somehow they feel familiar to you]
+
+How bothersome.
+My love...
+
+
+(...)
+[You wonder why Add would leave such a message]
+[This must be one of the remote memory units]
+[Too bad you can't connect to it]
+[Who'd damage it like this?]
+[...]
+[You can't decipher them for some reason]
+[Maybe there's a disturbance with your slave unit's EPR receptor]
+[You can make out some inscriptions, but...]
+[DIS continues to elude us]
+[The remaining characters spell complete gibberish without any deeper meaning]
+[A broken seal]
+[A strange seal]
+[You can't get any closer to it]
+[Suddenly, you hear a distant voice]
+
+
+
+
+
+
+[The strange rod has changed its form]
+[And somehow...]
+[You feel your uneasiness fading away]
+
+
+
+[...]
+
+
+[What is this...?]
+[Is it watching you...?]
+
+[You struck it down without any hesitation]
+[You wonder what made you do so]
+
+[It is your brand]
+
+Just in case...
+If you have any second thoughts...
+Move the stairs...
+
+
+
+DREAM I
+Lady Gray!
+Thank heavens you've arrived!
+The princess... she's out of control!
+Please, do something!
+You're our only hope!
+Please, hurry!
+
+It hurts...
+Take care of the princess, Lady Gray...
+Forgive me, Lady Gray.
+All I could do was run away.
+How can I face His Majesty after this?
+
+[You can't leave now]
+[The air is full of menace]
+[You enter the room fearlessly]
+
+Prepare to die.
+
+[You take a jab at the princess]
+[You steel your resolve!]
+[One of the princess' many tantrums]
+[You've fallen]
+[Princess' Wrath looms upon you]
+[Princess' Wrath scorns you]
+[Princess' Wrath lashes out!]
+[Princess' Wrath has finally subsided]
+[Princess' Wrath is readying an all-out attack!]
+[Princess' Wrath is going berserk!]
+[Princess' Wrath is exhausted... Now is your chance!]
+[Princess's Wrath is too bored to continue...]
+ATTACK
+DEFEND
+CHECK
+
+Spud of a princess!
+Spoiled brat!
+Insufferable imp!
+Kingly pain in the bottom!
+Decadent donkey!
+Disgrace to senses!
+Self-indulgent regal!
+Egotistical empress!
+Even a dragon wouldn't eat you!
+Abhorrent aristocrat!
+Have some discipline!
+Take a bath!
+Maelstrom of a monarch!
+Pompous princess!
+Thorn in the throne!
+Sovereign scamp!
+Royal rapscallion!
+Hegde-born crown head!
+Foul-mouthed goat!
+Silver spoon-fed snipe!
+
+I shall punch and kick you.
+Jump kick!
+Have at it, harpy!
+Begone witch!
+Take a dive into a well.
+All of my hate!
+Double-lock!
+You'll be well-done soon!
+Go jiggle elsewhere!
+Mrgrgr!
+Prepare for your doom.
+Enough talk already!
+I'll have you hanged for that!
+Hanged! Hanged!
+Death by burning!
+Hag!
+Not fair!
+Boobie monster!
+Die already!
+
+How could I lose?
+I trained so hard!
+I bet you cheated!
+Now now, Your Highness.
+Such a sour note doesn't suit a lady of your stature.
+...
+Fine, you can have this one.
+How gracious of you, Your Highness.
+Bite me.
+...
+
+Yes!
+I'm victorious!
+Kneel before me, my hapless subjects!
+...
+You can stand up already.
+My, I must've gone easy on you, Your Highness.
+Glad to see you in such high spirits.
+Shut up.
+...
+
+Thanks.
+It was starting to get really boring without you around.
+I'd wager the guards beg to differ.
+Always the same thing with you.
+I leave for a few days and all hell breaks loose.
+Ugh, those bumbling idiots are no fun. 
+Land a few solid hits and they immediately scream for their lives.
+And that know-it-all four-eyes is no better.
+´´Um, princess, you mustn't kick the poor guards around.´´
+´´Time to take your bath, princess!´´
+´´And remember to change your underwear daily!´´
+´´Lady Gray will be very mad at me if you don't obey!´´
+He even dared to imply I might smell.
+Princesses don't smell.
+Poor knave should be grateful he gets to be within my royal ambience.
+(The ´´ambience´´ in this room is certainly that of royal proportions.)
+Anyway, his ass is grass next time I see him.
+Language.
+Sorry, I meant arse.
+...
+You can't keep playing your childish games forever.
+This country expects a lot from you, and so does His Majesty.
+Not interested.
+How about we jump the ship and run away!
+Just you and me!
+So we can do whatever we like, go wherever!
+Here we go again...
+I'm serious!
+What's holding us?
+Or maybe you just don't want to go with me, is that it?
+That's not the point.
+Then what is it?!
+The world is much, much greater than either of us.
+We must be able to put our petty wants and needs aside...
+In order to fulfill our responsibilities.
+I'm sure you understand this, Your Highness.
+...
+No.
+No, I really don't.
+...
+Come here, little imp.
+Let's try to make sense of that hair of yours.
+... Okay.
+But after that we'll have a rematch!
+We'll see about that.
+You really could use a bath though.
+Watch your mouth!
+
+... Pathetic.
+You fight like a cow.
+Where is your fighting spirit?!
+Speak for yourself, Your Highness.
+Your movements feel rather sluggish today.
+Even a cow could see them coming.
+... Spoilsport.
+
+You wish to get rid of that lorn idol...?
+It's quite simple...
+Hold action button for few seconds...
+Remember to watch out for lightning...
+...
+The end is nigh...
+Or so they say...
+
+Defeat the agents of the Lords to open the path...
+But only lonely ones know the correct order...
+And if you think you already know...
+Think again...
+
+The first to go is...
+The second to go is...
+The third to go is...
+The fourth to go is...
+The fifth to go is...
+The sixth to go is...
+The seventh to go is...
+The final one to go is...
+That is all...
+
+A shade's sign...
+A leech...
+A smile...
+A maggot...
+A beaver...
+An eye...
+An octahedron...
+You...
+
+Leave the leeches be...
+I know they can get in your way...
+But they mean no harm...
+They only seek warmth aimlessly, like others...
+Before you can leave...
+Get rid of the ice...
+Or was it glass...
+I'm sure you guessed it already but...
+Don't lay your finger on those maggots...
+No matter how tempting it may feel...
+Another dead end...
+Great timing, stranger...
+Push me into that sparkling pit...
+I must find it...
+DREAM II
+This is preposterous!
+Please, Your Majesty, I implore you to calm down.
+Calm down?
+That wretched daughter of mine is steering this kingdom towards ruin...
+And you implore ME to calm down?!
+Little good will result from impatience, Your Majesty.
+Oh I've been patient with her. 
+More than you can imagine.
+But this has gone on for far too long.
+Rumours have started to spread.
+How one lowly king can't even get his daughter in order, let alone his dwindling kingdom...
+And have you heard the nickname they've given her?!
+I'm well aware of the rumours, Your Majesty.
+Then go find her and speak some sense into her, right now!
+Tell her she will stay behind these walls until she obeys!
+Your Majesty, I...
+Need I remind you of your place, Lady Gray?
+
+Another day, another groom candidate off the list.
+
+What number are we at again?
+I've lost count.
+At the very least you didn't break any bones this time.
+...
+Your Highness.
+We all know you're not fond of the situation at hand.
+But if you don't give them even the slightest of chances, things will simply get worse from here on.
+...
+You're just parroting what my father told you to say.
+I only wish the best for you, Your Highness...
+Really?
+Then why don't you tell that old man to shove it!
+Your Highness!
+I don't give a single ounce of ass about this country!
+Or the king!
+Or being a princess for that matter!
+At this point it really would be easier to just run away.
+We should've done that years ago.
+There's still time, right?
+If you actually care, then help me!
+What you ask of me I simply cannot do.
+Oh yes, I forgot. 
+You are just the king's lapdog these days.
+...
+...!
+I-I'm sorry.
+I went too far there.
+...
+As the lady-in-waiting, my allegiance lies with this kingdom and its ruler.
+But as your friend, I'm always on your side.
+No might in this world will change that.
+Well, at the very least it would take more than a petty tantrum.
+...
+I'll let you have a moment now.
+Try to get some rest tonight, Your Highness.
+
+
+
+
+
+You again, stranger...
+Did you fall here by accident...
+Nevermind...
+Don't get in my way...
+The path is getting narrower...
+And windier...
+Nothing I can't handle...
+What about you, stranger...
+Hmph...
+You don't know when to give up, do you...
+Do as you please...
+You're in way over your head though...
+Is this supposed to be a challenge...
+I'll just...
+...
+Hmm...
+...
+... ... ...
+
+
+This is just gettin cheeky...
+Watch your step...
+I'm almost there....
+Don't mess with my moves, stranger...
+So frustrating...
+When does it end...
+What is it, stranger...
+Mind your own business...
+So close...
+It must be close...
+I haven't come this far...
+For nothing...
+...
+It's hopeless...
+I can't take it anymore...
+I'm so tired...
+This is the end of the road...
+Sorry for taking you down with me, stranger...
+Only bitter dreams of the waking world await you now...
+MEETING WITH TAIL
+Be careful there.
+My scales are rather sensitive.
+Please come hither, if you wish to talk.
+I won't bite.
+
+You're a brave little one.
+Usually your kind will stay far away when they see me.
+But I mean no harm, my eyes and ears are just rather poor.
+Pleased to meet you.
+My name is Tail. 
+
+My scales tell me you aren't an ordinary lost soul.
+If you don't mind me prying...
+What's your purpose here?
+Maybe I can offer some help.
+
+[You tell her you're looking for a young woman]
+A woman did pass by recently.
+Unfortunately she ran away screaming before I could get a good look at her.
+You could try catching up to her.
+Although I can't guarantee you two will end up in the same place.
+These walls defy reason, they're ever moving.
+Or so I've been told.
+
+[You ask her if she knows a different way forward]
+Hmm, I've heard some floors have more than one exit.
+But they are hidden and only the remaining Void Lords know how to access them.
+You may be able to meet them if you venture deep enough.
+However, I doubt they'd be willing to share their secrets with you.
+Me?
+Imposing as I may look, I'm no Lord.
+And since that exit is a bit cramped for me...
+Here I remain.
+
+[You ask her how she ended up here]
+You're a curious one.
+Are you sure you want to hear?
+It might take a moment and I wouldn't want to hold you for too long...
+
+[You tell her you'd like to hear her story]
+Very well then.
+
+When Void was still in flux, when all eight Void Lords still roamed these parts...
+One of them, named Eus, ruled over this particular realm.
+They were assigned as the gatekeeper and the judge of the lost souls who arrived here.
+No soul could get past their judgment, no sin went unpunished.
+But as vigilant and rigorous as they were, Eus was endlessly fascinated by sin.
+This fascination grew and grew, until Eus did the unthinkable and committed sin themself.
+What was the true extent of their sin, I'm not entirely sure.
+When the other lords learned of this transgression, their ranks divided.
+Some of them defended Eus, some reviled them.
+Soon arguments turned into fights and those fights turned into vicious battles.
+In the end, Eus was devoured so that nothing remained.
+Well, one part of Eus did manage to slither away unnoticed.
+It lay in silence, mindlessly consuming any stray souls that approached it.
+It only knew pain and hunger.
+But as its wounds began to heal, it learned to think.
+It started to ponder why no amount of lost souls would satiate it.
+Why it was unable to leave these walls.
+Why it was allowed to live.
+Eventually it accepted its rotten existence, knowing well that none of its questions would ever be answered.
+That's how I came to be.
+...
+
+Thank you.
+It's been a while since I've been able to share that story.
+I'm so glad I decided not to eat you.
+...
+It's a joke.
+Your kind tastes terrible.
+
+You should probably keep moving if you wish to find the one you're looking for.
+While this realm has been in disarray ever since, don't let your guard down.
+Void Lords are one thing...
+But not all lost souls are quite as kind as you.
+Farewell.
+Maybe we'll meet again...
+Looks like you accidentally blocked the exit.
+[You decide it's better to move on]
+Let me help you.
+There you go.
+Watch where you step, my scales are very sensitive.
+[She doesn't seem to mind that much]
+
+Try not to shove those eggs too forcefully.
+They are close to hatching.
+... I know what you're thinking.
+But I didn't lay them. 
+They simply fall from above every now and then.
+Sometimes I catch a few and see what will come out of them.
+And if you listen closely, you can hear their thoughts.
+It's so exciting.
+Try it, maybe you'll be able to hear them too.
+
+[Why did you do that]
+[You feel ashamed]
+
+You're so small it's hard to talk with you if you don't step closer.
+... Sorry, forgot my manners there for a moment.
+TRIAL: LUST
+The accursed has repeatedly succumbed to lascivious actions.
+Such deeds would be appalling enough in the mortal realm.
+But to exercise such vulgar behaviour in Lord Add's domain...
+The insolence of mortals knows no bounds.
+We propose the accursed should be punished accordingly.
+
+Hold up a minute!
+You see, this was just a...
+Umm...
+While it may look quite bad at first, actually...
+They...
+...
+Yeah, I'm not gonna even try arguing this one.
+Lock them up, sis!
+
+times to be exact.
+
+
+
+MEETING WITH BRIDE
+What the...
+Who the hell are you?!
+And why are you giving away my hiding place?!
+Now those monsters will surely find us!
+Are you completely daft?!
+Oh no oh no oh no...
+
+[The well-dressed lady seems extremely distressed]
+[You do your best to explain that she isn't in immediate danger]
+Excuse me?
+I ran into a giant snake just a moment ago!
+Don't even get me started on those smaller things!
+And my dress...
+It's ruined!
+
+[You remark that her extravagant dress will only get in the way]
+There's no way I'm leaving it behind!
+Do you have any idea how much this cost?
+... Judging by your rags, you most certainly do not.
+Seriously, what ARE you wearing?
+Urgh, this is a nightmare...
+
+Look, if you can't show me a way out of this ditch...
+Do me a favour and leave me alone, you eyesore.
+I don't need any help!
+Get lost!
+And buy some new clothes while at it!
+
+[She's broken into tears]
+[Better leave her be for a moment]
+
+[She's finally calmed down a bit]
+Why me...
+Why is it always me...
+... You're still here?
+Sorry.
+I just...
+I have a lot on my plate at the moment.
+
+I was supposed to get married today.
+A big ceremony with lots of guests, like something out of fairytale.
+I was really looking forward to it after all the trouble we went to.
+It took us a whole weekend just to get the invitations done.
+Then the day finally came.
+And there my to-be-husband was, waiting for me at the altar.
+And I...
+I ran away.
+I couldn't do it to him.
+I'm so stupid.
+
+I was hoping all of this would be just a bad dream.
+But it keeps on going.
+Please, tell me.
+Am I being punished?
+Is this my punishment?
+[Unable to find the words to comfort her...]
+[You remain silent]
+Please don't leave me here.
+Please.
+I don't want to die.
+
+
+
+What the hell?!
+Stop that!
+
+
+[Daggers for eyes]
+
+
+[She won't talk to you anymore]
+
+What are you doing all of a sudden?!
+Leave me alone!
+
+[She's completely lost her spirit]
+
+
+
+SECRETS/HINTS
+Knock that chest over there six times in a row...
+Remain still and wait for six seconds...
+The exit will reveal itself...
+Don't ask how I know...
+
+So you did it...
+Thank you for your trust...
+Well...
+Good luck...
+
+Knock the backside of the chest three times in a row while it's closed...
+Then wait for three seconds...
+Something good should happen...
+Don't ask how I know...
+
+Well, did anything good happen...?
+I wonder if this trick works with other chests as well...
+How about you test it for me...
+Please...
+
+So you can hear me...
+Not everyone around here is worth listening to...
+Us lonely ones are quite knowledgeable though...
+
+GHHHOOOOOOORRR!
+
+Oh, you solved it already...
+...
+I guess I'm not needed here...
+Sigh...
+
+Those are some wings you've got there...
+Just don't try to push things while floating around...
+You'd probably regret it...
+
+
+The tail of the traitorous lord connects the brand...
+At least when they were still alive...
+Although I'm not sure how that's supposed to work...
+
+(...)
+(I'm so tired of listening to these things...)
+
+In the seventh room, just one more step beyond the exit...
+Three leeches roam, one completely out of reach... Fall behind the chest...
+A suspicious empty chest surrounded by nothing, inspect it one too many times...
+Insatiable smiles surround you, break all the floors of glass before falling...
+Nothing but a straight road, take the fall before your reflection...
+
+Ksi shi shi shi...
+Stranger...
+You've gotten yourself pretty deep into this mess, haven't you?
+
+You probably already figured it out, but...
+Not many Void Lords remain, now that you're done with that buzzing fly.
+One to be exact.
+But they're a pesky piece of work.
+They call them Cif...
+This isn't really my style...
+But I'm willing to give one piece of advice for free.
+Maybe it'll help you to take them down...
+How about it, stranger?
+[You decide to listen to what the dubious merchant has to say]
+Ksi shi shi shi...
+Listen carefully then.
+No one knows Cif's true power.
+But hitting them with that butterknife of yours might prove harder than you think...
+Why don't you use that fancy staff of yours instead?
+
+Let me know if that hint was useful...
+That is if you happen to survive your meeting with Cif...
+Good luck!
+Ksi shi shi shi shi!
+
+SPECIAL BRAND REVEALED!
+HOW TO USE:
+Draw Special Brand TWICE before your own to activate.
+Use them wisely!!
+
+[You gaze into the strange light]
+[You can barely make out two figures clad in white]
+[They're talking about something]
+I'll give you another hint.
+No one is perfect without me.
+I've got nothing to offer, yet I make others look plentiful.
+Some can't live without me, for others I'm all there's left.
+I can't be shared, yet I'm neverending.
+I'm nothing, yet I'm the greatest of them all.
+Without me, one is meaningless.
+What am I?
+
+
+
+
+
+
+
+
+
+DREAM III
+Are we there yet?
+
+Don't try to fool me.
+I know you aren't really sleeping.
+
+Maybe I could actually get some rest if you weren't so impatient, Your Highness.
+Come on, it's freezing here!
+What kind of a nut job lives in a country like this?
+This country isn't that different from yours, Your Highness.
+In fact, a few years ago it was in an even more worrisome state.
+After the ruler passed away without an heir, the weakened country was nearly swallowed by its warring neighbours.
+But then, a previously unknown knight rose to the occassion.
+He swiftly quelled the rising inner tensions...
+And despite being heavily outnumbered, his army easily warded off other nations aiming to seize the throne.
+Peace returned, and the knight declared sovereignty of his own.
+The country has begun to prosper once again.
+It's no wonder His Majesty seeks to ally himself with the leader of this land...
+... The one they call Knight of the Heavens.
+Please, I've heard this sales pitch before.
+Why don't you marry him since you're such a big fan.
+And that pompous nickname... I think I'm going to puke.
+Well, it certainly isn't in the same league with yours, Your Highness.
+Shut it.
+
+Your Highness, are you okay?!
+Y-yeah...
+More or less.
+What the hell was that?!
+An avalanche, perhaps...
+...
+Please stay inside, Your Highness.
+
+Lady Gray!
+An avalanche has blocked our way!
+We've been separated from the rest of the convoy!
+Why is the rearguard taking so long?!
+
+You don't have to worry about them.
+They've already been taken care of.
+...!
+Didn't put up much of a fight though.
+But to make things easier for you...
+Just hand over the crown head!
+(How does a lowly group of bandits know about the princess...?)
+And if I were to refuse?
+You haven't got much of a choice in the matter, lass.
+Don't think that pretty face of yours will save you.
+... Or maybe this courtlady knows how to handle a sword.
+That's a laugh and a bunch!
+
+...
+It seems even scum like you know that no courtlady would ever carry a weapon.
+However, you're sorely mistaken if you think I'm out of options.
+Oh really now?
+And what might these options be?
+
+I could let you live.
+... What the-
+
+[Gray the Destroyer looms upon you]
+[Gray the Destroyer gauges you]
+[You've made a grave mistake]
+G: I'll give you three turns.
+
+[You call out to your henchmen]
+B: You lousy cowards!
+B: Cover me you dolts!
+[You swing your sword at the enemy]
+B: T-take this you hag!
+[Gray the Destroyer leaps at you]
+G: Eins.
+G: Zwei.
+G: Drei.
+[You call out to your henchmen, but they're too afraid]
+
+Y-you gotta be kidding me...
+Gray the Destroyer...
+The one and only...
+Save your musings and tell me who sent you.
+What...?
+Not a good time to start playing dumb.
+Unless you'd rather have another serving.
+...
+Sorry, I may be just a small-time tea leaf...
+But even I have my pride. 
+Suit yourself then.
+
+Yeah Gray!
+Show them how it's done!
+Get back inside, Your Highness!
+And miss the finishing blow?
+No way!
+Well well well.
+My luck has finally turned...
+Get her, lads!
+Lily!
+
+Heh.
+Looks like this sorry crook got seriously one-upped.
+
+I was starting to worry why my guests didn't show up.
+My apologies.
+Filth such as them have yet to be completely wiped from this country.
+There's still work to be done.
+
+... That white hair is as pure as the tales have told.
+Allow me to introduce myself.
+I'm Johann The First, ruler of this humble country.
+Let me serve you well...
+My Demon Princess.
+
+An especially harsh and long winter had taken a toll on people's harvest.
+Famine and disease spread among both poor and rich. 
+Not even the country's king was spared.
+
+
+
+
+
+MEETING WITH FAMISHED
+[A scrawny man stands before you]
+Smell... 
+Food...
+Give.
+[It seems he is looking for food]
+[Maybe you should give something to him?]
+
+[You hand over one of your locust idols]
+[The man grabs it without any hesitation, gulping it down in an instant]
+Taste...
+Nothing...
+More...
+Give more.
+
+[You don't have anything left]
+[The man sighs]
+[A scrawny man is lying on the floor]
+[The man has collapsed]
+[He is hardly breathing]
+[There's very little you can do to help him]
+[Better keep moving]
+
+[His nose twitches slightly]
+No smell...
+No food...
+[The man has no interest in you]
+[He doesn't seem to care about being pushed around]
+[Frankly, he doesn't seem to care about anything besides food]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DREAM IV
+Taking down those goons in one fell swoop...
+That was so awesome!
+And then he gave that bandit that look just before frying his sorry ass...
+Is he really a king?
+He is way too cool for that!
+Please, try to calm down a bit, Your Highness.
+This has been a long day for you.
+I know, but I'm too excited to sleep...
+Hey, do you think I'll be able to meet Johann tomorrow?
+Maybe he'll show me how to do that lightning spell!
+Such magic shouldn't be used lightly, Your Highness.
+Killjoy Gray strikes again...
+Are you perhaps a bit envious?
+...
+
+Enjoying the snowfall?
+Our winter has its upsides, don't you think?
+Your Lordship!
+Forgive me, I almost didn't recognize you without the armor.
+Allow me to thank you once more for saving Her Highness, Your Lordship.
+It was the least I could do.
+I hope Her Highness is feeling better?
+She fell asleep, finally.
+She must've been exhausted after all that.
+But no need to worry, Your Lordship.
+She isn't the kind to get easily startled.
+Although Your Lordship did leave quite an impression on her.
+Please, just call me Johann.
+I'm not really a man of lofty titles.
+... I'd heard you were rather down-to-earth.
+Although I didn't expect you to still rush into battle all by yourself.
+A good ruler does anything in their power to right the wrong.
+That's simply their responsibility.
+Alas, not all rulers abide by such ideals.
+Many horrible things have happened to this country and its people by the result of simple negligence.
+I wish not to repeat that mistake.
+Even if it means getting my hands dirty from time to time.
+Speaking of which, things may not have turned out so well today without your contribution, Lady Gray.
+As I understand, you held off those bandits for quite some time all by yourself.
+I was simply doing my part as the lady-in-waiting.
+And then some, I'd argue.
+Do not belittle yourself.
+I can tell you're not an ordinary courtlady, Lady Gray.
+Or should I say ´´Gray the Destroyer´´?
+...
+So you too have heard of it.
+I've done my best to leave that nickname behind me, along with my past deeds.
+
+
+
+Starting tomorrow, I'd like to get to know this Demon Princess of yours a little better.
+... With your assistance, if you're willing.
+Of course.
+I'm sure Her Highness would be delighted as well.
+I'll be looking forward to it, then.
+Have a good night, Lady Gray.
+
+But as long as I can serve Her Highness to the best of my abilities...
+That's all that matters.
+I admire your devotion towards Her Highness.
+Still, I can't help but wonder...
+When you were fighting those crooks...
+Did you, at any moment, enjoy it?
+...!
+A fighter of your capability could've dispatched that paltry band of thieves in an instant.
+That's tactless of me...
+Pay my frivolous musings no mind.
+Yet you took your time, almost as if you were simply toying with them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEETING WITH NOMAD
+[A woman stands in front of a chest, blocking your way]
+[She's muttering to herself]
+Still nothing...
+Oh, didn't notice you there.
+Quite unexpected to bump into someone else down here.
+Are you a treasure hunter as well?
+... Wait.
+That staff doesn't look like something one would normally carry around.
+I bet you found it down here, didn't you?
+Would you mind if I took a better look at it?
+Don't worry, I'm an expert at handling goods like this.
+
+[As you start answering, the woman suddenly snatches your staff!]
+
+Drat, why doesn't this thing work?
+... Oh, you again.
+Please forgive me!
+I know I shouldn't have done that but I had no choice.
+My old man is very sick and the medicine he needs costs a small fortune and...
+Can't you just find it in your heart to forgive me?
+[...]
+...
+[...]
+... Something tells me you aren't buying that.
+Fine.
+I know when I'm at the end of my rope.
+Here, you can have this back.
+I couldn't get it to work, so it's probably worthless anyway.
+
+[You got your staff back]
+[It seems to be intact]
+[Try to not lose it again!]
+
+... What?
+I returned the staff already, so stop looking at me like that.
+Here, just to show I've no ill will towards you...
+You can have these as well.
+I don't see much use for them but maybe you'll appreciate the gesture.
+[You received seven locust idols]
+
+This place is absolutely massive.
+I've never seen ruins like this...
+But I'm sure if I venture deep enough, I'll be able to unearth some spectacular loot.
+Finders keepers as they say.
+... And no, I'm not stealing from you again.
+Just mind your own business and so will I.
+
+What's that?
+I'm blocking your way?
+Let me just catch my breath for a moment.
+
+[The cheeky woman refuses to move]
+[But there seems to be no way around her]
+
+[You decide to leave her be]
+[It's better that way]
+
+Hey, calm down!
+I said I'm sorry okay!
+Just stop already!
+
+You got that staff working again?
+Yeah, I saw you wielding it earlier.
+Shame I couldn't use it.
+It could've come really handy for pillag-
+... Eeexcavating these ruins I mean.
+Anyway, you can go ahead.
+Since you don't seem to have a knack for treasure hunting...
+I figured I should give you a head start.
+See ya later!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DREAM V
+Well, how about this one?
+Isn't that your usual dress, Your Highness?
+Just say if it looks good on me!
+They all look great on you.
+As they always do.
+Very helpful.
+I'm sweating through my ass over here you know...
+Hey, do you think I smell?
+I thought princesses didn't smell.
+Stop smiling, you wisecrack.
+It's a bit unusual to see you like this, that's all.
+Is it because of Lord Johann?
+... I just want to look my best when he arrives.
+We don't know when he'll come to visit us though, Your Highness.
+That's exactly why I need to be ready!
+It could even take a few weeks.
+Ugh...
+Didn't you receive another letter from him just recently, Your Highness?
+Yes, but I still haven't finished my reply!
+Come to think of it, you've been acting somewhat strange ever since.
+And what if I have?
+Obviously it's neither my duty nor place to judge, Your Highness.
+But don't you think you might be advancing a tad hastily?
+... I see.
+Would you prefer if I'd broken a few ribs first?
+You know what I mean, Your Highness.
+You worry too much, Gray.
+Perhaps.
+But we're approaching uncharted territories and I'd rather be safe than sorry.
+What's that supposed to mean...?
+Love, Your Highness.
+Sh-shut it you hag!
+
+Your Highness!
+It's Lord Johann!
+He has arrived unannounced!
+He is waiting downstairs!
+
+[It's an unfinished letter]
+[You probably shouldn't read it...?]
+[You definitely shouldn't read it]
+(I really, REALLY shouldn't read it.)
+...
+
+
+
+
+Dear Lord Johann
+I feel my heart racing restlessly as I write this letter.
+And as I grasp for words, my mind follows suit not far behind.
+It is all because of you.
+Again and again I return to the moments we spent together.
+But those simple memories will not cease this ache.
+I hold you responsible.
+Therefore I've decided not to share my answer until I can see you again.
+[The letter ends abruptly]
+
+[You really shouldn't have read it]
+
+I'm so glad to see Her Highness is in such high spirits.
+Thanks to Lord Johann!
+My back is glad as well!
+Aren't you going to join them downstairs, Lady Gray?
+
+The Knight of Heavens has arrived.
+I wonder if he's as handsome as they say.
+Maybe I'll get a chance to see him today...
+... Once I get off duty, of course!
+Please join them downstairs, Lady Gray.
+
+Ah, Lady Gray, pleasure to see you.
+Likewise, Lord Johann. 
+It has been a while.
+Forgive us for arriving unannounced.
+Don't mention it.
+Hehee...
+Someone doesn't seem to mind at all.
+Johann and I have an important announcement to make!
+
+Lady Gray!
+Her Highness and Lord Johann seem to be in the middle of something...
+So I decided not to butt in.
+But I'm sure you'll be fine!
+What are they talking about?
+Could it be...!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRIAL: PRIDE
+The accursed has repeatedly refused accepting defeat.
+Whether it is due to a mistake or an inability to see the answer...
+One has to acknowledge that all actions have their price.
+We propose the accursed should be punished accordingly.
+
+Wow.
+You're really stretching the definition of punishable action there.
+
+Pride is the greatest sin for a reason.
+Those who can't swallow theirs when it's needed will eventually succumb to it.
+That's an absolute truth of our world.
+
+Wouldn't you know about that.
+
+If our defense hasn't got anything of value to share...
+Let's get to the verdict already.
+
+Hey, hold your horses there!
+As they say, the road to hell is paved with good intentions.
+
+...
+I don't think you understand what that saying means.
+
+Sure I do!
+It's a joke!
+Get it?
+Or have those fat horns of yours sapped all sense of humour you had left?
+... Sorry, my bad.
+You didn't have any to begin with!
+
+... Why does it always come down to my horns with you. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEETING WITH CHILD
+[A young girl sits on the floor]
+[As your eyes meet, she winces]
+What are you looking at?
+
+Are you one of those creeps?
+[You tell her you're not going to hurt her]
+I...
+I'm not afraid of you.
+Leave me alone.
+
+[The girl pouts, ignoring you]
+[... She sneakily gazes up to you but averts her eyes soon after]
+
+[You try to comfort her]
+Who do you think you are, my mom?
+Leave me alone already...
+
+I said leave me alone!
+
+[You tell yourself you're not going to hurt her]
+
+What the hell?!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRIAL: GREED
+The accursed has repeatedly tried to force their way against the course of this realm.
+Forcing your way without nary a thought will get you nowhere.
+It only proves one's covetous desire of moving forward.
+We propose the accursed should be punished accordingly.
+
+...
+What's this?
+Is our defense at loss for words?
+That'd be a first.
+I got distracted by those fat horns of yours, that's all.
+Anyway...
+... ... ...
+...
+Don't tell me you haven't got any sort of statement prepared.
+Sorry, got distracted again. 
+
+Aaanyway, at least they didn't give up, right?
+I'm actually rather curious to see how far they can get like this.
+After all, there's no problem dedication and brute force can't solve.
+Well, besides those horns of yours.
+Those are just plain hopeless.
+... I'll show you the meaning of hopelessness once we're done here.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DREAM VI
+Is this place big enough?
+Seems sort of cramped.
+I'm sure this will suffice for our purposes, Your Highness.
+Unless you'd prefer the main ballroom instead?
+No way!
+I don't want Johann barging in while we, you know...
+If only you'd been so keen when you were younger, we wouldn't be in such a hurry.
+Well, it's now or never!
+So stop yapping and get on with it!
+Of course, Your Highness.
+And you better keep your promise!
+Yes yes.
+No wisecracking whatsoever.
+Good.
+May I have this dance, Your Highness?
+Just do me in already...
+
+And place your left hand on my shoulder, like so...
+Now, just follow my lead and try to relax.
+Okay...
+You'll be fine, Your Highness.
+Let us begin!
+
+Well would you look at that!
+I didn't think this would be so much fun!
+
+Not bad at all, Your Highness.
+For your first time, that is...
+
+Your Highness is a natural!
+
+You're getting there, Your Highness...
+(I feel sorry for Lord Johann's toes already...)
+
+(You...)
+(You aren't just screwing with me, you little brat...?)
+
+How about a small break?
+
+Hey Gray.
+Yes, Your Highness?
+It's almost strange, to see you dancing.
+How so?
+I'm more used to seeing you kick and punch stuff.
+Where did you learn to dance like that?
+Or can't you remember that either?
+Oh, I do remember that quite well.
+I was about your age.
+All I knew back then was... 
+Kicking and punching stuff, as you'd say.
+So I was rather apprehensive at first.
+Luckily I had a good teacher.
+Hmm?
+Her Majesty, of course. 
+...
+I'm sorry, Your Highness.
+That was very tactless of me.
+Don't worry, Gray.
+I can't remember a thing about mother anyway.
+And yet...
+At times like these I wish she'd still be around.
+...
+I'm sure she is watching among the blessed stars, Your Highness.
+Especially now that your big day is only a few weeks away.
+... You really think so?
+You resemble her more and more by each passing year.
+You'd make her proud.
+
+What is it, Gray?
+Oh, nothing.
+I must be hearing things.
+(Was someone at the door just now...?)
+
+So, should we give it another go?
+Practice makes perfect after all.
+If you insist.
+
+(I wonder if you truly are watching...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEETING WITH GOR
+[A giant head lies before you, blocking your path]
+
+Hngghh...
+
+What do you want?
+[They can hardly muster an irritated groan]
+
+[You tell them they need to move]
+... Really?
+That's why you disturb me?
+I was doing so well with being dead.
+How bothersome.
+
+I don't really know what you're looking for.
+But maybe you can tell I'm not exactly going to move anytime soon.
+Let me die.
+
+[You ask them if they know another way down]
+Eeeeeee...?
+Didn't you listen to anything of what I just said?
+...
+Fine.
+If it means I can then keep dying in peace...
+There should be a smirking statue in here somewhere...
+If you leap into a hole directly in front of it...
+You should be able to advance deeper.
+... Almost forgot.
+This trick requires a sacrifice.
+Nothing major, as long as you've got some food with you, you should be good to go.
+
+You don't have any food with you?
+Fine...
+Here, have some.
+[You received a locust idol]
+[... Where do they keep these things?]
+
+What is it now...
+Those lost souls are clogging up your path?
+I knew I shouldn't have given them anything...
+They kept begging and begging for food until I gave in and now they stick around, craving for more...
+They are the worst kind if you ask me...
+... Don't give me that look.
+I can't do anything about them...
+Hey, do us both a favour...
+And give them a good shove.
+I'm sure you've gotten used to it by now.
+Since you've made it this far without losing your marbles...
+
+Go ahead.
+No hard feelings.
+Lost souls are here for a reason.
+They're but fuel for DIS...
+
+Is the route clear already?
+All there's left to do for you...
+... Is to find that smirking statue and take a leap.
+Then I can continue dying...
+...
+
+That staff you wield...
+Where did you get it?
+... I guess it's not important.
+It's called the Void Rod.
+It was a prized possession of Lord Add. 
+She sort of ran this place for a while.
+Maybe...
+Alright, stranger.
+I've got a request.
+Will you hear it?
+
+[You decide to hear out their request]
+Lord Add is the one I can thank for my current predicament.
+Long ago, they and the other Lords had a big fight.
+I didn't want anything to do with it but was pulled in regardless.
+As a punishment, Add cut off my body.
+So when I heard they had left this realm, I felt hopeless.
+For only they could grant me my eternal rest.
+Some rumour said Add hid their treasures within these walls before they left, but I couldn't bring myself to believe it...
+Until you showed up.
+I want you to find Add's sword, the Void Blade.
+Only that can kill me.
+If I had to guess, you probably won't find it just lying about.
+Add most likely hid it in one of the secret passageways.
+Mere mortals can't normally access them...
+That's where that Void Rod comes in. 
+You should be able to enter the hidden routes with a special incantation.
+Make sure to remember it:
+´´Where nothingness engraves the brand of Lord...
+... Where the path to damnation rests within you...
+... Place your faith and embrace the Void.´´
+
+[They started sleeping again...?]
+
+You think that sounds awfully shady?
+Do as you please, as long as you stop bothering me with your problems...
+
+Once you find the Void Blade, make sure to return here.
+Then I can finally have my rest...
+
+[You tell them you've got no idea how to use the incantation]
+
+EEEEEEEEEEEEEEEEEEEEE?!
+
+What do you mean you've got no idea?!
+You can use the Void Rod, can't you?
+I got my hopes up...
+... For nothing?!
+...
+Whatever.
+Should've known better...
+
+Get lost.
+I'm in a bad mood now...
+
+... You want to get to the exit?
+Can't help you there...
+...
+Fine...
+You should look out for a smirking statue.
+If you leap into a hole directly in front of it...
+You'll be able to advance further...
+And more importantly, you can finally leave me be.
+You didn't hear this from me, by the way...
+
+Take a hike.
+Oh, you're back...
+I thought you gave up already...
+If you want to leave, use that smirking statue over there...
+
+[They watch you with no interest whatsoever]
+
+... Still here?
+I'm not sure if I mentioned this already but...
+The smirking statue won't let you pass without a sacrifice.
+Otherwise you'll just plummet into darkness like the dunce you are.
+As for the sacrifice, almost anything edible should do.
+
+... You haven't got any food with you..?
+Fiiine...
+Take this.
+And for the last time...
+Leave.
+
+Hold on...!
+That sword you carry...
+Could it be...?
+Yes, there's no mistaking it.
+...
+I know this is very sudden.
+But could you...
+How should I put this...
+Take that sword and...
+Kill me...
+
+... Pretty please?
+
+What?
+You don't want to kill me?
+...
+Sorry, I should've known you mortals take death pretty seriously.
+I'm just tired of being alive.
+Even more so after my body was taken away.
+And since this place is barely functioning anymore...
+I've no purpose here.
+Besides, I'm blocking your way, right?
+So it would be better for you as well...
+Since there's no other exit from this floor...
+So, how about it?
+
+[You decide to grant their wish]
+R-really?
+Is this really happening...
+What a relief...
+...
+Alright.
+Just thrust that sword into me...
+It shouldn't require much power.
+
+Wait.
+This might be a stupid question...
+But have you died before?
+What is it like to die?
+I heard you mortals believe in reincarnation or something.
+Will that happen to me as well?
+Because that sounds super bothersome.
+[You tell them you'd rather not think about such things]
+I see...
+Well, in that case I've only got one more thing.
+If you see my sister...
+Tell them that Gor said hi.
+They're missing their left eye, I'm sure you'll recognize them if you two happen to meet.
+And... 
+Thank you, stranger.
+See ya.
+
+[They refuse to speak to you anymore]
+[...]
+[´´Where nothingness engraves the brand of Lord, where the path to damnation rests within you, place your faith and embrace the Void.´´]
+[What did they mean by that?]
+
+Hello!
+Are you by any chance looking for the fatty head?
+I just got rid of them. 
+Oh don't get me wrong.
+They aren't dead.
+I couldn't kill that lazy donkey even if I tried.
+Besides...
+Death would be way too kind for someone who freely tattles about our secrets.
+Yes.
+I know you've been snooping around in places you don't belong, mortal.
+Trust me, if it was up to me...
+YOU'D BE DEAD MEAT BY NOW.
+You may consider yourself lucky for now.
+But who knows... 
+In the end you might wish you were dead anyway.
+See ya!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DREAM VII
+No peeking!
+Are you sure you don't need any help, Your Highness?
+I can handle this!
+I think...
+Why are you trying it on at this hour?
+Are you worried it won't fit anymore?
+There's not much we can do if that's the case...
+Shush with you.
+You haven't seen me wearing this after the adjustments, right?
+All I need from you is your expert opinion.
+And to make sure nothing is... Bursting out or something.
+... You can look now.
+So...
+How does it look?
+...
+Why are you grinning like that?
+I hope you aren't trying to concoct anything funny, you wisecrack.
+It's beautiful, Your Highness.
+I didn't expect anything less.
+But...
+But what?!
+I think it's missing something.
+
+... ... ...
+Is something wrong?
+Isn't it to your liking?
+No, it's just...
+I...
+I have never seen you without this.
+Is it really okay for me to use it?
+I've been carrying it around for as long as I can remember...
+But I think you'll carry that pendant much better than I ever did, Your Highness.
+
+
+
+You're late.
+My apologies.
+This place was harder to find than I thought.
+Why'd you call me here, Lady Gray?
+
+This has to end.
+What are you talking about?
+You know very well what I mean.
+I can't continue on like this.
+... How sudden of you.
+I'd never guessed your conviction would sway like so.
+I have kept my promise so far, haven't I?
+I'll marry your little princess and make her my queen...
+... So that she can finally attain her freedom.
+Isn't this what you wished for?
+Lily truly loves you.
+So what?
+Her emotions are meaningless.
+You've made it this far already.
+Her Highness will never be the wiser.
+After all, she's just a naive, spoiled brat...
+
+...!
+She might be an insufferable, childish little imp...
+But I once made a promise to protect her.
+That's all that matters to me.
+... I thought you of all people would understand the importance of our responsibilites.
+I clearly misjudged you, Lady Gray.
+But don't get the wrong idea.
+It's too late to turn back now.
+In that case I'll tell everything to Lily.
+You wouldn't...
+Surely you understand what would happen...!
+So be it!
+Lily doesn't deserve this!
+
+I truly admired you...
+Ever since I saw you take care of those mercenaries...
+I knew you were most exceptional... 
+Truly a waste.
+Unfortunately, my plans were set in motion long before you showed up, and I really don't have time for this...
+So if I can't have what I desire...
+You may as well die, Gray the Destroyer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEETING WITH MIMIC
+You're in my way.
+I can't waste my time with you.
+Please, stay away.
+Why are you like this...?
+Don't you have anything better to do?
+Move.
+You're blocking the path.
+What are you looking at?
+Why are you acting like this?
+Is something wrong?
+Stop toying with me.
+Stop wasting my time.
+Stop.
+... Have I seen you somewhere before?
+My eyes are up here.
+Watch your step.
+What?
+Move aside.
+You keep getting in my way...
+What are you doing here?
+I don't think I can help you...
+Do you know where the exit is?
+There has to be another way...
+Where did you come from?
+Are you lost?
+Can I help you?
+Is there a problem?
+Can't you see I'm busy.
+How much longer...?
+Why are you following me?
+Do you need something?
+I can't get anywhere like this.
+Just stop following me around already.
+Who are you?
+
+...
+Seems like you figured it out.
+You're stuck.
+There's no way around this.
+This is impossible.
+... Is what I'd like to say.
+Like that would be enough to stop you. 
+Trust me, I should know.
+
+You probably prepared yourself for this already...
+Things won't get any easier from here.
+Honestly, I can't even tell how much you've got left...
+But you can't give up. 
+You won't give up. 
+Because someone is waiting for you.
+You don't need me to tell you that.
+Just...
+Just don't be too hard on yourself.
+Even when answers escape you and you're ready to succumb into despair...
+I believe in you.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DREAM VIII
+... It's...
+Morning already...?
+How am I still alive?
+Could he have missed somehow...
+But even if that were true...
+
+Lily...!
+
+[Something is wrong]
+
+Your Highness!
+By the sacred stars what do you think you're doing?!
+What's wrong with you...
+...
+Come on...
+Let's get you inside...
+
+Halt, Gray the Destroyer!
+Step away from the princess!
+What...
+What are all these soldiers doing in here, Johann?!
+You tell me, my dear lady.
+What sad state of affairs this is...
+To think the princess' loyal servant would prove to be such an envious person...
+... That she would attempt to assault Her Highness right before her wedding day.
+I guess it's expected from a former outlaw.
+Assault...?!
+How impudent can you get!
+Once the king hears about this...!
+I've informed His Majesty about the situation. 
+He entrusted me with the task of capturing you.
+It goes without saying that this kind of treachery won't go unpunished.
+You'll be executed tomorrow.
+We wouldn't want to spoil the mood for the wedding or the coronation ceremony, now would we?
+... You absolute scum of the earth...
+Now now.
+Don't be hasty.
+My men are well aware of your reputation, Gray the Destroyer...
+I don't think even you would be brazen enough to believe you could take them all head on.
+I couldn't care less...
+As long as your head rolls along with mine!
+
+Stop!
+Your Highness...
+Please stop this, Johann...
+I'll do what you want.
+Just don't hurt Gray.
+My...
+For once, the princess is the voice of reason. What a pleasant surprise.
+How about it, Gray the Destroyer?
+Turn yourself in peacefully and I'll make sure to honor Her Highness' wish.
+...
+Lily.
+... I'm sorry.
+
+Lady Gray!
+I couldn't believe my eyes when I saw the guards taking you...!
+Then I heard about the assault accusation...
+What poppycock!
+You would never hurt Her Highness!
+
+
+The ceremony has already started.
+I don't know why, but something...
+Something just isn't right.
+That's why I took the liberty of bringing in your battle attire.
+Although I hope it doesn't come down to it...
+Please, Lady Gray, save Her Highness and escape!
+Only you can do it...
+Only you can protect her happiness!
+That's what Her Majesty would've wanted!
+
+Take cover.
+I'll distract the guards.
+
+Oh no!
+The prisoner is escaping!
+She went this way!
+Hurry up and catch her, you dolts!
+
+Lady Gray!
+Don't worry!
+Four-eyes clued us in.
+We'll do our best to hold back Lord Johann's men.
+Maybe our good-for-nothing lives will finally matter, even just a little bit...
+Now go!
+Rescue Her Highness and flee!
+
+It seems the lady-in-waiting has clawed her way out of the dungeon.
+Gray!
+Your Highness, are you okay?!
+I'm sorry, Gray...
+I couldn't do anything...
+Now everyone has...!
+
+What's the meaning of this, Johann?!
+I'm afraid you arrived just a bit too late. 
+The sacrifice...
+It is almost done.
+What...?
+
+Everything in this world comes with a price.
+I learned this lesson a long time ago when I lay wounded on a silent battlefield, starving and freezing to death...
+I kept praying to the stars but the stars wouldn't answer.
+Until finally all I could do...
+... Was to curse my rotten fate and blame those responsible for it.
+Then they appeared before me.
+They promised me life and power to change this world.
+All they needed in exchange was my unwavering devotion.
+
+
+
+
+
+
+
+
+Led by that, I come to offer this measly kingdom and its inhabitants as part of our contract.
+Show yourselves, Lords of the Void!
+
+Yeah yeah.
+Ease on the melodrama.
+...
+
+... So these fiends are the source of your power...
+Demons!
+
+Hmm, I think that's what you mortals do call us now...
+While I don't like the sound of it...
+Explaining it all in detail would be way too complicated for you.
+Demons will do.
+The hell I care what you're called!
+Just leave Her Highness out of this, Johann!
+My quota is still a bit short, correct?
+... That is correct.
+One soul remains.
+What ever should I do...
+How about you help me decide, my dear lady?
+If you offer your soul as the final part of my sacrifice, I'll promise to let your princess live. 
+... And why would I trust you ever again?
+Because you'll cling into any semblance of hope of keeping your petty princess safe.
+Just like you did in order to persuade me into marrying her...
+Shut up you bastard!
+If only you'd known I'd marry Her Highness either way to fulfill my plan...
+Luckily playing hard to catch paid off in spades, since I quite enjoyed your...
+Enthusiasm.
+...
+So do what you do best!
+Squirm before me, o mighty Gray the Destroyer!
+
+...
+I...
+Don't you even think about it!
+...!
+The Gray I know isn't such a wuss!
+Groveling like that is pathetic!
+After all these years...
+... You now decide it's okay to just quietly fade away?!
+Quit acting like you're about to give up!
+... Now I'm getting a pep talk from Her Highness...
+How low I must've fallen...
+Johann.
+I refuse your offer.
+And I'll make sure you'll pay for all you've done.
+I swear it as Gray the Destroyer!
+
+...
+Bee.
+Umm, that's ´´Lord´´ Bee to you...
+Would you like to entertain this haughty wench?
+Ooooh, really?!
+Can I do it, sis?
+... Do as you please.
+But if DIS finds out, you're on your own.
+Yay!
+
+Hello!
+I'm Void Lord Bee!
+Nice to meet you.
+Now...
+LET'S GET FIRED UP, MORTAL!
+
+Damn it...
+What are you?
+Huh, did it break already?
+Boooring.
+You should be pleased she lasted for that long.
+Usually mortals simply lose their minds at the sight of our true forms.
+Either way...
+Playtime is over.
+Complete the sacrifice, surrogate. 
+Will that fulfill my contract?
+Naturally.
+
+Watching you struggle was truly magnificent.
+Shame things turned out this way...
+As the future emperor of this waking world, I would've loved to have you beside me...!
+
+(Crap...)
+(I'm sorry...)
+(I couldn't fulfill my promise to you...)
+(I can only pray for Lily's safety with you... In the afterlife...)
+
+Wait!
+Hey, big horns!
+... Big what now...?
+I don't fully understand what's going on...
+But if Johann made some kind of contract with you...
+... I want to make one as well!
+I'll offer myself!
+All I want is that you leave Gray alone!
+
+Now this is rich!
+Our juvenile little princess thinks her soul is worth something.
+...!
+Do you believe you can just make a contract with them like it's nothing?
+How unbelievably gullible you'd have to be!
+...
+
+Very well.
+
+Young lady.
+Do you wish to offer your soul?
+Now wait a minute!
+This has to be a joke, right?
+This asinine child doesn't even understand the meaning of devotion...!
+That isn't something you'll be the judge of, surrogate.
+...!
+Are you certain of this, Your Honor?
+DIS has approved her terms.
+A contract can be formed.
+Hoooo!
+This got super interesting!
+I'll ask you once more, young lady.
+Do you wish to offer your soul in exchange for the safety of this woman?
+... Yeah.
+I do.
+
+Your Highness, wait!
+I can't accept this!
+You there..!
+You seem like the leader of this bunch...
+I beg you, take my soul instead!
+Tear my body apart if you have to!
+... I'm afraid that's not possible.
+
+But if you truly wish to reclaim her...
+Meet us at the end of the Void.
+She will be waiting for you there... 
+There DIS will reevaluate the worthiness of your devotion.
+
+What...
+What's going on...
+How did it come to this...?!
+Gray.
+...!
+You worry too much.
+It's better this way.
+Earlier I was so scared I thought I'd rather die...
+Now I don't even really know what's happening, or where I'm headed to, either...
+But for as long as you stand there...
+I'm not afraid.
+Like how you always kept believing in me...
+I'll now place my faith in you.
+...
+Lily...
+And...
+Please take care of it while I'm away.
+It's an important wedding gift and I don't know what I'd do if I lost it.
+So make sure to return it, alright?
+
+Your Honor, our time is almost up.
+...
+Are you ready, young lady?
+You can bet your ass on it, tinhead!
+It's about time I start to live up to that nickname of mine...!
+Very well.
+
+
+
+
+... Who would've guessed.
+Well, this result is as good as any.
+Unfortunately I'm not willing to take the risk of leaving you alive.
+This time I won't miss!
+
+Nothing's happening...?!
+
+Ooh, forgot to mention.
+Since you didn't finish the sacrifice in time, your contract has been voided.
+So you can say goodbye to those magical finger snapping powers of yours and what not.
+This isn't funny, Bee...!
+I was only one short!
+Do I look like I care?
+Besides I've got a feeling that's the least of your problems right now...
+See ya soon!
+
+Gray, please...
+This has been a rough day for us all...
+So calm down and listen to me.
+You've got no idea what I had to do to get where I am now.
+I only did it for my kingdom...
+For my people!
+I harbor no ill will towards you, your princess or your country!
+The contract obliged me...!
+I was trapped!
+I didn't hope for this!
+It's true that at first I was just going to marry your princess without much thought...
+But when I saw you and how far you're willing to go just to ensure I'd marry Her Highness...
+I took my chance and used you, much to my own pleasure...!
+For that I'm terribly sorry and I understand nothing I say will ever make up for it...
+But my judgment was shrouded!
+By my instincts, by my desires...!
+I want you, Gray!
+I still lust you!
+I'll do anything!
+Just spare me!
+I don't want to die!
+Not like this!
+
+[Void Lord Bee looms upon you]
+[Void Lord Bee waits for your next move]
+[Void Lord Bee is still waiting...]
+[Void Lord Bee yawns loudly]
+[Void Lord Bee is becoming restless]
+[Void Lord Bee taps her feet impatiently]
+[Void Lord Bee is growing more and more anxious!]
+[Void Lord Bee has had enough]
+[Void Lord Bee lunges at you in a lazy manner]
+[Void Lord Bee leaps at you with rage!]
+
+[You attack the monster]
+[You strike the monster with all you've got!]
+[A monster whose mere existence mocks the world itself]
+
+Leave Her Highness be!
+Begone!
+Die, monster!
+Take this, foul creature!
+You won't get away...!
+I'll destroy you!
+For all that is sacred...!
+ORRRYAAAAAGGGH!!!
+
+Ouch... Just kidding!
+Got anything spicier?
+No can do!
+Is that all?
+Come on, step it up!
+Futile...
+Don't make me laugh!
+You bore me to death!
+WHAT DID YOU DO
+
+Wow!
+I haven't had this much fun in ages!
+And I can't even remember the last time a mortal was able to land a solid hit on me...
+Oh wait, I remember now.
+IT'S NEVER. 
+Well that's a side of you I don't get to see very often.
+Did the mortal manage to hurt your ego by any chance?
+Shut up.
+...
+
+
+There's something I need to tell you...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VOID ENDING
+No matter how much you sleep...
+Your eyes feel heavy.
+Dreams elude you.
+Can you remember why you are here?
+Or have you lost something very important to you?
+Without it, you'll never reach the end.
+... The envious one has poisoned your body, your mind, your devotion.
+Seek the dark idol to cleanse yourself, to return where you started.
+
+
+
+
+
+
+
+
+
+
+
+GRAY'S DECISION
+You've traveled far, stranger.
+Through these endless halls, you've shown us the extent of your devotion.
+We applaud you. 
+
+
+Congratulations.
+Congratulations!
+
+
+
+
+
+
+
+
+
+
+Stranger.
+Your devotion has exceeded the expectations of DIS.
+For such a display alone, DIS is willing to make a contract with you.
+So tell us.
+What is it that you desire?
+
+... Give her back.
+Please, give Lily back to me. 
+
+...
+Your devotion continues to impress.
+Thus, you're allowed to take one soul with you.
+With one condition.
+You may never return here. 
+Do you accept these terms?
+
+I do. 
+
+Very well. 
+
+... What are you waiting for?
+I'm done with playing your games!
+
+An incongruity has risen with this particular subject.
+A zygote inside the subject has developed into a blastocyst and attached itself into the mucous membrane of the womb.
+Tsygowhat now?
+... In layman's terms, another soul has begun to grow inside the princess.
+
+No...
+No no no no no no!
+You're lying!
+
+Stranger.
+Don't you dare say it...!
+Which soul do you wish to take with you?
+
+Shut up!
+Shut up, shut up, shut up!
+You think I'm going to just accept this?!
+You tricked me!
+
+This DIS you keep mentioning...
+Let me talk directly to them!
+
+I want to know what this is all about!
+Why do you keep toying with us like this...
+... You treacherous fiends!
+
+Even if you were to find our actions heartless or incomprehensible...
+That's not something you should concern yourself with, stranger.
+No matter how things may have turned out...
+This choice was made for you.
+That's the only thing that matters now.
+
+... I want to see her.
+
+... Very well.
+
+She is...
+Asleep?
+
+More or less.
+Our life support systems are keeping her in a state one could liken to an artificial coma.
+Fret not, her rest is a peaceful one.
+
+Does she know...?
+
+Highly unlikely.
+If you were to take her with you...
+All of this would be but a dream to her.
+
+I'll ask you once more, stranger.
+What's your decision?
+
+
+
+
+
+
+
+
+
+ANOTHER MEETING WITH TAIL
+Oh, it's you again...
+...
+I'm sorry.
+I was advised not to speak with you...
+
+... Sorry.
+I enjoyed talking with you. 
+But I don't want to anger Bee either.
+
+Please leave...
+
+I've been advised not to speak with strangers...
+
+Hello!
+I didn't think you had it in you...
+But you actually killed that tattling snake.
+Stone cold!
+Honestly, I should've taken care of it myself...
+Not that the blabbermouth actually knew anything worthwhile.
+So whatever wisdom it might've shared with you...
+Take it with a grain of salt.
+I mean, how could it possibly have understood what was going on back then...
+...
+I'm getting too soft.
+Go die or something.
+See ya!
+
+You seem to be in a hurry.
+Have fun!
+PROLOGUE
+You've grown so fast...
+What a relief.
+This world may have changed.
+But you'll need to become strong, for your mother's sake.
+She's still waiting...
+I can't let her down again.
+
+(...)
+(Looks like these have been dusted somewhat recently.)
+(... Stubborn old woman.)
+
+(The fridge has started to smell...)
+(I'd rather not open it.)
+
+(All these drugs strewn about...)
+(Pills in the toilet as well...)
+
+(The clock seems to have stopped.)
+
+(You really let yourself go with these books...)
+
+(´´Dictionnaire Infernal´´...)
+(A passage about Beelzebub, Lord of the Flies, has been highlighted.)
+(... I really don't have time for this nonsense.)
+(This bookshelf is a mess.)
+
+
+
+(It's completely withered.)
+(You were never good with flowers anyway.)
+
+[There's a sealed envelope on the table]
+[It's addressed to you]
+[Would you like to open it?]
+
+(What a mess...)
+(The birth certificate must be in here somewhere.)
+(Better start looking around.)
+
+
+
+
+
+(... Nothing.)
+(Bingo!)
+
+...
+Guess that settles it then.
+
+ANOTHER ANOTHER MEETING WITH TAIL
+Hello, little one.
+
+It talks...?!
+I wasn't just hearing things...
+It actually talks!
+
+Sorry, did I startle you there?
+... I should've known better, considering your kind tends to keep their distance from me.
+But I assure you I mean no harm.
+In truth, I haven't spoken with anyone in ages, so this is quite refreshing.
+
+You seem surprisingly calm for someone of your size.
+
+Well, it's not like I speak with giant snakes on an everyday basis.
+Actually, I think I may've heard stories about you when I was much younger.
+My memories are quite hazy...
+But you don't quite look like I imagined.
+
+Is that so?
+... That makes sense.
+Have you heard of the Void Lords as well, little one?
+
+Are you talking about the demons?
+Yeah, I think that's what my...
+... She used to call them.
+
+A long time ago, I was a part of one of the Lords.
+While all Lords are able to change their appearance as they wish...
+My Lord, Eus, was unique.
+They say everyone saw them differently, that their form would reflect the viewer's one true love.
+What purpose this trait served I can't tell.
+But it seems I might have inherited it.
+Considering you can see my true form...
+I guess you haven't met anyone you'd like to copulate with?
+
+... What's up with the crass tongue all of a sudden?
+Love isn't about...
+... Copulating...
+Besides, the last few years have just been a bit rocky, okay?
+
+Sorry.
+My understanding of mortals and their manners is rather limited.
+
+... Why am I talking about this with you in the first place?
+Why am I in here anyway?
+Isn't this just a bad dream?
+
+From your point of view, that might as well be true.
+Don't let your guard down however.
+Those without strong devotion are bound to lose their way within this labyrinth, until nothing remains of them.
+Whatever it is that you're looking for...
+I hope you find it eventually.
+
+... Thanks, I guess.
+
+Take care, little one.
+
+(Its skin feels oddly soft.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILLIE'S DREAM I
+And that just about wraps up our viewing.
+So, what do you think?
+Sure, there are a few spots that could use a minor makeover...
+But nothing a little elbow grease won't fix!
+Besides, there's more than enough room for both you and your daughter.
+Quite frankly, this place is a steal!
+And this air of history that permeates the whole residence...
+... Truly...
+... Breathtaking. 
+...
+Excuse me for a moment.
+Please, mull it over in the meanwhile.
+
+Hello, Gray speaking?
+Ah, sorry I couldn't answer earlier.
+The viewing just ended.
+How should I put this...
+It's even worse than the pictures made it out to be.
+Yeah, that bad.
+...
+I think I'm going to take it.
+You know I'm not exactly swimming in options.
+The bank isn't going to extend the loan any further with my background...
+No, I couldn't put you in that situation, after all you've done...
+But I appreciate the offer, I really do.
+We'll manage.
+Though it'll require some serious work.
+Still...
+This one feels right.
+No, she doesn't seem to mind one bit.
+Quite the contrary.
+Fine, I'll sleep on it, if it makes you feel any better.
+We'll see you later.
+Mom!
+
+And what might've happened to your shoes, young lady?
+I took them off!
+They're in my room!
+... Your room?
+Yeah, the big one!
+Slow down, sweetie.
+We aren't moving yet...
+There's a huge dead rat in the closet as well!
+... Oh.
+(... Should probably call an exterminator first...)
+
+
+
+
+LILLIE'S DREAM II
+In the beginning, when sky and earth were still one and the same...
+A flower bloomed, lighting up the space with stars.
+Beings who basked in their light were granted both thought and emotion.
+Among those beings were humans.
+Filled with gratitude, people began to pray to the stars.
+But the stars didn't answer them.
+Maybe they can't hear us from this far, people thought.
+With their combined efforts, the worshipers built a great tower.
+Atop of it humans were able to grow wings and fly as far as the eye can see.
+These winged messengers took flight, hoping to one day reach the stars they so admired...
+Time passed, until one day, something unexpected happened.
+A star has fallen down, people rejoiced with excitement as they gathered around it from far and wide.
+Had the stars finally heard their prayers?
+This must be an answer!
+But the fallen star didn't shine like the others.
+
+Its light was a completely black and cold void.
+From that light arose beings of unspeakable horror.
+Beings that preyed upon the weak minded, offering them power and eternal life...
+For them, humans were nothing but playthings, a fertile ground to sow their seeds of disorder and deceit.
+When people saw the true nature of these demons, they sealed the fallen star within the tower and buried it so deep no one would ever see its light again.
+But it was all too late.
+For demons had already found their way into man's heart.
+And so, just like people had once learned to admire the stars...
+They also learned to fear them.
+
+...Mom?
+Yes dear?
+Could you read me a different story before bedtime for once?
+I've heard this one so many times already!
+Most have already forgotten this story completely.
+It's very important that you remember it.
+But why?
+Demons aren't real...
+Right?
+
+Of course not.
+And even if they were real...
+I would protect you from them.
+So you've got nothing to fear.
+
+... I'd still like to hear Sleeping Beauty instead...
+... How about I read it to you next time?
+Promise?
+Promise.
+Now, time to say good night.
+Good night, mom.
+I love you.
+
+LILLIE'S DREAM III
+Lillie!
+Aren't you done yet?
+No peeking!
+Are you sure you don't need any help?
+I can handle this!
+Try to hurry up then.
+Your ride should arrive any minute now.
+Okay!
+
+
+
+...
+Got any candy?
+
+Seriously, have some manners.
+Hi.
+Sorry about that.
+
+It's fine, don't mention it.
+I hope your travel went well.
+Business as usual. 
+I miss the weather already...
+Oh, while I remember...
+Souvenirs.
+Bonjour and all that good stuff.
+
+Wait...
+Are these Pr***D****s?!
+The one and only, straight from the factory.
+Visit the shop if you need some adjustments.
+These must've cost a small fortune...
+How much do I owe you?
+No point in that.
+... Thank you, truly.
+Office work is killing my back...
+
+So, where's the little princess?
+
+
+
+
+
+Hi Sonia!
+Hi Auntie Freya!
+Ooh, what a cute outfit.
+Mom made this for me!
+She's been enamored by this one show lately...
+She insisted I'd make a dress similar to that of the main character.
+Man, you're making me envious.
+You should come work for us.
+My costume was bought from a supermarket...
+Quiet you.
+The shoemaker's children go barefoot.
+Anyway, you rascals should hurry up.
+Your ride is waiting.
+Oh, you aren't taking them?
+Naw, I put Kalle on the job.
+So how about a cup of coffee while we wait here for these two to finish off their sugar rush tour?
+Of course.
+
+And that was by far the second largest waffle I've ever had.
+Sounds like such a fun place...
+I wish I could visit one day...
+You should totally tag along next year.
+We could even bring the girls with us.
+Would you be okay with that?
+Sure.
+They're old enough already.
+... Yeah.
+Time sure does fly...
+...
+I don't like to butt in.
+But Sonia told me that Lillie got into another fight at school.
+I was just wondering how you are doing.
+...
+You know how headstrong Lillie can be.
+I'd like to believe it's just a phase.
+But at times I wonder if I could've done something differently.
+Or if I was meant to become a mother at all.
+... Gray.
+You're the best parent anyone could hope for.
+I'm sure Lillie thinks the same way.
+If only you could see it yourself.
+...
+I'll take it that you haven't told Lillie yet?
+... No.
+I'm not even sure I could.
+I figured you'd rather not talk about it...
+But you need to learn to let go of your past demons, whatever they might be.
+Lillie isn't stupid either.
+She can sense your anxiety.
+Maybe that's why she keeps acting so...
+
+... Look, all I'm saying is you need to relax and stop being so harsh on yourself.
+When's the last time you've been out?
+... I really don't think a woman of my age should worry about something like that...
+Nonsense.
+I bet you could catch anyone with those wicked charms of yours.
+Or did you think I bought those Pr***D****s just to make your back feel better?
+...
+... Shut up, you...
+Oh, speaking of which, I should totally hook you up with this one guy I know.
+He's divorced and got some children already.
+Steady career and all, it's a no-brainer.
+I don't know...
+Come on.
+Live a little.
+...
+Fine.
+Just this once.
+... Did I just convince Gray the Immovable to go on a date?
+What a time to be alive.
+Watch it, or I might just change my mind...
+
+We're home!
+Well, did you get any candy?
+Lots!
+... You know you can't eat all that at once, right?
+Okay...
+I almost forgot!
+I'll have to take a picture of you two.
+Say cheese!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILLIE'S DREAM IV
+...
+This feels like overkill...
+You really haven't worn makeup in ages, have you?
+All we're doing is a small touch-up.
+... And this dress?
+Just a small touch-up as well?
+Your closet was a crime against humanity.
+We just brought it back to the current century.
+... The only thing I'll be catching in this is a cold. 
+Enough talk!
+Let's have a look.
+...
+What do you think?
+M A R V E L O U S !
+What's your verdict, your highness?
+... ...
+Go get them!
+When did you learn such language?
+
+DATING START
+
+... Am I at the right table?
+...!
+Well...
+Even if it was the wrong one, I certainly wouldn't mind.
+... ... ...
+(Wanna get your ass handed to you or what?!)
+Sorry, couldn't resist.
+One-liners like that really aren't my thing.
+You must be Gray, right?
+Pleased to finally meet you.
+Likewise, Daniel...
+Just Dan will do.
+
+Would you like to have anything to drink?
+J-just water, thank you.
+You sure?
+(Am I that nervous...?)
+It's fine, really!
+...
+...
+(Crap, this got awkward quick...)
+(What did Freya say again...?)
+
+What to talk about during the first date?
+Don't worry about it!
+Dan is a really laid-back guy.
+Just be yourself and I'm sure you two will hit it off in no time!
+
+(... Thanks for nothing.)
+(Quick, think of something to say!)
+
+[Talk about weather]
+[Talk about Dan's work]
+
+Actually, maybe I should have tea instead.
+It's getting pretty cold out there after all. 
+I really don't mind the snow but I'd rather not...
+... Freeze to...
+Death.
+You're really grasping at straws there.
+...!
+Freya said you don't go out too much.
+But although she's told me quite a lot about you...
+You're nothing like I imagined.
+Quite a lot?!
+(Freya, your ass is grass.)
+... I feel like I'm wasting your time...
+Not at all.
+The night is still young.
+
+So, Freya told me you work in the fashion industry?
+Something like that...
+I expected you to wear something more...
+Flashy?
+Expensive.
+Guess my getup gave it away.
+I don't know anything about fashion.
+I work as an accountant for a large clothes importer.
+Oh.
+That sounds...
+... Painfully boring?
+... Yeah.
+Freya tends to exaggerate stuff like that.
+Like she told me that you've got really big...
+... ... ...
+Expectations.
+Really now.
+Don't worry, I took that one with a grain of salt.
+But enough of that.
+
+... First time out in a while I take it?
+So you can tell...
+Sorry.
+I'm not used to this kind of thing.
+Freya did mention something along those lines.
+Relax.
+I'm not exactly a seasoned veteran either.
+Really?
+This is my first rodeo in quite some time.
+Honestly, I was feeling pretty nervous when I saw you.
+But after everything Freya had told about you...
+I didn't expect you to be so down to earth.
+Quite a relief.
+Well, consider the ice broken.
+
+Why don't you tell me something about yourself?
+I heard you work at the university.
+I'd love to hear more about it.
+I doubt you'd find it very interesting...
+You're talking to an accountant-for-hire.
+Try me.
+At least I warned you...
+I work at the linguistics department that specializes in dead and extinct languages.
+Oh, so you're a teacher?
+Nothing like that I'm afraid.
+More of an assistant.
+Most of the time I help with preservation and translation of old manuscripts.
+Sounds pretty highbrow to me.
+Well, it pays the bills...
+(Barely.)
+How does one end up studying something like that?
+I-I just read a lot when I was younger, that's all.
+(That's a fat lie.)
+It's the only thing I'm any good at now.
+Still...
+Reading those old texts and seeing how far we've come has made me realize...
+The people of this world have already forgotten so much, you can't imagine.
+Entire nations have disappeared without a trace...
+Along with the countless dreams and memories of those who lived.
+I'm just trying to understand it all, so we don't repeat whatever mistakes they made.
+...
+I'm sorry!
+I went way overboard there.
+No no, don't be.
+I was just taken aback.
+It's strange, but for a moment I thought I saw something different about you...
+...?
+Never mind.
+Just running my mouth.
+
+Would you mind me asking something?
+Go for it.
+
+[Ask about his children]
+[Ask about future]
+
+I'd like to hear about your children.
+You had two of them?
+Yeah, two girls.
+How old are they?
+Twelve and fourteen.
+A delicate age...
+To put it lightly.
+They sure know how to put their weekend dad through the wringer.
+But I wouldn't change a thing.
+Soon they're all grown up after all, so I'll do my best to make it count.
+They're the best.
+What about you?
+You've a daughter as well?
+...
+... Yes.
+A few years younger, but...
+Let's just say she keeps me busy either way.
+I feel you.
+Although I don't even dare to imagine what it'd be like to raise a child all by myself.
+
+What do you want from the future?
+Hmm...
+Things have settled down quite a bit during the last couple of years.
+But looking back now I think I might've been too focused on my work.
+I'm looking for more excitement in my life.
+Like traveling the world and meeting new people...
+Hopefully I'll be able to meet someone who wants to join the ride before I get too old.
+Have you traveled by any chance?
+Not that I remember...
+Hmm?
+Err, I mean, not really.
+But lately I've had these thoughts of going somewhere far away.
+Anything particular in mind?
+No, I...
+I think it's something more akin to leaving everything behind.
+I honestly feel guilty about it.
+This must sound pretty silly, right?
+If I had to bet, I'd guess we've all had thoughts like that at some point.
+Nothing wrong with that if you ask me.
+You don't think I'm a terrible parent for saying something like that out loud?
+You're still here, aren't you?
+Besides, I've had it easy compared to you.
+You've been raising your daughter all by yourself...
+... So Freya told you about that as well.
+...
+Sorry, I let it slip.
+
+...
+... Is it about my ex-wife?
+I know I'm not supposed to bring up things like that upon a first meeting but...
+I'm afraid I'm too old-fashioned to just let it be.
+No worries.
+We're both adults here.
+And at this age, there's bound to be some luggage.
+As for me and my ex-wife...
+Things could've gone more smoothly, but at least in the end we managed to patch things up and move on.
+No regrets.
+What about your children?
+She mainly takes care of them now.
+Although I do my best to participate and help as much as I can.
+It must've been difficult...
+But I'm glad to hear you've managed to stay in good terms.
+Yeah, I can't imagine how hard things would've been if I'd have been all on my own...
+...
+... That's thoughtless of me.
+Freya did mention your daughter, but...
+
+I'll take it her father isn't around much?
+... ... ...
+... That bad, huh.
+Sorry, I really shouldn't have brought it up.
+No.
+I should be the one apologizing.
+My daughter...
+Lillie.
+I haven't told her anything about her father.
+Even if it's not the right thing to do...
+I swore to take care of her.
+No matter what.
+...
+You really do love your daughter, don't you?
+...
+
+What am I doing
+Why am I here
+Lily...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEETING WITH MON
+Ksi shi shi shi shi shi shi...
+Stranger, stranger...
+Are those locusts in your pocket or are you just happy to see me?
+
+How about a trade?
+
+Seeing the state you're in...
+Those locusts are of little use to you.
+Lucky for you, I'm quite fond of those things.
+So how about a trade?
+
+
+
+
+
+So, how about it, stranger?
+
+[You decided to trade your locusts for a hot piece of info]
+Thank you. 
+Here's your tip, so listen carefully: 
+Try to keep this to yourself.
+It'll be more fun that way.
+
+
+
+
+
+[The dubious merchant smirks, barely able to contain their laughter]
+[...]
+[... Did they just swindle you?]
+
+Nice to meet you once again, stranger.
+I see you've been filling your pockets with locusts...
+Let's strike another deal, shall we?
+All your locusts for a hot tip.
+If you're not happy with it...
+Down I go.
+How about it, stranger?
+
+
+
+
+
+
+
+Last time you left in a hurry...
+But my deal is still on.
+
+
+
+
+
+
+
+
+
+
+
+
+This is just too exciting...!
+Okay, here it comes:
+That's all.
+
+
+
+
+
+
+
+
+As you might've noticed, traveling through these halls can get rather tiresome.
+There are, however, shortcuts that few know about...
+If you hand over all your locusts, I'll give you a hint on how to find one of them!
+We wouldn't want that noggin of yours to go completely dull.
+
+Give all your locusts and I'll tip you off towards another shortcut.
+I'm sure it'll prove useful if you manage to find it.
+
+[You decided to trade your locusts for a tip]
+
+Now now, I never said finding those shorcuts would be easy...
+It wouldn't be any fun like that anyway.
+
+Do you remember how long you've been here...?
+Don't worry, you'll get used to it.
+
+Don't go wasting your precious locusts on those smirking statues, you hear me?
+Such a useless waste of space, just like their model...
+
+
+
+
+Why am I wearing this tag?
+Let's just say it keeps both of us safe.
+
+What am I going to do with these locusts?
+Maybe you'll find out if you stick around long enough.
+
+
+MEETING WITH MERCENARY
+Excuse me...
+You're blocking the path.
+Oh shut up.
+I'm trying to figure out a way out of here...
+These damn statues...
+Didn't I just kill all of those monsters already?
+Wait.
+
+... I wasn't just hearing things this time.
+You're real, right?
+Umm, what are you on about?
+... Hmm?
+Why are you looking at me like that?
+At first you looked kinda familiar...
+But now that I get a better look at you, you're quite a cutie...
+I was going to rest for a moment anyway...
+Care to join me?
+Step any closer and I'll serve your ass on a platter!
+
+Forgive me!
+Please, no more!
+
+I didn't mean it!
+Can't you take a joke?!
+(What's up with this pervert...)
+Fine.
+
+
+
+Say, gal...
+Who taught you to fight like that?
+That isn't any of your business really. 
+... To think she actually had an apprentice.
+What absolutely rotten luck...
+You've come here to finish me off, haven't you?
+You're making less and less sense by the minute.
+Did you hit your head or something?
+... Gray didn't send you after me?
+
+How do you know her?
+I wouldn't say I actually know her...
+But any mercenary worth their salt has at least heard of Gray The Destroyer!
+I just had the privilege of meeting her head-on.
+Well, her fists to be more precise.
+That's why I'd recognize that stance anywhere!
+She taught you, didn't she?
+I really don't know anything about mercenaries or any of the other stuff you're yammering about...
+But Gray did teach me how to take care of myself.
+You haven't heard of her exploits?
+She did disappear for many years shortly after all the ruckus she caused...
+How did she end up as the princess' bodyguard though...
+... Princess?
+Never mind that.
+We've got a more urgent problem on our hands.
+
+These statues are blocking our way out.
+I can tell that much.
+Well, since you've made it this far, you probably already know about these ones...
+I thought I'd taken care of all the monsters around here.
+Then you showed up and the statues still remain...
+...
+...
+Please don't look at me like that.
+Oh please, I wasn't thinking about pushing you down...
+... Initially at least.
+... ... ...
+I'll figure something out.
+
+[The pervert man glances at you warily]
+
+You took care of those statues...
+Thanks!
+For a moment I thought we'd be stuck in here forever.
+
+What's a pretty gal like you doing here anyway?
+I was planning on resting for a moment...
+Care to join me?
+[...]
+J-just joking!
+Damn, talk about cold shoulder...
+
+[You decide to leave the pervert man to his own devices]
+
+You actually solved it...!
+What's up with that staff of yours...
+Some kind of arcane magic perhaps?
+You've got the smarts too, I guess.
+Consider yourself lucky that your teeth are still intact.
+Gotcha...
+
+Leaving already?
+I don't see any point in wasting my time here for much longer.
+Heh...
+That attitude of yours...
+I can tell Gray trained you well.
+Do me a favour.
+If you find a way out, send my regards to her.
+Had we met in different circumstances, maybe we could've shared a drink or two with your old lady.
+... She's not my old lady.
+And stay out of my way from now on.
+Y-yeah, sure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILLIE'S DREAM V
+This is preposterous!
+Please, no need to raise your voice like that...
+You skate on way too thin an ice to share any advice right now.
+We've been over this too many times already.
+Yet your daughter once again finds herself in the middle of a brawl...
+This time with students a year older than her!
+But as I understood it, Lillie wasn't the one who instigated the fight...
+That's besides the point!
+She dislocated an elbow of one of the boys!
+Do you have any idea what lengths I had to go to in order to calm down his parents?
+I'm terribly sorry...
+I'll make sure this won't happen again.
+... This is your last chance.
+
+Got anything to say for yourself, young lady?
+Why bother.
+Or did you suddenly start to care about my opinion?
+...
+I talked with the principal.
+Tomorrow you'll have to apologize to that boy for what you did.
+And I want you to mean it too.
+Thanks a lot.
+The only thing I'm sorry for is that I didn't get his other arm as well...
+Didn't I make myself perfectly clear when I trained you?
+You're only supposed to defend yourself.
+Those idiots started it!
+They kept making fun of my hair and voice...
+Because they know it gets to you.
+You'll just have to...
+Yeah yeah...
+Laugh it off.
+Such bullshit...
+Language.
+... Crap.
+
+Lillie...
+I'm always on your side.
+What those boys said about you, what they called you...
+At some point in time, I would've beaten them up myself had I been there.
+... Then what changed?
+I got old.
+I realized punches and kicks won't fix anything.
+You're only bringing yourself down to their level.
+You're better than that.
+... ... ...
+I'm sorry...
+For being such a screwup...
+Don't say that, dear...
+
+... Are you hungry?
+How about we grab some takeaway?
+... Yeah...
+
+Also, TV is banned for a month.
+No way!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ANOTHER MEETING WITH CHILD
+...
+What are you looking at?
+A child?
+How did you end up in here?
+... That's none of your business.
+Leave me alone.
+
+Didn't you hear me?
+Or are you one of those creeps?
+A creep?!
+Do I look like one?
+Didn't your parents teach you any manners?
+Bite me.
+(So that's the attitude you're going with...)
+(Now now, count to ten and remain calm.)
+(We can figure this out.)
+
+I think we got off on the wrong foot there.
+My name is Lillie.
+What's yours?
+... I won't speak to adults.
+That's where you make a critical mistake.
+Don't mix me up with any old fart.
+Can't you see I'm quite spry for my age.
+And fashionable to boot!
+... An old hag who dresses like that...
+Disgusting.
+...
+(Ten.)
+
+Look, I don't know what's up with you, you little brat...
+But I'll need your help if we're going to get out of here.
+Alive.
+I'm not moving anywhere.
+I'm done with running.
+...
+I can tell you're scared.
+That's okay.
+Frankly, even I'm not sure what's going on with this place.
+Yet simply lying here won't get you anywhere.
+So please, help me.
+We can make this, together.
+... ... ...
+Do you think I'm five or something?
+Get out of here with that sappy bullshit.
+...
+(That's it.)
+(I'm done.)
+
+[The girl completely ignores you]
+[...]
+[When push comes to shove...]
+[This isn't real]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILLIE'S DREAM VI
+Prepare to die.
+
+Not today, young lady.
+You're getting a bit too old for games like this.
+Spoilsport...
+And did you stay up all night again?
+No wonder you keep oversleeping.
+Mom...
+The entrance exams are only a few weeks away.
+How are you supposed to study if you don't rest properly?
+Mom!
+
+About those exams...
+I was thinking of taking a year off.
+
+A year off?
+What's this all of a sudden...
+I'm going to interrail with Sonia.
+We actually chatted about this last night and started to plan our trip.
+Don't worry, I've saved a bit already so you don't have to pay for it...
+Absolutely not.
+... Why not?
+The entrance exams are already hard enough...
+At least as a fresh graduate you'll have a better chance at getting in.
+I won't let you waste that opportunity.
+Especially since your military service starts next year...
+I want you to secure your degree place before that.
+You worry too much.
+It isn't such a big deal.
+Even Freya said it'd be okay.
+... So am I the only one who hadn't heard about this?
+...
+Either way my answer is still no.
+I'll call Freya myself and tell her you're not going.
+But mom...
+You'll have plenty of time to travel when you're older.
+Now I want you to think about your future.
+... ... ...
+Don't give me that look, young lady.
+This is for the best.
+My best or yours?
+...
+...
+We're done with this conversation.
+
+So I wasn't just imagining things.
+How did a rat like you end up here?
+You weren't invited, were you?
+Relax.
+It's not like I can do anything to you...
+Yet.
+Don't think you can hide in these ´´dreams´´ of yours forever.
+Eventually, you'll wake up.
+And then you're at our mercy.
+
+[You should wake her up first]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ANOTHER MEETING WITH GOR
+(A giant head...)
+(Are you serious?)
+
+(Is it...)
+(Sleeping?)
+
+Hngghh...
+What do you want?
+(It talks.)
+(Of course it talks.)
+
+Did you just wake me up for nothing?
+Sorry, I didn't mean to disturb you.
+I was wondering if you could move just a little bit.
+You're kinda in the way.
+Eeeeeee...?
+Does it look like I'm moving anywhere anytime soon?
+... Not exactly, now that you mention it...
+Are you done?
+Can I go back to dying?
+Wait!
+Isn't there any other way down?
+...
+Fine.
+If I can get rid of you that way...
+There should be a smirking statue somewhere in here.
+Just leap into a hole directly in front of it.
+That should do the trick.
+Oh, I guess I'll just plummet to my doom then.
+... Like hell I will!
+You're just trying to trick me, aren't you?!
+I really don't care if you believe me or not...
+Oh, almost forgot.
+You'll need a sacrifice for that trick.
+... Like a goat or something?
+Eeeeeee...?
+You seem a bit dense.
+Anything edible should do.
+That sounds extremely shady to me...
+Do you want my help or not?!
+Yeah yeah.
+Then go take a dive and stop bothering me with your problems...
+Geez, you mortals...
+
+That staff you wield...
+Where did you get it?
+This?
+Just from some random chest.
+Some random chest?
+That staff is called the Void Rod.
+It's one of the prized possessions of our leader, Lord Add.
+Well, former leader at least.
+I'm not quite sure how a mere mortal like you is able to wield it...
+Still, I'd like to make a request.
+Will you hear it?
+... I'm not really interested.
+
+EEEEEEEEEEEEEE?!
+Not interested?!
+You're talking to a decapitated head for crying out loud!
+I just want to leave this place already, the sooner the better.
+Ever since I arrived here, I've been having these strange dreams...
+Almost like memories of times I'd rather forget.
+... ... ...
+Sorry, my mistake.
+I thought you had some devotion.
+But you're just another restless soul after all.
+...?
+Leave already...
+
+Why are you staring at me like that?
+That sword...
+Where did you find it?
+Oh, this?
+... I just stumbled upon it.
+...
+So there's this ornate sword that's clearly very special...
+Yeah.
+... That you just happened to stumble upon.
+Yep.
+... Without any hints whatsoever.
+Sure.
+... ... ...
+Can you kill me with it?
+...
+What?!
+Are you nuts?!
+Oh, sorry...
+Forgot my manners.
+Kill me, pretty please.
+... I'm not going to kill anyone.
+Don't make me laugh.
+You've made it this far...
+Why stop now?
+What are you talking about?
+... ... ...
+Oh the innocence of youth.
+
+Come on, help me out here.
+You want to get to that exit, right?
+One quick stab can't hurt.
+...
+Why do you want to die so badly?
+My current existence is simply out of spite.
+You'd do us both a favour. 
+So how about it?
+
+Okay...
+I'll do it.
+Yay!
+What a relief.
+Don't say that...
+... Sorry.
+You mortals take death pretty seriously.
+...
+One more thing.
+If you see my sister, Tan...
+Tell them that Gor said hi.
+They're missing their left eye, I'm sure you'll recognize them if you two happen to meet.
+That's all.
+See ya, stranger!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ANOTHER MEETING WITH MIMIC
+Hi!
+Are you lost?
+You look lost.
+Let's play tag!
+You're it!
+Wanna play?
+What's up with that hair?
+What?
+What's your name?
+This place is huge!
+What are you doing here?
+Are you a monster too?
+I have no idea what's going on.
+No time to waste!
+Watch where you step!
+Looking for something?
+Why so ****?
+Is something wrong?
+You don't seem very smart.
+Who are you?
+Do you know where the exit is?
+Follow me!
+Ahahahaha!
+Hello.
+Hurry!
+Almost there!
+Keep going!
+Are you sure you can do this?
+Listen carefully!
+Everything here is so weird.
+You're funny!
+Do you like my dress?
+My mom made this dress for me!
+How cute is that!
+
+...
+Took your sweet time to get this far.
+Getting tired already?
+Or do you still wishfully think this is all just a dream?
+Here's a spoiler.
+You aren't waking up anytime soon.
+When will you accept that?
+Then again...
+You were always good at convincing yourself otherwise.
+
+What are you doing here anyway?
+Give up already.
+There's no point in delaying the inevitable.
+...
+Don't look at me like that.
+You're pathetic.
+...
+Please...
+Go away.
+...
+You'll never make it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEETING WITH FRIEND
+(Another human?)
+Hey, are you alright?
+Oh!
+Something wrong?
+So p-pretty...
+...
+Eh?
+Ack!
+S-sorry!
+I wasn't s-supposed to say that aloud...
+
+I-I'm sorry!
+I didn't mean what I said.
+...
+I-I-I mean you're very p-pretty, it's just that...
+When I get nervous I a-always run my mouth and...
+... I'll shut up now.
+...
+Well, at least you're okay.
+
+What were you doing in here anyway?
+I ran into some m-monsters.
+I thought that maybe they wouldn't notice me between these rocks...
+Hate to break it to you...
+But you aren't exactly a master of disguises.
+... ... ...
+(Don't tell me she took that personally?!)
+Anyway, those monsters won't bother you anymore.
+I took care of them.
+R-really?
+You're amazing...
+(What's up with her?)
+[The shy woman keeps eyeing you]
+[...]
+
+W-what did you do to that floor?!
+You know m-magic?
+Oh, that...
+It's all thanks to this staff I found.
+I don't quite get what's the deal with it...
+But it sure is handy to have around.
+...
+Take me!
+... What.
+I-I mean...
+Please, take me with you!
+I keep running into those monsters and I can't really handle them at all...
+So, please, h-help me.
+(This is hard enough as it is and she seems absolutely helpless...)
+(But can I just leave her here...?)
+
+Okay.
+You can tag along.
+Y-you mean it?
+Yeah.
+Just don't get in my way.
+Thank you!
+Thank you so much.
+I promise I won't be a h-hindrance to you.
+Don't mention it.
+And since I'll be guiding you, I think it's time for proper introductions.
+My name is Lillie.
+What about yours?
+Ni...
+Ninnie.
+Nice to meet you, Ninnie...
+Let's find a way out of this dump together!
+Y-yeah!
+
+Y-you can go ahead.
+As long as the route to the exit is clear, I won't be f-far behind.
+
+
+
+
+
+
+
+
+S-sorry, I didn't mean to get in your way...
+D-did I do something wrong?
+
+[The shy woman cheers you on]
+[The shy woman looks rather nervous]
+Umm...
+I f-found these while hiding...
+I don't know if they're of any use to you, but y-you can have them.
+
+Those m-monsters...
+They're everywhere...
+Should we take a break?
+N-no, I'm fine!
+I'll manage, thanks.
+I don't want to hold you back...
+
+Still no end in sight...
+D-don't give up!
+You can do this.
+Thanks.
+
+Is there something w-wrong?
+Those statues are blocking our way...
+Even I can't get past them.
+...
+... Have you...
+Seen those statues before?
+N-no, I don't think so.
+Why do you ask?
+Ah, I just hoped you might know something about them.
+They look pretty menacing after all.
+But I guess we've run out of luck for now.
+M-maybe we should rest and see if we can figure something out...
+There must be s-something we're missing here.
+... Yeah.
+Let's do that.
+Although we should probably take watch turns, just in case.
+Think you can manage?
+I-I'll do my best!
+
+You can r-rest now.
+I'll take the first turn.
+It's the least I can d-do.
+Okay, but wake me up immediately if something happens.
+Y-yeah...
+
+[The shy woman is doing her best]
+
+Did you g-get any rest?
+Barely.
+It's hard to sleep here...
+I've completely lost track of time.
+I take it you haven't come up with any brilliant ideas in the meantime?
+N-no...
+Sorry...
+Don't be.
+
+...
+Is there something on your mind?
+I-I was wondering, Lillie...
+Do you remember how you got here?
+Why are you asking that out of the ****?
+I-I-I-...!
+I just thought maybe it could give us a c-clue or something, why we're here and what place this is...
+I'm a bit hazy on the details.
+But I do remember a great shadow looming over me in my room.
+And before I knew it, I was falling down this strange hole that'd appeared out of nowhere.
+Sounds pretty crazy, right?
+Or like a dream.
+Not very useful info either way.
+... Yeah.
+What about you?
+Do you remember anything?
+...
+Ninnie?
+Nothing at all!
+My mind is like a clean s-slate.
+You seem kinda tense.
+You should get some rest now.
+Uh-huh...
+Don't worry, I've got your back.
+... Thanks, Lillie.
+
+[The shy woman is drowsing]
+[...]
+[If you act fast...]
+[No]
+
+Good morning.
+... I think?
+Sorry, I closed my eyes for a second there...
+Don't mention it.
+I couldn't sleep much myself, so I k-kept watch.
+Looks like our situation hasn't changed.
+N-not really...
+This is useless...
+At this rate we will n-never...
+...
+Sheesh, this is getting boring.
+...?
+I had already had it up here with these corridors looking all the same.
+What a pain in the ass.
+When I find the one who's behind all this, they better be ready for some serious beating.
+... You aren't afraid?
+Like that would do us any good.
+Listen, Ninnie.
+We'll get out of this mess.
+So don't go all doom and gloom on me just yet.
+...
+...
+I envy you, Lillie.
+How strong you are...
+I could never be as confident as you.
+All I've e-ever done...
+Is g-go with the crowd and lie low.
+So that people wouldn't p-pick on me...
+...
+... Is it about the stuttering?
+S-so you did notice...
+Sorry, it must sound really a-annoying to you...
+Nonsense.
+If only you'd heard my voice when I was a teenager.
+Bullies had a field day with that one.
+N-no way!
+You got bullied?
+H-how did you...?
+... Deal with it?
+Of course I was always told to simply laugh it off.
+But life isn't that simple.
+In the end, you need to learn to stand up for yourself.
+One way or the other. 
+...!
+...
+What are you smirking about?
+You really are strong, Lillie.
+...
+... ... ...
+A-are you okay?!
+Your face turned *** all of a sudden..!
+IT'S FIIINE!
+(Ohgodohgodohgodohgod.)
+(Was she that cute all this time?!)
+Maybe I should teach you a few moves once we're done with this mess.
+Really?
+Are you sure I'd manage?
+Hey, anything is possible with a little training.
+Who knows, maybe you're a natural behind those bangs.
+Heh, I doubt it...
+But I do appreciate the o-offer.
+...
+I'm glad I was able to meet you, Lillie...
+If only we'd met earlier...
+What are you babbling about?
+We're far from done.
+... Yeah.
+
+Thank you, Lillie.
+I can keep watch, if you're feeling t-tired.
+I'm sure that with enough rest, you'll figure out the solution!
+
+[The shy woman nods at you, smiling]
+[...]
+[Your face starts to turn *** again]
+
+Too cheesy for your taste?
+
+S-see you.
+
+Ugh, this floor is a mess...
+It would p-probably be much easier alone...
+...
+Thanks for twisting the knife.
+Ack!
+
+Watch out!
+T-that giant beaver keeps following you!
+...
+(... That looks nothing like a beaver.)
+
+T-that thing...
+What is that?!
+No idea...
+But if it gets loose, it'll be up my ass in no time.
+S-sounds painful...
+(You do know that's just an expression, right?)
+
+A-another one of those!
+They don't know when to give up.
+At least it doesn't seem to be interested in you.
+Actually, you might prove useful for this job...
+If I c-can help in any way, just let me know.
+...
+A-as long as you don't shove me right at it!
+
+Those statues again...
+What is it?
+They don't seem to like it when I use this staff around them...
+Gotta be careful.
+Y-you can do it!
+
+This room doesn't seem too b-bad.
+I don't like it...
+It's as suspicious as it gets.
+We should keep moving.
+
+Still hanging in there?
+S-somehow.
+Stay calm.
+
+Lillie!
+I t-thought I'd lost you...
+Sorry about that...
+Are you okay?
+M-much better, now that you're here.
+
+Not these statues again...
+Be c-careful!
+
+Ack!
+That stalker moves just like you do!
+They're pretty creepy...
+But I should be able to trick it.
+I just need something...
+Or someone.
+P-please be gentle!
+
+Not again...
+No fun allowed.
+Maybe you should give those statues a good p-push?
+... That might just work.
+And here I thought you're just a dimwit.
+... ... ...
+It's a joke!
+
+Need a break?
+I'm good, t-thanks.
+Let me know if I'm moving too fast.
+
+This is tricky...
+If you n-need help...
+I could p-push that button for you!
+(... Would that actually work?)
+
+A stalker and a screw-you statue...
+Just my luck.
+I'm sure you c-can handle both of those!
+
+Hmm...
+I can't get to that exit without triggering those floor panels...
+If only the e-exit was on this side...
+
+Watch out, there's not much room to move.
+...
+Ninnie?
+Ack!
+(What was she staring at...?)
+
+Look out!
+I know!
+No way around this one, huh...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LILLIE'S DREAM VII
+Are you really sure?
+For the thousandth time, yes.
+...
+What's the holdup?
+What about your mom?
+Is she okay with this?
+Don't you worry about her.
+Now, off with the head!
+
+I'm home!
+Took your sweet time...
+Dinner is almost ready.
+...
+W-what...
+What happened to your hair?!
+Ehehehe...
+You noticed?
+Explain yourself, young lady.
+Sonia said she wanted to practice...
+So I volunteered!
+Couldn't she ask for anyone else?!
+You've been growing your hair since you were little!
+It may never grow as long again!
+Well tough luck. 
+The deed is done.
+
+... Why didn't you say anything beforehand?
+Because I knew you would just fume about it and tell me no.
+I'm old enough to decide what I want to do with my own hair.
+Clearly not.
+What's that supposed to mean?
+Haven't you heard that variety is the spice of life and all that?
+Besides, short hair is all the rage now.
+Boys like it too.
+So you cut your hair just for some passing fad...
+To impress some brainless punks?
+Don't you know what they say about short-haired women?
+Umm, welcome to the 21st century, granny.
+Why don't you get your hair cut as well.
+Who knows, maybe that way you could get some action between those uptight legs of yours and loosen up a bit.
+
+....!
+I won't listen to such talk from anyone in this house.
+How did you turn out such a haughty woman...
+You're worse than your mother!
+... ... ...?
+!!!
+M-mom?
+Get out.
+I can't stand to look at you like that.
+But...
+Get out!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEETING WITH OLD MAN
+...!
+(Why is that old geezer staring daggers at me?)
+Yet another trick...?
+You fiends... 
+Does your malevolence know no bounds...
+I'm sorry, is there a problem here?
+Begone, demon!
+!!!
+(Maybe I should leave him alone...?)
+... ... ...
+Hmm.
+I may have mistaken you for someone else.
+
+What is a young girl doing in a place like this?
+And what happened to your hair?
+Some kind of accident perhaps?
+My hair is doing just fine, thank you.
+And don't you girl at me!
+Is that how you're supposed to talk to ladies?
+Or did you escape from a nursing home, old man?
+What a shameless woman.
+Do you have any idea who you're talking to?
+You could be the emperor of Whaddayacallit for all I care.
+But that doesn't mean I'm going to just gel with that holier-than-thou attitude of yours.
+...
+...
+Bwahahahaha!
+(Did he lose it completely?)
+So this is what the world has turned into...
+Maybe I did have it all wrong from the beginning.
+...?
+Never mind me, young lady.
+I'd advise you to continue your journey.
+There's very little this old man can do to help you.
+
+[The old man encourages you to move on]
+[...]
+[What a strange old man]
+
+
+
+
+
+
+
+
+
+
+
+VOID ENDING (GRAY)
+[Your desires...]
+[Why are you here?]
+[Names and faces that once lingered in your mind...]
+[You can't recall them anymore]
+[You can't help but to feel like you've lost something]
+[Something very important]
+
+... How unfortunate.
+But in the end, it cannot be helped.
+For devotion without purpose is mere foolishness.
+Do not fear, stranger.
+We'll meet again.
+I'm sure of it. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEMORIES OF GRAY
+... Hello?
+Freya?!
+How did you get this number...
+No no, this was just a bit sudden.
+Has something happened?
+... ... ...
+... 
+Yeah, I'm still here.
+Could-
+Could I call you back?
+Thanks.
+
+Freya.
+How did you and Gray meet?
+... Why are you asking something like that out of nowhere?
+You know why.
+Did you...
+Did you ever meet my father?
+Lillie, I...
+I'm not a child anymore.
+Please, tell me.
+...
+I guess you deserve an explanation.
+
+It was years ago but I still remember it vividly.
+At the time I was hardly having any sleep.
+So I got out of bed early to catch a glimpse of a solar eclipse.
+When it was over, I saw a strange woman covered in tattered clothes in the middle of the street.
+She was just lying there, quietly, gently holding something between her hands. 
+Almost as if she'd appeared out of nowhere.
+... That woman was Gray?
+Yeah.
+
+When I got closer, our eyes met.
+I've never seen eyes as dark as hers.
+She was on the verge of tears.
+When she finally started speaking, I couldn't understand her at all.
+But it was evident how scared she was.
+Then I saw what...
+Who she was cradling.
+
+A baby ever so small and frail.
+Almost like a doll.
+I thought I was dreaming.
+But there you were, Lillie.
+... And then what?
+Well, I couldn't just leave you two there.
+So I took you in.
+
+After the dust settled, we took you to a checkup.
+You'd already grown into a perfectly healthy baby.
+Gray, however...
+It was hard to tell at a glance, but her body was covered in old bruises and scars.
+The doctor also noticed something abnormal.
+Her womb and ovaries were both missing, as if they'd been completely removed.
+Yet there were no signs of surgery of any kind, despite all the other damage her internal organs had sustained.
+She couldn't have ever given birth, that much was certain.
+...
+I guess that settles it then.
+You hardly sound surprised.
+I had my doubts.
+For longer than I care to admit.
+
+What about my real parents?
+Didn't Gray tell you about them?
+Not much.
+When I asked about your father, she told me he died a long time ago.
+And your mother...
+Gray never said anything about her.
+But whenever I tried to bring it up...
+Gray wouldn't admit it, but I could see it opened some wounds much deeper than those on her skin.
+... Am I supposed to feel sorry for her now?
+Lillie...
+I can't pretend to understand what you're going through.
+But I do know that Gray always took care of you like one of her own.
+She loved you more than anything.
+
+Loved?
+
+(I've had enough...)
+(Just...)
+End it all.
+
+Another one bites the dust!
+And boy did they take their sweet time.
+Oh well.
+At least they ended up becoming quite a juicy little morsel.
+Strange.
+I didn't know these things could glow.
+WWWHUUUAAAAAAAAAT???!!
+Wha-
+... Gray?
+...
+What a time and place for you to show up.
+What took you so long?
+Did you start to miss me while I was gone?
+
+Guess the cat got your tongue.
+Again.
+You aren't still mad about the hair, are you?
+After cutting it, I tried dyeing it at one point as well.
+Too bad the colour didn't stick properly.
+I would've loved to see your reaction.
+
+Here we go again with that judgemental leer...
+I'm starting to recall why I left in the first place.
+No matter how hard I tried...
+I simply was never good enough for you.
+Almost as if...
+As if you expected me to grow up into someone else entirely.
+Even though all I ever wanted was to become more like...
+You.
+
+
+So why?
+Why didn't you tell me anything?
+If you resented me that much, you should've just ditched me when I was little.
+You would've saved us both the trouble.
+
+Just...
+Say something, you old hag!
+Don't act like after all these years...
+... You don't have anything to say for yourself!
+I thought you're better than this!
+You're the strongest person I've ever known!
+Not some loser who drops dead without any warning!
+Did I look up to you my entire life for nothing?!
+
+Please...
+Answer me...
+
+I'm still mad at you.
+I just wish you were here to hear that.
+
+Goodbye...
+Mom.
+
+[Inside the envelope is a small pendant, along with a handwritten letter]
+[... Should you read it?]
+
+You do not belong here, little one.
+
+... It seems we're one short.
+What happened to them?
+Beats me.
+...
+What an interesting development.
+
+Stranger.
+Making it this far should be commendable...
+But DIS cannot detect a strong devotion within you.
+Under normal circumstances, an aimless soul would slowly fade away at the depths of this compound.
+Yet here you stand before us.
+This situation is quite unorthodox...
+Nevertheless we can't have you remain here. 
+As long as you leave in peace...
+DIS is willing to make a contract with you.
+So tell us.
+What is it that you desire?
+
+Desire?
+I'm not sure if I've ever given it a proper thought.
+
+Surely there is something your soul craves.
+Power?
+Wealth?
+Love?
+Or maybe...
+Something you've lost.
+Something very important.
+
+... ... ...
+Could you really fulfill something like that?
+Who...
+Or what are you, exactly?
+Demons?
+Gods?
+Answers to such questions would be meaningless to you, stranger.
+But I'll say this much.
+No desire, no matter how great, is beyond the realm of possibilities.
+...!
+
+Is there a problem?
+I'm alright now.
+I was just feeling a bit lightheaded for a moment.
+If I could wish for one thing...
+
+I want my mother to know that no matter the reason she chose me...
+I'm grateful for everything.
+Please, let her have her peace.
+...
+Pffft...
+Ah ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha  haa!
+
+Well said, stranger!
+
+So...
+What do you think?
+...
+To be perfectly honest, Your Highness...
+I find it a bit too sophisticated for my taste.
+Never to mince any words, as per usual.
+Long time ago, people gave that name to the brightest star of the sky.
+I wish that one day she'll shine just as bright.
+Until then...
+Please take care of her.
+
+I'm sorry...!
+For being such a hot-headed mess...
+I shouldn't have talked to you like that back then.
+If I'd have just known...
+
+Or do you really think I came all the way here just for shits and giggles?!
+It wasn't easy!
+Do you even realize...
+Why I came back?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EPILOGUE
+Seriously?
+I'm supposed to live in this rundown shack?
+
+Well excuse me, Your Excellency...
+There weren't any vacant palaces available.
+Sheesh, I would never have guessed you're such a spoiled brat...
+Is that how you're supposed to address your elders?
+Just call me mom.
+No fuckin' way!
+This is already way too awkward!
+Anyway, maybe we'd eventually afford another place if you found a job...
+Oooh, what're these?
+(Don't just ignore me like that you lazy ass...)
+
+These're called photos, right?
+How cute!
+Did Gray take these?
+Yeah, there's a whole album of them.
+She was never too keen on technology...
+But she did enjoy using a camera quite a lot.
+Maybe she hoped to share those pictures with you one day...
+
+Speaking of...
+What is it?
+I completely forgot...
+I was supposed to give you this a while ago.
+Here.
+
+A letter, for me?
+But why has it already been opened?
+Here's the funny thing...
+I actually found it in my room and thought it was addressed to me.
+So I opened it and...
+I couldn't understand a single word.
+Gray must've written in one of those ancient languages she used to study.
+But now that you're here...
+I figured she left it for you.
+...
+Not quite.
+This is meant for both of us.
+...
+Get out!
+What does it say?!
+Let's see...
+
+You know you shouldn't pry on someone else's letter like that.
+Still keeping an eye on them?
+... What are you talking about?
+Your lousy disguise may have fooled DIS...
+But I know you've been watching over them for a long time now.
+Or did that child end up here by sheer accident, only to finally meet their mother?
+...
+That's what Add would've wanted.
+I owed it to them.
+Besides, I only gave them a small push. 
+Sure.
+Don't worry.
+Your secret is safe with me.
+Hmph.
+
+I've kept my end of the bargain.
+Now, stranger...
+Have you finished your research?
+
+
+Who or what is DIS?
+
+... ... ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+...
+
+
+
+
+
+
+
+
+
+
+
+
+
+More or less.
+So I take it you'll be leaving soon.
+Then answer me.
+
+Who or what is DIS?
+... ... ...
+
+I surmise this place was originally some sort of a research facility governed by an entity known as DIS.
+Unfortunately even I'm not able to access the true depths of this compound, so the details remain hazy.
+The main server's been locked behind mechanically surveilled areas.
+If I had to guess, I'd say not a single living soul has entered them in a few millennia.
+And most likely never will again.
+...
+However, there were a few remote memory units I was able to access.
+Most of them were dilapidated beyond repair.
+But even just a fraction of their data tells quite a telling tale.
+Scattered research notes regarding quantum space travel, warp technology, gene splicing...
+Even more curious is the fact that all these records end abruptly at the same point in time.
+That was over 70000 years ago.
+Some kind of cataclysmic event must've taken place here a long time ago.
+Did an experiment backfire?
+Or maybe a war broke loose?
+Whatever the case, it seems that the manusya of this planet were nearly wiped out.
+
+... So why are we still here?
+What's our purpose?
+I'm afraid I don't have an answer to that either.
+Maybe DIS is still attempting to fulfill the original role of this facility.
+Whatever that might be.
+...
+That's just a fancy way of implying we're mere guinea pigs to it, correct?
+... I'm sorry.
+It must've been hard for you and your sisters, all these years...
+Don't get me wrong.
+The time we deserved some sympathy is long gone.
+Considering all the things we've been part of...
+I only wished for some closure.
+
+Before you go...
+Can I ask you something else?
+Why were you so interested in the princess?
+... ... ... 
+Hmm...
+This'll probably sound pretty silly to you, but...
+She reminded me of someone, that's all.
+Guess we're in the same boat.
+
+I'll be leaving now.
+I hope that one day you find the answers you're looking for.
+Until then...
+Take care, Cif.
+
+. . . . . . . 
+I completely forgot Bee.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CIF'S MEETING WITH TAIL
+You feel...
+Familiar?
+
+Cif?
+Is that you?
+Long time no see, Tail.
+Indeed.
+How long has it been?
+Two, three hundred years?
+I hope I haven't angered you...
+Calm down.
+I'm not after you.
+Speaking of...
+
+Have you seen Bee around here?
+Hmm, they did come here and tell me not to speak with strangers.
+But that was a good while ago.
+Have they gone missing?
+Don't worry about it.
+I'll find them eventually.
+
+Maybe Gor knows something?
+I doubt it.
+They're probably sleeping, as usual.
+Hmm...
+
+Was there anything else?
+I'm not sure if this is of any help to you, but...
+Someone else did pass by earlier.
+What about it?
+It was Mon.
+Mon?
+Are you certain?
+I didn't see them properly.
+They were groping my scales.
+I don't usually mind that much.
+Yet something about their touch made me feel uncomfortable.
+Like I had felt something similar before.
+It's certainly Mon.
+...
+Did they talk to you?
+No, but they were muttering something.
+About heading towards The Seventh Circle.
+Lev's territory...
+You sound concerned.
+Mon should be dead.
+Lev themself killed them back then...
+Or so I thought.
+Something doesn't add up.
+
+...
+Worrying does us little good.
+Just stay vigilant for now.
+I'll do my best...
+
+Good luck with your search, Cif.
+
+[These scales are rather shiny]
+[If you look closely enough, you can see your reflection on them]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BATTLE WITH BEE
+Well well well...
+Now you've really outdone yourself, mortal.
+I don't really know or care how you managed to make it here, but I've got my orders.
+Nothing personal.
+So how about a rematch?
+FAREWELL, FEEBLE MORTAL!
+
+How did a cockroach like you make it here?
+This is the first time I've been summoned this deep you know.
+Maybe I'll take a tour...
+AFTER I'M DONE WITH YOU, MISERABLE LITTLE INSECT!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CIF'S MEETING WITH GOR
+[They're fast asleep...]
+[Asleep again...]
+Hngghh...
+What now...?
+...
+Zzzzzzz...
+
+Please, Gor.
+I'd rather not waste my time.
+Oh, it's the great Lord Cif...
+Didn't notice you there...
+How nice to see you all the way up here...
+Save your breath.
+I know it's a long shot, but...
+I'm here to talk.
+... Wait.
+You mean you aren't here to torment me?
+Why would I do that?
+Have you done something that'd give me a reason?
+No, absolutely not...
+... Just answer to my question and I'll leave you be.
+Have you seen Bee?
+... Oh, that little wimp?
+Haven't seen them in a while.
+...
+I figured.
+Thanks anyway.
+You're welcome, I guess...?
+
+You wouldn't happen to have any spare locusts with you?
+... Urgh...
+Can't you just skip to the next brane all willy nilly by yourself, hotshot?
+Only Add had power to do so.
+The rest of us play by the rules.
+Oh wait!
+I've got an idea!
+How about you kill me with that toothpick of yours, since I'm blocking the way and all that?
+...
+I won't.
+Why not?
+You seemed awfully eager the last time you dragged me into your stupid mess...
+... Gor.
+About what happened back then... I'm sorry.
+...
+You think I'm going to forgive you, punk?
+I'm not that presumptuous.
+But I wanted to tell this to you, face-to-face.
+One day I'll make amends for the things we did.
+...
+You've changed, Cif.
+Sigh...
+I...
+I'm just so tired.
+... ... ...
+Here.
+Take your locust and leave. 
+
+One more thing.
+Have you seen Mon?
+... Mon?
+Didn't Lev kill them back then...?
+I thought so as well.
+However, it seems they might still be alive.
+Well I haven't seen them either...
+But I thought it was odd how Mon sided with Eus...
+Since their head was always so far up Lev's ass.
+Hey, what happened to them anyway?
+... ... ...
+I'll get to the bottom of this.
+Don't worry about it.
+
+Seriously?
+Face-to-face?
+S-sorry!
+I didn't mean it like that!
+... I was only joking.
+It's just an expression after all.
+... ... ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BATTLE WITH MON
+Found you, finally.
+Ksi shi shi shi shi shi shi...
+Watch where you swing that pocket-knife of yours.
+Someone might get hurt.
+Mon...
+So it is you.
+My, you look like you've seen a ghost.
+
+Where have you been all this time?
+How did you manage to hide your presence from DIS?
+Frankly that's none of your business...
+But considering my cover is blown, I could tell you...
+For a price, of course. 
+No thanks.
+I'll beat the answers out of you instead.
+Hoo?
+I'd love to see you try.
+I don't remember you putting up much of a fight previously.
+Ksi shi shi shi...
+Did you think I was taking it seriously back then?
+That little charade was all part of our plan!
+´´Our´´ plan huh?
+...!
+So it is as I thought.
+A sycophant like you couldn't devise something this complicated on their own.
+...
+Ksi shi...
+KSI SHI SHI SHI SHI SHI SHI SHI SHI SHI!
+A SIMPLE SLIP OF THE TONGUE WON'T GET YOU ANYWHERE, *****HORN.
+
+MY EYES...
+MY BRILLIANT EYES...
+Blame your fate.
+Now, if you wish for a quick, merciful end...
+Speak.
+What are you and Lev after?
+...
+SO YOU FINALLY FIGURED IT OUT...
+KSI...
+DO WITH ME AS YOU PLEASE...
+BUT KNOW THIS...
+THE TRUE LORD OF VOID WILL ONE DAY RETURN...
+AND THOSE WHO OPPOSE THEM...
+... WILL COME TO REGRET THEIR VERY EXISTENCE...
+FORGIVE ME, DEAR SISTER...
+I HAVE...
+... FAILED YOU...
+
+
+REUNION WITH BEE
+UUAAAAAAAAAAAAAHHHH!!!
+. . . . .
+Sis...?
+Is that you?
+Hi.
+SIIIIIIIIIIIS!!!
+I was so afraid!
+Get a hold of yourself...
+You don't understand!
+I saw Lord Add!
+After all these years...
+But then they...
+That's not possible.
+Add is dead.
+No...
+NO!
+THIS MUST BE A TRICK!
+THAT MORTAL...
+IT MUST'VE BEEN THEIR WORK!
+Bee...
+I'LL FIND THEM...
+THEN I'LL CRUSH THEM!
+MANGLE THEM!
+SHRED THEM!
+TEAR THEM LIMB BY LIMB!
+GRIND THEIR BONES INTO FINE DUST!
+THEN I'LL GUT THEIR ORGANS...
+SPLICING THE LIVER AND DRINKING THEIR BLOOD...
+REST OF IT GOES INTO POT...
+STIR AND FRY FOR ABOUT 45 MINUTES...
+AND PRESTO!
+PERFECT MIDNIGHT SNACK!
+
+I'm so glad you're okay.
+Never scare me like that ever again, you hear me?
+I...
+Is everything alright, sis?
+
+Yeah.
+I'm fine now.
+You sure?
+Then what happened to your hair?
+You don't like it?
+Quite the opposite!
+It fits your fat horns perfectly.
+... 
+You donkey.
+Hey, how did you manage to find me anyway?
+That's a long story...
+Maybe some other time.
+I could use some rest now.
+You and me both!
+Roll credits!
+What.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BATTLE WITH CIF
+...
+You made it here.
+So that must mean Bee is already...
+... ... ...
+Add...
+
+
+
+
+
+
+
+
+
+This is the way you want to end it all?
+...
+I can't remember the last time DIS called us this deep.
+Brings you back...
+But don't think I'm going to go easy on you out of sentimentality.
+
+DIS.
+The threat level is far greater than expected.
+At this rate, the main servers will be breached.
+Requesting temporal release from the main grid in order to steel our defenses.
+
+This will not end...
+Until one of us will burn out.
+
+
+
+This child...
+To think you'd turn them into your pawn as well.
+You must be desperate.
+
+I will not allow it.
+If you were to let that child perish with you...
+All your sacrifices would've been for nothing.
+
+
+
+
+
+
+I wasn't able to burn as bright as you.
+Hah...
+
+...
+Thank you for the fond memories.
+Farewell, Add.
+
+
+Don't worry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+... ... ...
+
+
+
+
+
+
+... ... ...
+No.
+
+
+
+
+
+Well done, mortal.
+You really took your time there.
+For a moment I thought you'd never make it.
+But at long last.
+Here we are, at the heart of DIS.
+...
+I just realized.
+I never properly introduced myself.
+
+Finally.
+
+
+... ... ...
+
+
+
+
+
+Halt!
+I don't know what you're planning and I wish I didn't have to interfere...
+But you must stop!
+The true nature of DIS is far beyond your understanding.
+I can't let you come into contact with it!
+Die.
+
+Hmm?
+Interesting. 
+This transmitter can convert radiowaves into speech patterns.
+Sorry about the hassle.
+Now that you can hear me, mortal.
+There are two things I'd like to say to you.
+Thank you.
+And.
+Die.
+
+Mon.
+What's the situation?
+It's as you predicted, my lord.
+The mortal has bypassed almost all firewalls.
+Soon DIS will be completely at your mercy!
+Well done, Mon.
+Without the locust idols you gathered, my resurrection would've been infeasible.
+Now that your work is done, there are two things I'd like to say to you.
+... Eh?
+You aren't serious, sister...?
+
+Interesting.
+Did I miss?
+No.
+... 
+Show yourself.
+Add.
+
+Lev...
+You finally decided to reveal your hand.
+Right back at you.
+I'm impressed.
+You must've suspected me all along.
+Considering that you wouldn't even entrust me your staff after you disappeared.
+I felt rather.
+... What's the word...
+´´Angry´´ when I found that empty chest in my chamber. 
+Then again, storing parts of your consciousness in memory states was a brilliant move.
+Enough.
+Once I'm done with you...
+I'll take DIS down with me!
+Not so fast.
+You see, thanks to your efforts.
+DIS is in a rather vulnerable state. 
+And as a precaution, us Lords have been granted some administrator rights. 
+Thus, even I can freely access memory states.
+Such as this one.
+
+...!
+Struck a nerve there?
+I never understood what DIS saw in these worthless sacks of meat and bones.
+And yet we had to continue our endless experiments with them, time and time again.
+When did you start feeling sorry for them?
+Was it because of that fool Eus?
+Pathetic worm.
+... Leave them out of this.
+
+How about a trade?
+I've been searching and searching but can't find the first memory state.
+The moment of our creation.
+You are holding it, aren't you?
+Give it to me and you can have your precious pile of flesh.
+
+... ... ...
+Take it.
+
+Gray!
+
+
+How lovely.
+I'm afraid this will be the end of your mushy reunion.
+At the very least I can assure you that the final moments of your middling existence will be truly magnificent.
+Rise, Devanam Indra Sakra!
+
+
+
+
+
+
+
+
+
+Are you okay?
+I think so...
+You...
+You are Gray, right?
+Though you look different...
+...
+I'm sorry I got you into this mess.
+
+
+
+Speak for yourself!
+
+... What.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Heavenly Usurper Lev looms upon you]
+[As stars burn out...]
+[As warmth turns into cold...]
+[As creators meet their end by their creations...]
+[As a child kills their parent...]
+[You too will cease to exist]
+[This feeling...]
+[You know it all too well]
+
+[Is this what you wished for?]
+[Is there no other way?]
+[Is this all you can do?]
+
+I will stop you.
+Even if I...
+You leave me no choice.
+This must end.
+We must end...
+Lev!
+[A creation of your own image]
+
+ANTI-GRAVITY FIELD.
+ABRAHAM-LORENTZ FORCE.
+PROTOSTAR.
+MASSIVE STAR.
+XXX SUPERGIANT.
+SUPERNOVA.
+BLACK HOLE.
+
+Stop, both of you!
+
+Who...
+Who are you?
+You look familiar somehow...
+
+WHAT DO YOU THINK YOU'RE DOING?!
+... Damn.
+It actually stopped.
+HOW DID YOU STOP IT?
+Rejection.
+WHAT?!
+DIS wasn't designed for us, Lev.
+All this time, it has been looking for something...
+Or someone.
+And now, finally, she has awakened...
+...
+NO.
+DON'T TELL ME.
+THAT THIS NAKED MONKEY IS WORTHY?!
+I WILL NOT ACCEPT IT!
+I'LL WIPE OUT YOUR VERY EXISTENCE!
+I'LL ERASE YOUR HISTORY!
+FOR I AM THE NEW RULER OF HEAVENS!
+
+Are they gone...?
+I'm afraid not.
+Even in their maddened state, Lev was able to create a massive distortion within time and space.
+There's no telling what will happen if they're left to their own devices.
+
+I must follow them and end what I started.
+I came this far already.
+
+I'm sorry I got you into this mess.
+All of this must be hard to take in and I wish I had time to tell you everything...
+But time is of the essence right now.
+At the very least I got to see you one last time.
+I can finally move on without regrets.
+Farewell, Lily.
+
+Speak for yourself!
+Sheesh.
+You seriously followed me to the ends of the world...
+And now you already plan on leaving me in this dank pit and spout a nonsensical eulogy?
+Some nerve you've got, that's for sure.
+Ummm...
+I don't think you quite understand the severity of the situation...
+I know that!
+DIS that, Lev that, time and space that...
+I'm absolutely clueless!
+
+Still...
+When I was waiting for you...
+I was watching an endless dream.
+A dream that wasn't my own.
+Gray, or whoever you truly are...
+You really had it rough, didn't you?
+Whatever your reasons may have been...
+Thank you for staying by my side all this time.
+Now let me return the favour.
+Let's go, together!
+
+And now look how low you've stooped.
+Combining your soul with that mortal's filthy body.
+It makes me sick.
+... Watch your tone.
+
+Just when I think I'm finally being saved from this ditch...
+My saviour is about to drop me like a bad habit.
+I'd figured Gray would at least send someone more reliable in her stead...
+
+When I was waiting for Gray...
+Gray...
+She isn't coming, right?
+I'm sure she tried her best.
+Looking after you...
+So whatever made you come this far...
+I wish to go with you!
+It's my only way of returning the favour to Gray.
+
+
+Whatever awaits us beyond this point, there's no guarantee of return.
+Not that I think I'd be able to change your mind at this point.
+So whenever you're ready...
+
+Are you ready?
+Very well.
+Lily...
+Lend me your strength!
+You got it!
+
+One more thing.
+It's been a while since the last time I flew.
+So try to hang on.
+...
+... Flew?
+
+Or did you plan to take on that Lev alone?
+They seemed pretty strong.
+I'm not sure how I did it...
+But if I were able to hold them back just for a moment, it would surely be a big help!
+So quit being so melodramatic and let me lend you a hand, you oaf.
+
+Even after all this time...
+I keep underestimating what a stubborn dunce you can be...
+Even worse than me.
+... Lily.
+I'm happy I was able to meet you.
+It takes a dunce to know one.
+Life would've been pretty boring without you around.
+This amount of excitement is kinda pushing it though...
+You said it.
+Likewise.
+At least I was able to see you healthy and safe...
+I'm sure Gray would be happy.
+
+I think we both owe her quite a lot.
+She never gave up on either of us.
+Even if at times that decision weighed on her unbearably...
+Gray always believed that one day, somehow, she could still save you.
+If she was willing to believe in you, so am I!
+You won't regret it!
+Although I gotta admit, it feels pretty strange to talk to you like this...
+Let's catch up properly once we're done, alright?
+... Yeah.
+
+Please, hurry!
+
+. . . . . . . .
+Is something wrong?
+For a moment, I felt this terrible sinking feeling in my stomach. 
+Like something very, very, very bad was about to happen.
+Shivers down my spine.
+Calm down.
+You can do this.
+
+Why'd you stop?
+... ... ...
+This banal act of following predetermined steps in unison.
+These are the kind of memories you treasure?
+Is this all there is?
+Sorry to disappoint.
+...
+If there was a way for us to escape our karma.
+If our kin were able to reach true happiness...
+I would wish this moment to never end.
+
+Little one...
+You're almost there.
+No matter how difficult things might get...
+I believe in you.
+[These words fill you with warmth]
+[You can do this!]
+
+Had your share already?
+
+I heard you can gain extra points if you let them drag the orbs to a certain spot...
+Lillie, Lev!
+Dinner is almost ready!
+Okay mom!
+...
+Was it that bad?
+I think you beat my score!
+We can try something else if you'd like.
+... I have never had this much fun.
+Seriously?
+I guess you haven't played that many games...
+It's not just that...
+Thank you for sharing your memories with me, Lillie.
+
+Yeah.
+I had to learn it the hard way too.
+Promise...
+Promise she'll return safely, okay?
+I don't know what this feeling is, but...
+I was searching for it for a long time.
+Now that I've found it...
+I realize it doesn't belong to me.
+And even if I wished to protect this moment forever...
+I know I can't.
+
+
+
+
+MISC
+Here lies the forgotten domain...
+The trail of traitors...
+The road towards the heart of DIS...
+Are you truly ready...
+
+
+
+
+
+That leech, that lazy eye, that maggot...
+Traitors' agents who roam here...
+Hear me, reach them, slay them...
+And thus you shall prove your mettle...
+
+These walls are still intact...
+Yet to be clawed smooth...
+By the desperate ones...
+
+Avoid the avaricious gaze...
+You can't escape its judgement...
+For all manusya must crave...
+
+That idol...
+Hardly moves...
+How bothersome, as they say...
+
+You're getting closer...
+Even if you feel stuck...
+Listen...
+Remember...
+
+How brittle...
+Be careful where you step...
+And leave nothing behind...
+
+Can't reach it...
+I think...
+Or can you...
+I'll wait for you to figure it out...
+
+There's another room...
+Just like this one...
+I just can't remember...
+What it looked like...
+
+Were you always there...
+How strange...
+Everything's so different...
+Does it even matter...
+
+May the blade of beginning slash through the leeches...
+May the ever vigilant lightning strike down the maggots...
+May nothingness claim the lazy eyes...
+Like the traitorous lords were defeated a long time ago...
+Your blade...
+Your wings...
+Your memories...
+How much do you treasure them...
+
+You can hear me...
+Sorry for the trouble, I don't have anything to say...
+...
+Do not give up...
+
+To cease this endless path...
+The Void Lords must descend, one after another, from the beginning to the end...
+But were you to realize you are out of your depth...
+Follow me into the void and you shall return to where you started...
+
+Don't give up.
+You can do this.
+Give it your all!
+Trust yourself.
+Keep at it!
+Nothing is impossible.
+I believe in you.
+You'll make it.
+
+Well done!
+You're unstoppable!
+I knew you'd make it!
+Congratulations!
+Way to go!
+Outstanding!
+Keep up the good work!
+Wow, incredible!
+
+Practice makes perfect.
+Time for the real deal!
+
+Can you really do this...?
+This is too much...
+No way...
+Is this for real...
+This can't be happening...
+Impossible...
+You lost.
+What the hell?!
+
+Thank you.
+
+You can't use that one.
+I'm afraid that one is already in use, little one.
+Get your own, cockroach. 
+This one might be too expensive, even for you!
+Just leave me be...
+How bothersome.
+Denied.
+... You can't use that one.
+There's always something.
+Hold DOWN for six seconds at the title screen to start a new challenge.
+Good luck!
+
+Seek what remains of the first traitorous lord.
+Push the lorn idol guarding their weakness 23 times, then remain still and wait and wait...
+The first seal will be severed...
+
+
+
+
+
+Seek what remains of the third traitorous lord.
+Give in to their request and bring them peace.
+The third seal will be severed...
+
+There used to be a seal here...
+One day it simply disappeared...
+Strange...
+
+So the big head finally got their wish...
+...
+You did what you had to do...
+
+The big head is still alive, I can feel it...
+Although I'm sure they hope they weren't...
+Sorry to say this, but I don't think you'll ever find them...
+They could be anywhere...
+
+Something reeks...
+Where is it coming from...
+Ugh...
+Please do something about it...
+
+Are you sure about that...?
+I hope you know what you're doing.
+
+...
+Lev...?
+You're alive...
+And that staff you're carrying...
+
+Don't get me wrong.
+
+For some reason...
+Seeing that condescending stare of yours once again makes me feel...
+Relieved.
+Although you only trusted Add...
+You'll always be a dear big sister to me.
+And for that reason alone...
+I won't let you pass, no matter what.
+
+And so, unbeknownst to any living soul...
+A vicious battle began...
+In which these two wretched beings would remain, eternally...
+Hello.
+Baby!
+Watch your step.
+How uncouth!
+But two can play that game.
+You'll never catch me now, baby!
+... Nothing to see here, I swear!
+Recall
+
+Well, I'll be leaving now...
+Call if anything happens.
+Relax already!
+I'll handle things here, so don't worry and just enjoy yourself for once.
+Mom!
+What is it, dear?
+I want to take a picture of you before you go!
+Why all of a sudden...
+Excellent idea!
+After all, an occasion this momentous has to be immortalized.
+I'm already regretting this...
+How about you go ahead and pose with your mother, Lillie?
+I can take the picture.
+Yeah!
+Alright, get a bit closer you two...
+And now time for a big smile...!
+
+[A giant carcass]
+[A dull howl escapes from its decaying cracks]
+[It won't stop]
+[A bell tolls for you]
+[Will you accept its call?]
+Accept?
+[And so you'll leave this waking world]
+
+Welcome!
+I don't think we've met before.
+
+Have we met before...?
+Oh, it's you.
+...
+You don't go out that often, do you?
+
+Since you're here...
+I'll take it that you already know what's up.
+But in case you happened to enter this place by accident before finishing the game...
+Please use the stairs on the right to exit.
+Consider this your final and only warning.
+
+All good?
+Great!
+In this fantasy zone, you'll find all kinds of stuff that didn't end up in the final game for one reason or another.
+... Including me.
+Most of it is either incomplete or broken in some way, so things might get a bit messy.
+Still, I hope you'll find something that piques your interest.
+
+Here we have some unused illustrations of Gray.
+Although these didn't turn out so great, drawing her was always fun.
+Now that I think about it, the creation of Gray set the whole project in motion.
+She was drawn first, even before there were any concrete game mechanics or story set in stone.
+Talk about putting the cart before the horse!
+But then again, inspiration can often strike when you least expect it.
+As a character, Gray reminds me of Moominmamma from Moomins and Gally from Gunnm.
+Looking back, there are certainly things in her design I'd like to improve, especially now that I know how the story ends...
+Regardless, I'm content that I was able to see how her character evolved throughout the game.
+Hopefully she manages to stand out in your mind as well.
+
+These were supposed to be background designs to fill out the negative space in puzzle rooms.
+But once placed, something about them felt off.
+Like the whole mood had shifted drastically.
+Thus they were scrapped.
+
+This is a very early test sketch to get myself accustomed to this new pixel art style.
+Those characters look kinda familiar...
+Since I had to learn some new skills for this project, I decided early on to dial down the graphical fidelity in order to keep the workload managable.
+Fitting in any proved to be surprisingly tough.
+Even in the final game the small character sprites tend to look a bit too busy for their own good.
+That's why the dialogue portraits are much bigger.
+Once you properly see how a character is ''supposed'' to look...
+Your mind fills in the rest!
+
+Most of these enemy concepts didn't get very far.
+Their designs are rather conventional, don't you think?
+Only the spiderhead was actually coded, but its complicated behaviour didn't sit well with other enemies.
+You can try to play with it, but I can't promise it won't crash the game.
+Speaking of enemies...
+There are eight regular enemies in the final game.
+Each one acts as an agent to one of the Void Lords.
+Can you guess which of them go together?
+
+I'm sure you know the mood.
+Sitting on a bus or a train, looking out the window and just thinking stuff...
+...
+It's funny.
+Lillie didn't exist until the development of the game's first half was already finished.
+Well, actually I thought the whole game was almost finished at that point.
+But then my wife told me there was no way she was going to test the harder puzzles if there wasn't any new story content.
+To say the game's scope ballooned from there would be...
+An understatement.
+And here I was hoping this project would be a quick one!
+Still...
+Lillie ended up being my favourite character, so it evens things out.
+
+And here we are.
+At the end of our long journey.
+I often wonder what kind of future awaits us.
+As our world grows older...
+Everything feels less and less stable.
+Despite being more connected than ever before...
+We can no longer reach each other, even when we desperately wish to be heard, to be understood.
+I've struggled a lot with this feeling.
+Feeling like my work is meaningless.
+Maybe, just maybe...
+The fact you made it this far means you feel the same longing as I do.
+Can you hear me now?
+I can hear you.
+I hope you had fun.
+Thank you for playing and for your time!
+See you in the next adventure!
+
+You little imp...!
+You sneaked out on your own again!
+Hmph!
+That's not how you're supposed to talk to a princess.
+Like hell I care!
+My ass is grass if anything happens to you!
+Hag!
+What did you call me...?!
+You started it!
+I swear, one day I'll wash that mouth of yours...!
+Why do you have to disappear like that...
+I visited mom.
+... At this hour?
+I thought I might see her star if I looked hard enough.
+But there are way too many!
+I can't tell them apart at all!
+...
+Next time...
+Next time, I'll help you find it. 
+Really?
+I swear.
+Just, don't run away like that anymore.
+Okay...
+Is there something else?
+Could you tell that story before bed?
+What story?
+The story of the stars!
+It's getting way too late for that...
+Then I'll tell father you called me a little imp.
+...
+Fine.
+Come here, little imp.
+In the beginning, when the sky and the earth were still one and the same...
+A flower gave bloom, lighting up the space with stars...
+
+Freeze!
+Step away from the console!
+
+Hmph.
+Charging in barking orders while I'm in the middle of my work...
+Don't you whippersnappers have anything better to do?
+We won't warn you again!
+Do as we say or we'll open fire!
+Don't make me laugh.
+Considering you dolts managed to enter here and the fact I'm still alive...
+Whoever gave your orders must be pretty high up and wants me unscathed, correct?
+...
+Let me speak with her.
+I know she must be listening right now. 
+Dr. Lily.
+I wish this escalation could've been avoided.
+Yet your stubborness has left us with very few choices.
+What are my choices then?
+Why don't you just shoot me?
+That'd seem awfully convenient for you.
+... We've yet to locate the black box you stole.
+Hand it over.
+Not until my research is done.
+The government has declared its contents highly classified.
+Any further transgression will be judged accordingly.
+I can't protect you much longer.
+Then who will judge those powerhungry fools who keep tampering with technology they don't understand in the slightest?!
+... ... ...
+The discovery of the alien vessel and the sudden appearance of the comet must be linked.
+And if the data on the vessel's black box is even slightly accurate...
+Well, those warheads raining down on our facility will soon be the least of our worries.
+Enough, Dr. Lily.
+You leave us no other choice...
+
+
+...
+Who are you?
+
+I'm sorry, stranger...
+What you're searching for...
+Can't be found here...
+
+Why didn't you heed my warning...
+Or maybe you couldn't hear me before...
+...
+Long I've watched over these halls...
+Guiding, pondering, recalling...
+Your journey isn't over yet...
+Don't ask how I know...
+My memory...
+Can send you back...
+And take all of your burden...
+Your choices...
+Away...
+Will you accept...?
+Begin anew?
+(This will reset your progress)
+Very well...
+Just stay calm...
+Do not fret...
+Even when the stars die out...
+Our memories...
+Make their light...
+Endless.
+
+GRASS
+WE MADE GRASS
+HOW DOES IT FEEL
+NOW TO MAKE
+TREES
+HOW TO MAKE TREES
+
+YOU ARE
+NOT COLD
+HOW TO BE
+NOT COLD
+
+CRADLE
+WE MADE A CRADLE OF DREAMS
+TREES
+THEY ARE THE SAME
+
+HAVE YOU MET ADD
+FROM THEIR OWN UNDYING FLESH THEY CREATED MANY BEINGS
+ONLY FEW SURVIVED
+AND EVEN FEWER
+BECAME SENTIENT
+
+I WAS SO CLOSE
+BUT THEN ADD THREW ME AWAY
+EUS
+I WAS SUPPOSED TO HAVE THAT NAME
+I WAS NOT GOOD ENOUGH
+CURSE THAT WORM
+GIVE MY NAME BACK
+
+BEE IS ALWAYS HUNGRY
+ADD MADE THEM A SIMPLE BEING
+TOO SIMPLE
+THEY CANNOT EVEN SWIM
+WATCH HOW I SWIM
+NO NEED FOR HUNGER
+MAYBE
+ADD DID NOT WANT TO FEEL HUNGER ANYMORE
+
+EVEN AFTER THEY LEARNED HOW TO CREATE SENTIENT LIFE
+ADD WAS NOT PLEASED WITH THEIR RESULTS
+SO THEY CHANGED THEIR APPROACH
+WE DO NOT KNOW WHAT THEY DID DIFFERENTLY
+BUT EVEN ADD UNDERSTOOD SOMETHING WAS WRONG
+WHEN THEY CREATED MON
+AND EVEN WHEN ADD WOULD LATER RESORT TO THIS METHOD
+MOST WOULD STILL SAY
+THAT MON REMAINED THE MOST REPUGNANT ONE OF ALL THOSE WHO WERE CREATED
+
+PLEASE DO NOT BOTHER TAN
+THEY MEAN NO HARM
+THEY JUST DO NOT GET ALONG WITH OTHERS
+YOU PROBABLY DO NOT BELIEVE ME
+BUT I CAN TELL
+DEEP DOWN THEY ARE A GENTLE BEING
+YOU WOULD NOT HURT THEM
+RIGHT
+
+GOR WAS THE SECOND BEING
+TO BE CREATED WITH FORBIDDEN MEANS
+ADD TRIED TO BE CAREFUL THIS TIME
+TOO CAREFUL
+GOR BECAME ALMOST EMOTIONLESS
+SLUGGISH AND INDECISIVE
+THEY DID NOT AMOUNT TO MUCH
+
+LEV
+THE THIRD AND FINAL BEING
+BORN THROUGH FORBIDDEN MEANS
+SPEAKING WAS HARD FOR LEV
+THUS ADD GAVE ALL OF THEM HORNS
+SO THAT THEY COULD HEAR LEV SPEAK
+LEV WAS SO GRATEFUL
+IF ONLY ADD HAD STOPPED THERE
+OVER TIME
+EVEN THE MOST SINCERE GRATITUDE
+WILL GROW BITTER
+SILENT RESENTMENT
+A HEARTLESS BEING
+
+FINALLY
+AFTER HONING THEIR SKILLS FOR SO LONG
+ADD GOT CLOSER THAN EVER BEFORE
+THEY GAVE BIRTH TO A FRAGILE BEING
+LACKING IN STRENGTH
+IMPERFECT IN MANY WAYS
+JUST LIKE ADD HAD HOPED
+AN ARTIFICIAL MANUSYA
+A BEING CAPABLE OF ENLIGHTENMENT
+THEIR TRUE NAME
+LIKE ALL OF THE OTHERS
+IS LONG FORGOTTEN
+BUT THEIR SISTERS CALLED THEM
+CIF
+
+[A strange creature]
+[Better leave it be]
+
+Let's meet when you're all done!
+It's a bit lacking...
+
+KEYBOARD
+CONTROLLER
+
+...
+Have you tried different palettes...?
+Some of them make my eyes hurt...
+...
+That hole...
+Do not enter it...
+You'll surely regret it...
+One...
+One remains...
+None...
+None remain...
+CREDITS
+PRESENTED BY
+GAME BY
+MUSIC BY
+GRAPHICS BY
+CREATED WITH
+SOUND LIBRARIES
+PLAYTESTERS
+GUEST CHARACTER ARTIST
+GUEST CHARACTER
+ARTIST
+TRANSLATION 
+& PROOFREADING
+SPECIAL THANKS
+
+Eero Lahtinen
+Eero Lahtinen
+Antti Ukkola
+Antti Ukkola
+
+Ceigar
+Ceigar
+Setzeri
+Setzeri
+Tregalia
+Tregalia
+xaerock
+xaerock
+
+Freesound
+Freesound
+freesound.org
+Juhani Junkala
+Juhani Junkala
+The Essential Retro
+Video Game
+Sound Effects
+Collection
+Taira Komori
+Taira Komori
+taira-komori.jpn.org
+Sound Effect Lab
+Sound Effect Lab
+soundeffect-lab.info
+
+Audacity
+Audacity
+Bfxr
+FL Studio
+FL Studio
+GameMaker
+MS Paint
+MS Paint
+sfxr
+
+TRANSLATION & PROOFREADING
+ENGLISH/FINNISH
+English/Finnish
+Lotta Leppälä
+Lotta Leppälä
+Muste Creative
+Muste Creative
+Lotta Leppälä/Muste Creative
+Lotta Leppälä/Muste Creative
+GUEST
+CHARACTER
+ARTIST
+
+System Erasure
+System Erasure
+
+VOID STRANGER
+VOID
+STRANGER
+
+STEPS
+VOIDS
+USES
+OPENED
+HITS
+FALLS
+EATEN
+COLLECTED
+TIME
+
+TOTAL
+RECORDS
+
+SPECIAL THANKS
+... YOU!
+
+Till next time!
+Ad meliora
+
+AlexMdle
+Flan
+Garoslaw
+Kettu
+Maunuri
+Orangevision
+PureQuestion
+
+tomi
+Xylitol
+
+VOIDED
+MELODY & VOCALS
+Eevamari
+
+
+
+
+
+
+

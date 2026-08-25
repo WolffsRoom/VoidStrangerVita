@@ -1,0 +1,17 @@
+# Commercial game files, generated data and local optimization work
+/data/
+
+# Build products
+/artifacts/
+/src/vita-runner/build-vita/
+/third_party/vitaGL-nosplash/libvitaGL.a
+/third_party/vitaGL-nosplash/samples/
+/third_party/vitaGL-nosplash/stQdV8LI
+
+# Local diagnostics and editor files
+*.log
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
