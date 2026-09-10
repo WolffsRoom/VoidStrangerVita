@@ -9,12 +9,17 @@ static GLenum vitaTextureFilter(void) {
     return g_vitaTextureLinearFilter ? GL_LINEAR : GL_NEAREST;
 }
 #include <psp2/io/fcntl.h>
+#include <psp2/io/dirent.h>
 #include <psp2/io/stat.h>
 #include <psp2/kernel/sysmem.h>
 #include <stdio.h>
 // The bundled no-splash VitaGL exports this helper, while some installed
 // VitaSDK headers omit its declaration.
 extern void vglForceGarbageCollection(void);
+// vitaGL already links stb_dxt; encode BC3 on-device from the active data.win.
+extern void stb_compress_dxt_block(unsigned char* dest,
+                                   const unsigned char* src_rgba_four_bytes_per_pixel,
+                                   int alpha, int mode);
 #define VITA_TX_CACHE_ROOT "ux0:data/voidstranger/texture-cache"
 #define VITA_PVR_ROOT "ux0:data/voidstranger/pvr"
 #define VITA_PVR_RGBA4444_FORMAT 0x0404040461626772ULL
@@ -46,10 +51,20 @@ typedef struct {
     uint32_t height;
 } VitaTextureCacheHeader;
 
-#define VITA_TX_CACHE_MAGIC 0x31435456U /* VTC1 */
-#define VITA_TX_CACHE_COMPLETE_MAGIC 0x32435456U /* VTC2 */
+#define VITA_TX_CACHE_MAGIC 0x37435456U /* VTC7: runtime-generated cache */
+#define VITA_TX_CACHE_COMPLETE_MAGIC 0x38435456U /* VTC8: runtime-generated set */
 #define VITA_TX_CACHE_CH3_MAGIC 0x35435456U /* VTC5 */
 #define VITA_TX_CACHE_CH3_COMPLETE_MAGIC 0x36435456U /* VTC6 */
+#define VITA_BC3_CACHE_COMPLETE_MAGIC 0x33434256U /* VBC3 */
+
+typedef struct {
+    uint32_t magic;
+    uint32_t textureCount;
+    uint32_t sourceFingerprint;
+    uint32_t pvrFileCount;
+} VitaBc3CacheComplete;
+
+static bool vitaBc3ForceRegenerate = false;
 
 // One lossless 2048px cache page needs an 8 MiB upload buffer. The regular C
 // heap is intentionally small after parsing Chapters 3-5, while the Vita still
@@ -99,6 +114,7 @@ static void vitaTextureCachePath(const DataWin* dw, uint32_t pageId,
                                  char* output, size_t outputSize);
 
 static bool vitaPreparedTextureExists(const DataWin* dw, uint32_t pageId);
+static bool vitaBc3SetIsComplete(const DataWin* dw);
 
 // 0=generic, 1=Light World, 2=Castle, 3=Cyber/City, 4=Mansion.
 // Chapter 2 reuses atlas IDs across unrelated regions; selecting lossless
@@ -592,7 +608,11 @@ static bool vitaTextureCacheIsComplete(const DataWin* dw) {
 }
 
 bool GLLegacyRenderer_textureCacheIsComplete(const DataWin* dw) {
-    return vitaTextureCacheIsComplete(dw);
+    if (!vitaTextureCacheIsComplete(dw)) return false;
+    // Optimized/Low profiles also require a fingerprinted, Vita-generated BC3 set.
+    if (g_vitaPvrEnabled && g_vitaTextureFormatProfile != 1)
+        return vitaBc3SetIsComplete(dw);
+    return true;
 }
 
 static void vitaMarkTextureCacheComplete(const DataWin* dw) {
@@ -691,30 +711,246 @@ static void vitaSavePreparedTexture(const DataWin* dw, const Texture* txtr, uint
     sceIoClose(fd);
 }
 
+static uint32_t vitaBc3SourceFingerprint(const DataWin* dw) {
+    // FNV-1a over the TXTR layout. A rebuilt data.win with different offsets,
+    // dimensions or payload sizes invalidates a runtime-generated BC3 marker
+    // even when it happens to retain the same number of Texture Pages.
+    uint32_t hash = 2166136261U;
+    if (dw == nullptr) return hash;
+    for (uint32_t pageId = 0; pageId < dw->txtr.count; ++pageId) {
+        const Texture* txtr = &dw->txtr.textures[pageId];
+        uint32_t values[5] = {
+            pageId, txtr->blobSize, txtr->blobOffset,
+            (uint32_t)txtr->textureWidth, (uint32_t)txtr->textureHeight
+        };
+        for (size_t i = 0; i < sizeof(values); ++i) {
+            hash ^= ((const uint8_t*)values)[i];
+            hash *= 16777619U;
+        }
+    }
+    return hash;
+}
+
+static void vitaPvrDir(const DataWin* dw, char* output, size_t outputSize) {
+    char root[192];
+    vitaChapterRoot(dw, root, sizeof(root));
+    snprintf(output, outputSize, "%s/pvr", root);
+}
+
+static void vitaBc3CompletePath(const DataWin* dw, char* output, size_t outputSize) {
+    char dir[224];
+    vitaPvrDir(dw, dir, sizeof(dir));
+    snprintf(output, outputSize, "%s/complete.bc3.vtc", dir);
+}
+
+static uint32_t vitaCountBc3Files(const DataWin* dw) {
+    char dir[224];
+    vitaPvrDir(dw, dir, sizeof(dir));
+    SceUID dd = sceIoDopen(dir);
+    if (dd < 0) return 0;
+    uint32_t count = 0;
+    SceIoDirent entry;
+    memset(&entry, 0, sizeof(entry));
+    while (sceIoDread(dd, &entry) > 0) {
+        size_t length = strlen(entry.d_name);
+        static const char suffix[] = ".bc3.pvr";
+        if (length > sizeof(suffix) - 1U &&
+            strcmp(entry.d_name + length - (sizeof(suffix) - 1U), suffix) == 0)
+            count++;
+        memset(&entry, 0, sizeof(entry));
+    }
+    sceIoDclose(dd);
+    return count;
+}
+
+static void vitaMarkBc3CacheComplete(const DataWin* dw) {
+    char dir[224];
+    vitaPvrDir(dw, dir, sizeof(dir));
+    sceIoMkdir(dir, 0777);
+    char path[256];
+    vitaBc3CompletePath(dw, path, sizeof(path));
+    VitaBc3CacheComplete marker = {
+        VITA_BC3_CACHE_COMPLETE_MAGIC,
+        dw != nullptr ? dw->txtr.count : 0U,
+        vitaBc3SourceFingerprint(dw),
+        vitaCountBc3Files(dw)
+    };
+    SceUID fd = sceIoOpen(path, SCE_O_WRONLY | SCE_O_CREAT | SCE_O_TRUNC, 0666);
+    if (fd < 0) return;
+    sceIoWrite(fd, &marker, sizeof(marker));
+    sceIoClose(fd);
+}
+
+static bool vitaReadBc3Marker(const DataWin* dw, VitaBc3CacheComplete* marker) {
+    char path[256];
+    vitaBc3CompletePath(dw, path, sizeof(path));
+    SceUID fd = sceIoOpen(path, SCE_O_RDONLY, 0);
+    if (fd < 0) return false;
+    memset(marker, 0, sizeof(*marker));
+    int got = sceIoRead(fd, marker, sizeof(*marker));
+    sceIoClose(fd);
+    return got == sizeof(*marker) && marker->magic == VITA_BC3_CACHE_COMPLETE_MAGIC;
+}
+
+static bool vitaBc3SetIsComplete(const DataWin* dw) {
+    if (dw == nullptr) return false;
+    VitaBc3CacheComplete marker;
+    if (vitaReadBc3Marker(dw, &marker)) {
+        uint32_t fingerprint = vitaBc3SourceFingerprint(dw);
+        if (marker.textureCount != dw->txtr.count ||
+            marker.sourceFingerprint != fingerprint) {
+            // A rebuilt data.win can retain the same page dimensions while its
+            // atlas contents change completely. Re-encode every eligible page.
+            vitaBc3ForceRegenerate = true;
+            return false;
+        }
+        if (marker.pvrFileCount == vitaCountBc3Files(dw))
+            return true;
+        // A page was removed after completion. The preparation loop will fill
+        // only the missing file and refresh the marker.
+        return false;
+    }
+
+    // Void Stranger v0.83 intentionally does not adopt unmarked/offline PVR sets.
+    // A missing marker means the Vita must regenerate BC3 from the active data.win.
+    vitaBc3ForceRegenerate = true;
+    return false;
+}
+
+static bool vitaWriteBc3Block(SceUID fd, uint8_t* buffered, size_t* used,
+                              const uint8_t block[16]) {
+    const size_t capacity = 64U * 1024U;
+    if (*used + 16U > capacity) {
+        if (sceIoWrite(fd, buffered, (unsigned int)*used) != (int)*used)
+            return false;
+        *used = 0;
+    }
+    memcpy(buffered + *used, block, 16U);
+    *used += 16U;
+    return true;
+}
+
+static bool vitaGenerateBc3Pvr(const DataWin* dw, uint32_t pageId,
+                               int width, int height, const uint8_t* rgba,
+                               VitaTexturePrepareProgress progress, void* user) {
+    if (dw == nullptr || rgba == nullptr || width <= 0 || height <= 0 ||
+        width > 4096 || height > 4096 || !vitaPvrTextureAllowed(dw, pageId))
+        return false;
+
+    char dir[224];
+    vitaPvrDir(dw, dir, sizeof(dir));
+    sceIoMkdir(dir, 0777);
+    char finalPath[256];
+    vitaPvrPath(dw, pageId, finalPath, sizeof(finalPath));
+    char tempPath[272];
+    snprintf(tempPath, sizeof(tempPath), "%s.tmp", finalPath);
+    sceIoRemove(tempPath);
+
+    SceUID fd = sceIoOpen(tempPath, SCE_O_WRONLY | SCE_O_CREAT | SCE_O_TRUNC, 0666);
+    if (fd < 0) return false;
+
+    uint8_t header[52] = {0};
+    uint32_t version = 0x03525650U;
+    uint64_t format = VITA_PVR_BC3_DXT5_FORMAT;
+    uint32_t colorSpace = 1U, channelType = 0U;
+    uint32_t h = (uint32_t)height, w = (uint32_t)width;
+    uint32_t one = 1U, metadata = 0U;
+    memcpy(header + 0, &version, 4);
+    memcpy(header + 8, &format, 8);
+    memcpy(header + 16, &colorSpace, 4);
+    memcpy(header + 20, &channelType, 4);
+    memcpy(header + 24, &h, 4);
+    memcpy(header + 28, &w, 4);
+    memcpy(header + 32, &one, 4); // depth
+    memcpy(header + 36, &one, 4); // surfaces
+    memcpy(header + 40, &one, 4); // faces
+    memcpy(header + 44, &one, 4); // mipmaps
+    memcpy(header + 48, &metadata, 4);
+    bool ok = sceIoWrite(fd, header, sizeof(header)) == sizeof(header);
+
+    uint8_t* buffered = ok ? (uint8_t*)malloc(64U * 1024U) : nullptr;
+    if (buffered == nullptr) ok = false;
+    size_t used = 0;
+    const int blocksX = (width + 3) / 4;
+    const int blocksY = (height + 3) / 4;
+    uint8_t sourceBlock[64];
+    uint8_t encodedBlock[16];
+    for (int by = 0; ok && by < blocksY; ++by) {
+        for (int bx = 0; bx < blocksX; ++bx) {
+            for (int py = 0; py < 4; ++py) {
+                int sy = by * 4 + py;
+                if (sy >= height) sy = height - 1;
+                for (int px = 0; px < 4; ++px) {
+                    int sx = bx * 4 + px;
+                    if (sx >= width) sx = width - 1;
+                    memcpy(sourceBlock + (py * 4 + px) * 4,
+                           rgba + ((size_t)sy * (size_t)width + (size_t)sx) * 4U, 4U);
+                }
+            }
+            // Mode 0 is stb_dxt's fast deterministic path. It preserves the
+            // input sRGB byte values; the PVR header declares that same space.
+            stb_compress_dxt_block(encodedBlock, sourceBlock, 1, 0);
+            ok = vitaWriteBc3Block(fd, buffered, &used, encodedBlock);
+        }
+        // Keep the loading animation responsive during multi-second pages.
+        if (progress != nullptr && (by & 31) == 31)
+            progress(pageId, dw->txtr.count, user);
+    }
+    if (ok && used > 0)
+        ok = sceIoWrite(fd, buffered, (unsigned int)used) == (int)used;
+    free(buffered);
+    sceIoClose(fd);
+
+    uint64_t expectedPayload = (uint64_t)blocksX * (uint64_t)blocksY * 16ULL;
+    SceIoStat stat;
+    if (!ok || sceIoGetstat(tempPath, &stat) < 0 ||
+        (uint64_t)stat.st_size != 52ULL + expectedPayload) {
+        sceIoRemove(tempPath);
+        return false;
+    }
+    // Rename only a complete file. A power loss leaves at most a disposable
+    // .tmp and never a truncated page_NNN.bc3.pvr.
+    sceIoRemove(finalPath);
+    if (sceIoRename(tempPath, finalPath) < 0) {
+        sceIoRemove(tempPath);
+        return false;
+    }
+    if (vitaPvrTextureEncodedBytes(dw, pageId) != expectedPayload) {
+        sceIoRemove(finalPath);
+        return false;
+    }
+    vitaTextureLog(pageId, width, height, 4096, "runtime_bc3_written");
+    return true;
+}
+
 uint32_t GLLegacyRenderer_prepareTextureCache(DataWin* dw,
                                               VitaTexturePrepareProgress progress,
                                               void* user) {
     if (dw == nullptr || dw->txtr.count == 0) return 0;
-    // A completion marker from a pre-PVR build must not keep duplicate raw
-    // pages alive forever. Exact external pages are authoritative now.
-    vitaPrunePvrBackedFallbacks(dw);
-    if (vitaTextureCacheIsComplete(dw)) return dw->txtr.count;
+    // Keep R444 and BC3 side by side on disk. The user can switch profiles
+    // live, and deleting the lossless companion here made Native mode trust a
+    // stale complete.vtc while its actual page file had already disappeared.
+    if (GLLegacyRenderer_textureCacheIsComplete(dw)) return dw->txtr.count;
     uint32_t prepared = 0;
     bool gm2022_5 = DataWin_isVersionAtLeast(dw, 2022, 5, 0, 0);
     for (uint32_t pageId = 0; pageId < dw->txtr.count; ++pageId) {
         Texture* txtr = &dw->txtr.textures[pageId];
-        if (vitaPvrTextureIsAvailable(dw, pageId) &&
-            !vitaPvrRequiresLosslessCompanion(dw, pageId)) {
-            char stalePath[256];
-            vitaTextureCachePath(dw, pageId, stalePath, sizeof(stalePath));
-            sceIoRemove(stalePath);
+        if (!vitaBc3ForceRegenerate && vitaPvrTextureEncodedBytes(dw, pageId) != 0 &&
+            vitaPreparedTextureExists(dw, pageId)) {
             prepared++;
             vitaTextureLog(pageId, 0, 0, 4096, "preload_pvr_skip");
             if (progress != nullptr) progress(pageId + 1, dw->txtr.count, user);
             continue;
         }
         int w = 0, h = 0;
-        uint16_t* cached = vitaLoadPreparedTexture(dw, txtr, pageId, &w, &h);
+        // In Aggressive mode a valid R444 page is not a substitute for a
+        // missing BC3 page: decode once, generate the requested compressed
+        // representation and persist it before entering gameplay.
+        bool needsBc3 = vitaPvrTextureAllowed(dw, pageId) &&
+                        (vitaBc3ForceRegenerate ||
+                         vitaPvrTextureEncodedBytes(dw, pageId) == 0);
+        uint16_t* cached = needsBc3 ? nullptr :
+            vitaLoadPreparedTexture(dw, txtr, pageId, &w, &h);
         if (cached != nullptr) {
             free(cached);
             prepared++;
@@ -725,7 +961,15 @@ uint32_t GLLegacyRenderer_prepareTextureCache(DataWin* dw,
             uint8_t* pixels = ImageDecoder_decodeToRgba(txtr->blobData, (size_t)txtr->blobSize,
                                                         gm2022_5, &w, &h);
             if (pixels != nullptr && w > 0 && h > 0 && w <= 4096 && h <= 4096) {
+                bool generatedBc3 = false;
+                if (vitaPvrTextureAllowed(dw, pageId)) {
+                    generatedBc3 = vitaGenerateBc3Pvr(dw, pageId, w, h, pixels,
+                                                      progress, user);
+                }
                 uint64_t pixelCount = (uint64_t)w * (uint64_t)h;
+                // Persist the lossless companion as well. It makes later live
+                // switching to Native deterministic and avoids decoding the
+                // same commercial atlas a second time.
                 uint16_t* packed = (uint16_t*)pixels;
                 for (uint64_t i = 0; i < pixelCount; ++i) {
                     const uint8_t* src = &pixels[i * 4ULL];
@@ -734,10 +978,19 @@ uint32_t GLLegacyRenderer_prepareTextureCache(DataWin* dw,
                     packed[i] = (uint16_t)(((uint16_t)(src[0] >> 4) << 12) |
                                            ((uint16_t)(src[1] >> 4) << 8) |
                                            ((uint16_t)(src[2] >> 4) << 4) | alpha4);
+                    // A 4096x4096 lossless page can spend several seconds in
+                    // this CPU conversion. Yield a redraw roughly every 256K
+                    // pixels so the 750 ms loading animation does not freeze.
+                    if (progress != nullptr && (i & 0x3FFFFULL) == 0x3FFFFULL)
+                        progress(pageId, dw->txtr.count, user);
                 }
                 vitaSavePreparedTexture(dw, txtr, pageId, w, h, packed);
-                prepared++;
-                vitaTextureLog(pageId, w, h, 4096, "preload_cache_written");
+                if (generatedBc3 || vitaPreparedTextureExists(dw, pageId)) {
+                    prepared++;
+                    vitaTextureLog(pageId, w, h, 4096,
+                                   generatedBc3 ? "preload_bc3_written" :
+                                                  "preload_cache_written");
+                }
             } else {
                 vitaTextureLog(pageId, w, h, 4096, "preload_decode_skipped");
             }
@@ -749,7 +1002,14 @@ uint32_t GLLegacyRenderer_prepareTextureCache(DataWin* dw,
         }
         if (progress != nullptr) progress(pageId + 1, dw->txtr.count, user);
     }
-    if (prepared == dw->txtr.count) vitaMarkTextureCacheComplete(dw);
+    if (prepared == dw->txtr.count) {
+        vitaMarkTextureCacheComplete(dw);
+        // The files were created from this exact data.win in this preparation
+        // pass. Persist its fingerprint so following boots can skip conversion.
+        if (g_vitaPvrEnabled && g_vitaTextureFormatProfile != 1)
+            vitaMarkBc3CacheComplete(dw);
+        vitaBc3ForceRegenerate = false;
+    }
     return prepared;
 }
 
@@ -785,6 +1045,47 @@ typedef struct Vita2DVertex {
     GLfloat x, y;
 } Vita2DVertex;
 
+// The fixed-function VitaGL path consumes glVertexPointer/glColorPointer/
+// glTexCoordPointer, while a linked GLSL program consumes generic vertex
+// attributes. shader_palette is the only custom program enabled on Vita, and
+// its linker bindings are: 0=position, 1=texcoord, 2=colour.
+static bool vitaCustomShaderAttribsActive = false;
+static bool vitaCustomShaderAttribsLogged = false;
+
+static void vitaEnable2DVertexArrays(const Vita2DVertex* vertices) {
+    if (vitaCustomShaderAttribsActive) {
+        glEnableVertexAttribArray(0);
+        glEnableVertexAttribArray(1);
+        glEnableVertexAttribArray(2);
+        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vita2DVertex), &vertices[0].x);
+        glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(Vita2DVertex), &vertices[0].u);
+        glVertexAttribPointer(2, 4, GL_FLOAT, GL_FALSE, sizeof(Vita2DVertex), &vertices[0].r);
+        if (!vitaCustomShaderAttribsLogged) {
+            vitaRenderLog("VITA_CUSTOM_ATTRIB=enabled position=0 texcoord=1 colour=2");
+            vitaCustomShaderAttribsLogged = true;
+        }
+    } else {
+        glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+        glEnableClientState(GL_COLOR_ARRAY);
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glTexCoordPointer(2, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].u);
+        glColorPointer(4, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].r);
+        glVertexPointer(2, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].x);
+    }
+}
+
+static void vitaDisable2DVertexArrays(void) {
+    if (vitaCustomShaderAttribsActive) {
+        glDisableVertexAttribArray(2);
+        glDisableVertexAttribArray(1);
+        glDisableVertexAttribArray(0);
+    } else {
+        glDisableClientState(GL_VERTEX_ARRAY);
+        glDisableClientState(GL_COLOR_ARRAY);
+        glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    }
+}
+
 // VitaGL's immediate-mode compatibility layer generates a large fixed-function
 // shader at the first glEnd(). Use explicit client arrays on Vita instead. This
 // is the primitive used by the Vita renderer migration; desktop/PS3 keep the
@@ -792,20 +1093,13 @@ typedef struct Vita2DVertex {
 static void vitaDrawQuad(const Vita2DVertex vertices[4]) {
     static bool firstDraw = true;
     if (firstDraw) vitaRenderLog("VITA_ARRAY=first_draw_begin");
-    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-    glEnableClientState(GL_COLOR_ARRAY);
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glTexCoordPointer(2, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].u);
-    glColorPointer(4, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].r);
-    glVertexPointer(2, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].x);
+    vitaEnable2DVertexArrays(vertices);
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
     if (firstDraw) {
         vitaRenderLog("VITA_ARRAY=first_draw_complete");
         firstDraw = false;
     }
-    glDisableClientState(GL_VERTEX_ARRAY);
-    glDisableClientState(GL_COLOR_ARRAY);
-    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    vitaDisable2DVertexArrays();
 }
 
 #define VITA_IMMEDIATE_MAX_VERTICES 262144
@@ -844,16 +1138,9 @@ static void vitaVertex2f(GLfloat x, GLfloat y) {
 }
 
 static void vitaDrawVertexRange(GLenum mode, const Vita2DVertex* vertices, GLsizei count) {
-    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-    glEnableClientState(GL_COLOR_ARRAY);
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glTexCoordPointer(2, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].u);
-    glColorPointer(4, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].r);
-    glVertexPointer(2, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].x);
+    vitaEnable2DVertexArrays(vertices);
     glDrawArrays(mode, 0, count);
-    glDisableClientState(GL_VERTEX_ARRAY);
-    glDisableClientState(GL_COLOR_ARRAY);
-    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    vitaDisable2DVertexArrays();
 }
 
 static void vitaEnd(void) {
@@ -875,26 +1162,18 @@ static void vitaEnd(void) {
             indicesInited = true;
         }
 
-        glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-        glEnableClientState(GL_COLOR_ARRAY);
-        glEnableClientState(GL_VERTEX_ARRAY);
-        
-        // Draw in chunks of 65536 vertices (16-bit index limit)
+        // Draw in chunks of 65536 vertices (16-bit index limit). Generic
+        // attributes are required while shader_palette is active; fixed
+        // client arrays remain the default for every other Vita draw.
         for (GLsizei offset = 0; offset + 3 < vitaImmediateCount; offset += 65536) {
             GLsizei count = vitaImmediateCount - offset;
             if (count > 65536) count = 65536;
             GLsizei quads = count / 4;
-            
-            glTexCoordPointer(2, GL_FLOAT, sizeof(Vita2DVertex), &vitaImmediateVertices[offset].u);
-            glColorPointer(4, GL_FLOAT, sizeof(Vita2DVertex), &vitaImmediateVertices[offset].r);
-            glVertexPointer(2, GL_FLOAT, sizeof(Vita2DVertex), &vitaImmediateVertices[offset].x);
-            
+            const Vita2DVertex* vertices = &vitaImmediateVertices[offset];
+            vitaEnable2DVertexArrays(vertices);
             glDrawElements(GL_TRIANGLES, quads * 6, GL_UNSIGNED_SHORT, quadIndices);
+            vitaDisable2DVertexArrays();
         }
-        
-        glDisableClientState(GL_VERTEX_ARRAY);
-        glDisableClientState(GL_COLOR_ARRAY);
-        glDisableClientState(GL_TEXTURE_COORD_ARRAY);
     } else if (vitaImmediateMode == GL_TRIANGLES) {
         vitaDrawVertexRange(GL_TRIANGLES, vitaImmediateVertices, vitaImmediateCount);
     }
@@ -1056,6 +1335,19 @@ static void glApplyProjection(Renderer* renderer, const Matrix4f* viewMatrix, co
     glLoadMatrixf(projection.m);
     glMatrixMode(GL_MODELVIEW);
     glLoadMatrixf(worldView.m);
+
+    GLLegacyRenderer* gl = (GLLegacyRenderer*) renderer;
+    if (renderer != nullptr && renderer->dataWin != nullptr && renderer->currentShader >= 0 &&
+        (uint32_t)renderer->currentShader < renderer->dataWin->shdr.count && gl->shaderPrograms != nullptr) {
+        GLuint program = gl->shaderPrograms[renderer->currentShader];
+        if (program > 0) {
+            GLint vitaMVP = glGetUniformLocation(program, "u_vitaMVP");
+            if (vitaMVP >= 0) {
+                Matrix4f mvp = worldViewProjection;
+                glUniformMatrix4fv(vitaMVP, 1, GL_FALSE, mvp.m);
+            }
+        }
+    }
 }
 
 // ===[ Vtable Implementations ]===
@@ -1119,21 +1411,14 @@ static void glInit(Renderer* renderer, DataWin* dataWin) {
         gl->shaderPrograms = (GLuint*)safeCalloc(dataWin->shdr.count, sizeof(GLuint));
         gl->shaderAttempted = (bool*)safeCalloc(dataWin->shdr.count, sizeof(bool));
 #ifndef PLATFORM_VITA
-        // VitaGL's legacy renderer must not link the embedded GameMaker shader
-        // table during chapter startup.  Some localized data.win variants keep
-        // valid GameMaker shader metadata but expose GLSL combinations that
-        // libshacccg accepts at compile time and then aborts inside SceGxm while
-        // glLinkProgram() is building the program.  This happened before the
-        // first Chapter 2 PT-BR room was created.  Keep the slots allocated so
-        // shader builtins retain their stable fallback behaviour, but reserve
-        // programmable shader compilation for the desktop validation path and
-        // the Modern GL renderer until each Vita shader has an audited GXP-safe
-        // implementation.
         glCompileAllShaders(gl);
 #else
-        fprintf(stderr,
-                "[SHDR] legacy Vita startup linking disabled; fixed-pipeline fallback active (%u shaders)\n",
-                dataWin->shdr.count);
+        // libshacccg may abort inside SceGxm while linking even the compact
+        // palette program. That crash happens during Runner_create, before the
+        // first frame, leaving audio alive behind a permanently black screen.
+        // Preserve GameMaker shader handles but use the proven fixed-pipeline
+        // fallback on Vita until this effect has an offline-compiled GXP pair.
+        vitaRenderLog("SHADER_COMPILE=disabled reason=vita_linker_startup_crash fixed_pipeline=active");
 #endif
     }
 #endif
@@ -1593,7 +1878,9 @@ static void glEndFrameInit(Renderer* renderer) {
     GLLegacyRenderer* gl = (GLLegacyRenderer*) renderer;
     if (renderer->runner->usingAppSurface && !renderer->runner->appSurfaceAutoDraw) {
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
+#if !defined(VOIDSTRANGER_LOCAL_TEST)
         return;
+#endif
     }
     int32_t appId = gl->base.runner->applicationSurfaceId;
     GLCommon_beginLetterboxBlit(gl->surfaces[appId], 0);
@@ -1602,7 +1889,9 @@ static void glEndFrameInit(Renderer* renderer) {
 static void glEndFrameEnd(Renderer* renderer) {
     GLLegacyRenderer* gl = (GLLegacyRenderer*) renderer;
     if (renderer->runner->usingAppSurface && !renderer->runner->appSurfaceAutoDraw) {
+#if !defined(VOIDSTRANGER_LOCAL_TEST)
         return;
+#endif
     }
     int32_t appId = gl->base.runner->applicationSurfaceId;
     GLCommon_beginLetterboxBlit(gl->surfaces[appId], 0);
@@ -2400,8 +2689,13 @@ bool GLLegacyRenderer_ensureTextureLoaded(GLLegacyRenderer* gl, uint32_t pageId)
 
     free(pixels);
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, vitaTextureFilter());
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, vitaTextureFilter());
+#ifdef PLATFORM_VITA
+    GLenum textureFilter = vitaTextureFilter();
+#else
+    GLenum textureFilter = GL_NEAREST;
+#endif
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, textureFilter);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, textureFilter);
     bool is_pot = ((w & (w - 1)) == 0) && ((h & (h - 1)) == 0);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, is_pot ? GL_REPEAT : GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, is_pot ? GL_REPEAT : GL_CLAMP_TO_EDGE);
@@ -4518,6 +4812,16 @@ static bool glLegacySetRenderTarget(Renderer* renderer, int32_t surfaceId, bool 
 // Resolves a surfaceID to a GL texture and its actual texture size
 // (POT dimensions if needsPOT, logical dimensions otherwise).
 static bool resolveSurfaceTexture(GLLegacyRenderer* gl, int32_t surfaceId, GLuint* outTexId, int32_t* outTexW, int32_t* outTexH) {
+    if (surfaceId == APPLICATION_SURFACE_ID || (gl->base.runner != nullptr && surfaceId == gl->base.runner->applicationSurfaceId)) {
+        int32_t appId = (gl->base.runner != nullptr) ? gl->base.runner->applicationSurfaceId : 0;
+        if (appId < 0) appId = 0;
+        if ((uint32_t)appId < gl->surfaceCount && gl->surfaces != nullptr && gl->surfaces[appId] != 0) {
+            *outTexId = gl->surfaceTexture[appId];
+            *outTexW = gl->needsPOT ? nextPow2(gl->surfaceWidth[appId]) : gl->surfaceWidth[appId];
+            *outTexH = gl->needsPOT ? nextPow2(gl->surfaceHeight[appId]) : gl->surfaceHeight[appId];
+            return true;
+        }
+    }
     if (0 > surfaceId || (uint32_t) surfaceId >= gl->surfaceCount) return false;
     if (gl->surfaces[surfaceId] == 0) return false;
     *outTexId = gl->surfaceTexture[surfaceId];
@@ -4546,9 +4850,60 @@ static void glLegacyDrawSurface(Renderer* renderer, int32_t surfaceId, int32_t s
     if (0 > srcWidth) {
         srcLeft = 0;
         srcTop = 0;
-        srcWidth = gl->surfaceWidth[surfaceId];
-        srcHeight = gl->surfaceHeight[surfaceId];
+        int32_t sIdx = (surfaceId == APPLICATION_SURFACE_ID || (gl->base.runner != nullptr && surfaceId == gl->base.runner->applicationSurfaceId)) ? ((gl->base.runner != nullptr) ? gl->base.runner->applicationSurfaceId : 0) : surfaceId;
+        if (sIdx < 0) sIdx = 0;
+        srcWidth = gl->surfaceWidth[sIdx];
+        srcHeight = gl->surfaceHeight[sIdx];
     }
+
+#if defined(VOIDSTRANGER_VITA) && (defined(PLATFORM_VITA) || defined(VOIDSTRANGER_LOCAL_TEST))
+    // Void Stranger disables automatic application-surface drawing and
+    // presents it itself in Draw Post.  Its GML uses the native 224x144
+    // coordinates, so changing only the host viewport leaves the quad tiny.
+    // Expand only the complete application_surface presentation; ordinary
+    // user surfaces and partial surface effects keep their original geometry.
+    Runner* runner = renderer->runner;
+    if (runner != nullptr && (surfaceId == APPLICATION_SURFACE_ID || surfaceId == runner->applicationSurfaceId) &&
+        srcLeft == 0 && srcTop == 0 && angleDeg == 0.0f &&
+        (xscale >= 2.0f || (x == 144.0f && y == 56.0f))) {
+        x = 0.0f;
+        y = 0.0f;
+        xscale = 1.0f;
+        yscale = 1.0f;
+        angleDeg = 0.0f;
+    }
+    // Void Stranger's Draw Post presents a dedicated final surface. The
+    // Steam GML scale is lost after its surface target is popped on Vita, so
+    // perform the final aspect-fit here, directly in the 960x544 host pass.
+    // 224:144 becomes 846.22x544 with equal scaling and centered side bars.
+    if (runner != nullptr && runner->inGuiPass &&
+        runner->guiPassTarget == RENDER_TARGET_HOST_FRAMEBUFFER &&
+        srcLeft == 0 && srcTop == 0 &&
+        ((srcWidth == 896 && srcHeight == 576) ||
+         (srcWidth == 448 && srcHeight == 288) ||
+         (srcWidth == 224 && srcHeight == 144)) &&
+        angleDeg == 0.0f) {
+        float finalScale = fminf((float)gl->windowW / (float)srcWidth,
+                                 (float)gl->windowH / (float)srcHeight);
+        x = ((float)gl->windowW - (float)srcWidth * finalScale) * 0.5f;
+        y = ((float)gl->windowH - (float)srcHeight * finalScale) * 0.5f;
+        xscale = finalScale;
+        yscale = finalScale;
+#ifdef PLATFORM_VITA
+        static bool loggedFinalFit = false;
+        if (!loggedFinalFit) {
+            char line[192];
+            snprintf(line, sizeof(line),
+                     "FINAL_SURFACE_FIT src=%dx%d dst=%.1fx%.1f pos=%.1f,%.1f host=%dx%d",
+                     srcWidth, srcHeight, (float)srcWidth * finalScale,
+                     (float)srcHeight * finalScale, x, y,
+                     gl->windowW, gl->windowH);
+            vitaRenderLog(line);
+            loggedFinalFit = true;
+        }
+#endif
+    }
+#endif
 
     // top-down GML coords -> flipped V for our bottom-up texture
     float u0 = (float) srcLeft / (float) texW;
@@ -4589,6 +4944,19 @@ static void glLegacyDrawSurfaceColor(Renderer* renderer, int32_t surfaceId, int3
     GLuint texId; int32_t texW, texH;
     if (!resolveSurfaceTexture(gl, surfaceId, &texId, &texW, &texH)) return;
     if (srcWidth < 0) { srcLeft = srcTop = 0; srcWidth = gl->surfaceWidth[surfaceId]; srcHeight = gl->surfaceHeight[surfaceId]; }
+#if defined(VOIDSTRANGER_VITA) && (defined(PLATFORM_VITA) || defined(VOIDSTRANGER_LOCAL_TEST))
+    Runner* runner = renderer->runner;
+    if (runner != nullptr && surfaceId == runner->applicationSurfaceId &&
+        runner->inGuiPass && runner->guiPassTarget == RENDER_TARGET_HOST_FRAMEBUFFER &&
+        srcLeft == 0 && srcTop == 0 &&
+        srcWidth == gl->surfaceWidth[surfaceId] && srcHeight == gl->surfaceHeight[surfaceId]) {
+        x = 0.0f;
+        y = 0.0f;
+        xscale = (float)gl->windowW / (float)srcWidth;
+        yscale = (float)gl->windowH / (float)srcHeight;
+        angleDeg = 0.0f;
+    }
+#endif
     float u0 = (float) srcLeft / texW, u1 = (float) (srcLeft + srcWidth) / texW;
     float v0 = (float) srcTop / texH, v1 = (float) (srcTop + srcHeight) / texH;
     Matrix4f transform;
@@ -4847,13 +5215,10 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
         // and several generated shaders are outside libshacccg's supported
         // GLSL subset. Keep a small audited allow-list for effects whose
         // fixed-pipeline fallback is visibly incorrect.
-        bool supported = strcmp(shaderName, "shd_hue") == 0 ||
-                         strcmp(shaderName, "shd_pal_swapper") == 0 ||
-                         strcmp(shaderName, "shd_shoujo") == 0 ||
-                         strcmp(shaderName, "shd_shadowblend") == 0 ||
-                         strcmp(shaderName, "shd_shadowblend_evening") == 0 ||
-                         strcmp(shaderName, "shd_forcecolour") == 0 ||
-                         strcmp(shaderName, "shd_lut") == 0;
+        // Only this compact, locally supplied program is audited for the
+        // Vita legacy path. Other GameMaker shaders retain their safe fixed
+        // pipeline fallback and do not consume GXM program memory.
+        bool supported = strcmp(shaderName, "shader_palette") == 0;
         if (!supported) continue;
 #endif
         gl->shaderAttempted[shaderIndex] = true;
@@ -4878,9 +5243,9 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
         // so local-test exercises precisely this path before the Vita build.
         static const char* hueVertexDesktop =
             "#version 120\n"
-            "attribute vec3 in_Position; attribute vec4 in_Colour; attribute vec2 in_TextureCoord;\n"
+            "attribute vec2 in_Position; attribute vec4 in_Colour; attribute vec2 in_TextureCoord;\n"
             "uniform mat4 u_vitaMVP; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
-            "void main(){ gl_Position=u_vitaMVP*vec4(in_Position,1.0); v_vColour=in_Colour; v_vTexcoord=in_TextureCoord; }\n";
+            "void main(){ gl_Position=u_vitaMVP*vec4(in_Position,0.0,1.0); v_vColour=in_Colour; v_vTexcoord=in_TextureCoord; }\n";
         static const char* hueFragmentDesktop =
             "#version 120\n"
             "uniform sampler2D gm_BaseTexture; uniform float u_Position; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
@@ -4889,17 +5254,40 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
             "void main(){ vec4 t=texture2D(gm_BaseTexture,v_vTexcoord); vec3 y=(t.rgb*v_vColour.rgb)*rgb2yiq; float h=atan(y.b,y.g)+u_Position; float c=sqrt(y.b*y.b+y.g*y.g); gl_FragColor=vec4(vec3(y.r,c*cos(h),c*sin(h))*yiq2rgb,t.a*v_vColour.a); }\n";
 #ifdef PLATFORM_VITA
         static const char* hueVertexVita =
-            "attribute vec3 in_Position; attribute vec4 in_Colour; attribute vec2 in_TextureCoord;\n"
+            "attribute vec2 in_Position; attribute vec4 in_Colour; attribute vec2 in_TextureCoord;\n"
             "uniform mat4 u_vitaMVP; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
-            "void main(){ gl_Position=u_vitaMVP*vec4(in_Position,1.0); v_vColour=in_Colour; v_vTexcoord=in_TextureCoord; }\n";
+            "void main(){ gl_Position=u_vitaMVP*vec4(in_Position,0.0,1.0); v_vColour=in_Colour; v_vTexcoord=in_TextureCoord; }\n";
         static const char* hueFragmentVita =
             "precision mediump float; uniform sampler2D gm_BaseTexture; uniform float u_Position; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
             "const mat3 rgb2yiq=mat3(0.299,0.587,0.114,0.595716,-0.274453,-0.321263,0.211456,-0.522591,0.311135);\n"
             "const mat3 yiq2rgb=mat3(1.0,0.9563,0.6210,1.0,-0.2721,-0.6474,1.0,-1.1070,1.7046);\n"
             "void main(){ vec4 t=texture2D(gm_BaseTexture,v_vTexcoord); vec3 y=(t.rgb*v_vColour.rgb)*rgb2yiq; float h=atan(y.b,y.g)+u_Position; float c=sqrt(y.b*y.b+y.g*y.g); gl_FragColor=vec4(vec3(y.r,c*cos(h),c*sin(h))*yiq2rgb,t.a*v_vColour.a); }\n";
+        static const char* paletteVertexVita =
+            "attribute vec2 in_Position; attribute vec4 in_Colour; attribute vec2 in_TextureCoord;\n"
+            "uniform mat4 u_vitaMVP; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
+            "void main(){ gl_Position=u_vitaMVP*vec4(in_Position,0.0,1.0); v_vColour=in_Colour; v_vTexcoord=in_TextureCoord; }\n";
+        static const char* paletteFragmentVita =
+            "precision mediump float; uniform sampler2D gm_BaseTexture; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
+            "uniform vec3 cBl; uniform vec3 cG0; uniform vec3 cG1; uniform vec3 cWh;\n"
+            "void main(){ vec4 t=texture2D(gm_BaseTexture,v_vTexcoord); vec3 p;"
+            "if(t.r<0.51) p=(t.r<0.25)?cBl:cG0; else p=(t.r<0.76)?cG1:cWh;"
+            "gl_FragColor=vec4(p*v_vColour.rgb,t.a*v_vColour.a); }\n";
         if (strcmp(shaderName, "shd_hue") == 0) { vsrc=hueVertexVita; fsrc=hueFragmentVita; }
-#else
+        else if (strcmp(shaderName, "shader_palette") == 0) { vsrc=paletteVertexVita; fsrc=paletteFragmentVita; }
+        static const char* paletteVertexDesktop =
+            "#version 120\n"
+            "attribute vec2 in_Position; attribute vec4 in_Colour; attribute vec2 in_TextureCoord;\n"
+            "uniform mat4 u_vitaMVP; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
+            "void main(){ gl_Position=u_vitaMVP*vec4(in_Position,0.0,1.0); v_vColour=in_Colour; v_vTexcoord=in_TextureCoord; }\n";
+        static const char* paletteFragmentDesktop =
+            "#version 120\n"
+            "uniform sampler2D gm_BaseTexture; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
+            "uniform vec3 cBl; uniform vec3 cG0; uniform vec3 cG1; uniform vec3 cWh;\n"
+            "void main(){ vec4 t=texture2D(gm_BaseTexture,v_vTexcoord); vec3 p;"
+            "if(t.r<0.51) p=(t.r<0.25)?cBl:cG0; else p=(t.r<0.76)?cG1:cWh;"
+            "gl_FragColor=vec4(p*v_vColour.rgb,t.a*v_vColour.a); }\n";
         if (strcmp(shaderName, "shd_hue") == 0) { vsrc=hueVertexDesktop; fsrc=hueFragmentDesktop; }
+        else if (strcmp(shaderName, "shader_palette") == 0) { vsrc=paletteVertexDesktop; fsrc=paletteFragmentDesktop; }
 #endif
 
         const char* compiledVsrc = vsrc;
@@ -4925,6 +5313,11 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
             char info[512] = {0};
             glGetShaderInfoLog(vs, sizeof(info) - 1, NULL, info);
             fprintf(stderr, "[SHDR] vertex failed %u (%s): %s\n", shaderIndex, sh->name ? sh->name : "?", info);
+#ifdef PLATFORM_VITA
+            char probe[640];
+            snprintf(probe, sizeof(probe), "SHADER_COMPILE=vertex_failed index=%u name=%s error=%s", shaderIndex, shaderName, info);
+            vitaRenderLog(probe);
+#endif
             glDeleteShader(vs);
 #ifdef PLATFORM_VITA
             free(fixedVsrc);
@@ -4942,6 +5335,11 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
             char info[512] = {0};
             glGetShaderInfoLog(fs, sizeof(info) - 1, NULL, info);
             fprintf(stderr, "[SHDR] fragment failed %u (%s): %s\n", shaderIndex, sh->name ? sh->name : "?", info);
+#ifdef PLATFORM_VITA
+            char probe[640];
+            snprintf(probe, sizeof(probe), "SHADER_COMPILE=fragment_failed index=%u name=%s error=%s", shaderIndex, shaderName, info);
+            vitaRenderLog(probe);
+#endif
             glDeleteShader(vs);
             glDeleteShader(fs);
 #ifdef PLATFORM_VITA
@@ -4965,6 +5363,11 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
             char info[512] = {0};
             glGetProgramInfoLog(prog, sizeof(info) - 1, NULL, info);
             fprintf(stderr, "[SHDR] link failed %u (%s): %s\n", shaderIndex, sh->name ? sh->name : "?", info);
+#ifdef PLATFORM_VITA
+            char probe[640];
+            snprintf(probe, sizeof(probe), "SHADER_COMPILE=link_failed index=%u name=%s error=%s", shaderIndex, shaderName, info);
+            vitaRenderLog(probe);
+#endif
             glDeleteProgram(prog);
             glDeleteShader(vs);
             glDeleteShader(fs);
@@ -4979,6 +5382,9 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
 #ifdef PLATFORM_VITA
         fprintf(stderr, "[SHDR] compiled %u (%s)\n", shaderIndex,
                 sh->name != nullptr ? sh->name : "?");
+        char probe[192];
+        snprintf(probe, sizeof(probe), "SHADER_COMPILE=success index=%u name=%s", shaderIndex, shaderName);
+        vitaRenderLog(probe);
 #endif
         glDeleteShader(vs);
         glDeleteShader(fs);
@@ -4992,6 +5398,19 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
 static void glGpuSetShader(Renderer* renderer, MAYBE_UNUSED int32_t shaderIndex) {
     GLLegacyRenderer* gl = (GLLegacyRenderer*) renderer;
     renderer->currentShader = shaderIndex;
+#ifdef PLATFORM_VITA
+    // Compiling during Runner_create used to crash inside the Vita linker.
+    // Compile only the tiny palette shader, lazily on its first actual use.
+    if (shaderIndex >= 0 && (uint32_t)shaderIndex < gl->base.dataWin->shdr.count &&
+        gl->shaderPrograms != nullptr && gl->shaderAttempted != nullptr &&
+        gl->shaderPrograms[shaderIndex] == 0 && !gl->shaderAttempted[shaderIndex]) {
+        const char* lazyName = gl->base.dataWin->shdr.shaders[shaderIndex].name;
+        if (lazyName != nullptr && strcmp(lazyName, "shader_palette") == 0) {
+            vitaRenderLog("SHADER_COMPILE=lazy_begin name=shader_palette");
+            glCompileAllShaders(gl);
+        }
+    }
+#endif
 #ifndef PLATFORM_VITA
     static const DataWin* loggedDataWin = nullptr;
     static bool loggedShaders[1024] = { false };
@@ -5010,14 +5429,35 @@ static void glGpuSetShader(Renderer* renderer, MAYBE_UNUSED int32_t shaderIndex)
         loggedShaders[shaderIndex] = true;
     }
 #endif
+#ifdef PLATFORM_VITA
+    static bool loggedVitaShaders[1024] = { false };
+    if (shaderIndex >= 0 && shaderIndex < (int32_t)(sizeof(loggedVitaShaders) / sizeof(loggedVitaShaders[0])) &&
+        !loggedVitaShaders[shaderIndex]) {
+        const char* name = (uint32_t)shaderIndex < gl->base.dataWin->shdr.count &&
+                           gl->base.dataWin->shdr.shaders[shaderIndex].name != nullptr
+                           ? gl->base.dataWin->shdr.shaders[shaderIndex].name : "<invalid>";
+        char probe[192];
+        snprintf(probe, sizeof(probe), "SHADER_USE index=%d name=%s compiled=%d", shaderIndex, name,
+                 (uint32_t)shaderIndex < gl->base.dataWin->shdr.count &&
+                 gl->shaderPrograms != nullptr && gl->shaderPrograms[shaderIndex] != 0 ? 1 : 0);
+        vitaRenderLog(probe);
+        loggedVitaShaders[shaderIndex] = true;
+    }
+#endif
     if (shaderIndex < 0 || (uint32_t)shaderIndex >= gl->base.dataWin->shdr.count ||
         gl->shaderPrograms == nullptr || gl->shaderPrograms[shaderIndex] == 0) {
+#ifdef PLATFORM_VITA
+        vitaCustomShaderAttribsActive = false;
+#endif
         glUseProgram(0);
         return;
     }
 
     GLuint program = gl->shaderPrograms[shaderIndex];
     glUseProgram(program);
+#ifdef PLATFORM_VITA
+    vitaCustomShaderAttribsActive = true;
+#endif
 
     // GameMaker shaders project every immediate-mode vertex through this
     // array. The previous Vita experiment omitted it, leaving the matrix at
@@ -5038,8 +5478,13 @@ static void glGpuSetShader(Renderer* renderer, MAYBE_UNUSED int32_t shaderIndex)
     }
     GLint vitaMVP = glGetUniformLocation(program, "u_vitaMVP");
     if (vitaMVP >= 0) {
-        Matrix4f mvp = renderer->gmlMatrices[MATRIX_WORLD_VIEW_PROJECTION];
-        Matrix4f_flipClipY(&mvp);
+        GLfloat proj[16], mv[16];
+        glGetFloatv(GL_PROJECTION_MATRIX, proj);
+        glGetFloatv(GL_MODELVIEW_MATRIX, mv);
+        Matrix4f pMat, mvMat, mvp;
+        memcpy(pMat.m, proj, sizeof(proj));
+        memcpy(mvMat.m, mv, sizeof(mv));
+        Matrix4f_multiply(&mvp, &pMat, &mvMat);
         glUniformMatrix4fv(vitaMVP, 1, GL_FALSE, mvp.m);
     }
 
@@ -5096,6 +5541,9 @@ static void glGpuSetShader(Renderer* renderer, MAYBE_UNUSED int32_t shaderIndex)
 }
 static void glGpuResetShader(Renderer* renderer) {
     renderer->currentShader = -1;
+#ifdef PLATFORM_VITA
+    vitaCustomShaderAttribsActive = false;
+#endif
     glUseProgram(0);
     // Disable extra texture stages enabled by texture_set_stage (e.g. pal_swap)
     // so fixed-function pipeline multi-texturing doesn't corrupt subsequent draws.

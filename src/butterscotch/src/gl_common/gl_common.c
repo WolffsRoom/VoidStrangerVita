@@ -20,18 +20,6 @@ extern void VitaBorders_draw(int windowW, int windowH);
 #endif
 
 void GLCommon_computeLetterbox(int32_t gameW, int32_t gameH, int32_t windowW, int32_t windowH, int32_t* outStartX, int32_t* outStartY, int32_t* outEndX, int32_t* outEndY) {
-#if defined(PLATFORM_VITA) && defined(VOIDSTRANGER_VITA)
-    /* Void Stranger's 224x144 application surface is presented across the
-       Vita's native framebuffer. The game itself owns its scaling/border
-       choices; do not reuse Deltarune's 4:3 letterbox policy here. */
-    (void)gameW;
-    (void)gameH;
-    *outStartX = 0;
-    *outStartY = 0;
-    *outEndX = windowW;
-    *outEndY = windowH;
-    return;
-#else
     int32_t effW, effH;
     if ((gameW * windowH) / gameH < windowW) {
         effW = (gameW * windowH) / gameH;
@@ -56,7 +44,6 @@ void GLCommon_computeLetterbox(int32_t gameW, int32_t gameH, int32_t windowW, in
     *outStartY = startY;
     *outEndX = startX + effW;
     *outEndY = startY + effH;
-#endif
 }
 
 void GLCommon_beginLetterboxBlit(GLuint fbo, GLuint hostFbo) {

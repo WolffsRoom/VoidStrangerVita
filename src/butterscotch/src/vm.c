@@ -3728,11 +3728,11 @@ RValue VM_executeCode(VMContext* ctx, int32_t codeIndex) {
     int32_t savedSavearefBalance = ctx->savearefBalance;
     ctx->savearefBalance = 0;
 
-#ifdef ENABLE_VM_GML_PROFILER
+#if defined(ENABLE_VM_GML_PROFILER) || defined(ENABLE_VM_GML_EVENT_PROFILER)
     Profiler_enter(ctx->profiler, code->name);
 #endif
     RValue result = executeLoop(ctx);
-#ifdef ENABLE_VM_GML_PROFILER
+#if defined(ENABLE_VM_GML_PROFILER) || defined(ENABLE_VM_GML_EVENT_PROFILER)
     Profiler_exit(ctx->profiler);
 #endif
 
@@ -3811,11 +3811,11 @@ RValue VM_callCodeIndex(VMContext* ctx, int32_t codeIndex, RValue* args, int32_t
     ctx->savearefBalance = 0;
 
     // Execute the callee
-#ifdef ENABLE_VM_GML_PROFILER
+#if defined(ENABLE_VM_GML_PROFILER) || defined(ENABLE_VM_GML_EVENT_PROFILER)
     Profiler_enter(ctx->profiler, code->name);
 #endif
     RValue result = executeLoop(ctx);
-#ifdef ENABLE_VM_GML_PROFILER
+#if defined(ENABLE_VM_GML_PROFILER) || defined(ENABLE_VM_GML_EVENT_PROFILER)
     Profiler_exit(ctx->profiler);
 #endif
 

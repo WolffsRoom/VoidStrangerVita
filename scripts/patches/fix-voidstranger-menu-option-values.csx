@@ -1,0 +1,15 @@
+﻿using UndertaleModLib.Compiler;
+using UndertaleModLib.Decompiler;
+using UndertaleModLib.Models;
+EnsureDataLoaded();
+CodeImportGroup imports = new(Data) { AutoCreateAssets = true };
+UndertaleCode code = Data.Code.ByName("gml_Object_obj_menu_Draw_0");
+if (code == null) throw new Exception("Missing obj_menu Draw 0");
+string g = GetDecompiledText(code).Replace("\r\n", "\n");
+string needle = "            var current_val = ds_grid_get(ds_grid, 3, yy);\n            var current_array = ds_grid_get(ds_grid, 4, yy);\n            var left_shift = \"<<\";";
+string replacement = "            var current_val = ds_grid_get(ds_grid, 3, yy);\n            var current_array = ds_grid_get(ds_grid, 4, yy);\n            if (!is_real(current_val) || !is_array(current_array) || array_length(current_array) <= 0 || current_val < 0 || current_val >= array_length(current_array))\n            {\n                current_val = 0;\n                ds_grid_set(ds_grid, 3, yy, 0);\n            }\n            var left_shift = \"<<\";";
+if (!g.Contains(needle)) throw new Exception("Menu option draw block not found");
+g = g.Replace(needle, replacement);
+imports.QueueReplace(code, g);
+imports.Import();
+ScriptMessage("Void Stranger menu option values sanitized.");

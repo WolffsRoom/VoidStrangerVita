@@ -2846,6 +2846,10 @@ DataWin* DataWin_parse(const char* filePath, DataWinParserOptions options) {
         } else if (memcmp(chunkName, "FEDS", 4) == 0) {
             // Filter Effects Data chunk (GMS 2.3.6+)
             DataWin_bumpVersionTo(dw, 2, 3, 6, 0);
+        } else if (memcmp(chunkName, "FEAT", 4) == 0) {
+            // Feature flags (GMS 2022.8+). Version detection happens in pass
+            // one; the payload is not needed by this runner.
+            DataWin_bumpVersionTo(dw, 2022, 8, 0, 0);
         } else if (options.parseTpag && memcmp(chunkName, "TPAG", 4) == 0) {
             parseTPAG(&reader, dw);
         } else if (options.parseCode && memcmp(chunkName, "CODE", 4) == 0) {

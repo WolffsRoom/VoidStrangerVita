@@ -398,6 +398,7 @@ const char* Runner_getEventName(int32_t eventType, int32_t eventSubtype) {
             switch (eventSubtype) {
                 case OTHER_OUTSIDE_ROOM:    return "OutsideRoom";
                 case OTHER_GAME_START:      return "GameStart";
+                case OTHER_GAME_END:        return "GameEnd";
                 case OTHER_ROOM_START:      return "RoomStart";
                 case OTHER_ROOM_END:        return "RoomEnd";
                 case OTHER_NO_MORE_LIVES:   return "NoMoreLives";

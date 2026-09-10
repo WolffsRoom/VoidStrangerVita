@@ -7,7 +7,8 @@ project(voidstranger_vita C CXX)
 include("$ENV{VITASDK}/share/vita.cmake" REQUIRED)
 set(VITA_MKSFOEX_FLAGS "-d ATTRIBUTE2=12")
 set(CMAKE_C_STANDARD 99)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -Wall -Wextra")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
+set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -DNDEBUG")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mfloat-abi=softfp")
 
 file(GLOB BS_COMMON_SOURCES ../butterscotch/src/*.c)
@@ -31,8 +32,11 @@ target_include_directories(${PROJECT_NAME} PRIVATE
   ../butterscotch/vendor/stb/ds ../butterscotch/vendor/stb/image
   ../butterscotch/vendor/stb/image_write ../butterscotch/vendor/stb/vorbis)
 target_compile_definitions(${PROJECT_NAME} PRIVATE
-  ENABLE_WAD17 ENABLE_LEGACY_GL PLATFORM_VITA VOIDSTRANGER_VITA ENABLE_VM_GML_PROFILER
+  ENABLE_WAD17 ENABLE_LEGACY_GL PLATFORM_VITA VOIDSTRANGER_VITA
   BUTTERSCOTCH_COMMIT_HASH="voidstranger-vita" BUTTERSCOTCH_COMMIT_DATE="2026-08-24")
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  target_compile_definitions(${PROJECT_NAME} PRIVATE ENABLE_VM_GML_PROFILER)
+endif()
 target_link_libraries(${PROJECT_NAME}
   ${CMAKE_SOURCE_DIR}/../../third_party/vitaGL-nosplash/libvitaGL.a
   vitashark SceShaccCgExt taihen_stub SceShaccCg_stub SceAppMgr_stub
@@ -50,4 +54,6 @@ vita_create_vpk(VoidStranger.vpk VSTR00001 eboot.bin
     ${CMAKE_SOURCE_DIR}/../../assets/bg0.png sce_sys/livearea/contents/bg0.png
     ${CMAKE_SOURCE_DIR}/../../assets/template.xml sce_sys/livearea/contents/template.xml
     ${CMAKE_SOURCE_DIR}/../../assets/load_assets/frame0.png assets/loading/frame0.png
-    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/frame1.png assets/loading/frame1.png)
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/frame1.png assets/loading/frame1.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/frame3-final.png assets/loading/frame3-final.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/frame4-final.png assets/loading/frame4-final.png)

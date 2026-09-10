@@ -4148,7 +4148,7 @@ STUB_RETURN_FALSE(os_is_paused)
 #ifdef PLATFORM_VITA
 #include "../../vita-runner/source/vita_video.h"
 
-// video_open(path) — open an MP4 and start playing
+// video_open(path) â€” open an MP4 and start playing
 static RValue builtin_video_open(VMContext* ctx, RValue* args, int32_t argCount) {
     if (argCount < 1 || args[0].type != RVALUE_STRING || args[0].string == nullptr)
         return RValue_makeUndefined();
@@ -4161,7 +4161,7 @@ static RValue builtin_video_open(VMContext* ctx, RValue* args, int32_t argCount)
     return RValue_makeUndefined();
 }
 
-// video_draw(x, y, w, h) — render current frame into the given rectangle
+// video_draw(x, y, w, h) â€” render current frame into the given rectangle
 static RValue builtin_video_draw(VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
     bool active = VitaVideo_updateFrame();
     RValue result = RValue_makeArray(GMLArray_create(ctx->dataWin->gen8.wadVersion, 2));
@@ -4188,7 +4188,7 @@ static RValue builtin_video_resume(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RVa
     return RValue_makeUndefined();
 }
 
-// video_seek() — no-op on Vita (sceAvPlayer does not support arbitrary seeking)
+// video_seek() â€” no-op on Vita (sceAvPlayer does not support arbitrary seeking)
 static RValue builtin_video_seek(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
     return RValue_makeUndefined();
 }
@@ -4638,6 +4638,27 @@ static RValue builtin_ds_list_insert(VMContext* ctx, RValue* args, int32_t argCo
     int32_t pos = RValue_toInt32(args[1]);
     RValue val = args[2];
     arrins(list->items, pos, RValue_makeIndependent(val));
+    return RValue_makeUndefined();
+}
+
+static RValue builtin_ds_list_set(VMContext* ctx, RValue* args, int32_t argCount) {
+    if (3 > argCount) return RValue_makeUndefined();
+    Runner* runner = ctx->runner;
+    int32_t id = RValue_toInt32(args[0]);
+    DsList* list = dsListGet(runner, id);
+    if (list == nullptr) return RValue_makeUndefined();
+    int32_t pos = RValue_toInt32(args[1]);
+    if (0 > pos) return RValue_makeUndefined();
+    RValue val = args[2];
+    int32_t currentLen = (int32_t) arrlen(list->items);
+    if (pos >= currentLen) {
+        for (int32_t i = currentLen; i <= pos; ++i) {
+            arrput(list->items, RValue_makeUndefined());
+        }
+    } else {
+        RValue_free(&list->items[pos]);
+    }
+    list->items[pos] = RValue_makeIndependent(val);
     return RValue_makeUndefined();
 }
 
@@ -5100,6 +5121,7 @@ static RValue builtin_ds_grid_create(VMContext* ctx, MAYBE_UNUSED RValue* args, 
             runner->dsGridPool[i].width = width;
             runner->dsGridPool[i].height = height;
             runner->dsGridPool[i].items = count > 0 ? (RValue *)safeCalloc(count, sizeof(RValue)) : nullptr;
+            repeat(count, cell) runner->dsGridPool[i].items[cell] = RValue_makeReal(0);
             return RValue_makeReal(i);
         }
     }
@@ -5108,6 +5130,7 @@ static RValue builtin_ds_grid_create(VMContext* ctx, MAYBE_UNUSED RValue* args, 
     newGrid.width = width;
     newGrid.height = height;
     newGrid.items = count > 0 ? (RValue *)safeCalloc(count, sizeof(RValue)) : nullptr;
+    repeat(count, cell) newGrid.items[cell] = RValue_makeReal(0);
     int32_t id = poolSize;
     arrput(runner->dsGridPool, newGrid);
     return RValue_makeReal(id);
@@ -5147,7 +5170,7 @@ static RValue builtin_ds_grid_height(VMContext* ctx, MAYBE_UNUSED RValue* args, 
 }
 
 static RValue builtin_ds_grid_set(VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
-    if (argCount > 3) return RValue_makeUndefined();
+    if (argCount < 4) return RValue_makeUndefined();
 
     DsGrid* grid = dsGridGet(ctx->runner, RValue_toInt32(args[0]));
     if (grid == nullptr) return RValue_makeUndefined();
@@ -5164,6 +5187,22 @@ static RValue builtin_ds_grid_set(VMContext* ctx, MAYBE_UNUSED RValue* args, MAY
     return RValue_makeUndefined();
 }
 
+static RValue builtin_ds_grid_set_post(VMContext* ctx, RValue* args, int32_t argCount) {
+    if (argCount < 4) return RValue_makeUndefined();
+    DsGrid* grid = dsGridGet(ctx->runner, RValue_toInt32(args[0]));
+    if (grid == nullptr) return RValue_makeIndependent(args[3]);
+    int32_t x = RValue_toInt32(args[1]);
+    int32_t y = RValue_toInt32(args[2]);
+    if (x < 0 || y < 0 || x >= grid->width || y >= grid->height)
+        return RValue_makeIndependent(args[3]);
+    RValue* slot = &grid->items[x + (y * grid->width)];
+    RValue previous = RValue_makeIndependent(*slot);
+    RValue replacement = RValue_makeIndependent(args[3]);
+    RValue_free(slot);
+    *slot = replacement;
+    return previous;
+}
+
 static RValue builtin_ds_grid_get(VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
     if (argCount > 3) return RValue_makeUndefined();
 
@@ -5176,6 +5215,97 @@ static RValue builtin_ds_grid_get(VMContext* ctx, MAYBE_UNUSED RValue* args, MAY
         return RValue_makeUndefined();
 
     return RValue_makeIndependent(grid->items[x + (y * grid->width)]);
+}
+
+
+// GameMaker 2.3.1+ DS grid stream format. The official HTML5 runtime writes
+// magic 603, then width/height, then values with X as the outer loop.
+static RValue builtin_ds_grid_write(VMContext* ctx, RValue* args, int32_t argCount) {
+    if (1 > argCount) return RValue_makeOwnedString(safeStrdup(""));
+    DsGrid* grid = dsGridGet(ctx->runner, RValue_toInt32(args[0]));
+    if (grid == nullptr) return RValue_makeOwnedString(safeStrdup(""));
+
+    uint8_t* buf = nullptr;
+    dsStreamAppendU32(&buf, 603);
+    dsStreamAppendU32(&buf, (uint32_t)grid->width);
+    dsStreamAppendU32(&buf, (uint32_t)grid->height);
+
+    for (int32_t x = 0; x < grid->width; x++) {
+        for (int32_t y = 0; y < grid->height; y++) {
+            dsStreamWriteValue(&buf, grid->items[x + (y * grid->width)]);
+        }
+    }
+    return dsStreamFinishToHexString(buf);
+}
+
+static RValue builtin_ds_grid_read(VMContext* ctx, RValue* args, int32_t argCount) {
+    if (2 > argCount || args[1].type != RVALUE_STRING || args[1].string == nullptr || args[1].string[0] == '\0')
+        return RValue_makeBool(false);
+
+    DsGrid* grid = dsGridGet(ctx->runner, RValue_toInt32(args[0]));
+    if (grid == nullptr) return RValue_makeBool(false);
+
+    const char* hex = args[1].string;
+    int32_t hexLen = (int32_t)strlen(hex);
+    if (2 > hexLen || (hexLen & 1) != 0) return RValue_makeBool(false);
+
+    int32_t byteLen = hexLen / 2;
+    uint8_t* bytes = (uint8_t*)safeMalloc((size_t)byteLen);
+    repeat(byteLen, i) {
+        int hi = dsHexNibble(hex[i * 2]);
+        int lo = dsHexNibble(hex[i * 2 + 1]);
+        if (hi < 0 || lo < 0) { free(bytes); return RValue_makeBool(false); }
+        bytes[i] = (uint8_t)((hi << 4) | lo);
+    }
+
+    DsReadStream stream = {0};
+    stream.data = bytes;
+    stream.size = byteLen;
+    stream.pos = 0;
+    stream.error = false;
+
+    uint32_t magic = dsStreamReadU32(&stream);
+    int32_t version;
+    if (magic == 602) version = 3;
+    else if (magic == 603) version = 0;
+    else { free(bytes); return RValue_makeBool(false); }
+
+    int32_t width = dsStreamReadS32(&stream);
+    int32_t height = dsStreamReadS32(&stream);
+    if (stream.error || width < 0 || height < 0 ||
+        (width != 0 && (size_t)height > SIZE_MAX / (size_t)width)) {
+        free(bytes);
+        return RValue_makeBool(false);
+    }
+
+    size_t count = (size_t)width * (size_t)height;
+    RValue* newItems = count > 0 ? (RValue*)safeCalloc(count, sizeof(RValue)) : nullptr;
+
+    for (int32_t x = 0; x < width && !stream.error; x++) {
+        for (int32_t y = 0; y < height; y++) {
+            RValue value = dsStreamReadValue(ctx->dataWin->gen8.wadVersion, &stream, version);
+            if (stream.error) {
+                RValue_free(&value);
+                break;
+            }
+            newItems[x + (y * width)] = value;
+        }
+    }
+
+    free(bytes);
+    if (stream.error) {
+        repeat(count, i) RValue_free(&newItems[i]);
+        free(newItems);
+        return RValue_makeBool(false);
+    }
+
+    size_t oldCount = (size_t)grid->width * (size_t)grid->height;
+    repeat(oldCount, i) RValue_free(&grid->items[i]);
+    free(grid->items);
+    grid->items = newItems;
+    grid->width = width;
+    grid->height = height;
+    return RValue_makeBool(true);
 }
 
 static RValue builtin_ds_grid_add(VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
@@ -5222,6 +5352,7 @@ static RValue builtin_ds_grid_resize(VMContext* ctx, MAYBE_UNUSED RValue* args, 
 
     size_t count = (size_t) width * (size_t) height;
     RValue* newGrid = count > 0 ? (RValue *)safeCalloc(count, sizeof(RValue)) : nullptr;
+    repeat(count, cell) newGrid[cell] = RValue_makeReal(0);
 
     int32_t copyWidth = width > grid->width ? grid->width : width;
     int32_t copyHeight = height > grid->height ? grid->height : height;
@@ -5246,6 +5377,112 @@ static RValue builtin_ds_grid_resize(VMContext* ctx, MAYBE_UNUSED RValue* args, 
     grid->items = newGrid;
     grid->width = width;
     grid->height = height;
+    return RValue_makeUndefined();
+}
+
+static RValue builtin_ds_grid_get_max(VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    if (argCount < 5) return RValue_makeReal(0);
+    DsGrid* grid = dsGridGet(ctx->runner, RValue_toInt32(args[0]));
+    if (grid == nullptr || grid->items == nullptr) return RValue_makeReal(0);
+
+    int32_t x1 = RValue_toInt32(args[1]);
+    int32_t y1 = RValue_toInt32(args[2]);
+    int32_t x2 = RValue_toInt32(args[3]);
+    int32_t y2 = RValue_toInt32(args[4]);
+
+    if (x1 < 0) x1 = 0;
+    if (y1 < 0) y1 = 0;
+    if (x2 >= grid->width) x2 = grid->width - 1;
+    if (y2 >= grid->height) y2 = grid->height - 1;
+
+    double maxVal = -1e30;
+    bool found = false;
+    for (int32_t y = y1; y <= y2; y++) {
+        for (int32_t x = x1; x <= x2; x++) {
+            if (x >= 0 && x < grid->width && y >= 0 && y < grid->height) {
+                RValue* slot = &grid->items[x + (y * grid->width)];
+                double val = RValue_toReal(*slot);
+                if (!found || val > maxVal) {
+                    maxVal = val;
+                    found = true;
+                }
+            }
+        }
+    }
+    return RValue_makeReal(found ? maxVal : 0.0);
+}
+
+static RValue builtin_ds_grid_get_min(VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    if (argCount < 5) return RValue_makeReal(0);
+    DsGrid* grid = dsGridGet(ctx->runner, RValue_toInt32(args[0]));
+    if (grid == nullptr || grid->items == nullptr) return RValue_makeReal(0);
+
+    int32_t x1 = RValue_toInt32(args[1]);
+    int32_t y1 = RValue_toInt32(args[2]);
+    int32_t x2 = RValue_toInt32(args[3]);
+    int32_t y2 = RValue_toInt32(args[4]);
+
+    if (x1 < 0) x1 = 0;
+    if (y1 < 0) y1 = 0;
+    if (x2 >= grid->width) x2 = grid->width - 1;
+    if (y2 >= grid->height) y2 = grid->height - 1;
+
+    double minVal = 1e30;
+    bool found = false;
+    for (int32_t y = y1; y <= y2; y++) {
+        for (int32_t x = x1; x <= x2; x++) {
+            if (x >= 0 && x < grid->width && y >= 0 && y < grid->height) {
+                RValue* slot = &grid->items[x + (y * grid->width)];
+                double val = RValue_toReal(*slot);
+                if (!found || val < minVal) {
+                    minVal = val;
+                    found = true;
+                }
+            }
+        }
+    }
+    return RValue_makeReal(found ? minVal : 0.0);
+}
+
+static RValue builtin_ds_grid_set_region(VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    if (argCount < 6) return RValue_makeUndefined();
+    DsGrid* grid = dsGridGet(ctx->runner, RValue_toInt32(args[0]));
+    if (grid == nullptr || grid->items == nullptr) return RValue_makeUndefined();
+
+    int32_t x1 = RValue_toInt32(args[1]);
+    int32_t y1 = RValue_toInt32(args[2]);
+    int32_t x2 = RValue_toInt32(args[3]);
+    int32_t y2 = RValue_toInt32(args[4]);
+    RValue val = args[5];
+
+    if (x1 < 0) x1 = 0;
+    if (y1 < 0) y1 = 0;
+    if (x2 >= grid->width) x2 = grid->width - 1;
+    if (y2 >= grid->height) y2 = grid->height - 1;
+
+    for (int32_t y = y1; y <= y2; y++) {
+        for (int32_t x = x1; x <= x2; x++) {
+            if (x >= 0 && x < grid->width && y >= 0 && y < grid->height) {
+                RValue* slot = &grid->items[x + (y * grid->width)];
+                RValue_free(slot);
+                *slot = RValue_makeIndependent(val);
+            }
+        }
+    }
+    return RValue_makeUndefined();
+}
+
+static RValue builtin_ds_grid_clear(VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    if (argCount < 2) return RValue_makeUndefined();
+    DsGrid* grid = dsGridGet(ctx->runner, RValue_toInt32(args[0]));
+    if (grid == nullptr || grid->items == nullptr) return RValue_makeUndefined();
+
+    RValue val = args[1];
+    size_t count = (size_t) grid->width * (size_t) grid->height;
+    repeat(count, i) {
+        RValue_free(&grid->items[i]);
+        grid->items[i] = RValue_makeIndependent(val);
+    }
     return RValue_makeUndefined();
 }
 
@@ -7197,6 +7434,129 @@ static RValue builtin_ini_section_exists(VMContext* ctx, RValue* args, int32_t a
     return RValue_makeBool(Ini_hasSection(runner->currentIni, section));
 }
 
+static RValue builtin_ini_key_exists(VMContext* ctx, RValue* args, int32_t argCount) {
+    Runner* runner = ctx->runner;
+    if (2 > argCount || runner->currentIni == nullptr) return RValue_makeBool(false);
+
+    const char* section = (args[0].type == RVALUE_STRING ? args[0].string : "");
+    const char* key = (args[1].type == RVALUE_STRING ? args[1].string : "");
+    const char* val = Ini_getString(runner->currentIni, section, key);
+    return RValue_makeBool(val != nullptr);
+}
+
+
+// GameMaker load_csv(): load a comma-separated file into a DS grid.
+// Void Stranger uses this for Languages/names.csv during startup.  Keep UTF-8
+// bytes intact and support quoted fields / escaped quotes so this is useful to
+// other GameMaker titles too.
+static RValue builtin_load_csv(VMContext* ctx, RValue* args, int32_t argCount) {
+    if (1 > argCount || args[0].type != RVALUE_STRING || args[0].string == nullptr) {
+        RValue createArgs[2] = { RValue_makeReal(0), RValue_makeReal(0) };
+        return builtin_ds_grid_create(ctx, createArgs, 2);
+    }
+
+    Runner* runner = ctx->runner;
+    FileSystem* fs = runner->fileSystem;
+    char* content = fs->vtable->readFileText(fs, args[0].string);
+    if (content == nullptr) {
+        RValue createArgs[2] = { RValue_makeReal(0), RValue_makeReal(0) };
+        return builtin_ds_grid_create(ctx, createArgs, 2);
+    }
+
+    typedef struct CsvCell {
+        int32_t x;
+        int32_t y;
+        char* text;
+    } CsvCell;
+
+    CsvCell* cells = nullptr;
+    char* field = nullptr;
+    int32_t x = 0;
+    int32_t y = 0;
+    int32_t maxWidth = 0;
+    bool inQuotes = false;
+    bool endedWithNewline = false;
+
+    size_t len = strlen(content);
+    size_t pos = 0;
+    if (len >= 3 && (uint8_t)content[0] == 0xEF && (uint8_t)content[1] == 0xBB && (uint8_t)content[2] == 0xBF)
+        pos = 3;
+
+    #define CSV_FINISH_FIELD() do { \
+        char* cellText = (char*)safeMalloc(arrlen(field) + 1); \
+        if (arrlen(field) > 0) memcpy(cellText, field, arrlen(field)); \
+        cellText[arrlen(field)] = '\0'; \
+        CsvCell cell = { x, y, cellText }; \
+        arrput(cells, cell); \
+        arrfree(field); \
+        field = nullptr; \
+        x++; \
+        if (x > maxWidth) maxWidth = x; \
+    } while (0)
+
+    while (pos < len) {
+        char c = content[pos++];
+        endedWithNewline = false;
+
+        if (c == '"') {
+            if (inQuotes && pos < len && content[pos] == '"') {
+                arrput(field, '"');
+                pos++;
+            } else {
+                inQuotes = !inQuotes;
+            }
+            continue;
+        }
+
+        if (!inQuotes && c == ',') {
+            CSV_FINISH_FIELD();
+            continue;
+        }
+
+        if (!inQuotes && (c == '\r' || c == '\n')) {
+            CSV_FINISH_FIELD();
+            if (c == '\r' && pos < len && content[pos] == '\n') pos++;
+            x = 0;
+            y++;
+            endedWithNewline = true;
+            continue;
+        }
+
+        arrput(field, c);
+    }
+
+    if (!endedWithNewline || x > 0 || arrlen(field) > 0) {
+        CSV_FINISH_FIELD();
+    }
+
+    int32_t height = y + (endedWithNewline ? 0 : 1);
+    if (height < 0) height = 0;
+    if (maxWidth < 0) maxWidth = 0;
+
+    RValue createArgs[2] = { RValue_makeReal(maxWidth), RValue_makeReal(height) };
+    RValue gridId = builtin_ds_grid_create(ctx, createArgs, 2);
+    DsGrid* grid = dsGridGet(runner, RValue_toInt32(gridId));
+
+    if (grid != nullptr) {
+        repeat(arrlen(cells), i) {
+            CsvCell* cell = &cells[i];
+            if (cell->x >= 0 && cell->y >= 0 && cell->x < grid->width && cell->y < grid->height) {
+                RValue* slot = &grid->items[cell->x + (cell->y * grid->width)];
+                RValue_free(slot);
+                *slot = RValue_makeOwnedString(cell->text);
+                cell->text = nullptr;
+            }
+        }
+    }
+
+    repeat(arrlen(cells), i) free(cells[i].text);
+    arrfree(cells);
+    arrfree(field);
+    free(content);
+    #undef CSV_FINISH_FIELD
+    return gridId;
+}
+
 // ===[ Text File Functions ]===
 
 static int32_t findFreeTextFileSlot(Runner* runner) {
@@ -7911,6 +8271,18 @@ static RValue builtin_joystick_axes(VMContext* ctx, RValue* args, MAYBE_UNUSED i
     if (runner == NULL || runner->gamepads == NULL) return RValue_makeReal(0.0);
     int32_t id = RValue_toInt32(args[0]) - 1;
     return RValue_makeReal(RunnerGamepad_getAxisCount(runner->gamepads, id));
+}
+
+#ifdef PLATFORM_VITA
+int g_vitaGameVsyncEnabled = 1;
+#endif
+
+static RValue builtin_display_reset(VMContext* ctx, RValue* args, int32_t argCount) {
+    (void)ctx;
+#ifdef PLATFORM_VITA
+    if (argCount >= 2) g_vitaGameVsyncEnabled = RValue_toBool(args[1]) ? 1 : 0;
+#endif
+    return RValue_makeUndefined();
 }
 
 // Window stubs
@@ -9115,6 +9487,53 @@ static RValue builtin_buffer_read(MAYBE_UNUSED VMContext* ctx, RValue* args, MAY
 
     buf->position = gmlBufferAlign(buf->position, buf->alignment);
     return result;
+}
+
+static RValue builtin_buffer_peek(MAYBE_UNUSED VMContext* ctx, RValue* args, MAYBE_UNUSED int32_t argCount) {
+    if (3 > argCount) return RValue_makeReal(0.0);
+    Runner* runner = ctx->runner;
+    int32_t id = RValue_toInt32(args[0]);
+    int32_t offset = RValue_toInt32(args[1]);
+    int32_t dataType = RValue_toInt32(args[2]);
+    GmlBuffer* buf = gmlBufferGet(runner, id);
+    if (buf == nullptr || 0 > offset || offset >= buf->size) return RValue_makeReal(0.0);
+
+    switch (dataType) {
+        case GML_BUFTYPE_U8:
+        case GML_BUFTYPE_BOOL:
+            return RValue_makeReal((GMLReal) buf->data[offset]);
+        case GML_BUFTYPE_S8:
+            return RValue_makeReal((GMLReal) (int8_t) buf->data[offset]);
+        case GML_BUFTYPE_U16:
+            if (offset + 2 <= buf->size) return RValue_makeReal((GMLReal) BinaryUtils_readUint16(buf->data + offset));
+            break;
+        case GML_BUFTYPE_S16:
+            if (offset + 2 <= buf->size) return RValue_makeReal((GMLReal) (int16_t) BinaryUtils_readUint16(buf->data + offset));
+            break;
+        case GML_BUFTYPE_U32:
+            if (offset + 4 <= buf->size) return RValue_makeReal((GMLReal) BinaryUtils_readUint32(buf->data + offset));
+            break;
+        case GML_BUFTYPE_S32:
+            if (offset + 4 <= buf->size) return RValue_makeReal((GMLReal) BinaryUtils_readInt32(buf->data + offset));
+            break;
+        case GML_BUFTYPE_F32:
+            if (offset + 4 <= buf->size) return RValue_makeReal((GMLReal) BinaryUtils_readFloat32(buf->data + offset));
+            break;
+        case GML_BUFTYPE_F64:
+            if (offset + 8 <= buf->size) return RValue_makeReal((GMLReal) BinaryUtils_readFloat64(buf->data + offset));
+            break;
+        case GML_BUFTYPE_STRING:
+        case GML_BUFTYPE_TEXT: {
+            int32_t maxLen = buf->size - offset;
+            int32_t len = 0;
+            while (len < maxLen && buf->data[offset + len] != '\0') len++;
+            char* str = (char *)safeMalloc((size_t) len + 1);
+            memcpy(str, buf->data + offset, (size_t) len);
+            str[len] = '\0';
+            return RValue_makeOwnedString(str);
+        }
+    }
+    return RValue_makeReal(0.0);
 }
 
 static RValue builtin_buffer_seek(MAYBE_UNUSED VMContext* ctx, RValue* args, MAYBE_UNUSED int32_t argCount) {
@@ -16911,6 +17330,61 @@ static RValue builtin_sprite_get_info(VMContext* ctx, RValue* args, int32_t argC
     return RValue_makeStructAndIncRef(ret);
 }
 
+static RValue builtin_font_exists(MAYBE_UNUSED VMContext* ctx, RValue* args, int32_t argCount) {
+    if (1 > argCount) return RValue_makeBool(false);
+    int32_t fontId = RValue_toInt32(args[0]);
+    if (fontId >= 0 && fontId < (int32_t) ctx->dataWin->font.count) {
+        return RValue_makeBool(true);
+    }
+    return RValue_makeBool(false);
+}
+
+static RValue builtin_date_current_datetime(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    time_t t = time(NULL);
+    double days = (double)t / 86400.0 + 25569.0;
+    return RValue_makeReal((GMLReal) days);
+}
+
+static RValue builtin_array_sort(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeUndefined();
+}
+
+static RValue builtin_sprite_prefetch(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeReal(0.0);
+}
+
+static RValue builtin_texture_prefetch(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeReal(0.0);
+}
+
+static RValue builtin_steam_utils_is_steam_running_on_steam_deck(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeBool(false);
+}
+
+static RValue builtin_steam_update(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeUndefined();
+}
+
+static RValue builtin_display_mouse_get_x(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeReal(0.0);
+}
+
+static RValue builtin_display_mouse_get_y(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeReal(0.0);
+}
+
+static RValue builtin_window_get_x(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeReal(0.0);
+}
+
+static RValue builtin_window_get_y(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeReal(0.0);
+}
+
+static RValue builtin_window_set_position(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeUndefined();
+}
+
 // ===[ REGISTRATION ]===
 
 void VMBuiltins_registerAll(VMContext* ctx) {
@@ -16921,6 +17395,20 @@ void VMBuiltins_registerAll(VMContext* ctx) {
 
     // Core output
     VM_registerBuiltin(ctx, "show_debug_message", builtin_show_debug_message);
+    VM_registerBuiltin(ctx, "font_exists", builtin_font_exists);
+    VM_registerBuiltin(ctx, "date_current_datetime", builtin_date_current_datetime);
+    VM_registerBuiltin(ctx, "buffer_peek", builtin_buffer_peek);
+    VM_registerBuiltin(ctx, "array_sort", builtin_array_sort);
+    VM_registerBuiltin(ctx, "sprite_prefetch", builtin_sprite_prefetch);
+    VM_registerBuiltin(ctx, "texture_prefetch", builtin_texture_prefetch);
+    VM_registerBuiltin(ctx, "steam_utils_is_steam_running_on_steam_deck", builtin_steam_utils_is_steam_running_on_steam_deck);
+    VM_registerBuiltin(ctx, "steam_update", builtin_steam_update);
+    VM_registerBuiltin(ctx, "display_mouse_get_x", builtin_display_mouse_get_x);
+    VM_registerBuiltin(ctx, "display_mouse_get_y", builtin_display_mouse_get_y);
+    VM_registerBuiltin(ctx, "display_reset", builtin_display_reset);
+    VM_registerBuiltin(ctx, "window_get_x", builtin_window_get_x);
+    VM_registerBuiltin(ctx, "window_get_y", builtin_window_get_y);
+    VM_registerBuiltin(ctx, "window_set_position", builtin_window_set_position);
 
     // String functions
     VM_registerBuiltin(ctx, "string_length", builtin_string_length);
@@ -17154,6 +17642,7 @@ void VMBuiltins_registerAll(VMContext* ctx) {
     VM_registerBuiltin(ctx, "ds_list_destroy", builtin_ds_list_destroy);
     VM_registerBuiltin(ctx, "ds_list_add", builtin_ds_list_add);
     VM_registerBuiltin(ctx, "ds_list_insert", builtin_ds_list_insert);
+    VM_registerBuiltin(ctx, "ds_list_set", builtin_ds_list_set);
     VM_registerBuiltin(ctx, "ds_list_delete", builtin_ds_list_delete);
     VM_registerBuiltin(ctx, "ds_list_empty", builtin_ds_list_empty);
     VM_registerBuiltin(ctx, "ds_list_size", builtin_ds_list_size);
@@ -17172,9 +17661,16 @@ void VMBuiltins_registerAll(VMContext* ctx) {
     VM_registerBuiltin(ctx, "ds_grid_width", builtin_ds_grid_width);
     VM_registerBuiltin(ctx, "ds_grid_height", builtin_ds_grid_height);
     VM_registerBuiltin(ctx, "ds_grid_set", builtin_ds_grid_set);
+    VM_registerBuiltin(ctx, "ds_grid_set_post", builtin_ds_grid_set_post);
     VM_registerBuiltin(ctx, "ds_grid_get", builtin_ds_grid_get);
+    VM_registerBuiltin(ctx, "ds_grid_get_max", builtin_ds_grid_get_max);
+    VM_registerBuiltin(ctx, "ds_grid_get_min", builtin_ds_grid_get_min);
+    VM_registerBuiltin(ctx, "ds_grid_set_region", builtin_ds_grid_set_region);
+    VM_registerBuiltin(ctx, "ds_grid_clear", builtin_ds_grid_clear);
     VM_registerBuiltin(ctx, "ds_grid_add", builtin_ds_grid_add);
     VM_registerBuiltin(ctx, "ds_grid_resize", builtin_ds_grid_resize);
+    VM_registerBuiltin(ctx, "ds_grid_write", builtin_ds_grid_write);
+    VM_registerBuiltin(ctx, "ds_grid_read", builtin_ds_grid_read);
 
     // ds_stack
     VM_registerBuiltin(ctx, "ds_stack_create", builtin_ds_stack_create);
@@ -17340,6 +17836,7 @@ void VMBuiltins_registerAll(VMContext* ctx) {
     VM_registerBuiltin(ctx, "ini_read_string", builtin_ini_read_string);
     VM_registerBuiltin(ctx, "ini_read_real", builtin_ini_read_real);
     VM_registerBuiltin(ctx, "ini_section_exists", builtin_ini_section_exists);
+    VM_registerBuiltin(ctx, "ini_key_exists", builtin_ini_key_exists);
 
     // Directory
     VM_registerBuiltin(ctx, "directory_exists", builtin_directory_exists);
@@ -17348,6 +17845,7 @@ void VMBuiltins_registerAll(VMContext* ctx) {
 
     // File
     VM_registerBuiltin(ctx, "file_exists", builtin_file_exists);
+    VM_registerBuiltin(ctx, "load_csv", builtin_load_csv);
     VM_registerBuiltin(ctx, "file_text_open_write", builtin_file_text_open_write);
     VM_registerBuiltin(ctx, "file_text_open_read", builtin_file_text_open_read);
     VM_registerBuiltin(ctx, "file_text_close", builtin_file_text_close);

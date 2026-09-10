@@ -1,4 +1,4 @@
-#include <psp2/ctrl.h>
+﻿#include <psp2/ctrl.h>
 int _newlib_heap_size_user = 256 * 1024 * 1024;
 #include <psp2/appmgr.h>
 #include <psp2/apputil.h>
@@ -48,7 +48,7 @@ int _newlib_heap_size_user = 256 * 1024 * 1024;
 #define LOG_PATH DATA_ROOT "butterscotch-probe.log"
 #define NEXT_CHAPTER_PATH DATA_ROOT "next-chapter.txt"
 #define DEV_LOG_ROOT DATA_ROOT "devlogs"
-#define PORT_BUILD_VERSION "v0.71 (Internal Development Build)"
+#define PORT_BUILD_VERSION "v1.0 (Runtime Cache + Vita Settings + Palette)"
 #define VITA_CDIALOG_MEMORY_SIZE 0x8C6000
 
 // Read by the Vita renderer to apply chapter-specific memory safety policies.
@@ -60,6 +60,7 @@ int g_vitaSpanishModActive = 0;
 int g_vitaProbeLoggingEnabled = 0;
 // Read by room-transition code before accessing backend-specific structures.
 bool g_vitaModernGlActive = false;
+extern int g_vitaGameVsyncEnabled;
 
 static SceUID dev_log_fd = -1;
 static char* dev_log_buffer = NULL;
@@ -68,12 +69,13 @@ static size_t dev_log_buffer_capacity = 0;
 static GLuint loading_overlay_texture = 0;
 static GLuint generating_overlay_texture = 0;
 static GLuint loading_textures_tex = 0;
-static GLuint loading_frame_textures[2] = {0};
+static GLuint loading_frame_textures[4] = {0};
 static void log_line(const char *text);
 static void dev_log_write(const char* text);
 static void loading_screen_init(void);
 static void loading_screen_shutdown(void);
 static void draw_loading_screen(bool showProgress, float ratio, int labelType);
+static void draw_post_loading_screen(bool showTitle);
 
 // Lightweight CRT presentation filter.  It draws sparse one-pixel dark lines
 // into the host framebuffer after the game and Vita overlays are composed.
@@ -391,10 +393,13 @@ static void loading_screen_init(void) {
         snprintf(path, sizeof(path), "app0:assets/loading/frame%d.png", i);
         loading_frame_textures[i] = load_loading_texture(path);
     }
+    loading_frame_textures[2] = load_loading_texture("app0:assets/loading/frame3-final.png");
+    loading_frame_textures[3] = load_loading_texture("app0:assets/loading/frame4-final.png");
     char line[192];
     snprintf(line, sizeof(line),
-             "LOADING_ASSETS frames=%u,%u interval_ms=500",
-             loading_frame_textures[0], loading_frame_textures[1]);
+             "LOADING_ASSETS frames=%u,%u final=%u,%u interval_ms=500",
+             loading_frame_textures[0], loading_frame_textures[1],
+             loading_frame_textures[2], loading_frame_textures[3]);
     log_line(line);
 }
 
@@ -402,7 +407,7 @@ static void loading_screen_shutdown(void) {
     if (loading_overlay_texture != 0) glDeleteTextures(1, &loading_overlay_texture);
     if (generating_overlay_texture != 0) glDeleteTextures(1, &generating_overlay_texture);
     if (loading_textures_tex != 0) glDeleteTextures(1, &loading_textures_tex);
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 4; i++) {
         if (loading_frame_textures[i] != 0) glDeleteTextures(1, &loading_frame_textures[i]);
     }
     loading_overlay_texture = 0;
@@ -643,6 +648,7 @@ static const KeyMap KEY_MAP[] = {
     {SCE_CTRL_LEFT, VK_LEFT}, {SCE_CTRL_RIGHT, VK_RIGHT},
     {SCE_CTRL_CROSS, 'Z'}, {SCE_CTRL_CIRCLE, 'X'},
     {SCE_CTRL_SQUARE, 'X'}, {SCE_CTRL_TRIANGLE, 'C'},
+    {SCE_CTRL_START, VK_ENTER}, {SCE_CTRL_SELECT, VK_ESCAPE},
     {SCE_CTRL_LTRIGGER, VK_PAGEDOWN},
     {SCE_CTRL_RTRIGGER, VK_PAGEUP}
 };
@@ -815,6 +821,31 @@ static void texture_existing_progress(uint32_t current, uint32_t total, void *us
     (void)user;
     float ratio = total > 0 ? (float)current / (float)total : 1.0f;
     draw_loading_screen(true, ratio, 0);
+}
+
+static void draw_post_loading_screen(bool showTitle) {
+    glViewport(0, 0, 960, 544);
+    glDisable(GL_SCISSOR_TEST);
+    glDisable(GL_DEPTH_TEST);
+    glDisable(GL_CULL_FACE);
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    glMatrixMode(GL_MODELVIEW);
+    glPushMatrix();
+    glLoadIdentity();
+    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    draw_loading_texture(loading_frame_textures[2], 0, 0, 960, 544);
+    if (showTitle)
+        draw_loading_texture(loading_frame_textures[3], 0, 0, 960, 544);
+    vglSwapBuffers(GL_FALSE);
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
 }
 
 static void set_key(RunnerKeyboardState *kb, int key, bool down, bool *previous) {
@@ -1010,12 +1041,19 @@ int main(void) {
     settings.showSettings = false;
     settings.open = false;
     settings.devMode = false;
+    // This port has no Deltarune Game Settings overlay, so an old/default
+    // fps_mode=0 silently locked Void Stranger to 30 FPS. Always pace the
+    // Vita build at the game's intended 60 Hz; frames that genuinely exceed
+    // the budget are still reported by PERF_DETAIL.
+    settings.fpsTargetMode = 2;
+    settings.vsyncEnabled = true;
+    g_vitaGameVsyncEnabled = 1;
     // vglSwapBuffers()'s boolean argument controls Common Dialog updates, not
     // synchronization.  Configure VitaGL's real swap interval explicitly.
-    vglWaitVblankStart(settings.vsyncEnabled ? GL_TRUE : GL_FALSE);
+    vglWaitVblankStart(g_vitaGameVsyncEnabled ? GL_TRUE : GL_FALSE);
     char settingsLog[256];
     snprintf(settingsLog, sizeof(settingsLog),
-             "SETTINGS_LOAD master=%d music=%d sfx=%d disabled=%d vsync=%d mod=%s",
+             "SETTINGS_LOAD master=%d music=%d sfx=%d disabled=%d vsync=%d fps=60 mod=%s",
              settings.masterVolume, settings.musicVolume, settings.sfxVolume,
              settings.audioDisabled ? 1 : 0, settings.vsyncEnabled ? 1 : 0,
              (settings.modIndex >= 0 && settings.modIndex < settings.modCount) ? settings.modNames[settings.modIndex] : "Original");
@@ -1240,6 +1278,7 @@ int main(void) {
     }
     Runner_initFirstRoom(runner);
     log_line("RUNNER=first_room_complete");
+    log_line("PERF_CAPTURE=compact interval_frames=120 profiler=disabled");
     bool startup_audio_paused = false;
     if (active_chapter > 0 && audio->vtable->pauseAll != NULL) {
         // Category gain alone muted the chapter bootstrap but allowed voices
@@ -1339,6 +1378,19 @@ int main(void) {
                 draw_loading_screen(true, 1.0f, textureGenerationRequired ? 1 : 0);
                 sceKernelDelayThread(16667);
             } while (sceKernelGetProcessTimeWide() - textureLoadingStartedUs < minimumLoadingUs);
+
+            uint64_t finalFrameStartedUs = sceKernelGetProcessTimeWide();
+            do {
+                draw_post_loading_screen(false);
+                sceKernelDelayThread(16667);
+            } while (sceKernelGetProcessTimeWide() - finalFrameStartedUs < 1000000ULL);
+
+            uint64_t titleFrameStartedUs = sceKernelGetProcessTimeWide();
+            do {
+                draw_post_loading_screen(true);
+                sceKernelDelayThread(16667);
+            } while (sceKernelGetProcessTimeWide() - titleFrameStartedUs < 2000000ULL);
+            log_line("LOADING_FINAL_SEQUENCE=frame3_1s frame4_overlay_2s");
             loading_screen_shutdown();
         }
     }
@@ -1377,12 +1429,18 @@ int main(void) {
     bool dev_force_move = false;
     uint32_t failure_black_frames = 0;
     bool failure_exit_held = false;
+    bool gameplay_input_armed = false;
+    uint32_t gameplay_input_neutral_frames = 0;
 
     while (!exit_requested && !runner->shouldExit) {
         RunnerKeyboard_beginFrame(runner->keyboard);
         RunnerGamepad_beginFrame(runner->gamepads);
-        runner->gamepads->connectedCount = 1;
-        runner->gamepads->slots[0].connected = true;
+        // Void Stranger's Steam build mixes keyboard and controller branches
+        // when both are active. Feeding both for one Vita press made the rod
+        // action execute twice in the same step (pick up, then undo). Expose a
+        // single keyboard-compatible input source for deterministic controls.
+        runner->gamepads->connectedCount = 0;
+        runner->gamepads->slots[0].connected = false;
         strcpy(runner->gamepads->slots[0].description, "Sony DualShock 4");
         RunnerMouse_beginFrame(runner->mouse);
         SceCtrlData pad = {0};
@@ -1597,7 +1655,12 @@ int main(void) {
                              SCE_CTRL_DOWN | SCE_CTRL_RTRIGGER);
         }
         
-        /* SELECT no longer opens Deltarune's Game Settings overlay. */
+        // SELECT opens the native Vita settings overlay. Circle consistently
+        // acts as Back there and closing changes that require it restarts the
+        // runner through the normal, clean path below.
+        // Select belongs to Void Stranger as Escape/Back. Intercepting it for
+        // the inherited native settings overlay made Back/Resume and several
+        // in-game settings appear unresponsive.
         bool restart_for_settings = false;
         if (settings.debugDevChanged) {
             const char* room = runner->currentRoom != NULL ? runner->currentRoom->name : NULL;
@@ -1698,7 +1761,27 @@ int main(void) {
             }
         }
 
-        bool controls_enabled = !settings.open && !settings.adjustMode && settings.inputCooldown == 0;
+        // Ignore stale pad/touch state inherited from the loader. Require a
+        // short neutral period before exposing any gameplay key edge; without
+        // this, Cross could be reported as a fresh Z/X press on the first room.
+        bool gameplay_input_neutral =
+            (pad.buttons & (SCE_CTRL_UP | SCE_CTRL_DOWN | SCE_CTRL_LEFT | SCE_CTRL_RIGHT |
+                            SCE_CTRL_CROSS | SCE_CTRL_CIRCLE | SCE_CTRL_SQUARE |
+                            SCE_CTRL_TRIANGLE | SCE_CTRL_START | SCE_CTRL_SELECT |
+                            SCE_CTRL_LTRIGGER | SCE_CTRL_RTRIGGER)) == 0 &&
+            dx >= -48 && dx <= 48 && dy >= -48 && dy <= 48 &&
+            !touch_up && !touch_down && !touch_left && !touch_right &&
+            !touch_confirm && !touch_cancel && !touch_menu;
+        if (!gameplay_input_armed) {
+            gameplay_input_neutral_frames = gameplay_input_neutral ?
+                gameplay_input_neutral_frames + 1 : 0;
+            if (gameplay_input_neutral_frames >= 3) {
+                gameplay_input_armed = true;
+                log_line("INPUT=armed_after_neutral");
+            }
+        }
+        bool controls_enabled = gameplay_input_armed && !settings.open &&
+                                !settings.adjustMode && settings.inputCooldown == 0;
         
         bool gp_up = controls_enabled && !dev_force_move && ((pad.buttons & SCE_CTRL_UP) || dy < -48 || touch_up);
         bool gp_down = controls_enabled && !dev_force_move && ((pad.buttons & SCE_CTRL_DOWN) || dy > 48 || touch_down);
@@ -1709,20 +1792,26 @@ int main(void) {
         RunnerGamepad_setButton(runner->gamepads, 0, GP_PADL, gp_left, &gp_previous[2]);
         RunnerGamepad_setButton(runner->gamepads, 0, GP_PADR, gp_right, &gp_previous[3]);
         
-        bool gp_cross = controls_enabled && ((pad.buttons & SCE_CTRL_CROSS) || touch_confirm);
+        bool gp_cross = controls_enabled && ((pad.buttons & (SCE_CTRL_CROSS | SCE_CTRL_CIRCLE)) || touch_confirm);
         RunnerGamepad_setButton(runner->gamepads, 0, GP_FACE1, gp_cross, &gp_previous[4]);
         
-        bool gp_circle = controls_enabled && ((pad.buttons & (SCE_CTRL_CIRCLE | SCE_CTRL_SQUARE)) || touch_cancel);
+        bool gp_circle = controls_enabled && ((pad.buttons & SCE_CTRL_CIRCLE) || touch_cancel);
         RunnerGamepad_setButton(runner->gamepads, 0, GP_FACE2, gp_circle, &gp_previous[5]);
+
+        // Keep every Vita face button distinct. Void Stranger uses gp_face3
+        // (Square) for the secondary action/staff; merging it into Circle made
+        // the staff animation run without placing a tile.
+        bool gp_square = controls_enabled && (pad.buttons & SCE_CTRL_SQUARE);
+        RunnerGamepad_setButton(runner->gamepads, 0, GP_FACE3, gp_square, &gp_previous[6]);
         
         bool gp_triangle = controls_enabled && ((pad.buttons & SCE_CTRL_TRIANGLE) || touch_menu);
-        RunnerGamepad_setButton(runner->gamepads, 0, GP_FACE4, gp_triangle, &gp_previous[6]);
+        RunnerGamepad_setButton(runner->gamepads, 0, GP_FACE4, gp_triangle, &gp_previous[7]);
         
         bool gp_l = controls_enabled && (pad.buttons & SCE_CTRL_LTRIGGER);
-        RunnerGamepad_setButton(runner->gamepads, 0, GP_SHOULDERL, gp_l, &gp_previous[7]);
+        RunnerGamepad_setButton(runner->gamepads, 0, GP_SHOULDERL, gp_l, &gp_previous[8]);
         
         bool gp_r = controls_enabled && (pad.buttons & SCE_CTRL_RTRIGGER);
-        RunnerGamepad_setButton(runner->gamepads, 0, GP_SHOULDERR, gp_r, &gp_previous[8]);
+        RunnerGamepad_setButton(runner->gamepads, 0, GP_SHOULDERR, gp_r, &gp_previous[9]);
 
         RunnerGamepad_setAxis(runner->gamepads, 0, GP_AXIS_LH, visual_x);
         RunnerGamepad_setAxis(runner->gamepads, 0, GP_AXIS_LV, visual_y);
@@ -1731,8 +1820,10 @@ int main(void) {
         set_key(runner->keyboard, VK_DOWN, gp_down, &previous[1]);
         set_key(runner->keyboard, VK_LEFT, gp_left, &previous[2]);
         set_key(runner->keyboard, VK_RIGHT, gp_right, &previous[3]);
+        // Both Vita face-button assignments confirm reliably. Square remains
+        // the distinct X/staff action and Select remains Esc/back.
         set_key(runner->keyboard, 'Z', gp_cross, &previous[4]);
-        set_key(runner->keyboard, 'X', gp_circle, &previous[5]);
+        set_key(runner->keyboard, 'X', gp_square, &previous[5]);
         
         if (settings.shortcutSkipDialogs) {
             set_key(runner->keyboard, 'C', gp_triangle, &previous[7]);
@@ -1742,14 +1833,17 @@ int main(void) {
         
         set_key(runner->keyboard, VK_PAGEDOWN, gp_l, &previous[8]);
         set_key(runner->keyboard, VK_PAGEUP, gp_r, &previous[9]);
+        bool key_start = controls_enabled && (pad.buttons & SCE_CTRL_START);
+        bool key_select = controls_enabled && (pad.buttons & SCE_CTRL_SELECT);
+        set_key(runner->keyboard, VK_ENTER, key_start, &previous[10]);
+        set_key(runner->keyboard, VK_ESCAPE, key_select, &previous[11]);
 
         uint64_t frame_begin = sceKernelGetProcessTimeWide();
         uint64_t now = frame_begin;
         runner->deltaTime = (double)(now - last_time);
         last_time = now;
         uint64_t step_begin = sceKernelGetProcessTimeWide();
-        bool profiler_sample_frame = dev_log_fd >= 0 &&
-            runner->vmContext->profiler != NULL && (frame % 120U) == 0U;
+        bool profiler_sample_frame = false;
         if (runner->vmContext->profiler != NULL)
             Profiler_setSampling(runner->vmContext->profiler, profiler_sample_frame);
         if (profiler_sample_frame)
@@ -1847,6 +1941,12 @@ int main(void) {
         glClear(GL_COLOR_BUFFER_BIT);
         int game_w = runner->applicationWidth > 0 ? runner->applicationWidth : (int)dw->gen8.defaultWindowWidth;
         int game_h = runner->applicationHeight > 0 ? runner->applicationHeight : (int)dw->gen8.defaultWindowHeight;
+        /* Preserve Void Stranger's complete 896x576 logical canvas. Several
+         * effects and surfaces use absolute Steam-window coordinates; reducing
+         * the application surface crops those effects and looks like a strong
+         * zoom. Only the final compositor scales it into the Vita display. */
+        int render_w = game_w;
+        int render_h = game_h;
         runner->widescreenExtraWidth = 0;
         runner->widescreenExtraHeight = 0;
         if (game_w != logged_game_w || game_h != logged_game_h) {
@@ -1862,11 +1962,11 @@ int main(void) {
         render_pre_us = sceKernelGetProcessTimeWide() - render_phase_begin;
         render_phase_begin = sceKernelGetProcessTimeWide();
         if (frame == 0) log_line("FRAME0=draw_pre_complete");
-        Runner_beginFrame(runner, game_w, game_h, 960, 544, 960, 544);
+        Runner_beginFrame(runner, render_w, render_h, 960, 544, 960, 544);
         render_begin_frame_us = sceKernelGetProcessTimeWide() - render_phase_begin;
         render_phase_begin = sceKernelGetProcessTimeWide();
         if (frame == 0) log_line("FRAME0=begin_frame_complete");
-        Runner_drawViews(runner, game_w, game_h, settings.debugCollisionMasks);
+        Runner_drawViews(runner, render_w, render_h, settings.debugCollisionMasks);
         render_views_us = sceKernelGetProcessTimeWide() - render_phase_begin;
         render_phase_begin = sceKernelGetProcessTimeWide();
         if (settings.debugCollisionMasks && (frame % 30U) == 0U)
@@ -1944,7 +2044,7 @@ int main(void) {
         render_composite_us = sceKernelGetProcessTimeWide() - render_phase_begin;
         render_phase_begin = sceKernelGetProcessTimeWide();
         if (frame == 0) log_line("FRAME0=end_frame_end_complete");
-        Runner_drawGUI(runner, 960, 544, game_w, game_h);
+        Runner_drawGUI(runner, 960, 544, render_w, render_h);
         render_gui_us = sceKernelGetProcessTimeWide() - render_phase_begin;
         render_phase_begin = sceKernelGetProcessTimeWide();
         if (frame == 0) log_line("FRAME0=draw_gui_complete");
@@ -2035,8 +2135,14 @@ int main(void) {
             // cadence while the software limiter also tried to hold 25 ms.
             // Keep synchronized presentation for the exact 30/60 divisors;
             // 40 FPS uses only the precise software deadline below.
-            bool waitForVblank = settings.vsyncEnabled && settings.fpsTargetMode != 1;
-            vglWaitVblankStart(waitForVblank ? GL_TRUE : GL_FALSE);
+            // Do not stack VitaGL's VBlank wait with the monotonic limiter at
+            // the end of this loop. The double wait quantized 30 FPS gameplay
+            // to roughly 20 FPS whenever Step+Draw crossed one refresh slot.
+            // At 60 FPS let VitaGL block on the display's VBlank. This yields
+            // the CPU cleanly to the OpenAL output thread; the former software
+            // deadline woke into a busy-spin tail every frame and the Vita
+            // mixer could accept sources while producing no audible output.
+            vglWaitVblankStart(g_vitaGameVsyncEnabled ? GL_TRUE : GL_FALSE);
             vglSwapBuffers(GL_FALSE);
             render_swap_us = sceKernelGetProcessTimeWide() - swap_begin;
             if (frame == 0) log_line("FRAME0=swap_complete");
@@ -2056,25 +2162,20 @@ int main(void) {
                         startup_audio_paused = false;
                         log_line("STARTUP_AUDIO=resumed_at_first_presented_frame");
                     }
-                    save_load_fade = true;
-                    save_load_fade_start = sceKernelGetProcessTimeWide();
-                    log_line("AUDIO_FADE=begin_after_present duration_ms=1000");
+                    // Restore category gains atomically. The former wall-clock
+                    // fade could leave both categories at zero after the 60 Hz
+                    // pacing change, producing a fully silent session.
+                    AlAudioSystem_setCategoryGains((AlAudioSystem*)audio,
+                        (float)settings.musicVolume / 10.0f,
+                        (float)settings.sfxVolume / 10.0f);
+                    save_load_fade = false;
+                    log_line("STARTUP_AUDIO=gains_restored_after_present");
                 }
             }
         }
         // Report after Step and Draw so GPU-heavy rooms identify the GML Draw
         // code that submitted their primitives. Previously this ran directly
         // after Step and therefore omitted every Draw event from GML_TOP.
-        if (profiler_sample_frame) {
-            char* gmlReport = Profiler_createReport(runner->vmContext->profiler, 10, 1);
-            if (gmlReport != NULL) {
-                char header[64];
-                snprintf(header, sizeof(header), "GML_TOP_STEP_DRAW frame=%u", frame);
-                dev_log_write(header);
-                dev_log_write(gmlReport);
-                free(gmlReport);
-            }
-        }
         const char* previous_room_name = runner->currentRoom != NULL ? runner->currentRoom->name : NULL;
         bool leaving_save_menu = previous_room_name != NULL &&
             (strcmp(previous_room_name, "PLACE_MENU") == 0 ||
@@ -2200,6 +2301,50 @@ int main(void) {
                      (unsigned long long)render_swap_us);
             dev_log_write(render_phase);
         }
+        /* The normal probe log is always collected by users. Emit a compact
+         * phase sample every 120 frames so dialogue/cutscene captures remain
+         * useful without requiring Dev Mode or writing on every frame. */
+        if ((frame % 120U) == 0U) {
+            uint32_t active_instances = 0;
+            uint32_t dialogue_instances = 0;
+            char dialogue_names[192];
+            dialogue_names[0] = '\0';
+            for (ptrdiff_t i = 0; i < arrlen(runner->instances); ++i) {
+                Instance* inst = runner->instances[i];
+                if (inst == NULL || !inst->active) continue;
+                active_instances++;
+                if (inst->objectIndex < 0 || (uint32_t)inst->objectIndex >= dw->objt.count) continue;
+                const char* name = dw->objt.objects[inst->objectIndex].name;
+                if (name == NULL || (strstr(name, "text") == NULL &&
+                    strstr(name, "message") == NULL && strstr(name, "dialog") == NULL &&
+                    strstr(name, "cif") == NULL && strstr(name, "crawl") == NULL)) continue;
+                dialogue_instances++;
+                if (strstr(dialogue_names, name) == NULL) {
+                    size_t used = strlen(dialogue_names);
+                    snprintf(dialogue_names + used, sizeof(dialogue_names) - used,
+                             "%s%s", used > 0 ? "," : "", name);
+                }
+            }
+            char detail[768];
+            snprintf(detail, sizeof(detail),
+                     "PERF_DETAIL frame=%u room=%s fps=%.2f total_us=%llu step_us=%llu audio_us=%llu render_us=%llu pre_us=%llu begin_us=%llu views_us=%llu composite_us=%llu gui_us=%llu overlay_us=%llu swap_us=%llu quads=%u flushes=%u instances=%u dialogue_instances=%u dialogue=%s gpu_bytes=%llu evict=%u defer=%u ramhit=%u",
+                     frame, runner->currentRoom && runner->currentRoom->name ? runner->currentRoom->name : "<null>",
+                     work_us > 0 ? 1000000.0 / (double)work_us : 0.0,
+                     (unsigned long long)work_us, (unsigned long long)step_us,
+                     (unsigned long long)audio_us, (unsigned long long)render_us,
+                     (unsigned long long)render_pre_us,
+                     (unsigned long long)render_begin_frame_us,
+                     (unsigned long long)render_views_us,
+                     (unsigned long long)render_composite_us,
+                     (unsigned long long)render_gui_us,
+                     (unsigned long long)render_overlay_us,
+                     (unsigned long long)render_swap_us,
+                     rendererPrimitives, rendererFlushes, active_instances,
+                     dialogue_instances, dialogue_names[0] ? dialogue_names : "none",
+                     (unsigned long long)rendererGpuBytes, rendererEvictions,
+                     rendererDeferred, rendererRamHits);
+            log_line(detail);
+        }
         if (work_us > 50000 && frame_begin - last_slow_log > 1000000ULL) {
             char slow[384];
             snprintf(slow, sizeof(slow), "PERF_SLOW frame=%u total_us=%llu step_us=%llu audio_us=%llu render_us=%llu gpu_bytes=%llu events_us=%llu alarms_us=%llu collision_us=%llu other_us=%llu room=%s index=%d",
@@ -2243,7 +2388,7 @@ int main(void) {
         switch (settings.fpsTargetMode) {
             case 0: targetFps = 30; break;
             case 1: targetFps = 40; break;
-            case 2: targetFps = 60; break;
+            case 2: targetFps = 0;  break; // 60 Hz is paced by VitaGL VBlank.
             case 3: targetFps = 0;  break; // Unlock / Uncapped
             default: targetFps = 30; break;
         }
@@ -2274,8 +2419,12 @@ int main(void) {
         }
     }
 
-    /* Respect game_end and shut down cleanly so settings and saves are flushed. */
+    /* Native desktop GameMaker dispatches Game End before tearing the runner
+       down. Void Stranger writes settings.vs from that event; skipping it can
+       lose settings or leave a corrupt save after returning to LiveArea. */
     log_line(next_chapter >= 0 ? "EXIT=chapter_switch" : "EXIT=runner_requested");
+    Runner_executeEventForAll(runner, EVENT_OTHER, OTHER_GAME_END);
+    log_line("EXIT=game_end_event_complete");
     Runner_free(runner);
     runner = NULL;
     dev_log_stop();
@@ -2290,3 +2439,5 @@ int main(void) {
     sceKernelExitProcess(0);
     return 0;
 }
+
+

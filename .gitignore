@@ -15,3 +15,14 @@
 .idea/
 Thumbs.db
 Desktop.ini
+# Local workspaces / archives
+/scratch/
+/archive/
+/local-test/
+/.tools/
+
+# Regenerable build/cache output
+/src/butterscotch/build-local/
+**/__pycache__/
+*.pre-*
+

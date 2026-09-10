@@ -1,0 +1,7613 @@
+PORTUGUÊS (BRASIL)
+Tradução PT-BR para PS Vita
+
+MENUS
+[Sim]
+[Não]
+VOLTAR
+LIGADO
+DESLIGADO
+PORTUGUÊS (BRASIL)
+FINLANDÊS
+CONTINUAR
+CONFIGURAÇÕES
+SAIR DO JOGO
+GRÁFICOS
+ÁUDIO
+CONTROLES
+OUTROS
+GERAL
+MÚSICA
+SOM
+RESOLUÇÃO
+TELA CHEIA
+CRONÔMETRO
+CONTADOR
+CIMA
+ESQUERDA
+DIREITA
+BAIXO
+BOTÃO DE AÇÃO
+IDIOMA
+INICIAR
+Pulando...
+VELOCIDADE DO TEXTO
+MÉDIA
+LENTA
+RÁPIDA
+PAUSAR
+PRESSIONE X PARA CONFIRMAR
+Você gostaria de alterar as configurações antes de iniciar sua jornada?
+Está pronto?
+Boa sorte!
+
+Não desistas!
+PRESSIONE X PARA CONTINUAR
+VOCÊ CAIU
+NENHUM CONTROLE ENCONTRADO
+
+
+CONTROLE(S) ENCONTRADO(S)
+
+
+
+
+MOVIMENTOS
+VAZIOS
+TEMPO
+
+Reiniciando...
+
+[Uma bétula solitária fica no vazio]
+Esta área parece segura.
+E já que viajas há algum tempo...
+[Gostaria de descansar por enquanto?]
+Descansar?
+[Você decide seguir em frente]
+Devagar, com certeza, os sonhos abraçam-te.
+
+[A árvore murchou]
+É melhor seguir em frente.
+EFEITOS PISCANTES
+PALETA
+Acordar
+Acabar com tudo
+DESCANSO FINAL
+APRESENTADO POR
+EQUIPE
+
+BIBLIOTECAS DE ÁUDIO
+TESTADORES
+
+MEMÓRIAS
+'Får ej övertäckas. Ei saa peittää.»
+FARDOS
+MEMÓRIA DO VAZIO
+ESPADA DO VAZIO
+ASAS DO VAZIO
+Não pode ser isto...?
+MOVIMENTO
+TOCAR
+SEGURAR
+
+[Esta máquina Lotus-Comer não parece estar operacional]
+[Esta máquina Lotus-Comer ainda está operacional]
+[Talvez você possa descansar um pouco?]
+Grava a sua marca.
+Já está?
+Que assim seja!
+CENA DE VOID
+Olá.
+É a sua primeira vez aqui?
+
+Foi o que pensei.
+Tenho acompanhado a sua viagem até agora.
+Deve estar determinada a vir a este lugar de bom grado.
+Infelizmente, a determinação só o levará até agora.
+Especialmente agora que está morto.
+Diz-me.
+Ainda quer continuar?
+
+Não te reconheci.
+Sou mau com caras.
+
+
+
+O que fazer.
+Ninguém pode enganar a morte.
+Mas há um truque que pode tentar.
+Se comeres alguma coisa aqui, vai tornar-te parte deste reino.
+Então poderás percorrer estes corredores para o seu coração.
+Acontece que tenho esta fruta comigo.
+Quer comê-lo?
+
+Óptimo.
+Ainda bem que te pude ajudar.
+Espero que encontres o que procuras.
+Vou deixar-te a sós.
+
+...
+Foi tudo o que foi preciso.
+Tudo o que foi preciso.
+Para desistires, mortal?
+Mesmo quando o meu interesse na sua espécie continua a diminuir.
+Não consigo deixar de pensar.
+O que te fez sentir assim.
+Os seus pensamentos dispersos irão juntar-se aos outros.
+Neste vazio infinito esculpido pelo desespero.
+Chegámos longe demais.
+Não pode desistir agora.
+
+[Comeste a fruta inteira]
+[Seu gosto é estranho para você]
+[No entanto, a polpa é suprisingly doce, se amargo]
+[Provavelmente devia tê-lo descascado antes de comer.]
+[...]
+
+O que respondes?
+Qual é a sua decisão?
+[Você quer continuar]
+[Você deseja desistir]
+O que vai fazer?
+[Quer comer a fruta]
+[Você se recusa]
+(Sabe a...)
+(******...?)
+(De que é que aquela bola de pêlos estava falando?)
+Que sonho estranho.
+
+CENA VOIDROD
+Você adquiriu uma vara estranha.
+[Simplesmente segurando faz você se sentir desconfortável]
+[Algo está errado]
+
+[Sceptro de Adicionar...]
+[...]
+[Hora de encontrar Bee!]
+
+[Algo é diferente]
+QUEIXAS DE ABERTURA
+[Está vazio]
+[Você não adquiriu nada]
+
+[Você adquiriu um ídolo gafanhoto]
+[Parece bastante saboroso, na verdade]
+Quem sabe, talvez seja útil a longo prazo.
+
+
+Espera.
+[Há um bilhete dentro]
+[Ele lê:]
+Entrei com alguns dos seus lanches favoritos.
+Bebe um pouco quando te sentires deprimido.
+E por favor, não fales com a minha irmã.
+É o nosso segredinho! - Bee
+[A mensagem faz pouco sentido para você]
+
+[Está escrito em uma língua que você pode ler]
+
+Você adquiriu uma espada estranha.
+[O seu design ornamentado torna-o bastante complicado de usar]
+
+Você adquiriu um par estranho de asas.
+[Eles se sentem extremamente frágeis]
+Quem sabe, talvez sejam úteis a longo prazo.
+
+[Você adquiriu um sentimento estranho]
+[Sua mente se sente mais pesada]
+[... você não sabe o que fazer com isso]
+
+
+Caso tenha esquecido como usá-los:
+
+
+
+
+
+
+Você pode voar sobre pequenas lacunas com estes.
+Salta e acredita em ti!
+Se eu tivesse as minhas próprias asas.
+Por favor, dá-me asas! - Bee
+
+A minha memória de ti.
+Com isso, você deve ser capaz de ouvir a voz de caído, todos os que foram e aqueles que ainda estão para ser.
+E se outra pessoa (que inclui você, irmã) está lendo isso...
+Desaparece. - Bee
+
+[Eles parecem bastante saborosos, na verdade]
+Quem sabe, talvez sejam úteis a longo prazo.
+
+[Você adquiriu três ídolos gafanhotos]
+[L U C K Y !]
+
+É muito mau não poder carregar mais deles...
+[Quando você tenta colocá-los de volta, eles desmoronam em pó fino]
+Que perda de tempo!
+É muito mau não poder carregar mais destes...
+[Quando você tenta colocá-lo de volta, ele desmorona em pó fino]
+[Sabe a serragem]
+[Eles sabem a serragem]
+[... Por que você está coletando estes novamente?]
+
+[Encontrou as asas do Add]
+[...]
+É melhor deixá-los.
+
+[Encontrou o núcleo do Add]
+[...]
+É melhor deixá-lo.
+
+(Seu idiota absoluto...)
+
+
+[...]
+
+
+Está rebentando de alegria...
+
+Está vazio.
+[Está muito, muito vazio]
+Mas agora que olhas mais de perto...
+Parece que o peito foi aberto com força em algum momento.
+
+[Uma mensagem cruamente escrita brilha através do nicho]
+[Ele lê:]
+[`mon estava aqui`]
+[...]
+
+[Entalhes estranhos brilham através do nicho]
+[É algum tipo de escrita...?]
+
+Você adquiriu 99 ídolos de gafanhotos.
+[I N C R E D I B L E ]
+
+[Algo não está certo]
+
+[Você recebeu 16 gafanhotos ídolos]
+É melhor prevenir do que remediar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRIAL: INTRODUÇÃO
+"Por estes defeitos, e por nenhum outro mal, agora estamos perdidos e punidos apenas com isto: "
+"Não temos esperança e ainda vivemos com saudade."
+Juiz ZERO.
+
+Procurador ZERO.
+
+Defesa ZERO!
+
+O Tribunal Void, ZERO JUSTIÇA, está agora em sessão.
+
+Procurador, por favor comece.
+
+Sim, Meritíssimo.
+JUÍZO: MORTE DE TROCA
+O amaldiçoado tem repetidamente enganado uma certa morte.
+Ainda não sabemos como o amaldiçoado conseguiu tal feito.
+No entanto, parece óbvio que foi intencional.
+Propomos que o amaldiçoado seja punido em conformidade.
+
+Espera! A defesa está tocando!
+Tem alguma prova?
+Enganar a morte parece-me muito difícil.
+Isso é possível?
+De certeza que não podia ser obrigado a fazê-lo.
+Não que eu possa morrer, claro.
+
+Todos vimos, seu idiota.
+Nada passa pelo Tribunal Vazio.
+
+Oh, sim.
+Certo.
+Mas pode provar que foi intencionalmente?
+
+Os mortais agarram-se às suas vidas a qualquer custo.
+É simplesmente da natureza deles.
+
+Mas talvez tenha sido um acidente.
+Sim.
+Um acidente! Porque não percebi isso antes?
+Gostas dessa reviravolta?
+
+...
+Só há um acidente aqui, tanto quanto sei.
+
+Hmm? Não te ouvi bem.
+Tem de falar mais alto com esses seus chifres gordos.
+
+Isso não faz sentido.
+E deixa os meus chifres fora disto.
+
+Chama-se queimadura, mana.
+
+Vou queimar-te assim que acabarmos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JULGAMENTO: ACÓRDÃO
+Silêncio.
+Estranho.
+Como responde a estas alegações?
+
+Muito bem.
+Continua a sua viagem, estranho.
+Em direcção à sua condenação final.
+
+É mesmo tolo.
+Mas pelo menos é um tolo honesto.
+Continua a sua viagem, estranho.
+O seu dia de absolvição chegará a tempo.
+Até lá... Reze para nunca mais nos encontrarmos.
+
+[Não Culpado]
+[Culpado]
+
+
+
+
+
+
+
+
+
+
+
+
+
+JULGAMENTO: GLUTTÓNIA
+Os amaldiçoados acumularam repetidamente ídolos de gafanhotos.
+Estes ídolos sagrados fazem parte da herança do Senhor Add.
+Um mero mortal a mexer com eles...
+Só o pensamento é repulsivo.
+Propomos que o amaldiçoado seja punido em conformidade.
+
+O nosso procurador nunca ouviu a velha sabedoria:
+Achados, roubados?
+Se não quer que as pessoas cuidem das suas coisas...
+Tem de tratar melhor disso.
+
+De fato.
+Normalmente, esses ídolos estão bem seguros.
+Mas, por alguma razão, a maioria deles foram dispersos.
+A nossa defesa não saberia disto, pois não?
+
+Não faço ideia do que está insinuando.
+Além disso...
+Pode culpar alguém por querer pôr as mãos nisto?
+São deliciosos!
+
+Os ídolos não são um lanche de passatempo, seu idiota.
+Andaste a devorá-los outra vez, não foi?
+É mais do que provável, pelo que parece.
+
+Rude.
+Aviso-te que a minha dieta é rigorosa.
+Este corpo voluptuosa não se vai sustentar.
+Posso dar-te dicas, se quiseres.
+Você pode ser capaz de diminuir os seus chifres gordos também.
+
+Por favor, come um grilo e engasga-te com ele.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REUNIÃO COM A NUN
+Por favor, não me mates!
+...
+Não é uma dessas coisas, pois não?
+Caramba.
+Assustou-me mesmo ali.
+
+A senhora assustada parece ter recuperado a compostura.
+Pergunta-lhe o que faz aqui.
+Ia perguntar-te o mesmo.
+Sinceramente, nem me lembro como vim parar aqui.
+O que estava fazendo?
+A Irmã Ballbuster vai esfolar-me vivo se eu não aparecer em breve.
+É uma pitada.
+
+Por acaso não conheces uma saída?
+Diz-lhe que a única opção é continuar a andar.
+E eu a pensar que eras tão capaz.
+Sério, não me deixes pendurado assim.
+Especialmente com aquelas coisas a rastejar.
+Também os viu, não viu?
+Ou estou enlouquecendo?
+
+...
+Espera.
+Acho que me lembro agora.
+Estava trabalhando no jardim quando me deparei com este buraco estranho.
+Tenho certeza que não estava lá antes, as bordas estavam demasiado limpas.
+Quase como se tivesse aparecido do nada.
+Devo ter caído e batido com a cabeça ou algo assim.
+Isto é um sonho?
+
+[Ela parece estar perdida no pensamento]
+
+...
+Olá.
+Acredita em ***?
+A Irmã Ballbuster nunca pára de falar dessas coisas.
+Você deve se arrepender, só então *** vai salvá-lo.
+Apesar da minha aparência, nunca acreditei.
+Claro que cometi alguns erros na minha vida...
+Mas parece muito conveniente, não acha?
+Basta acreditar em *** e no final tudo vai ficar bem.
+Como se alguém o tivesse inventado para ter uma saída fácil.
+...
+Do que é que ainda estou falando?
+Esquece.
+Preciso de preparar o meu rabo para uma pancada.
+E se encontrares a saída, avisa-me, obrigado.
+
+[Você decide não incomodá-la por mais tempo]
+
+
+Ela tornou-se cautelosa com você.
+
+Pára!
+
+
+[Ela já não quer falar com você]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRIAL: SLOTH
+O amaldiçoado tentou criar um atalho entre os branes.
+Isto é sem precedentes, para ser honesto.
+As paredes destes branes são impenetráveis.
+Um mortal não pode escapar-lhes.
+Mas não te enganes.
+Esta transgressão ainda é extremamente grave.
+Propomos que o amaldiçoado seja punido em conformidade.
+
+Vá lá.
+Esta trincheira nunca acaba.
+Quanto mal há em saltar um quarto ou uma dúzia?
+
+O Senhor Add criou este labirinto para punir os pecadores.
+Simplesmente tentar ''skip''' contamina nosso Senhor.
+Já devias entender isso.
+
+Mas...
+Isso não é bom.
+Isso não é nada bom.
+Acho que não é permitido.
+
+Isto não tem nada a ver com diversão.
+Por favor, tente levar o seu trabalho mais sério.
+Começas sempre a agir como uma criança mimada quando sabe que está perdendo.
+
+Sim, sim.
+Como queiras.
+Pelo menos os meus chifres não são gordos como os seus.
+O que disseste?
+Ouviste-me.
+Chifres gordos.
+Diz isso mais uma vez e juro...
+chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos chifres gordos.
+Por favor, morra.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEMORIAS DE VOD
+Perdoa-me...
+Está tudo tão frio.
+Onde estou?
+Consegue ouvir-me?
+É difícil mover-se.
+Não me provoques.
+Mãe...
+Padre...
+Irmã, é você?
+Não consigo ver nada.
+O que se passa comigo?
+Também... Cansado...
+Não consigo ouvir a minha voz.
+Escuro.
+Não fiz nada de errado.
+Ajuda-me.
+Quero morrer.
+É só um sonho.
+Vou acordar em breve... Certo?
+Onde é que eu errei?
+Eu fiz-te mal...
+Por favor.
+Matar.
+Por favor, não me magoes.
+Tenho comichão nas costas.
+É tão difícil de mover.
+As minhas costas estão matando-me.
+Há quanto tempo estou aqui?
+Fome...
+Não consigo chorar.
+Quem sou eu?
+Não quero morrer.
+Mamã.
+Mãe.
+Papá?
+Está aí alguém?
+Está aí?
+Preciso de dormir.
+Não chores.
+A mãe está aqui.
+Tudo será...
+Por favor, pára...
+Pára!
+5470041062466101, 5470041062466102, 5470041062466103, 5470041062466104... 
+Porque não consigo adormecer?
+Faz com que acabe.
+Estou implorando-te.
+Porquê porquê porquê porquê?
+Já é o jantar?
+Tiraste-me a minha mulher?
+Morre.
+Nunca acreditei em nada...
+É este o preço pelos meus pecados?
+Devo rezar?
+Posso rezar?
+A quem rezei?
+Só quero que acabe.
+Socorro!
+O meu nome...
+Não me lembro do meu nome.
+Quero ver a sua cara mais uma vez...
+O que sou eu?
+É o fim?
+...
+Nada.
+Não há nada.
+Não, não, não.
+Não pode ser.
+Alguém sabe o meu nome?
+Não sinto as pernas.
+Para onde foi a minha cara?
+O que aconteceu à minha cara?
+As minhas mãos não se mexem.
+Não consigo respirar.
+Ar. Preciso de ar.
+Maldiçãos...
+Odeio-me.
+Porque tinha de acabar assim?
+Para onde foi o meu gato?
+O que está comendo, minha querida?
+Amargo.
+As minhas últimas palavras...
+Algum arrependimento?
+Quero tocar-te.
+O que...?
+Água... quero água.
+A minha voz...
+Tem de haver uma saída.
+Não há saída.
+Laalaa lala laaa...
+Hahahaha...
+Mente...
+Morte...
+Ama-me.
+Liberta-me.
+Quem é você?
+O que vai fazer?
+Sair? Ninguém pode sair.
+Olá.
+Ouve.
+Consegue ouvi-los?
+Vozes...
+Tudo desaparece.
+Dói.
+Já não dói.
+Numb.
+Carne.
+Canta para mim.
+A desaparecer...
+O que aconteceu às luzes?
+Luzes.
+Eles mentiram.
+Tudo.
+Diz-me a verdade.
+Verdade.
+Só posso provar cinzas.
+Quanto tempo...
+Vem até mim.
+
+Há muito tempo atrás...
+Estes salões eram governados por seres conhecidos como Senhores Vazios...
+O líder deles era Lord Add, The Beginning...
+
+Sob o comando do Lorde Add...
+Os pecadores foram enviados para percorrer estas profundezas por toda a eternidade...
+Com que propósito, não sei dizer...
+
+Nem todos os Lordes Vazios viram olho a olho.
+Um dia, uma grande batalha irrompeu entre duas facções entre os senhores.
+À medida que os seus agentes se voltavam uns contra os outros, o Vazio começou a desestabilizar...
+
+A batalha entre os Lordes Void durou anos...
+Até que apenas três lordes ficaram intactos...
+E dois dos seus seguidores...
+
+Enquanto a luta tinha finalmente terminado...
+Algo inesperado aconteceu...
+Enquanto o Vazio ainda estava em ruínas, o Senhor Add deixou...
+
+Por que Lord Add decidiu deixar Vazio...
+... ... ...
+Só estes corredores se lembram da resposta a essa pergunta...
+
+Aqui está o domínio do primeiro traidor Senhor Vazio...
+Aquele que uma vez foi o aliado mais confiável do Lorde Add...
+O nome deles nunca mais enfeitará estas salas...
+
+Dizem que o senhor desta área foi quem instigou a guerra entre os Senhores Void...
+Senhor. O Add não queria acreditar...
+Mas a transgressão deles também não podia ser perdoada...
+
+Assim que a batalha entre os Senhores Void terminou...
+Senhor Add pessoalmente consumiu tudo o que restava do traidor senhor...
+De certa forma, tornaram-se um, como sempre esperaram...
+
+Apesar do que aconteceu, o Senhor Add nunca quis lutar contra o traidor senhor...
+Eram bons amigos...
+Mais do que isso...
+
+Aqui está o domínio de Lord Bee, O Anseio.
+Um verdadeiro trapaceiro, mesmo entre os Senhores Void...
+... E um devoto admirador de Lord Add...
+
+O Senhor Add gostava muito dos ídolos de gafanhotos secos e o Senhor Bee gostava deles ao lado do seu senhor...
+Mesmo que o Lorde Bee não pudesse provar nada nem sentir-se contente...
+Eles sempre apreciariam aqueles pequenos momentos de lanche...
+
+O Senhor Bee vangloria-se regularmente de quão cruéis eram para com os mortais...
+Mas agora que penso nisso, nunca os vi magoar ninguém...
+No mínimo, duvido que tenham gostado tanto quanto deixaram claro.
+
+Aquele sorriso...
+Lord Bee estava sempre a sorrir quando os outros...
+Faz-nos pensar se eles continuavam sozinhos...
+
+Depois da partida do Lorde Add...
+O sorriso proeminente de Lorde Bee permaneceu...
+Como se nada tivesse acontecido...
+
+Aqui está o domínio do segundo traidor Senhor Vazio...
+O calculista charlatão, para sempre cego pela sua própria cobiça...
+O nome deles nunca mais enfeitará estas salas...
+
+O senhor cobiçado muitas vezes seguiu o senhor traidor...
+Ficaram apaixonados pelas suas escamas...
+Talvez esta razão vazia fosse suficiente para eles se unirem ao traidor senhor...
+
+Não olhes diretamente nos olhos do senhor cobiçado, costumavam dizer...
+O olhar deles transformaria qualquer um em ouro puro...
+Que destino terrível...
+
+Até mesmo o cobiçado senhor mostrou interesse em ídolos de gafanhotos...
+Mas o cobiçoso não as comia, simplesmente gostavam de as coleccionar...
+Ter muitos gafanhotos e eles certamente aparecer, negociar por alguns...
+
+Aqui está o domínio de Lorde Tan, O Raging.
+Tão feroz era a sua natureza, outros Senhores Void preferiam não interagir com eles...
+Infelizmente, Lorde Tan permaneceria por conta própria a maior parte do tempo...
+
+Embora evitado, Lorde Tan não se importava de ficar sozinho...
+Na verdade, eles preferiram...
+O Lorde Tan não se dava bem com os outros...
+
+Lorde Tan nunca falou muito...
+Talvez porque não eram bons nisso...
+Acabariam por ficar zangados consigo mesmos e atacar...
+
+Durante a batalha, Lorde Tan foi imparável...
+Mesmo quando a batalha diminuiu, a raiva deles não acabaria...
+Assim, o Senhor Add não tinha outra opção, senão derrubar o seu aliado...
+
+Aqui está o domínio do terceiro traidor Senhor Vazio...
+Cuja apatia fraca é apenas o segundo da sua indecisividade...
+O nome deles nunca mais enfeitará estas salas...
+
+O senhor fraco nunca mostrou interesse pelos acontecimentos do Vazio...
+Eles simplesmente cumpririam o seu papel sem qualquer entusiasmo...
+Só para que outros senhores não os incomodassem...
+
+No momento decisivo, quando os Senhores Vazios tiveram de escolher o seu lado no grande confronto...
+O fraco senhor permaneceu indeciso...
+Mas um fica com o Lorde Add ou...
+
+
+
+
+
+Aqui está o domínio do Lorde Lev, O Depravado...
+O vassalo desamoroso do Vazio...
+A devoção deles rivalizou até com o Lorde Add...
+
+Tão feroz era o poder de Lorde Lev...
+Poucos pecadores passariam o julgamento...
+Para ver as profundezas finais do Vazio...
+
+Lorde Lev sempre foi leal ao Lorde Add...
+Mesmo quando a batalha os colocou contra a própria irmã...
+O Lorde Lev sempre foi leal ao Lorde Add...
+
+A morte da sua irmã deixou o Lorde Lev num estado tão perturbado...
+Aquele Lorde Lev, que sempre foi inabalável na sua devoção...
+Tiraram a própria vida...
+
+
+
+...
+
+Destruir o que resta dos traidores...
+Voltar para zero, zero, zero...
+Então encontrarás o tesouro final do Lorde Add, um que eles esconderam até dos seus aliados...
+A chave que grava a marca da DIS...
+
+Alguém está à sua espera...
+Não te preocupes...
+Eles estão bem...
+
+Acorda.
+Que milagre que é.
+Mas não importa o quanto eu tente...
+Isto é o mais perto que posso chegar.
+O resto é com você.
+Em breve vai crescer...
+Tem de continuar a trabalhar diligentemente e cuidar bem das suas irmãs...
+Mesmo quando você discute e comete erros.
+Mesmo que eu...
+
+É o meu pequeno isqueiro.
+É o meu orgulho.
+E o seu nome será...
+
+Não me lembro destes corredores...
+Quem os construiu...
+O que estão escondendo...
+
+Aqueles ídolos mesquinhos...
+Aquele olhar avarento...
+Como sobreviveram...
+
+A marca de Lord Cif...
+Não te preocupes, já foi esculpida...
+Mas qual era o quarto...
+Não me lembro do número, mas deve estar algures no domínio deles...
+
+[...]
+[A luz das estrelas...]
+As nossas memórias tornam-no...
+
+Sem fim.
+
+Fez bem em encontrar o caminho até aqui...
+Descobrir as marcas é apenas o primeiro passo...
+Pense "onde" você pode desenhá-los...
+É assim que vai dobrar estes corredores à sua vontade...
+
+O valor brano é volátil...
+Mas enquanto manipular os dois últimos dígitos...
+Deve funcionar...
+Sabe como fazer isso, não sabe?
+
+
+[O mural está cheio de inscrições]
+[Decifrando-os parece um esforço fútil]
+[Ele lê:]
+[... você sempre foi capaz de ler isso?]
+
+
+
+
+
+Um passo em falso e vou destruir-te...
+
+
+
+
+
+
+Tem gafanhotos?
+
+
+
+
+
+Fá-los ir embora...
+
+
+
+
+Apenas uma memória simples permanecerá
+
+[O mural está muito danificado]
+Decifrar as suas inscrições parece quase impossível...
+
+
+O mural desmoronou-se, revelando um pequeno nicho cheio de...
+O que é isto?
+
+APENAS AMEMORIARES
+
+SOMENTEACRAVINGREMAINS
+
+SOMENTE GNAWINGRAGEREMAINES
+
+SOCIALENVIREMINAS
+
+
+[O mural está completamente em branco...]
+[Você só pode entender algumas das personagens]
+[Soar como completa tagarelice]
+
+[De alguma forma eles se sentem familiares para você]
+
+Que incómodo.
+Meu amor...
+
+
+(...)
+[Você se pergunta por que Add deixaria tal mensagem]
+[Esta deve ser uma das unidades de memória remota]
+É muito mau não conseguires ligar-te a ele.
+[Quem iria danificá-lo assim?]
+[...]
+[Você não pode decifrá-los por alguma razão]
+Talvez haja uma perturbação com o receptor EPR da sua unidade escrava.
+[Você pode fazer algumas inscrições, mas...]
+[DIS continua a iludir-nos]
+[Os caracteres restantes soletram palavras sem sentido profundo]
+[Um selo quebrado]
+[Um selo estranho]
+[Você não pode chegar mais perto dele]
+[De repente, você ouve uma voz distante]
+
+
+
+
+
+
+[A vara estranha mudou sua forma]
+E de alguma forma...
+[Você sente sua inquietação desaparecendo]
+
+
+
+[...]
+
+
+O que é isto?
+[Está observando você...?]
+
+Você derrubou-o sem qualquer hesitação.
+O que te fez fazer isso?
+
+[É a sua marca]
+
+Só para o caso de...
+Se tiveres dúvidas...
+Mexe as escadas...
+
+
+
+SONHO I
+Lady Gray!
+Graças a Deus que chegou!
+A princesa... está descontrolada!
+Por favor, faz alguma coisa!
+É a nossa única esperança!
+Por favor, depressa!
+
+Dói...
+Cuide da princesa, Lady Gray...
+Perdoe-me, Lady Gray.
+Tudo o que podia fazer era fugir.
+Como posso enfrentar Sua Majestade depois disto?
+
+[Não pode sair agora]
+[O ar está cheio de ameaça]
+[Você entra no quarto destemidamente]
+
+Preparem-se para morrer.
+
+[Você leva um soco na princesa]
+[Você aciona sua determinação!]
+[Uma das muitas birras da princesa]
+[Caíste]
+[A ira da princesa se aproxima de você]
+[A ira da princesa te despreza]
+[A ira da princesa chicota!]
+[A ira da princesa finalmente diminuiu]
+A Ira da Princesa está preparando um ataque total!
+A Ira da Princesa vai enlouquecer!
+A Ira da Princesa está exausta... Agora é a sua chance!]
+A Ira da Princesa está muito aborrecida para continuar...
+ATAQUE
+DEFENDÊNCIA
+VERIFICAÇÃO
+
+Uma princesa!
+Pirralha mimada!
+Impermeável!
+Grande dor no fundo!
+Burro decadente!
+Desgraça aos sentidos!
+Auto-indulgente Regal!
+Imperatriz egotista!
+Nem um dragão te comeria!
+Aristocrata abominável!
+Tem alguma disciplina!
+Toma um banho!
+Maelstrom de monarca!
+Princesa pomposa!
+Espinho no trono!
+Snapp soberano!
+Real rapscallion!
+Cabeça de coroa nascida em Hegde!
+Cabra de boca suja!
+Nabo de colher de prata!
+
+Vou bater-te e dar-te um pontapé.
+Salta!
+Vai lá, Harpy!
+Vai-te embora, bruxa!
+Mergulhar num poço.
+Todo o meu ódio!
+Trava dupla!
+Em breve estarás bem passado!
+Mexe-te noutro lado!
+Sr.grgr!
+Preparem-se para a vossa destruição.
+Chega de conversa!
+Vou enforcar-te por isso!
+Enforcado! Enforcado!
+Morte queimando!
+Hag!
+Não é justo!
+Monstro Boobie!
+Morre já!
+
+Como poderia perder?
+Treinei tanto!
+Aposto que fez batota!
+Agora, Vossa Alteza.
+Uma nota tão azeda não combina com uma senhora da sua estatura.
+...
+Tudo bem, pode ficar com esta.
+Que gentil da sua parte, Vossa Alteza.
+Morde-me.
+...
+
+Sim!
+Sou vitorioso!
+Ajoelhem-se diante de mim, meus infelizes súditos!
+...
+Já pode levantar-te.
+Devo ter sido brando consigo, Alteza.
+É bom ver-te de tão bom humor.
+Cala-te.
+...
+
+Obrigado.
+Estava ficando muito chato sem ti por perto.
+Aposto que os guardas discordam.
+É sempre a mesma coisa com você.
+Parto por uns dias e o inferno desaba.
+Aqueles idiotas não têm piada.
+Pousam alguns golpes sólidos e gritam imediatamente por suas vidas.
+E que sabe-tudo-todos os quatro olhos não é melhor.
+'Um, princesa, você não deve chutar os pobres guardas.'
+É hora de tomar banho, princesa!
+E lembre-se de trocar suas cuecas diariamente!
+‘’Lady Gray vai ficar muito brava comigo se você não obedecer!’’
+Até se atreveu a insinuar que eu podia cheirar mal.
+Princesas não cheiram mal.
+O pobre valete devia estar grato por estar dentro do meu ambiente real.
+(A 'ambiência' nesta sala é certamente de proporções reais.)
+Seja como for, o rabo dele é erva da próxima vez que o vir.
+Linguagem.
+Desculpa, quis dizer rabo.
+...
+Não pode continuar a jogar os seus jogos infantis para sempre.
+Este país espera muito de si, assim como Sua Majestade.
+Não estou interessado.
+Que tal saltarmos a nave e fugirmos?
+Só você e eu!
+Para podermos fazer o que quisermos, ir para onde quisermos!
+Lá vamos nós outra vez...
+Estou falando sério!
+O que nos prende?
+Ou talvez não queiras ir comigo, pois não?
+A questão não é essa.
+Então o que é?!
+O mundo é muito, muito maior que qualquer um de nós.
+Temos de ser capazes de pôr os nossos desejos e necessidades de lado...
+Para cumprir as nossas responsabilidades.
+Tenho certeza que compreende isto, Vossa Alteza.
+...
+Não.
+Não, sério que não.
+...
+Anda cá, pequeno idiota.
+Vamos tentar entender esse seu cabelo.
+Tudo bem.
+Mas depois disso teremos uma revanche!
+Veremos.
+Mas precisa mesmo de um banho.
+Cuidado com o que diz!
+
+Patético.
+Lutas como uma vaca.
+Onde está o seu espírito de luta?!
+Fale por si, Vossa Alteza.
+Os seus movimentos estão muito lentos hoje.
+Até uma vaca podia vê-los a chegar.
+Desmancha-prazeres.
+
+Quer livrar-te daquele ídolo?
+É muito simples...
+Segure o botão de ação por alguns segundos...
+Lembre-se de ter cuidado com os relâmpagos...
+...
+O fim está próximo...
+Ou é o que dizem...
+
+Derrotar os agentes dos Senhores para abrir o caminho...
+Mas só os solitários sabem a ordem correcta...
+E se acha que já sabe...
+Pensa outra vez...
+
+O primeiro a ir é...
+A segunda é...
+A terceira é...
+O quarto é...
+O quinto é...
+O sexto é...
+O sétimo é...
+O último é...
+Isso é tudo...
+
+Um sinal de sombra...
+Uma sanguessuga...
+Um sorriso...
+Um verme...
+Um castor...
+Um olho...
+Um octaedro...
+Você...
+
+Deixa as sanguessugas...
+Sei que podem atrapalhar-te...
+Mas não querem fazer mal...
+Eles só procuram calor sem rumo, como os outros...
+Antes que possas sair...
+Livrem-se do gelo...
+Ou era vidro...
+Tenho certeza que já adivinhaste, mas...
+Não ponhas o dedo naqueles vermes...
+Não importa o quão tentador possa ser...
+Outro beco sem saída...
+Grande momento, estranho...
+Empurra-me para aquele poço brilhante...
+Tenho de encontrá-lo...
+SONHO II
+Isto é um absurdo!
+Por favor, Majestade, imploro-lhe que se acalme.
+Acalmar-me?
+Aquela minha filha miserável está conduzindo este reino para a ruína...
+E você implora ME para se acalmar?!
+Um pouco de bem resultará da impaciência, Majestade.
+Tenho sido paciente com ela.
+Mais do que imaginas.
+Mas isto já dura há demasiado tempo.
+Os rumores começaram a espalhar-se.
+Como um rei humilde nem consegue pôr a filha em ordem, quanto mais o seu reino a diminuir...
+E já ouviu a alcunha que lhe deram?!
+Estou bem ciente dos rumores, Vossa Majestade.
+Então vai procurá-la e diz-lhe alguma coisa, já!
+Diga-lhe que ficará atrás destas paredes até que obedeça!
+Vossa Majestade, eu...
+Devo lembrá-la da sua casa, Lady Gray?
+
+Outro dia, outro noivo candidato fora da lista.
+
+Em que número estamos?
+Perdi a conta.
+Pelo menos desta vez não partiste nenhum osso.
+...
+Vossa Alteza.
+Todos sabemos que não gostas da situação.
+Mas se não lhes dermos o mínimo de hipóteses, as coisas vão piorar a partir de agora.
+...
+Só está dizendo o que o meu pai te mandou dizer.
+Desejo-lhe o melhor, Vossa Alteza...
+Sério?
+Então porque não diz àquele velhote para o enfiar?
+Vossa Alteza!
+Estou-me nas tintas para este país!
+Ou o rei!
+Ou ser uma princesa.
+Neste ponto, seria realmente mais fácil fugir.
+Devíamos ter feito isso há anos.
+Ainda há tempo, certo?
+Se realmente te importas, ajuda-me!
+O que me pedes não posso fazer.
+Sim, esqueci-me.
+Hoje em dia é apenas o cachorrinho de estimação do rei.
+...
+...!
+Desculpa.
+Fui longe demais.
+...
+Como dama de companhia, a minha lealdade reside neste reino e no seu governante.
+Mas como seu amigo, estou sempre do seu lado.
+Nenhum poder neste mundo mudará isso.
+Bem, pelo menos seria preciso mais do que uma birra.
+...
+Vou dar-lhe um momento.
+Tente descansar, Vossa Alteza.
+
+
+
+
+
+Você outra vez, estranho...
+Caíste aqui por acidente...
+Esquece...
+Não te metas no meu caminho...
+O caminho está ficando mais estreito...
+E o vento...
+Nada que eu não possa lidar...
+E você, estranho...
+Hmph...
+Não sabe quando desistir, pois não?
+Faz o que quiseres...
+Mas está passando dos limites...
+Isto é suposto ser um desafio...
+Vou só...
+...
+Hmm...
+...
+... ... ...
+
+
+Isto está ficando atrevido...
+Cuidado onde pisas...
+Estou quase lá...
+Não te metas com os meus movimentos, estranho...
+Tão frustrante...
+Quando é que acaba...
+O que foi, estranho...
+Mete-te na sua vida...
+Tão perto...
+Deve estar perto...
+Não cheguei tão longe...
+Por nada...
+...
+É inútil...
+Não aguento mais...
+Estou tão cansada...
+Este é o fim da estrada...
+Desculpa ter-te levado comigo, estranho...
+Só os sonhos amargos do mundo acordado vos esperam agora...
+REUNIÃO COM O TAIL
+Cuidado aí.
+As minhas escamas são bastante sensíveis.
+Por favor, venha cá, se quiser falar.
+Não mordo.
+
+É uma criança corajosa.
+Normalmente a sua espécie fica longe quando me vêem.
+Mas não quero fazer mal, os meus olhos e ouvidos são muito pobres.
+Prazer em conhecê-lo.
+O meu nome é Tail.
+
+A minha balança diz-me que não é uma alma perdida.
+Se não se importa que eu me intrometa...
+Qual é o seu propósito aqui?
+Talvez possa oferecer ajuda.
+
+Diz-lhe que andas à procura de uma jovem.
+Uma mulher passou por aqui recentemente.
+Infelizmente ela fugiu gritando antes que eu pudesse dar uma boa olhada nela.
+Podias tentar alcançá-la.
+Embora não possa garantir que os dois vão acabar no mesmo sítio.
+Estas paredes desafiam a razão, estão sempre a mover-se.
+Foi o que me disseram.
+
+Pergunta-lhe se ela sabe outro caminho.
+Ouvi dizer que alguns andares têm mais de uma saída.
+Mas eles estão escondidos e apenas os restantes Senhores Vazios sabem como acessá-los.
+Você pode ser capaz de conhecê-los se você se aventurar profundamente.
+No entanto, duvido que estejam dispostos a partilhar os seus segredos com você.
+Eu?
+Por mais que eu pareça, não sou nenhum Senhor.
+E já que a saída está um pouco apertada para mim...
+Aqui estou eu.
+
+Pergunta-lhe como veio parar aqui.
+É curioso.
+Tem certeza que quer ouvir?
+Pode demorar um pouco e eu não gostaria de te abraçar por muito tempo...
+
+Diga-lhe que gostaria de ouvir a história dela.
+Muito bem, então.
+
+Quando o Vazio ainda estava em fluxo, quando os oito Senhores Vazios ainda andavam por estas partes...
+Um deles, chamado Eus, governava este reino em particular.
+Eles foram designados como o porteiro e o juiz das almas perdidas que chegaram aqui.
+Nenhuma alma poderia ultrapassar seu julgamento, nenhum pecado ficou impune.
+Mas, por mais vigilantes e rigorosos que fossem, Eus era infinitamente fascinado pelo pecado.
+Este fascínio cresceu e cresceu, até Eus fez o impensável e cometeu pecado a si mesmo.
+Qual era a verdadeira extensão do pecado deles, não tenho certeza.
+Quando os outros senhores souberam dessa transgressão, suas fileiras se dividiram.
+Alguns deles defenderam Eus, alguns os insultaram.
+Logo os argumentos se transformaram em lutas e essas lutas se transformaram em batalhas cruéis.
+No final, Eus foi devorado para que nada permanecesse.
+Bem, uma parte de Eus conseguiu escapar despercebida.
+Ele estava em silêncio, consumindo sem pensar quaisquer almas perdidas que se aproximassem dela.
+Só conhecia dor e fome.
+Mas, à medida que as feridas começaram a sarar, aprendeu a pensar.
+Começou a ponderar porque nenhuma quantidade de almas perdidas a saciaria.
+Por que foi incapaz de sair destas paredes.
+Por que foi permitido viver.
+Por fim, aceitou sua existência podre, sabendo bem que nenhuma de suas perguntas jamais seriam respondidas.
+Foi assim que vim a ser.
+...
+
+Obrigado.
+Já faz algum tempo que não consigo partilhar essa história.
+Ainda bem que decidi não te comer.
+...
+É uma piada.
+A sua espécie sabe muito mal.
+
+Devias continuar a andar se quiseres encontrar o que procuras.
+Enquanto este reino está em desordem desde então, não baixes a guarda.
+Os Senhores Vazios são uma coisa...
+Mas nem todas as almas perdidas são tão gentis como você.
+Adeus.
+Talvez nos encontremos de novo...
+Parece que bloqueaste acidentalmente a saída.
+[Decide que é melhor seguir em frente]
+Deixa-me ajudar-te.
+Pronto.
+Cuidado onde pisas, as minhas escamas são muito sensíveis.
+[Ela não parece se importar muito]
+
+Tente não enfiar esses ovos com força.
+Estão perto de chocar.
+Sei o que está pensando.
+Mas eu não as deitei.
+Eles simplesmente caem de cima de vez em quando.
+Às vezes eu pego alguns e vejo o que vai sair deles.
+E se você ouvir atentamente, você pode ouvir seus pensamentos.
+É tão excitante.
+Experimenta, talvez consigas ouvi-los também.
+
+[Porque fez isso]
+[Você se sente envergonhado]
+
+É tão pequeno que é difícil falar com você se não te aproximares.
+Desculpe, esqueci-me dos meus modos.
+TRIAL: LUSTO
+O amaldiçoado sucumbiu repetidamente a ações lascivas.
+Tais atos seriam terríveis o suficiente no reino mortal.
+Mas para exercer tal comportamento vulgar no domínio de Lord Add...
+A insolência dos mortais não conhece limites.
+Propomos que o amaldiçoado seja punido em conformidade.
+
+Espera um minuto!
+Vês, isto foi só...
+Umm...
+Embora possa parecer muito mau no início, na verdade...
+Eles...
+...
+Nem vou tentar discutir esta.
+Prendam-nos, mana!
+
+Tempos para ser exacto.
+
+
+
+REUNIÃO COM A NOITE
+Mas que...
+Quem diabos é você?!
+E por que você está dando meu esconderijo?!
+Agora aqueles monstros vão encontrar-nos!
+Você é completamente louco?!
+Oh não oh não oh não...
+
+A senhora bem vestida parece extremamente aflita.
+Faça o seu melhor para explicar que ela não está em perigo imediato.
+Desculpe?
+Encontrei uma cobra gigante há pouco tempo!
+Nem me venhas com essas coisas mais pequenas!
+E o meu vestido...
+Está arruinado!
+
+[Você observa que o vestido extravagante dela só vai atrapalhar]
+Não vou deixá-lo para trás!
+Fazes ideia de quanto isto custa?
+A julgar pelos seus trapos, certamente que não.
+Sério, o que tem vestido?
+Urgh, isto é um pesadelo...
+
+Se não me pode mostrar uma saída desta vala...
+Faz-me um favor e deixa-me em paz.
+Não preciso de ajuda!
+Desaparece!
+E comprar roupas novas enquanto isso!
+
+[Ela está quebrada em lágrimas]
+É melhor deixá-la estar por um momento.
+
+[Ela finalmente se acalmou um pouco]
+Por que eu...
+Porque sou sempre eu...
+Ainda está aqui?
+Desculpa.
+Eu só...
+Tenho muito que fazer neste momento.
+
+Era suposto eu casar hoje.
+Uma grande cerimónia com muitos convidados, como algo de conto de fadas.
+Estava ansioso por isso depois de todos os problemas que tivemos.
+Demorámos um fim-de-semana inteiro só para fazer os convites.
+Então finalmente chegou o dia.
+E lá estava o meu futuro marido, à minha espera no altar.
+E eu...
+Eu fugi.
+Não consegui fazê-lo.
+Sou tão estúpido.
+
+Esperava que tudo isto fosse apenas um pesadelo.
+Mas continua.
+Por favor, diz-me.
+Estou sendo castigado?
+É este o meu castigo?
+É impossível encontrar palavras para a confortar.
+[Você fica em silêncio]
+Por favor, não me deixes aqui.
+Por favor.
+Não quero morrer.
+
+
+
+Mas que raio?
+Pára com isso!
+
+
+[Daggers para olhos]
+
+
+[Ela não fala mais com você]
+
+O que você está fazendo de repente?!
+Deixa-me em paz!
+
+[Ela perdeu completamente o espírito]
+
+
+
+SECRETOS/HINTS
+Bate naquele peito seis vezes seguidas...
+Fica quieto e espera seis segundos...
+A saída revelar-se-á...
+Não perguntes como sei...
+
+Então fez...
+Obrigado pela sua confiança...
+Bem...
+Boa sorte...
+
+Bater no peito três vezes seguidas enquanto está fechado...
+Então espera três segundos...
+Algo bom deve acontecer...
+Não perguntes como sei...
+
+Bem, aconteceu alguma coisa boa...?
+Será que este truque também funciona com outros baús...
+Que tal testá-lo para mim...
+Por favor...
+
+Para me ouvires...
+Nem todos aqui merecem ouvir...
+Mas nós, solitários, somos bastante conhecedores...
+
+GHHHOOOOOORRR!
+
+Já o resolveste...
+...
+Acho que não precisam de mim aqui...
+Suspiro...
+
+Que asas tem aí...
+Não tente empurrar as coisas enquanto flutua...
+Provavelmente arrepender-se-ias...
+
+
+A cauda do Senhor traidor liga a marca...
+Pelo menos quando ainda estavam vivos...
+Embora não saiba como é suposto isso funcionar...
+
+(...)
+(Estou tão cansado de ouvir essas coisas...)
+
+Na sétima sala, apenas mais um passo para além da saída...
+Três sanguessugas vagam, uma completamente fora de alcance... Cair atrás do peito...
+Um peito vazio suspeito cercado por nada, inspecione-o muitas vezes...
+Sorris insaciáveis cercam você, quebram todos os pisos de vidro antes de cair...
+Nada além de uma estrada reta, levar a culpa antes do seu reflexo...
+
+Ksi Shi Shi Shi...
+Estranho...
+Já te meteste muito nisto, não foi?
+
+Já deve ter percebido, mas...
+Não restam muitos Senhores Vazios, agora que acabaste com essa mosca.
+Uma para ser exacta.
+Mas são uma peça chata.
+Chamam-lhes CIF...
+Este não é o meu estilo...
+Mas estou disposto a dar um conselho de graça.
+Talvez te ajude a acabar com eles...
+Que tal, estranho?
+[Você decide ouvir o que o comerciante duvidoso tem a dizer]
+Ksi Shi Shi Shi...
+Ouve com atenção.
+Ninguém sabe o verdadeiro poder do CIF.
+Mas bater-lhes com o seu canivete de manteiga pode ser mais difícil do que pensa...
+Por que não usas esse seu pessoal chique?
+
+Avisa-me se essa dica foi útil...
+Se sobreviveres ao encontro com o Cif...
+Boa sorte!
+Ksi Shi Shi Shi Shi!
+
+A Mão Especial foi revelada!
+COMO USAR:
+Desenhar marca especial duas vezes antes de seu próprio para ativar.
+Usem-nos sabiamente!!
+
+[Você olha para a luz estranha]
+[Você mal consegue ver duas figuras vestidas de branco]
+[Eles estão falando sobre algo]
+Dou-te outra pista.
+Ninguém é perfeito sem mim.
+Não tenho nada para oferecer, mas faço os outros parecerem abundantes.
+Alguns não podem viver sem mim, para outros sou tudo o que resta.
+Não posso ser partilhada, mas estou sem fim.
+Não sou nada, mas sou o melhor de todos.
+Sem mim, um não tem sentido.
+O que sou eu?
+
+
+
+
+
+
+
+
+
+SONHO III
+Já chegámos?
+
+Não tentes enganar-me.
+Sei que não está dormindo.
+
+Talvez pudesse descansar se não fosse tão impaciente, Alteza.
+Vá lá, está um gelo aqui!
+Que tipo de maluco vive num país como este?
+Este país não é tão diferente do seu, Vossa Alteza.
+Na verdade, há alguns anos atrás estava num estado ainda mais preocupante.
+Depois que o governante faleceu sem herdeiro, o país enfraquecido quase foi engolido pelos vizinhos em guerra.
+Mas então, um cavaleiro anteriormente desconhecido subiu à ocassão.
+Ele rapidamente eliminou as tensões internas crescentes...
+E apesar de estar em grande desvantagem numérica, seu exército facilmente afastou outras nações com o objetivo de tomar o trono.
+A paz voltou, e o cavaleiro declarou sua soberania.
+O país começou a prosperar novamente.
+Não admira que Sua Majestade se queira aliar ao líder desta terra...
+Aquele a quem chamam Cavaleiro dos Céus.
+Por favor, já ouvi este discurso de vendas antes.
+Porque não casas com ele já que é um grande fã?
+E essa alcunha pomposa... Acho que vou vomitar.
+Bem, certamente não está na mesma liga com a sua, Vossa Alteza.
+Cala-te.
+
+Vossa Alteza, tudo bem?
+Sim...
+Mais ou menos.
+Que raio foi aquilo?
+Uma avalanche, talvez...
+...
+Por favor, fique dentro de casa, Alteza.
+
+Lady Gray!
+Uma avalanche bloqueou o nosso caminho!
+Fomos separados do resto do trem!
+Por que a retaguarda está demorando tanto?!
+
+Não tem de te preocupar com eles.
+Eles já foram tratados.
+...!
+Mas não resistiu muito.
+Mas para facilitar as coisas para ti...
+Dá-me a cabeça da coroa!
+(Como um grupo humilde de bandidos sabe sobre a princesa ...?)
+E se eu recusar?
+Não tem muita escolha, menina.
+Não penses que essa sua cara bonita te vai salvar.
+Ou talvez esta senhora saiba manusear uma espada.
+Isso é um riso e um monte!
+
+...
+Parece até escória como você sabe que nenhuma corte jamais carregaria uma arma.
+No entanto, está muito enganado se acha que estou sem opções.
+Sério?
+E quais seriam essas opções?
+
+Podia deixar-te viver.
+Mas que...
+
+[Gray o Destruidor se aproxima de você]
+[Gray o Destruidor medi-lo]
+[Você cometeu um erro grave]
+G: Vou te dar três voltas.
+
+[Você chama seus capangas]
+B: Seus covardes!
+B: Cubram-me, seus tolos!
+[Você balança sua espada contra o inimigo]
+B: Toma esta sua bruxa!
+[Gray o Destruidor salta para você]
+G: Eins.
+G: Zwei.
+G: Drei.
+[Você chama seus capangas, mas eles estão com muito medo]
+
+Só pode estar a brincar...
+Gray, o Destruidor...
+O primeiro e único...
+Poupa as suas reflexões e diz-me quem te mandou.
+O que...?
+Não é uma boa altura para começares a fazer-te de parvo.
+A não ser que prefiras outro serviço.
+...
+Desculpe, posso ser apenas uma folha de chá...
+Mas até eu tenho o meu orgulho.
+Como queiras.
+
+Sim, Gray!
+Mostra-lhes como se faz!
+Volte para dentro, Sua Alteza!
+E perder o golpe final?
+Nem pensar!
+Bem, bem, bem.
+A minha sorte finalmente mudou...
+Peguem-na, rapazes!
+Lily!
+
+Heh.
+Parece que este bandido foi muito enganado.
+
+Estava começando a preocupar-me porque os meus convidados não apareceram.
+As minhas desculpas.
+Sujos como eles ainda não foram completamente eliminados deste país.
+Ainda há trabalho a fazer.
+
+... Esse cabelo branco é tão puro como os contos contaram.
+Permita-me apresentar-me.
+Sou Johann, o Primeiro, governante deste país humilde.
+Deixa-me servir-te bem...
+Minha princesa demoníaca.
+
+Um inverno especialmente duro e longo teve um preço na colheita das pessoas.
+A fome e as doenças espalham-se entre pobres e ricos.
+Nem mesmo o rei do país foi poupado.
+
+
+
+
+
+REUNIÃO COM OS FAMILHOS
+[Um homem magro está diante de você]
+Cheira...
+Comida...
+Dá-me.
+Parece que ele está à procura de comida.
+[Talvez você deva dar algo para ele?]
+
+[Entregas um dos seus ídolos de gafanhotos]
+O homem agarra-o sem hesitar, engolindo-o num instante.
+Prova...
+Nada...
+Mais...
+Dá mais.
+
+[Não te resta nada]
+[O homem suspira]
+Um homem magro está deitado no chão.
+[O homem caiu]
+[Ele mal está respirando]
+Há muito pouco que possas fazer para o ajudar.
+É melhor continuar a andar.
+
+O nariz dele mexe-se ligeiramente.
+Sem cheiro...
+Sem comida...
+O homem não tem interesse em ti.
+Ele parece não se importar em ser empurrado.
+Ele parece não se importar com nada além de comida.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SONHO IV
+Derrubar aqueles capangas de uma só vez...
+Foi fantástico!
+E depois deu aquele olhar de bandido antes de lhe fritar o rabo...
+Ele é mesmo um rei?
+Ele é demasiado fixe para isso!
+Por favor, tente acalmar-se um pouco, Vossa Alteza.
+Este foi um longo dia para ti.
+Eu sei, mas estou muito excitado para dormir...
+Acha que vou poder conhecer o Johann amanhã?
+Talvez ele me ensine a fazer aquele feitiço!
+Tal magia não deve ser usada de ânimo leve, Vossa Alteza.
+Killjoy Gray ataca novamente...
+Talvez esteja com um pouco de inveja?
+...
+
+Está gostando da queda de neve?
+O nosso inverno tem as suas vantagens, não acha?
+Vossa Senhoria!
+Desculpa, quase não te reconheci sem a armadura.
+Permita-me agradecer-lhe mais uma vez por salvar Sua Alteza, Vossa Senhoria.
+Era o mínimo que podia fazer.
+Espero que Sua Alteza se sinta melhor.
+Ela adormeceu, finalmente.
+Ela deve ter ficado exausta depois de tudo isso.
+Mas não se preocupe, Vossa Senhoria.
+Ela não é do tipo que se assusta facilmente.
+Embora Vossa Senhoria tenha deixado uma grande impressão sobre ela.
+Por favor, trata-me por Johann.
+Não sou um homem de títulos elevados.
+Ouvi dizer que eras um pouco realista.
+Embora eu não esperasse que você ainda correr para a batalha sozinho.
+Um bom governante faz qualquer coisa em seu poder para corrigir o errado.
+Isso é responsabilidade deles.
+Infelizmente, nem todos os governantes seguem tais ideais.
+Muitas coisas horríveis aconteceram a este país e ao seu povo devido à simples negligência.
+Não quero repetir esse erro.
+Mesmo que signifique sujar as mãos de vez em quando.
+Falando nisso, as coisas podem não ter corrido tão bem hoje sem a sua contribuição, Lady Gray.
+Pelo que sei, seguraste esses bandidos durante algum tempo sozinho.
+Estava fazendo a minha parte como dama de companhia.
+E depois alguns, eu discutiria.
+Não te menosprezes.
+Posso dizer que não é uma senhora comum, Lady Gray.
+Ou devo dizer 'Gray, o Destruidor'?
+...
+Então, também já ouviu falar.
+Fiz o meu melhor para deixar essa alcunha para trás, juntamente com os meus feitos passados.
+
+
+
+A partir de amanhã, gostaria de conhecer melhor esta sua princesa demoníaca.
+Com a sua ajuda, se quiser.
+Claro.
+Tenho certeza que Sua Alteza também ficaria encantada.
+Estarei ansioso por isso, então.
+Tenha uma boa noite, Lady Gray.
+
+Mas enquanto eu puder servir Sua Alteza o melhor que puder...
+Isso é tudo o que importa.
+Admiro a sua devoção a Sua Alteza.
+Ainda assim, não consigo evitar de pensar...
+Quando lutaste contra aqueles bandidos...
+A qualquer momento, gostaste?
+...!
+Um lutador da sua capacidade poderia ter enviado aquele bando de ladrões num instante.
+Não tenho tato...
+Não me venhas com pensamentos frívolos.
+No entanto, tomou o seu tempo, quase como se estivesse apenas brincando com eles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REUNIÃO COM NÓMADA
+Uma mulher está à frente de um peito, a bloquear-te o caminho.
+[Ela está resmungando para si mesma]
+Ainda nada...
+Não reparei em ti.
+Foi inesperado encontrar outra pessoa aqui.
+Também é caçador de tesouros?
+Espera.
+Esse pessoal não se parece com algo que normalmente se carrega.
+Aposto que o encontrou aqui, não foi?
+Importas-te que dê uma vista de olhos melhor?
+Não te preocupes, sou especialista em lidar com coisas como esta.
+
+[Quando você começa a responder, a mulher de repente pega seu bastão!]
+
+Drat, porque é que isto não funciona?
+Você outra vez.
+Por favor, perdoa-me!
+Sei que não devia ter feito isso, mas não tive escolha.
+O meu pai está muito doente e o remédio que precisa custa uma pequena fortuna e...
+Não pode encontrar no seu coração para me perdoar?
+[...]
+...
+[...]
+Algo me diz que não acredita nisso.
+Tudo bem.
+Sei quando estou no limite.
+Toma, pode ficar com isto.
+Não consegui fazê-lo funcionar, por isso provavelmente não vale nada.
+
+[Recuperaste o seu pessoal]
+[Parece estar intacto]
+[Tente não perdê-lo novamente!]
+
+O quê?
+Já devolvi a equipe, por isso pára de olhar para mim assim.
+Aqui, só para mostrar que não tenho má vontade com você...
+Também pode ficar com isto.
+Não vejo grande utilidade para eles, mas talvez aprecie o gesto.
+[Você recebeu sete ídolos gafanhotos]
+
+Este lugar é absolutamente enorme.
+Nunca vi ruínas como esta...
+Mas tenho certeza que se me aventurar o suficiente, serei capaz de descobrir algum saque espectacular.
+Achado não é roubado, como dizem.
+E não, não vou roubar-te outra vez.
+Mete-te na sua vida e eu também.
+
+O que é isso?
+Estou bloqueando o seu caminho?
+Deixa-me recuperar o fôlego por um momento.
+
+[A mulher atrevida se recusa a mover]
+Mas parece que não há forma de a contornar.
+
+[Decide deixá-la em paz]
+É melhor assim.
+
+Acalma-te!
+Já pedi desculpa!
+Pára já!
+
+Tem o pessoal a trabalhar outra vez?
+Sim, vi-te a manuseá-lo mais cedo.
+É uma pena não poder usá-lo.
+Podia ter sido muito útil para a pilhag...
+...excavando estas ruínas.
+De qualquer forma, pode ir em frente.
+Já que não tem jeito para caçar tesouros...
+Pensei em dar-te uma vantagem.
+Até logo!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SONHO V
+Que tal esta?
+Não é o seu vestido habitual, Alteza?
+Diz-me se ficar bem em mim!
+Ficam-te todos bem.
+Como sempre fazem.
+Muito útil.
+Estou suando aqui, sabe...
+Acha que cheiro mal?
+Pensei que as princesas não cheirassem.
+Pára de sorrir, engraçadinho.
+É um pouco estranho ver-te assim, só isso.
+É por causa de Lord Johann?
+... só quero estar melhor quando ele chegar.
+Não sabemos quando virá visitar-nos, Alteza.
+É exactamente por isso que tenho de estar preparado!
+Pode demorar algumas semanas.
+Ugh...
+Não recebeu outra carta dele recentemente, Alteza?
+Sim, mas ainda não terminei a minha resposta!
+Pensando bem, tem andado estranho desde então.
+E se eu tiver?
+Obviamente, não é meu dever nem lugar para julgar, Vossa Alteza.
+Mas não acha que está avançando um pouco precipitadamente?
+Entendo.
+Preferes que partisse umas costelas primeiro?
+Sabe o que quero dizer, Vossa Alteza.
+Preocupas-te demais, Gray.
+Talvez.
+Mas estamos aproximando-nos de territórios desconhecidos e prefiro estar seguro do que arrependido.
+O que quer dizer com isso?
+Com amor, Vossa Alteza.
+Cala-te, sua bruxa!
+
+Vossa Alteza!
+É Lorde Johann!
+Ele chegou sem avisar!
+Ele está à espera lá em baixo!
+
+É uma carta inacabada.
+[Você provavelmente não deveria lê-lo ...?]
+[Você definitivamente não deve lê-lo]
+(Eu realmente, realmente não deveria lê-lo.)
+...
+
+
+
+
+Querido Senhor Johann.
+Sinto meu coração acelerado enquanto escrevo esta carta.
+E à medida que aprendo as palavras, a minha mente segue o exemplo não muito atrás.
+É tudo por sua causa.
+Repito e volto aos momentos que passámos juntos.
+Mas essas simples memórias não cessarão esta dor.
+Eu responsabilizo-te.
+Por isso decidi não partilhar a minha resposta até poder vê-lo novamente.
+[A carta termina abruptamente]
+
+[Não devias ter lido]
+
+Estou tão contente por ver que Sua Alteza está tão animada.
+Graças a Lord Johann!
+As minhas costas também estão contentes!
+Não se vai juntar a eles lá em baixo, Lady Gray?
+
+O Cavaleiro dos Céus chegou.
+Será que ele é tão bonito como dizem?
+Talvez possa vê-lo hoje...
+... Assim que eu sair do serviço, claro!
+Por favor, junte-se a eles lá em baixo, Lady Gray.
+
+Lady Gray, prazer em vê-la.
+Igualmente, Lorde Johann.
+Já faz algum tempo.
+Perdoe-nos por chegarmos sem avisar.
+De nada.
+Hehee...
+Alguém parece não se importar.
+Johann e eu temos um anúncio importante a fazer!
+
+Lady Gray!
+Sua Alteza e Lorde Johann parecem estar no meio de algo...
+Então decidi não me intrometer.
+Mas tenho certeza que vai ficar bem!
+Do que estão falando?
+Poderia ser...!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JULGAMENTO: PRIDO
+O amaldiçoado tem repetidamente recusado aceitar a derrota.
+Se é devido a um erro ou uma incapacidade de ver a resposta...
+É preciso reconhecer que todas as ações têm seu preço.
+Propomos que o amaldiçoado seja punido em conformidade.
+
+Uau.
+Está mesmo a alargar a definição de acção punível.
+
+O orgulho é o maior pecado por uma razão.
+Aqueles que não conseguem engolir o deles quando é necessário vão eventualmente sucumbir a ele.
+É uma verdade absoluta do nosso mundo.
+
+Não sabe disso?
+
+Se a nossa defesa não tem nada de valor para partilhar...
+Vamos já ao veredicto.
+
+Calma aí!
+Como dizem, o caminho para o inferno é pavimentado com boas intenções.
+
+...
+Acho que não percebes o que significa esse ditado.
+
+Claro que sim!
+É uma piada!
+Percebeste?
+Ou aqueles seus chifres gordos deixaram todo o sentido de humor que tinhas?
+Desculpa, foi mal.
+Não tinhas nada para começar!
+
+... Porque é que sempre cai aos meus cornos com você?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REUNIÃO COM A FILHA
+[Uma menina se senta no chão]
+Enquanto os seus olhos se encontram, ela treme.
+Para onde está olhando?
+
+É um daqueles anormais?
+Diz-lhe que não vai magoá-la.
+Eu...
+Não tenho medo de ti.
+Deixa-me em paz.
+
+[A menina faz beicinho, ignorando você]
+Ela olha sorrateiramente para ti, mas desvia os olhos logo depois.
+
+[Tenta confortá-la]
+Quem pensa que é, a minha mãe?
+Deixa-me em paz...
+
+Eu disse para me deixares em paz!
+
+[Você diz a si mesmo que não vai machucá-la]
+
+Mas que raio?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JULGAMENTO: GREED
+O amaldiçoado tem tentado repetidamente forçar seu caminho contra o curso deste reino.
+Forçar o seu caminho sem pensar em nada não te leva a lado nenhum.
+Só prova o desejo cobiçado de seguir em frente.
+Propomos que o amaldiçoado seja punido em conformidade.
+
+...
+O que é isto?
+A nossa defesa está sem palavras?
+Seria a primeira vez.
+Distraí-me com os seus chifres gordos, só isso.
+Enfim...
+... ... ...
+...
+Não me digas que não tem nenhuma declaração preparada.
+Desculpa, distraí-me outra vez.
+
+Pelo menos não desistiram, certo?
+Na verdade, estou bastante curioso para ver o quão longe eles podem chegar assim.
+Afinal, não há problema em dedicação e força bruta não pode resolver.
+Além dos seus chifres.
+São simplesmente sem esperança.
+... Vou mostrar-te o significado de desesperança quando acabarmos aqui.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SONHO VI
+Este lugar é suficientemente grande?
+Parece apertado.
+Tenho certeza que isto será suficiente para os nossos propósitos, Vossa Alteza.
+A não ser que prefiras o salão principal?
+Nem pensar!
+Não quero que o Johann entre enquanto nós...
+Se tivesses estado tão interessado quando eras mais novo, não teríamos tanta pressa.
+Bem, é agora ou nunca!
+Por isso pára de tagarelar e continua!
+Claro, Vossa Alteza.
+E é melhor cumprires a sua promessa!
+Sim, sim.
+Nada de piadas.
+Óptimo.
+Posso ter esta dança, Vossa Alteza?
+Faz-me só...
+
+E põe a sua mão esquerda no meu ombro, assim...
+Agora, segue-me e tenta relaxar.
+Tudo bem...
+Vai ficar bem, Vossa Alteza.
+Vamos começar!
+
+Vejam só!
+Não pensei que isto fosse tão divertido!
+
+Nada mal, Vossa Alteza.
+Pela primeira vez, isso é...
+
+Sua Alteza é natural!
+
+Está chegando lá, Vossa Alteza...
+(Sinto pena dos dedos do Senhor Johann...)
+
+Você...
+(Você não está apenas brincando comigo, seu pirralho...)
+
+Que tal uma pequena pausa?
+
+Olá, Gray.
+Sim, Vossa Alteza?
+É quase estranho ver-te a dançar.
+Como assim?
+Estou mais habituado a ver-te chutar e socar coisas.
+Onde aprendeste a dançar assim?
+Ou também não te lembras disso?
+Lembro-me muito bem.
+Eu tinha a sua idade.
+Tudo o que eu sabia naquela altura era...
+Chutar e socar coisas, como dirias.
+Então, eu estava bastante apreensivo no início.
+Felizmente tive um bom professor.
+Hmm?
+Sua Majestade, claro.
+...
+Desculpe, Vossa Alteza.
+Isso foi muito indelicado da minha parte.
+Não te preocupes, Gray.
+Não me lembro de nada da mãe.
+E no entanto...
+Em alturas como estas, gostava que ela ainda estivesse por perto.
+...
+Tenho certeza que ela está vendo entre as estrelas abençoadas, Vossa Alteza.
+Especialmente agora que o seu grande dia é daqui a poucas semanas.
+Acha mesmo?
+Você se parece cada vez mais com ela a cada ano que passa.
+Deixava-a orgulhosa.
+
+O que foi, Gray?
+Nada.
+Devo estar a ouvir coisas.
+(Estava alguém à porta...)
+
+Então, devemos tentar de novo?
+Afinal, a prática torna-se perfeita.
+Se insistes.
+
+(Eu me pergunto se você realmente está assistindo ...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REUNIÃO COM GOR
+Uma cabeça gigante está diante de ti, bloqueando o seu caminho.
+
+Hngghh...
+
+O que quer?
+[Eles mal conseguem reunir um gemido irritado]
+
+Diz-lhes que precisam de se mexer.
+Sério?
+É por isso que me perturbas?
+Estava saindo-me tão bem com a morte.
+Que incómodo.
+
+Não sei do que está à procura.
+Mas talvez saibas que não me vou mudar em breve.
+Deixa-me morrer.
+
+Pergunta-lhes se sabem outra maneira de descer.
+Eeeeeee...?
+Não ouviste nada do que acabei de dizer?
+...
+Tudo bem.
+Se significa que posso continuar a morrer em paz...
+Deve haver aqui uma estátua sorridente algures...
+Se saltares directamente para um buraco à frente dele...
+Você deve ser capaz de avançar mais fundo.
+Quase me esquecia.
+Este truque requer um sacrifício.
+Nada de importante, desde que tenhas comida com você, devias estar pronto para ir.
+
+Não tem comida com você?
+Tudo bem...
+Toma, toma.
+[Você recebeu um ídolo gafanhoto]
+[... Onde eles guardam essas coisas?]
+
+O que é agora...
+Aquelas almas perdidas estão obstruindo o seu caminho?
+Eu sabia que não lhes devia ter dado nada...
+Continuavam a implorar e a pedir comida até eu ceder e agora ficam por perto, à espera de mais...
+São do pior tipo, se me perguntares...
+Não me olhes assim.
+Não posso fazer nada em relação a eles...
+Faça-nos um favor...
+E dá-lhes um bom empurrão.
+Tenho certeza que já te habituaste.
+Já que chegou até aqui sem perderes a cabeça...
+
+Vá em frente.
+Sem ressentimentos.
+As almas perdidas estão aqui por uma razão.
+São apenas combustível para a DIS...
+
+O caminho já está livre?
+Tudo o que resta fazer por ti...
+... é encontrar aquela estátua sorridente e dar um salto.
+Então posso continuar a morrer...
+...
+
+Aquele pessoal que empunhas...
+Onde o arranjaste?
+... acho que não é importante.
+Chama-se Vazio Rod.
+Era uma posse valorizada de Lord Add.
+Ela dirigiu isto por uns tempos.
+Talvez...
+Muito bem, estranho.
+Tenho um pedido.
+Vai ouvir?
+
+[Você decide ouvir o pedido deles]
+Senhor. Adicionar é o que eu posso agradecer por minha situação atual.
+Há muito tempo, eles e os outros Lordes tiveram uma grande luta.
+Não queria ter nada a ver com isso, mas foi puxado de qualquer maneira.
+Como castigo, o Add cortou-me o corpo.
+Quando soube que tinham deixado este reino, senti-me sem esperança.
+Porque só eles me poderiam conceder o meu descanso eterno.
+Dizem que o Add escondeu os seus tesouros antes de partirem, mas não consegui acreditar...
+Até apareceres.
+Quero que encontres a espada do Add, a Lâmina Vazio.
+Só isso me pode matar.
+Se eu tivesse que adivinhar, provavelmente não o encontrarás apenas a mentir.
+Adicionar provavelmente escondeu-o em uma das passagens secretas.
+Os meros mortais normalmente não os podem aceder...
+É aí que entra o Vazio Rod.
+Você deve ser capaz de entrar nas rotas ocultas com um encantamento especial.
+Lembre-se disso:
+Onde o nada grava a marca do Senhor...
+... Onde o caminho para a condenação repousa dentro de ti...
+... Colocai vossa fé e abraçai o Vazio.
+
+[Eles começaram a dormir novamente...?]
+
+Acha que isso parece muito suspeito?
+Faça o que quiser, desde que pare de me incomodar com os seus problemas...
+
+Assim que encontrar a Lâmina Vazio, certifique-se de voltar para cá.
+Então posso finalmente descansar...
+
+Diz-lhes que não sabe usar o encantamento.
+
+- O quê?
+
+Como assim, não fazes ideia?
+Pode usar o Vazio, não pode?
+Tenho muitas esperanças...
+... Por nada?!
+...
+Como queiras.
+Já devia saber...
+
+Desaparece.
+Estou de mau humor agora...
+
+Quer chegar à saída?
+Não te posso ajudar...
+...
+Tudo bem...
+Devias procurar uma estátua sorridente.
+Se saltares directamente para um buraco à frente dele...
+Poderá avançar mais...
+E mais importante, pode finalmente deixar-me em paz.
+A propósito, não ouviste isto de mim.
+
+Vai dar uma volta.
+Está de volta...
+Pensei que já tinhas desistido...
+Se quer sair, usa aquela estátua sorridente ali...
+
+[Eles te observam sem qualquer interesse]
+
+Ainda aqui?
+Não sei se já mencionei isto, mas...
+A estátua sorridente não o deixará passar sem um sacrifício.
+Senão vai cair na escuridão como o burro que é.
+Quanto ao sacrifício, quase qualquer coisa comestível deve fazer.
+
+Não tem comida com você?
+Fiiine...
+Toma isto.
+E pela última vez...
+Sai.
+
+Espera...!
+A espada que carregas...
+Será que...?
+Sim, não há dúvida.
+...
+Sei que isto é muito repentino.
+Mas podias...
+Como devo dizer isto...
+Pega nessa espada e...
+Mata-me...
+
+Por favorzinho?
+
+O quê?
+Não me quer matar?
+...
+Desculpem, devia saber que os mortais levam a morte muito sério.
+Estou cansado de estar vivo.
+Ainda mais depois de o meu corpo ter sido levado.
+E já que este lugar mal funciona...
+Não tenho nenhum propósito aqui.
+Além disso, estou bloqueando o seu caminho, certo?
+Então seria melhor para ti também...
+Como não há outra saída deste andar...
+Então, que tal?
+
+[Você decide conceder o seu desejo]
+Sério?
+Isto está mesmo a acontecer...
+Que alívio...
+...
+Tudo bem.
+Enfia-me essa espada...
+Não deve exigir muita energia.
+
+Espera.
+Pode ser uma pergunta estúpida...
+Mas já morreu antes?
+Como é morrer?
+Ouvi dizer que os mortais acreditam em reencarnação ou algo assim.
+Isso também vai acontecer comigo?
+Porque isso parece muito incómodo.
+Diz-lhes que preferes não pensar nessas coisas.
+Entendo...
+Nesse caso, só tenho mais uma coisa.
+Se vires a minha irmã...
+Diz-lhes que o Gor disse olá.
+Falta-lhes o olho esquerdo, tenho certeza que os reconhecerá se por acaso se encontrarem.
+E...
+Obrigado, estranho.
+Até logo.
+
+[Eles se recusam a falar com você mais]
+[...]
+[ ́'Onde o nada grava a marca do Senhor, onde o caminho da condenação repousa dentro de vós, depositai a vossa fé e abraçai o Vazio. ́’]
+[O que eles queriam dizer com isso?]
+
+Olá!
+Está à procura da cabeça gorda?
+Acabei de me livrar deles.
+Não me interpretes mal.
+Eles não estão mortos.
+Não podia matar aquele burro preguiçoso nem que tentasse.
+Além disso...
+A morte seria demasiado gentil para alguém que dedura livremente sobre os nossos segredos.
+Sim.
+Sei que andas a bisbilhotar lugares que não pertences, mortal.
+Acredita, se dependesse de mim...
+Já estarias morto.
+Pode considerar-se com sorte por agora.
+Mas quem sabe...
+No final, talvez gostasses de estar morto.
+Até logo!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SONHO VII
+Nada de espreitar!
+Tem a certeza que não precisa de ajuda, Sua Alteza?
+Eu trato disto!
+Acho que...
+Por que está experimentando isso a esta hora?
+Está preocupado que já não sirva?
+Não há muito que possamos fazer se for esse o caso...
+Cala-te.
+Não me viu a usar isto depois dos ajustes, pois não?
+Só preciso da sua opinião de especialista.
+E para ter certeza de que nada é... A rebentar ou assim.
+Pode olhar agora.
+Então...
+O que acha?
+...
+Porque está sorrindo assim?
+Espero que não estejas a tentar inventar nada engraçado.
+É lindo, Vossa Alteza.
+Não esperava nada menos.
+Mas...
+Mas o quê?!
+Acho que está faltando alguma coisa.
+
+... ... ...
+Há algum problema?
+Não lhe agrada?
+Não, é que...
+Eu...
+Nunca te vi sem isto.
+Posso mesmo usá-lo?
+Tenho andado com ele desde que me lembro...
+Mas acho que vai carregar esse pingente muito melhor do que eu, Alteza.
+
+
+
+Está atrasado.
+As minhas desculpas.
+Este lugar foi mais difícil de encontrar do que eu pensava.
+Porque me chamou aqui, Lady Gray?
+
+Isto tem de acabar.
+Do que está falando?
+Sabe muito bem o que quero dizer.
+Não posso continuar assim.
+Que repentino da sua parte.
+Nunca imaginei que a sua convicção fosse assim.
+Cumpri a minha promessa até agora, não foi?
+Vou casar com a sua princesinha e torná-la minha rainha...
+... para que ela possa finalmente alcançar a sua liberdade.
+Não foi isto que desejaste?
+A Lily ama-te mesmo.
+E depois?
+As emoções dela não têm sentido.
+Já chegou até aqui.
+Sua Alteza nunca será a mais sábia.
+Afinal, ela é apenas uma ingénua, mimada...
+
+...!
+Ela pode ser uma imp...
+Mas uma vez prometi protegê-la.
+É tudo o que me importa.
+Pensei que você, de todas as pessoas, entenderia a importância das nossas responsabilidades.
+Eu claramente julguei-a mal, Lady Gray.
+Mas não te enganes.
+É tarde demais para voltar atrás.
+Nesse caso, vou contar tudo à Lily.
+Você não...
+Certamente entendes o que aconteceria...!
+Que assim seja!
+A Lily não merece isto!
+
+Eu realmente admiro-te...
+Desde que te vi a tratar daqueles mercenários...
+Eu sabia que eras excepcional...
+Realmente um desperdício.
+Infelizmente, os meus planos foram iniciados muito antes de você apareceres, e não tenho tempo para isto...
+Se não posso ter o que desejo...
+É melhor morreres, Gray, o Destruidor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REUNIÃO COM MIMIC
+Está no meu caminho.
+Não posso perder tempo com você.
+Por favor, afasta-te.
+Por que está assim?
+Não tem nada melhor para fazer?
+Mexe-te.
+Está bloqueando o caminho.
+Para onde está olhando?
+Porque está agindo assim?
+Há algum problema?
+Pára de brincar comigo.
+Pára de me fazer perder tempo.
+Pára.
+Já te vi antes?
+Os meus olhos estão aqui em cima.
+Cuidado onde pisas.
+O quê?
+Afastem-se.
+Ficas sempre no meu caminho...
+O que fazes aqui?
+Acho que não te posso ajudar...
+Sabe onde fica a saída?
+Tem de haver outra maneira...
+De onde veio?
+Está perdido?
+Posso ajudá-lo?
+Há algum problema?
+Não vês que estou ocupado?
+Quanto tempo mais...?
+Porque me está seguindo?
+Precisa de alguma coisa?
+Não consigo chegar a lado nenhum assim.
+Pára de me seguir.
+Quem é você?
+
+...
+Parece que descobriste.
+Está preso.
+Não há forma de contornar isto.
+Isto é impossível.
+É o que eu gostaria de dizer.
+Como se isso fosse suficiente para te impedir.
+Acredita, eu devia saber.
+
+Provavelmente já te preparaste para isto...
+As coisas não vão ficar mais fáceis a partir daqui.
+Honestamente, nem sei dizer quanto te resta...
+Mas não pode desistir.
+Não vai desistir.
+Porque alguém está à sua espera.
+Não precisa que te diga isso.
+Apenas...
+Não sejas muito dura com você.
+Mesmo quando as respostas te escapam e está pronto para sucumbir ao desespero...
+Eu acredito em ti.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SONHO VIII
+É...
+Já de manhã...?
+Como é que ainda estou vivo?
+Ele pode ter falhado...
+Mas mesmo que isso fosse verdade...
+
+Lily!
+
+[Algo está errado]
+
+Vossa Alteza!
+Pelas estrelas sagradas o que você pensa que está fazendo?!
+O que se passa com você?
+...
+Vamos...
+Vamos para dentro...
+
+Alto, Gray, o Destruidor!
+Afaste-se da princesa!
+O que...
+O que fazem todos estes soldados aqui, Johann?
+Diga-me você, minha querida senhora.
+Que triste situação é esta...
+Pensar que o servo leal da princesa seria uma pessoa tão invejosa...
+... que ela tentaria atacar Sua Alteza mesmo antes do dia do casamento.
+Acho que é esperado de um antigo fora-da-lei.
+Agressão...?!
+Quão imprudente você pode ficar!
+Assim que o rei souber disto...
+Informei Sua Majestade sobre a situação.
+Ele confiou-me a tarefa de vos capturar.
+Escusado será dizer que este tipo de traição não ficará impune.
+Será executado amanhã.
+Não queremos estragar o clima para o casamento ou a cerimónia de coroação, pois não?
+... Sua escória absoluta da terra...
+Agora.
+Não te apresses.
+Os meus homens estão bem cientes da sua reputação, Gray, o Destruidor...
+Acho que nem você serias descarado o suficiente para acreditares que os consegue enfrentar.
+Não me interessa...
+Desde que a sua cabeça role com a minha!
+
+Pára!
+Vossa Alteza...
+Por favor, pára com isso, Johann...
+Farei o que quiseres.
+Só não magoes o Gray.
+Meu...
+Por uma vez, a princesa é a voz da razão. Que surpresa agradável.
+Que tal, Gray, o Destruidor?
+Entregue-se pacificamente e farei questão de honrar o desejo de Sua Alteza.
+...
+Lily.
+Desculpa.
+
+Lady Gray!
+Não acreditei nos meus olhos quando vi os guardas a levarem-te!
+Depois soube da acusação de agressão...
+Que papo furado!
+Nunca magoaria Sua Alteza!
+
+
+A cerimónia já começou.
+Não sei porquê, mas algo...
+Algo não está certo.
+Foi por isso que tomei a liberdade de trazer o seu traje de batalha.
+Mas espero que não chegue a isso...
+Por favor, Lady Gray, salve Sua Alteza e escape!
+Só você consegue...
+Só você pode proteger a felicidade dela!
+Isso é o que Sua Majestade teria desejado!
+
+Protejam-se.
+Vou distrair os guardas.
+
+Não!
+O prisioneiro está fugindo!
+Ela foi por aqui!
+Despacha-te e apanha-a, seus idiotas!
+
+Lady Gray!
+Não te preocupes!
+Os quatro-olhos informaram-nos.
+Faremos o possível para conter os homens de Lord Johann.
+Talvez as nossas vidas inúteis, finalmente, importem, mesmo que um pouco...
+Agora vai!
+Salve Sua Alteza e fuja!
+
+Parece que a dama de companhia saiu da masmorra.
+Gray!
+Vossa Alteza, tudo bem?
+Desculpa, Gray...
+Não pude fazer nada...
+Agora toda a gente tem...!
+
+O que significa isto, Johann?!
+Receio que tenha chegado tarde demais.
+O sacrifício...
+Está quase pronto.
+O que...?
+
+Tudo neste mundo tem um preço.
+Aprendi esta lição há muito tempo quando coloquei feridos num campo de batalha silencioso, a morrer de fome e a morrer de frio...
+Continuei a rezar às estrelas, mas as estrelas não respondiam.
+Até que finalmente tudo o que pude fazer...
+Foi para amaldiçoar o meu destino podre e culpar os responsáveis por isso.
+Então eles apareceram diante de mim.
+Prometeram-me vida e poder para mudar este mundo.
+Só precisavam da minha devoção inabalável.
+
+
+
+
+
+
+
+
+Liderado por isso, venho oferecer este reino miserável e os seus habitantes como parte do nosso contrato.
+Mostrem-se, Senhores do Vazio!
+
+Sim, sim.
+Calma com o melodrama.
+...
+
+Estes demónios são a fonte do seu poder...
+Demónios!
+
+Acho que é assim que vocês mortais nos chamam agora...
+Enquanto não gosto do som...
+Explicar tudo em detalhes seria muito complicado para ti.
+Os demónios servem.
+Que se lixe o seu nome!
+Deixe Sua Alteza fora disto, Johann!
+A minha quota ainda é um pouco curta, certo?
+... Correcto.
+Resta uma alma.
+O que devo fazer...
+Que tal ajudar-me a decidir, minha querida senhora?
+Se ofereceres a sua alma como parte final do meu sacrifício, prometo deixar a sua princesa viver.
+E porque confiaria em ti outra vez?
+Porque vai agarrar-te a qualquer aparência de esperança de manter a sua pequena princesa a salvo.
+Tal como fez para me convenceres a casar com ela...
+Cala-te, sacana!
+Se soubesses que me casaria com Sua Alteza de qualquer forma para cumprir o meu plano...
+Felizmente jogar duro para pegar valeu a pena, desde que eu gostei bastante do seu...
+Entusiasmo.
+...
+Então faz o que fazes melhor!
+Esquime-se diante de mim, ó poderoso Gray, o Destruidor!
+
+...
+Eu...
+Nem penses nisso!
+...!
+O Gray que conheço não é tão maricas!
+Andar assim é patético!
+Depois de todos estes anos...
+... Você agora decide que está tudo bem apenas desaparecer silenciosamente?!
+Pára de agir como se fosses desistir!
+Estou recebendo uma conversa animadora de Sua Alteza...
+Quão baixo devo ter caído...
+Johann.
+Recuso a sua oferta.
+E farei com que pagues tudo o que fez.
+Juro como Gray, o Destruidor!
+
+...
+Bee.
+É o 'Senhor'. Abelha para ti...
+Gostaria de entreter esta moça arrogante?
+Sério?
+Posso fazê-lo, mana?
+Faz o que quiseres.
+Mas se o DIS descobrir, está por sua conta.
+Boa!
+
+Olá!
+Sou o Lorde Bee Vazio!
+Prazer em conhecê-la.
+Agora...
+Vamos ser despedidos, Mortal!
+
+Raios...
+O que é você?
+Já se partiu?
+Boooring.
+Devias estar contente por ela ter durado tanto tempo.
+Normalmente os mortais simplesmente perdem a cabeça ao ver as nossas verdadeiras formas.
+De qualquer forma...
+Acabou a brincadeira.
+Complete o sacrifício, barriga de aluguer.
+Isso vai cumprir o meu contrato?
+Naturalmente.
+
+Ver-te a lutar foi realmente magnífico.
+Pena que as coisas tenham acabado assim...
+Como futuro imperador deste mundo acordado, teria adorado ter-te ao meu lado!
+
+(Crap ...)
+Desculpa...
+(Eu não poderia cumprir minha promessa para você ...)
+(Só posso rezar pela segurança da Lily com você... No pós-vida...)
+
+Espera!
+Ei, chifres grandes!
+Grande e agora...?
+Não percebo o que se passa...
+Mas se o Johann fez algum tipo de contrato com você...
+... Também quero fazer um!
+Eu ofereço-me!
+Só quero que deixes o Gray em paz!
+
+Isto é que é rico!
+A nossa jovem princesa acha que a sua alma vale alguma coisa.
+...!
+Acredita que pode fazer um contrato com eles como se não fosse nada?
+Quão incrédulo terias de ser!
+...
+
+Muito bem.
+
+Jovem.
+Desejas oferecer a sua alma?
+Espera um minuto!
+Isto tem de ser uma piada, certo?
+Esta criança asinina nem sequer compreende o significado da devoção...!
+Isso não é algo que você julgará, barriga de aluguel.
+...!
+Tem a certeza disto, Meritíssimo?
+A DIS aprovou os seus termos.
+Um contrato pode ser formado.
+Hoooo!
+Isto ficou super interessante!
+Vou perguntar-lhe mais uma vez, menina.
+Deseja oferecer a sua alma em troca da segurança desta mulher?
+Sim.
+Eu sei.
+
+Vossa Alteza, espere!
+Não posso aceitar isto!
+Você aí!
+Parece o líder deste grupo...
+Imploro-te, toma a minha alma em vez disso!
+Rasga-me o corpo se for preciso!
+Receio que isso não seja possível.
+
+Mas se realmente quiser recuperá-la...
+Encontramo-nos no fim do Vazio.
+Ela estará à sua espera lá...
+Lá a DIS vai reavaliar a dignidade de sua devoção.
+
+O que...
+O que se passa...
+Como chegou a este...?!
+Gray.
+...!
+Preocupas-te demais.
+É melhor assim.
+Mais cedo tive tanto medo que pensei que preferia morrer...
+Nem sei o que se passa, ou para onde vou...
+Mas enquanto estiveres aí...
+Não tenho medo.
+Como sempre acreditaste em mim...
+Vou agora depositar a minha fé em ti.
+...
+Lily...
+E...
+Por favor, trate disso enquanto estiver fora.
+É um presente de casamento importante e não sei o que faria se o perdesse.
+Portanto, certifique-se de devolvê-lo, tudo bem?
+
+Meritíssimo, o nosso tempo está quase a acabar.
+...
+Está pronta, menina?
+Pode apostar o seu rabo nisso, idiota!
+Está na hora de começar a viver à altura da minha alcunha...
+Muito bem.
+
+
+
+
+... que teria adivinhado.
+Bem, este resultado é tão bom quanto qualquer outro.
+Infelizmente não estou disposto a correr o risco de te deixar vivo.
+Desta vez não vou falhar!
+
+Não está acontecendo nada...!
+
+Esqueci-me de mencionar.
+Como não acabaste o sacrifício a tempo, o seu contrato foi anulado.
+Então pode despedir-te dos seus poderes mágicos de apertar o dedo e o que não.
+Isto não tem piada, Bee!
+Só faltava um!
+Parece que me importo?
+Além disso, tenho a sensação de que é o menor dos seus problemas neste momento...
+Até breve!
+
+Gray, por favor...
+Este tem sido um dia difícil para todos nós...
+Então, acalma-te e ouve-me.
+Não fazes ideia do que tive de fazer para chegar onde estou agora.
+Só o fiz pelo meu reino...
+Para o meu povo!
+Não guardo má vontade em relação a ti, à sua princesa ou ao seu país!
+O contrato obrigou-me...!
+Eu estava preso!
+Não esperava isto!
+É verdade que no início ia casar com a sua princesa sem pensar muito...
+Mas quando te vi e até onde está disposto a ir só para garantir que me casaria com Sua Alteza...
+Arrisquei-me e usei-te, para o meu prazer...!
+Por isso, lamento imenso e entendo que nada do que disser irá compensar...
+Mas o meu julgamento foi encoberto!
+Pelos meus instintos, pelos meus desejos!
+Quero-te, Gray!
+Ainda te desejo!
+Faço qualquer coisa!
+Poupa-me!
+Não quero morrer!
+Assim não!
+
+[Void Lord Bee se aproxima de você]
+[Void Lord Bee espera pelo seu próximo movimento]
+O Lorde Bee ainda está à espera.
+[Void Lord Bee boceja alto]
+[Void Lord Bee está ficando inquieto]
+[Void Lord Bee bate seus pés impacientemente]
+[Void Lord Bee está crescendo cada vez mais ansioso!]
+[Void Lord Bee já teve o suficiente]
+[Void Lord Bee lança em você de forma preguiçosa]
+[Void Lord Bee salta em você com raiva!]
+
+[Ataca o monstro]
+[Ataca o monstro com tudo o que tem!]
+Um monstro cuja mera existência zomba do próprio mundo.
+
+Deixe Sua Alteza em paz!
+Vai-te embora!
+Morre, monstro!
+Toma isto, criatura nojenta!
+Não vai fugir...!
+Vou destruir-te!
+Por tudo o que é sagrado...!
+ORRRYAAAAAGGGH!!!
+
+Ouch... Estou brincando!
+Tem alguma coisa mais picante?
+Não posso!
+Só isso?
+Vamos, mexam-se!
+Futil...
+Não me faças rir!
+Você me entedia até a morte!
+O que fez?
+
+Uau!
+Não me divirto assim há séculos!
+E nem me lembro da última vez que um mortal conseguiu acertar-me...
+Espera, já me lembro.
+Nunca é.
+É um lado seu que não vejo com muita frequência.
+Será que o mortal conseguiu magoar o seu ego?
+Cala-te.
+...
+
+
+Há uma coisa que preciso de te dizer...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FIM DOS VOÍDEOS
+Não importa o quanto durmas...
+Os seus olhos estão pesados.
+Os sonhos escapam-te.
+Lembras-te porque está aqui?
+Ou perdeste algo muito importante para ti?
+Sem ele, nunca chegarás ao fim.
+... O invejoso envenenou o seu corpo, a sua mente, a sua devoção.
+Procura o Ídolo Negro para te limpares, para voltares para onde começaste.
+
+
+
+
+
+
+
+
+
+
+
+DECISÃO DA RAIA
+Viajaste muito, estranho.
+Através destes corredores intermináveis, mostraste-nos a extensão da sua devoção.
+Nós aplaudimos-te.
+
+
+Parabéns.
+Parabéns!
+
+
+
+
+
+
+
+
+
+
+Estranho.
+Sua devoção ultrapassou as expectativas da DIS.
+Para tal exibição sozinho, a DIS está disposta a fazer um contrato com você.
+Então diz-nos.
+O que é que desejas?
+
+Devolve-a.
+Por favor, devolve-me a Lily.
+
+...
+A sua devoção continua a impressionar.
+Assim, pode levar uma alma com você.
+Com uma condição.
+Talvez nunca mais voltes aqui.
+Aceita estes termos?
+
+Eu sei.
+
+Muito bem.
+
+Do que está à espera?
+Estou farto de jogar os seus jogos!
+
+Surgiu uma incongruência com este assunto específico.
+Um zigoto dentro do sujeito desenvolveu-se em um blastocisto e prendeu-se na membrana mucosa do útero.
+Tsygo e agora?
+... Em termos leigos, outra alma começou a crescer dentro da princesa.
+
+Não...
+Não, não, não, não!
+Está mentindo!
+
+Estranho.
+Não te atrevas a dizer...!
+Que alma deseja levar consigo?
+
+Cala-te!
+Cala-te, cala-te, cala-te!
+Acha que vou aceitar isto?!
+Enganaste-me!
+
+Esta DIS que continuas a mencionar...
+Deixem-me falar directamente com eles!
+
+Quero saber do que se trata!
+Porque continuas a brincar connosco assim...
+Seus demônios traiçoeiros!
+
+Mesmo que achasses as nossas acções sem coração ou incompreensíveis...
+Isso não é algo com que te devas preocupar, estranho.
+Não importa o que tenha acontecido...
+Esta escolha foi feita para ti.
+É a única coisa que importa agora.
+
+Quero vê-la.
+
+Muito bem.
+
+Ela é...
+A dormir?
+
+Mais ou menos.
+Os nossos sistemas de suporte de vida mantêm-na num estado que se pode comparar a um coma artificial.
+Não te preocupes, o seu descanso é pacífico.
+
+Ela sabe...?
+
+Muito improvável.
+Se a levasses com você...
+Tudo isto seria apenas um sonho para ela.
+
+Vou perguntar mais uma vez, estranho.
+Qual é a sua decisão?
+
+
+
+
+
+
+
+
+
+OUTRA REUNIÃO COM O TAIL
+É você outra vez...
+...
+Desculpa.
+Fui aconselhado a não falar consigo...
+
+Desculpa.
+Gostei de falar com você.
+Mas também não quero irritar o Bee.
+
+Por favor, saia...
+
+Fui aconselhada a não falar com estranhos...
+
+Olá!
+Não pensei que fosses capaz...
+Mas mataste mesmo aquela cobra.
+Muito frio!
+Sinceramente, eu devia ter tratado disso...
+Não que a tagarelice soubesse de algo que valesse a pena.
+Seja qual for a sabedoria que possa ter partilhado com você...
+Toma-o com um grão de sal.
+Quero dizer, como é que poderia ter entendido o que se passava naquela altura...
+...
+Estou ficando muito mole.
+Vai morrer ou algo assim.
+Até logo!
+
+Parece estar com pressa.
+Diverte-te!
+PROLOGUE
+Cresceste tão rápido...
+Que alívio.
+Este mundo pode ter mudado.
+Mas terás de te tornar forte, pelo bem da sua mãe.
+Ela ainda está à espera...
+Não posso desiludi-la outra vez.
+
+(...)
+(Parece que estes foram pulverizados um pouco recentemente.)
+(... velha teimosa.)
+
+(O frigorífico começou a cheirar...)
+(Prefiro não abrir.)
+
+Todas estas drogas espalhadas por...
+(Pills na banheiro também ...)
+
+O relógio parece ter parado.
+
+(Você realmente deixou-se ir com estes livros ...)
+
+('Dictionnaire Inferno''...)
+(Uma passagem sobre Belzebu, Senhor das Moscas, foi realçado.)
+(... eu realmente não tenho tempo para este absurdo.)
+(Esta estante está uma bagunça.)
+
+
+
+Está completamente murcha.
+(Você nunca foi bom com flores de qualquer maneira.)
+
+Há um envelope selado na mesa.
+[Está endereçado a você]
+[Gostaria de abri-lo?]
+
+Que confusão...
+(A certidão de nascimento deve estar aqui algures.)
+É melhor começares a procurar.
+
+
+
+
+
+Nada.
+(Bingo)
+
+...
+Acho que está resolvido.
+
+OUTRA REUNIÃO COM O TAIL
+Olá, pequenina.
+
+Fala...?
+Não estava só a ouvir coisas...
+Fala mesmo!
+
+Desculpa, assustei-te?
+Eu devia ter percebido melhor, considerando que a sua espécie tende a manter distância de mim.
+Mas garanto-lhe que não quero fazer mal.
+Na verdade, não falo com ninguém há séculos, por isso, isto é muito refrescante.
+
+Parece surpreendentemente calmo para alguém do seu tamanho.
+
+Não falo com cobras gigantes todos os dias.
+Na verdade, acho que ouvi histórias sobre ti quando era muito mais nova.
+As minhas memórias são bastante confusas...
+Mas não parece como eu imaginava.
+
+Ai sim?
+Faz sentido.
+Já ouviste falar dos Senhores Vazios, pequenino?
+
+Está falando dos demónios?
+Sim, acho que é isso que...
+Ela costumava ligar-lhes.
+
+Há muito tempo, fazia parte de um dos Lordes.
+Enquanto todos os Senhores são capazes de mudar a sua aparência como desejam...
+Meu Senhor, Eus, era único.
+Dizem que todos os viam de forma diferente, que sua forma refletiria o verdadeiro amor do espectador.
+O propósito que este traço serviu não sei dizer.
+Mas parece que a herdei.
+Considerando que consegue ver a minha verdadeira forma...
+Acho que não conheceste ninguém com quem gostasses de copular?
+
+... O que se passa com essa língua grosseira de repente?
+O amor não é sobre...
+Copulando...
+Além disso, os últimos anos têm sido difíceis, tudo bem?
+
+Desculpa.
+A minha compreensão dos mortais e das suas maneiras é bastante limitada.
+
+... Porque estou falando disto com você?
+Porque estou aqui?
+Não é só um pesadelo?
+
+Do seu ponto de vista, isso pode muito bem ser verdade.
+Mas não baixes a guarda.
+Aqueles sem forte devoção estão obrigados a perder seu caminho dentro deste labirinto, até que nada permaneça deles.
+O que quer que estejas à procura...
+Espero que o encontres eventualmente.
+
+Obrigado, acho eu.
+
+Cuida-te, pequenino.
+
+(Sua pele parece estranhamente macia.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+O SONHO DE LILLIE I
+E isso acaba com a nossa visão.
+Então, o que acha?
+Claro, há alguns locais que precisam de uma pequena transformação...
+Mas nada que um pouco de gordura não resolva!
+Além disso, há espaço suficiente para ti e para a sua filha.
+Francamente, este lugar é um roubo!
+E este ar de história que permeia toda a residência...
+Sério...
+De tirar o fôlego.
+...
+Dá-me licença por um momento.
+Por favor, pensa nisso entretanto.
+
+Estou, fala o Gray?
+Desculpa não ter respondido antes.
+A visualização acabou.
+Como devo dizer isto...
+É ainda pior do que as fotografias fizeram parecer.
+Sim, isso é mau.
+...
+Acho que vou aceitar.
+Sabe que não estou nadando em opções.
+O banco não vai estender o empréstimo com o meu passado...
+Não, não te podia colocar nessa situação, depois de tudo o que fez...
+Mas agradeço a oferta, sério.
+Nós damos um jeito.
+Embora precise de um trabalho sério.
+Mesmo assim...
+Este parece-me bem.
+Não, ela não parece importar-se nada.
+Pelo contrário.
+Tudo bem, vou pensar nisso, se te faz sentir melhor.
+Vemo-nos mais tarde.
+Mãe!
+
+E o que aconteceu aos seus sapatos, menina?
+Tirei-os!
+Estão no meu quarto!
+O seu quarto?
+Sim, o grande!
+Calma, querida.
+Ainda não nos movemos...
+Há um enorme rato morto no armário também!
+Oh.
+(... provavelmente deveria chamar um exterminador primeiro...)
+
+
+
+
+SONHO DE LILLIE II
+No início, quando o céu e a terra ainda eram um e o mesmo...
+Uma flor floresceu, iluminando o espaço com estrelas.
+Seres que se baseavam em sua luz foram concedidos tanto pensamento e emoção.
+Entre esses seres estavam os humanos.
+Cheio de gratidão, as pessoas começaram a orar às estrelas.
+Mas as estrelas não lhes responderam.
+Talvez não nos possam ouvir de tão longe, pensavam.
+Com seus esforços combinados, os adoradores construíram uma grande torre.
+Acima dela, os humanos foram capazes de criar asas e voar até onde o olho pode ver.
+Estes mensageiros alados fugiram, esperando um dia alcançar as estrelas que tanto admiravam...
+O tempo passou, até que um dia, algo inesperado aconteceu.
+Uma estrela caiu, as pessoas se alegraram com a emoção ao se reunirem ao redor dela de longe.
+Será que as estrelas finalmente ouviram suas orações?
+Deve ser uma resposta!
+Mas a estrela caída não brilhou como as outras.
+
+A sua luz era um vazio completamente negro e frio.
+Da luz surgiram seres de horror indescritível.
+Seres que se aproveitaram da mente fraca, oferecendo-lhes poder e vida eterna...
+Para eles, os humanos eram apenas brinquedos, um terreno fértil para semear suas sementes de desordem e engano.
+Quando as pessoas viram a verdadeira natureza destes demónios, selaram a estrela caída dentro da torre e enterraram-na tão profundamente que ninguém voltaria a ver a sua luz.
+Mas era tarde demais.
+Pois os demônios já haviam encontrado o seu caminho para o coração do homem.
+Assim, tal como as pessoas aprenderam a admirar as estrelas...
+Eles também aprenderam a temê-los.
+
+Mãe?
+Sim, querida?
+Pode ler-me uma história diferente antes de dormir?
+Já ouvi esta tantas vezes!
+A maioria já esqueceu completamente esta história.
+É muito importante que te lembres.
+Mas porquê?
+Demónios não são reais...
+Certo?
+
+Claro que não.
+E mesmo que fossem reais...
+Eu proteger-te-ia deles.
+Então, não tem nada a temer.
+
+... ainda quero ouvir a Bela Adormecida...
+Que tal eu ler para ti da próxima vez?
+Prometes?
+Prometo.
+Agora, hora de dizer boa noite.
+Boa noite, mãe.
+Eu amo-te.
+
+SONHO DE LILLIE III
+Lillie!
+Ainda não acabaste?
+Nada de espreitar!
+Tem certeza que não precisa de ajuda?
+Eu trato disto!
+Então, tenta despachar-te.
+A sua boleia deve chegar a qualquer momento.
+Tudo bem!
+
+
+
+...
+Tem doces?
+
+Sério, tem boas maneiras.
+Olá.
+Desculpa.
+
+Está tudo bem, de nada.
+Espero que a viagem tenha corrido bem.
+Negócios como sempre.
+Já sinto falta do tempo...
+Oh, enquanto me lembro...
+Lembranças.
+Bonjour e todas essas coisas boas.
+
+Espera...
+Estes são Pr***D****s?!
+O primeiro e único, directamente da fábrica.
+Visite a loja se precisar de alguns ajustes.
+Isto deve ter custado uma pequena fortuna...
+Quanto te devo?
+Não vale a pena.
+Obrigado, de verdade.
+O trabalho de escritório está matando-me as costas...
+
+Onde está a princesinha?
+
+
+
+
+
+Olá Sonia!
+Olá tia Freya!
+Que roupa gira.
+A mãe fez isto para mim!
+Ela tem estado apaixonada por este programa ultimamente...
+Ela insistiu que eu fizesse um vestido semelhante ao da personagem principal.
+Meu, está deixando-me com inveja.
+Devias vir trabalhar para nós.
+O meu fato foi comprado num supermercado...
+Cala-te.
+Os filhos do sapateiro andam descalços.
+Seja como for, vocês malandros deviam despachar-se.
+A sua boleia está à espera.
+Não vai levá-los?
+Não, pus o Kalle no trabalho.
+Então, que tal uma chávena de café enquanto esperamos que estes dois terminem a visita ao açúcar?
+Claro.
+
+E esse foi de longe o segundo maior waffle que já comi.
+Parece um lugar tão divertido...
+Gostava de poder visitar um dia...
+Devias ir no próximo ano.
+Podíamos até trazer as garotas connosco.
+Ficas bem com isso?
+Claro.
+Já têm idade suficiente.
+Sim.
+O tempo voa...
+...
+Não gosto de me intrometer.
+Mas a Sonia disse-me que a Lillie teve outra discussão na escola.
+Estava pensando como está.
+...
+Sabe como a Lillie é teimosa.
+Gostaria de acreditar que é só uma fase.
+Mas às vezes pergunto-me se poderia ter feito algo diferente.
+Ou se fosse para ser mãe.
+Gray.
+É o melhor pai que alguém poderia esperar.
+Tenho certeza que a Lillie pensa da mesma forma.
+Se ao menos pudesses vê-lo.
+...
+Ainda não disseste à Lillie?
+Não.
+Nem sei se conseguiria.
+Achei que preferias não falar sobre isso...
+Mas tem de aprender a esquecer os seus demónios do passado, sejam eles quais forem.
+A Lillie também não é estúpida.
+Ela consegue sentir a sua ansiedade.
+Talvez seja por isso que ela continua a agir tão...
+
+Só estou dizendo que precisa de relaxar e parar de ser tão dura com você mesma.
+Quando foi a última vez que saíste?
+Não acho que uma mulher da minha idade deva preocupar-se com algo assim...
+Tolice.
+Aposto que consegue apanhar qualquer um com os seus encantos.
+Ou achaste que eu comprei aqueles Pr***D****s só para fazer as suas costas sentirem-se melhor?
+...
+Cala-te, seu...
+Por falar nisso, devia arranjar-te um tipo que conheço.
+Está divorciado e já tem filhos.
+Uma carreira estável e tudo, é fácil.
+Não sei...
+Vamos.
+Vive um pouco.
+...
+Tudo bem.
+Só desta vez.
+Convenci o Gray a ir a um encontro?
+Que altura para estar vivo.
+Cuidado, ou posso mudar de ideias...
+
+Chegámos!
+Trouxeste algum doce?
+Muitos!
+Sabe que não pode comer tudo isso de uma vez, certo?
+Tudo bem...
+Quase me esquecia!
+Vou ter de vos tirar uma foto.
+Diz queijo!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SONHO DE LILLIE IV
+...
+Isto parece um exagero...
+Não usas maquilhagem há séculos, pois não?
+Só estamos fazendo um pequeno retoque.
+E este vestido?
+Só um pequeno retoque também?
+O seu armário foi um crime contra a humanidade.
+Apenas o trouxemos de volta ao século atual.
+A única coisa que vou apanhar nisto é uma constipação.
+Chega de conversa!
+Vamos ver.
+...
+O que acha?
+M A R V E L O U S !
+Qual é o seu veredicto, Vossa Alteza?
+... ...
+Vai buscá-los!
+Quando aprendeu tal língua?
+
+PRINCIPAIS NACIONAIS
+
+Estou na mesa certa?
+...!
+Bem...
+Mesmo que fosse a errada, não me importaria.
+... ... ...
+(Quer levar uma surra ou o quê?)
+Desculpa, não pude resistir.
+Uma frase dessas não me agrada.
+Deve ser o Gray, certo?
+Prazer em conhecê-la finalmente.
+Igualmente, Daniel...
+O Dan serve.
+
+Quer beber alguma coisa?
+Apenas água, obrigado.
+Tem certeza?
+Estou assim tão nervoso...?
+Está tudo bem, sério!
+...
+...
+(Crap, isto ficou estranho rápido ...)
+(O que Freya disse novamente ...?)
+
+O que falar durante o primeiro encontro?
+Não te preocupes com isso!
+O Dan é um tipo descontraído.
+Sê você mesmo e tenho certeza que vão dar-se bem num instante!
+
+Obrigado por nada.
+(Rápido, pense em algo para dizer!)
+
+[Fala sobre o tempo]
+[Fala sobre o trabalho do Dan]
+
+Na verdade, talvez devesse tomar um chá.
+Está ficando muito frio lá fora.
+Não me importo com a neve, mas prefiro não...
+Congelar para...
+Morte.
+Está mesmo a agarrar-te às palhas.
+...!
+A Freya disse que não sais muito.
+Mas embora ela me tenha falado muito de ti...
+Não é nada como eu imaginava.
+Bastante?
+Freya, o seu rabo é erva.
+Sinto que estou desperdiçando o seu tempo.
+De modo algum.
+A noite ainda é uma criança.
+
+A Freya disse-me que trabalhas na indústria da moda?
+Algo assim...
+Esperava que usasses algo mais...
+Fascinante?
+Caro.
+Acho que a minha roupa a entregou.
+Não sei nada sobre moda.
+Trabalho como contabilista para um grande importador de roupas.
+Oh, sim.
+Parece...
+Dolorosamente chato?
+Sim.
+Freya tende a exagerar nessas coisas.
+Como ela me disse que você é muito grande...
+... ... ...
+Expectativas.
+Sério.
+Não te preocupes, levei-o com um grão de sal.
+Mas chega disso.
+
+É a primeira vez que saio daqui a pouco?
+Então, pode dizer...
+Desculpa.
+Não estou habituado a este tipo de coisas.
+Freya mencionou algo nesse sentido.
+Relaxa.
+Também não sou propriamente um veterano experiente.
+Sério?
+Este é o meu primeiro rodeio em algum tempo.
+Sinceramente, estava muito nervoso quando te vi.
+Mas depois de tudo o que Freya disse sobre ti...
+Não esperava que fosses tão fiel.
+Que alívio.
+Considera o gelo partido.
+
+Porque não me diz algo sobre ti?
+Ouvi dizer que trabalhas na universidade.
+Adorava ouvir mais sobre isso.
+Duvido que o achasse muito interessante...
+Está falando com um contabilista.
+Experimenta.
+Pelo menos eu avisei-te...
+Trabalho no departamento de linguística especializado em línguas mortas e extintas.
+Então é professora?
+Receio que nada disso.
+Mais como assistente.
+Na maioria das vezes eu ajudo com a preservação e tradução de manuscritos antigos.
+Parece-me bastante honesto.
+Bem, paga as contas...
+Mal.
+Como se acaba estudando algo assim?
+Eu lia muito quando era mais novo, só isso.
+Isso é uma grande mentira.
+É a única coisa em que sou bom agora.
+Mesmo assim...
+Ler esses textos antigos e ver o quão longe chegamos fez-me perceber...
+As pessoas deste mundo já se esqueceram tanto que nem imaginas.
+Nações inteiras desapareceram sem deixar rasto...
+Junto com os inúmeros sonhos e memórias daqueles que viveram.
+Só estou tentando entender tudo, para não repetirmos os erros que cometeram.
+...
+Desculpa!
+Fui longe demais.
+Não, não estejas.
+Fiquei surpreendido.
+É estranho, mas por um momento pensei ter visto algo diferente em ti...
+...?
+Esquece.
+Só estou falando.
+
+Importas-te que pergunte uma coisa?
+Vai em frente.
+
+[Pergunte sobre seus filhos]
+[Pergunte sobre o futuro]
+
+Gostava de saber dos seus filhos.
+Tinhas dois?
+Sim, duas garotas.
+Quantos anos têm?
+Doze e catorze.
+Uma idade delicada...
+Para dizer de ânimo leve.
+Eles sabem como fazer o pai passar o fim-de-semana por maus bocados.
+Mas eu não mudaria nada.
+Em breve estão todos crescidos, então farei o meu melhor para que valha a pena.
+São os melhores.
+E você?
+Também tem uma filha?
+...
+Sim.
+Uns anos mais novo, mas...
+Digamos que ela me mantém ocupado de qualquer maneira.
+Eu percebo-te.
+Embora nem me atreva a imaginar como seria criar uma criança sozinha.
+
+O que quer do futuro?
+Hmm...
+As coisas acalmaram bastante nos últimos anos.
+Mas, olhando para trás, acho que estava demasiado focado no meu trabalho.
+Estou à procura de mais excitação na minha vida.
+Como viajar pelo mundo e conhecer novas pessoas...
+Espero poder conhecer alguém que queira juntar-se ao passeio antes de ficar demasiado velho.
+Viajaste por acaso?
+Não que me lembre...
+Hmm?
+Quer dizer, nem por isso.
+Mas ultimamente tenho pensado em ir para algum lugar longe.
+Alguma coisa em especial em mente?
+Não, eu...
+Acho que é algo mais parecido com deixar tudo para trás.
+Sinceramente sinto-me culpado.
+Isto deve parecer uma tolice, certo?
+Se tivesse de apostar, acho que todos tínhamos pensamentos assim.
+Não há nada de mal nisso, se me perguntares.
+Não acha que sou um péssimo pai por dizer algo assim em voz alta?
+Ainda está aqui, não está?
+Além disso, tenho sido fácil comparado a ti.
+Tem criado a sua filha sozinha...
+A Freya também te contou isso.
+...
+Desculpa, deixei escapar.
+
+...
+É sobre a minha ex-mulher?
+Sei que não devo falar disso numa primeira reunião, mas...
+Receio ser demasiado antiquado para deixar estar.
+Não te preocupes.
+Somos ambos adultos.
+E nesta idade, deve haver alguma bagagem.
+Quanto a mim e à minha ex-mulher...
+As coisas podiam ter corrido melhor, mas, pelo menos, conseguimos resolver as coisas e seguir em frente.
+Sem arrependimentos.
+E os seus filhos?
+Ela cuida principalmente deles agora.
+Embora eu faça o meu melhor para participar e ajudar tanto quanto eu puder.
+Deve ter sido difícil...
+Mas fico feliz por saber que conseguiste ficar em bons termos.
+Não consigo imaginar como as coisas teriam sido difíceis se tivesse ficado sozinha...
+...
+Isso não me faz pensar.
+A Freya mencionou a sua filha, mas...
+
+Presumo que o pai dela não esteja muito presente.
+... ... ...
+É assim tão mau.
+Desculpa, não devia ter falado nisso.
+Não.
+Eu é que devia pedir desculpa.
+A minha filha...
+Lillie.
+Não lhe contei nada sobre o pai.
+Mesmo que não seja a coisa certa a fazer...
+Jurei cuidar dela.
+Não importa o que aconteça.
+...
+Amas mesmo a sua filha, não amas?
+...
+
+O que estou fazendo?
+Porque estou aqui?
+Lily...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REUNIÃO COM MON
+Ksi Shi Shi Shi Shi Shi...
+Estranho, estranho...
+Os gafanhotos estão no seu bolso ou está feliz por me ver?
+
+Que tal uma troca?
+
+Vendo o estado em que está...
+Esses gafanhotos são pouco úteis para ti.
+Para sua sorte, gosto muito dessas coisas.
+Que tal uma troca?
+
+
+
+
+
+Então, que tal, estranho?
+
+[Você decidiu trocar seus gafanhotos por uma informação quente]
+Obrigado.
+Aqui está a sua dica, por isso ouve com atenção:
+Tenta guardar isto para ti.
+Vai ser mais divertido assim.
+
+
+
+
+
+[O duvidoso comerciante sorri, mal consegue conter o seu riso]
+[...]
+Eles enganaram-te?
+
+Prazer em conhecer-te, estranho.
+Vejo que encheste os bolsos com gafanhotos...
+Vamos fazer outro acordo, tudo bem?
+Todos os gafanhotos para uma dica quente.
+Se não está feliz com isso...
+Lá vou eu.
+Que tal, estranho?
+
+
+
+
+
+
+
+Da última vez que saíste com pressa...
+Mas o meu acordo ainda está de pé.
+
+
+
+
+
+
+
+
+
+
+
+
+Isto é muito excitante...!
+Muito bem, aí vem:
+Só isso.
+
+
+
+
+
+
+
+
+Como deve ter notado, viajar por estes corredores pode ser cansativo.
+Há, no entanto, atalhos que poucos conhecem...
+Se entregares todos os gafanhotos, dou-te uma pista de como encontrar um deles!
+Não queremos que essa sua cabeça fique completamente chata.
+
+Dê todos os gafanhotos e eu aviso-o para outro atalho.
+Tenho certeza que vai ser útil se conseguir encontrá-lo.
+
+Decidiste trocar os gafanhotos por uma gorjeta.
+
+Eu nunca disse que encontrar aqueles chocos seria fácil...
+Não seria divertido assim.
+
+Lembras-te há quanto tempo está aqui?
+Não te preocupes, vai habituar-te.
+
+Não desperdices os seus preciosos gafanhotos nessas estátuas sorridentes, ouviste?
+Um desperdício inútil de espaço, tal como o modelo deles...
+
+
+
+
+Porque estou usando esta etiqueta?
+Digamos que nos mantém seguros.
+
+O que vou fazer com estes gafanhotos?
+Talvez descubras se ficares tempo suficiente.
+
+
+REUNIÃO COM O MERCENÁRIO
+Com licença...
+Está bloqueando o caminho.
+Cala-te.
+Estou tentando descobrir uma maneira de sair daqui...
+Estas malditas estátuas...
+Não acabei de matar todos aqueles monstros?
+Espera.
+
+Não estava só a ouvir coisas desta vez.
+É real, certo?
+Do que está falando?
+Hmm?
+Porque está olhando para mim assim?
+No início parecias-me familiar...
+Mas agora que te olho melhor, é muito giro...
+Eu ia descansar por um momento...
+Quer juntar-te a mim?
+Chegue mais perto e eu sirvo-lhe o rabo numa bandeja!
+
+Perdoa-me!
+Por favor, chega!
+
+Não quis dizer isso!
+Não aguentas uma piada?
+(O que se passa com este pervertido...)
+Tudo bem.
+
+
+
+Olha, miúda...
+Quem te ensinou a lutar assim?
+Isso não é da sua conta.
+... e pensar que ela tinha um aprendiz.
+Que azar...
+Veio aqui para acabar comigo, não veio?
+Está fazendo cada vez menos sentido.
+Bateste com a cabeça?
+O Gray não te mandou atrás de mim?
+
+Como a conhece?
+Não diria que a conheço...
+Mas qualquer mercenário que valha o seu sal pelo menos ouviu falar de Gray, o Destruidor!
+Tive o privilégio de conhecê-la de frente.
+Os punhos para ser mais preciso.
+É por isso que reconheço essa posição em qualquer lugar!
+Ela ensinou-te, não foi?
+Não sei nada sobre mercenários ou qualquer outra coisa que estejas a tagarelar...
+Mas o Gray ensinou-me a cuidar de mim.
+Não ouviste falar das suas façanhas?
+Ela desapareceu durante muitos anos pouco depois de toda a confusão que causou...
+Como é que ela acabou como guarda-costas da princesa?
+Princesa?
+Esquece isso.
+Temos um problema mais urgente nas mãos.
+
+Estas estátuas estão bloqueando a nossa saída.
+Posso dizer isso.
+Já que chegou até aqui, já deve saber destes...
+Pensei que tinha tratado de todos os monstros por aqui.
+Depois apareceste e as estátuas continuam...
+...
+...
+Por favor, não olhes para mim assim.
+Por favor, não estava pensando em empurrar-te para baixo...
+No início, pelo menos.
+... ... ...
+Vou pensar em alguma coisa.
+
+[O pervertido olha para você com cuidado]
+
+Trataste daquelas estátuas...
+Obrigado!
+Por um momento pensei que ficaríamos presos aqui para sempre.
+
+O que faz aqui uma garota bonita como você?
+Estava planeando descansar por um momento...
+Quer juntar-te a mim?
+[...]
+Estava brincando!
+Raios, por falar em frio...
+
+[Decide deixar o homem pervertido aos seus próprios dispositivos]
+
+Você resolveste mesmo...!
+O que se passa com o seu pessoal...
+Algum tipo de magia arcana, talvez?
+Também tem inteligência, acho eu.
+Considere-se com sorte que seus dentes ainda estão intactos.
+Apanhei-te...
+
+Já vai embora?
+Não vejo razão para perder o meu tempo aqui por muito mais tempo.
+Heh...
+Essa sua atitude...
+Posso dizer que o Gray te treinou bem.
+Faz-me um favor.
+Se encontrares uma saída, manda-lhe cumprimentos.
+Se nos tivéssemos conhecido em circunstâncias diferentes, talvez pudéssemos ter partilhado uma bebida ou duas com a sua mulher.
+Ela não é a minha velha.
+E fica fora do meu caminho a partir de agora.
+Sim, claro.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SONHO DE LILLIE V
+Isto é um absurdo!
+Por favor, não precisa de levantar a voz assim...
+Andas de skate demasiado fino para partilhares conselhos.
+Já falámos disto muitas vezes.
+No entanto, sua filha se encontra mais uma vez no meio de uma briga...
+Desta vez com alunos um ano mais velhos do que ela!
+Mas pelo que percebi, não foi a Lillie que instigou a luta...
+Isso é além da questão!
+Deslocou o cotovelo de um dos rapazes!
+Fazes ideia de até onde tive de ir para acalmar os pais dele?
+Lamento muito...
+Vou certificar-me que isto não volta a acontecer.
+Esta é a sua última oportunidade.
+
+Tem alguma coisa a dizer em sua defesa, menina?
+Por que se preocupar.
+Ou começaste a preocupar-te com a minha opinião?
+...
+Falei com o director.
+Amanhã terás de pedir desculpa ao rapaz pelo que fez.
+E também quero que sejas sincero.
+Muito obrigado.
+A única coisa pela qual lamento é que também não lhe tirei o outro braço...
+Não fui perfeitamente claro quando te treinei?
+Só devias defender-te.
+Aqueles idiotas começaram!
+Estavam sempre a gozar com o meu cabelo e voz...
+Porque eles sabem que isso te afecta.
+Vai ter de...
+Sim, sim...
+Ri-te.
+Que treta...
+Linguagem.
+Merda.
+
+Lillie...
+Estou sempre do seu lado.
+O que aqueles rapazes disseram sobre ti, como te chamaram...
+A dada altura, eu próprio os teria espancado se lá estivesse.
+Então o que mudou?
+Envelheci.
+Percebi que socos e pontapés não resolvem nada.
+Só está descendo ao nível deles.
+É melhor do que isso.
+... ... ...
+Desculpa...
+Por seres um falhado...
+Não digas isso, querida...
+
+Tem fome?
+Que tal irmos buscar comida?
+Sim...
+
+Além disso, a TV está proibida por um mês.
+Nem pensar!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTRA REUNIÃO COM CRIANÇA
+...
+Para onde está olhando?
+Uma criança?
+Como veio parar aqui?
+Isso não é da sua conta.
+Deixa-me em paz.
+
+Não me ouviste?
+Ou é um daqueles anormais?
+Um anormal?
+Pareço-te um?
+Os seus pais não te ensinaram boas maneiras?
+Morde-me.
+(Então essa é a atitude que você está indo com ...)
+Agora, conte até dez e mantenha a calma.
+Podemos resolver isto.
+
+Acho que começámos mal.
+O meu nome é Lillie.
+Qual é o seu?
+Não vou falar com adultos.
+É aí que se comete um erro crítico.
+Não me mistures com nenhum velho.
+Não vês que sou muito ágil para a minha idade?
+E na moda!
+Uma velha bruxa que se veste assim...
+Nojento.
+...
+(Dez.)
+
+Não sei o que se passa com você, pirralha...
+Mas vou precisar da sua ajuda se vamos sair daqui.
+Vivo.
+Não me vou mudar para lado nenhum.
+Estou farto de fugir.
+...
+Vejo que está com medo.
+Não faz mal.
+Francamente, nem eu sei o que se passa com este lugar.
+No entanto, ficar aqui deitado não te leva a lado nenhum.
+Por favor, ajuda-me.
+Podemos fazer isto juntos.
+... ... ...
+Acha que tenho cinco anos?
+Sai daqui com essa treta.
+...
+É isso.
+Acabei.
+
+[A garota ignora-te completamente]
+[...]
+[Quando o empurrão vem para empurrar...]
+[Isto não é real]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+O SONHO DE LILLIE VI
+Preparem-se para morrer.
+
+Hoje não, menina.
+Está ficando velho demais para jogos como este.
+Desmancha-prazeres...
+E ficaste acordada a noite toda?
+Não admira que continues a dormir.
+Mãe...
+Os exames de admissão são daqui a algumas semanas.
+Como é suposto estudares se não descansas bem?
+Mãe!
+
+Sobre os exames...
+Estava pensando tirar um ano de folga.
+
+Um ano de folga?
+O que é isto de repente...
+Vou para o intertrilho com a Sonia.
+Falámos sobre isto ontem à noite e começámos a planear a nossa viagem.
+Não te preocupes, já poupei um pouco para não pagares...
+Absolutamente não.
+Porque não?
+Os exames de admissão já são suficientemente difíceis...
+Pelo menos, como recém-formado, terás mais hipóteses de entrar.
+Não te vou deixar desperdiçar essa oportunidade.
+Especialmente porque o seu serviço militar começa no próximo ano...
+Quero que assegures o seu diploma antes disso.
+Preocupas-te demais.
+Não é nada de mais.
+Até a Freya disse que não havia problema.
+Sou o único que não soube disto?
+...
+De qualquer forma, a minha resposta ainda é não.
+Eu mesmo ligo à Freya e digo-lhe que não vai.
+Mas mãe...
+Terá muito tempo para viajar quando for mais velho.
+Agora quero que penses no seu futuro.
+... ... ...
+Não me olhe assim, menina.
+Isto é o melhor.
+O meu melhor ou o seu?
+...
+...
+Acabámos esta conversa.
+
+Não estava só a imaginar coisas.
+Como é que um rato como você veio parar aqui?
+Não foi convidado, pois não?
+Relaxa.
+Não posso fazer-te nada...
+Ainda.
+Não penses que pode esconder-te nestes seus sonhos para sempre.
+Eventualmente, vai acordar.
+E depois está à nossa mercê.
+
+[Devia acordá-la primeiro]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTRA REUNIÃO COM GOR
+(Uma cabeça gigante...)
+Está falando sério?
+
+(É...)
+A dormir?
+
+Hngghh...
+O que quer?
+Ele fala.
+Claro que fala.
+
+Acordaste-me para nada?
+Desculpa, não te queria incomodar.
+Estava pensando se podias mexer-te um pouco.
+Está atrapalhando.
+Eeeeeee...?
+Parece que vou mudar-me para algum lado tão cedo?
+... Não exactamente, agora que fala nisso...
+Já acabaste?
+Posso voltar a morrer?
+Espera!
+Não há outra maneira de descer?
+...
+Tudo bem.
+Se eu me livrar de ti assim...
+Deve haver uma estátua sorridente algures por aqui.
+Salta para um buraco mesmo à frente dele.
+Isso deve servir.
+Acho que vou cair para o meu destino.
+O tanas é que vou!
+Está tentando enganar-me, não está?
+Não me interessa se acredita ou não...
+Quase me esquecia.
+Vai precisar de um sacrifício para esse truque.
+Como uma cabra ou algo assim?
+Eeeeeee...?
+Parece um pouco densa.
+Qualquer coisa comestível deve servir.
+Parece-me extremamente obscuro...
+Quer a minha ajuda ou não?!
+Sim, sim.
+Então vai mergulhar e pára de me incomodar com os seus problemas...
+Caramba, seus mortais...
+
+Aquele pessoal que empunhas...
+Onde o arranjaste?
+Isto?
+Só de um peito qualquer.
+Um peito qualquer?
+Esse pessoal chama-se Vazio Rod.
+É um dos bens valiosos do nosso líder, Lorde Add.
+Bem, ex-líder, pelo menos.
+Não sei como um mero mortal como você é capaz de o empunhar...
+Ainda assim, gostaria de fazer um pedido.
+Vai ouvir?
+Não estou interessado.
+
+Eieeeeeeeeeeee?!
+Não está interessado?!
+Está falando com uma cabeça decapitada!
+Só quero sair daqui, quanto mais cedo melhor.
+Desde que cheguei aqui, tenho tido sonhos estranhos...
+Quase como memórias de tempos que prefiro esquecer.
+... ... ...
+Desculpa, enganei-me.
+Pensei que tinhas alguma devoção.
+Mas afinal é apenas outra alma inquieta.
+...?
+Sai já...
+
+Porque está olhando assim para mim?
+Essa espada...
+Onde o encontrou?
+Isto?
+tropecei nela.
+...
+Então há uma espada ornamentada que é claramente muito especial...
+Sim.
+... que por acaso tropeçaste.
+Sim.
+... Sem nenhuma dica.
+Claro.
+... ... ...
+Pode matar-me com ela?
+...
+O quê?
+Está maluco?
+Desculpa...
+Esqueci-me dos meus modos.
+Mata-me, por favor.
+Não vou matar ninguém.
+Não me faças rir.
+Chegou até aqui...
+Porquê parar agora?
+Do que está falando?
+... ... ...
+A inocência da juventude.
+
+Vá lá, ajuda-me.
+Quer chegar à saída, certo?
+Uma facada rápida não faz mal.
+...
+Porque quer tanto morrer?
+A minha existência actual está simplesmente por despeito.
+Faria-nos um favor.
+Então, que tal?
+
+Tudo bem...
+Eu faço-o.
+Boa!
+Que alívio.
+Não digas isso...
+Desculpa.
+Vocês mortais levam a morte muito sério.
+...
+Mais uma coisa.
+Se vires a minha irmã, Tan...
+Diz-lhes que o Gor disse olá.
+Falta-lhes o olho esquerdo, tenho certeza que os reconhecerá se por acaso se encontrarem.
+Só isso.
+Até logo, estranho!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTRA REUNIÃO COM MIMIC
+Olá!
+Está perdido?
+Parece perdido.
+Vamos jogar às cartas!
+É você!
+Quer jogar?
+Que cabelo é esse?
+O quê?
+Como te chamas?
+Este lugar é enorme!
+O que fazes aqui?
+Também é um monstro?
+Não faço ideia do que se passa.
+Não há tempo a perder!
+Cuidado onde pisas!
+Procuras alguma coisa?
+Porque é que está assim?
+Há algum problema?
+Não parece muito inteligente.
+Quem é você?
+Sabe onde fica a saída?
+Sigam-me!
+Ahahahaha!
+Olá.
+Depressa!
+Quase lá!
+Continua!
+Tem certeza que consegue fazer isto?
+Ouve com atenção!
+Tudo aqui é tão estranho.
+É engraçado!
+Gostas do meu vestido?
+A minha mãe fez este vestido para mim!
+Que giro!
+
+...
+Demorou muito para chegar até aqui.
+Já está ficando cansado?
+Ou ainda pensa que tudo isto é apenas um sonho?
+Aqui está um spoiler.
+Não vai acordar tão cedo.
+Quando aceitará isso?
+Por outro lado...
+Sempre foi bom a convencer-te do contrário.
+
+O que está aqui a fazer?
+Desiste já.
+Não adianta atrasar o inevitável.
+...
+Não olhes para mim assim.
+É patético.
+...
+Por favor...
+Vai-te embora.
+...
+Nunca vai conseguir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REUNIÃO COM AMIGOS
+(Outro humano?)
+Está bem?
+Oh!
+Passa-se alguma coisa?
+Então, bonito...
+...
+Eh?
+Ack!
+Desculpe!
+Não era suposto eu dizer isso em voz alta...
+
+Desculpa!
+Não quis dizer aquilo.
+...
+Quero dizer, é muito bonita, é só que...
+Quando fico nervoso, sempre falo e...
+Vou calar-me agora.
+...
+Bem, pelo menos está bem.
+
+O que estavas aqui a fazer?
+Encontrei uns monstros.
+Pensei que talvez não me notassem entre estas rochas...
+Odeio dizer-te...
+Mas não é propriamente um mestre dos disfarces.
+... ... ...
+(Não me diga que ela levou isso para o lado pessoal?)
+Seja como for, esses monstros já não te incomodam.
+Eu tratei deles.
+Sério?
+É incrível...
+O que se passa com ela?
+[A mulher tímida continua olhando para você]
+[...]
+
+O que fez àquele chão?
+Conheces a magia?
+Isso...
+Foi tudo graças ao pessoal que encontrei.
+Não percebo qual é o problema.
+Mas certamente é útil ter por perto.
+...
+Leva-me!
+O quê?
+Quero dizer...
+Por favor, leva-me com você!
+Continuo a encontrar aqueles monstros e não consigo lidar com eles...
+Por favor, ajuda-me.
+(Isso já é difícil o suficiente e ela parece absolutamente indefesa...)
+(Mas posso deixá-la aqui...)
+
+Tudo bem.
+Pode acompanhar-me.
+Está falando sério?
+Sim.
+Não te metas no meu caminho.
+Obrigado!
+Muito obrigado.
+Prometo que não te vou esconder.
+De nada.
+E já que vou guiar-te, acho que está na hora das apresentações.
+O meu nome é Lillie.
+E a sua?
+Ni...
+Ninnie.
+Prazer em conhecê-la, Ninnie...
+Vamos encontrar uma saída desta espelunca juntos!
+Sim!
+
+Pode ir em frente.
+Enquanto o caminho para a saída estiver livre, não estarei muito atrás.
+
+
+
+
+
+
+
+
+Desculpe, não queria atrapalhar...
+Fiz alguma coisa errada?
+
+[A mulher tímida te saúda]
+[A mulher tímida parece um pouco nervosa]
+Umm...
+Encontrei isto enquanto me escondia...
+Não sei se te servem de alguma coisa, mas pode ficar com eles.
+
+Aqueles monstros...
+Estão por todo o lado...
+Vamos fazer uma pausa?
+Não, estou bem!
+Eu arranjo-me, obrigado.
+Não quero atrasar-te...
+
+Ainda sem fim à vista...
+Não desistas!
+Você consegue.
+Obrigado.
+
+Há alguma coisa errada?
+Aquelas estátuas estão bloqueando o nosso caminho...
+Nem eu consigo passar por eles.
+...
+Você...
+Já viu aquelas estátuas antes?
+Não, acho que não.
+Porque pergunta?
+Só esperava que soubesses alguma coisa sobre eles.
+Afinal, parecem muito ameaçadores.
+Mas acho que por agora estamos sem sorte.
+Talvez devêssemos descansar e ver se conseguimos descobrir alguma coisa...
+Deve haver algo que nos está escapando.
+Sim.
+Vamos fazer isso.
+Embora devêssemos fazer turnos de vigia, por precaução.
+Acha que consegue?
+Farei o meu melhor!
+
+Já pode descansar.
+Vou dar a primeira volta.
+É o mínimo que posso fazer.
+Tudo bem, mas acorda-me imediatamente se acontecer alguma coisa.
+Sim...
+
+[A mulher tímida está fazendo o seu melhor]
+
+Descansaste?
+Mal.
+É difícil dormir aqui...
+Perdi completamente a noção do tempo.
+Presumo que ainda não tenhas tido ideias brilhantes?
+Não...
+Desculpa...
+Não lamentes.
+
+...
+Está pensando em alguma coisa?
+Estava pensando, Lillie...
+Lembras-te como chegou aqui?
+Porque é que está pedindo isso do ****?
+Eu... eu...
+Pensei que talvez nos pudesse dar uma pista ou algo assim, porque estamos aqui e que lugar é este...
+Estou um pouco confuso com os detalhes.
+Mas lembro-me de uma grande sombra sobre mim no meu quarto.
+E antes de perceber, estava caindo num buraco estranho que tinha aparecido do nada.
+Parece uma loucura, não é?
+Ou como um sonho.
+Não é muito útil de qualquer forma.
+Sim.
+E você?
+Lembras-te de alguma coisa?
+...
+Ninnie?
+Nada mesmo!
+A minha mente é como um s-late limpo.
+Parece tenso.
+Devias descansar agora.
+Sim...
+Não te preocupes, eu protejo-te.
+Obrigado, Lillie.
+
+[A mulher tímida está dormindo]
+[...]
+Se agires depressa...
+[Não]
+
+Bom dia.
+Acho eu?
+Desculpa, fechei os olhos por um segundo.
+De nada.
+Não conseguia dormir muito, por isso fiquei a ver.
+Parece que a nossa situação não mudou.
+Na verdade, não...
+Isto é inútil...
+A este ritmo, nunca...
+...
+Caramba, isto está ficando chato.
+...?
+Já o tinha tido aqui com estes corredores todos iguais.
+Que chato.
+Quando encontrar aquele que está por detrás disto tudo, é bom que estejam prontos para uma grande surra.
+Não tem medo?
+Como se isso nos fizesse bem.
+Ouve, Ninnie.
+Vamos sair desta confusão.
+Por isso, não me venhas com tristeza.
+...
+...
+Invejo-te, Lillie.
+Como é forte...
+Nunca poderia ser tão confiante como você.
+Tudo o que fiz...
+É ir com a multidão e ficar escondido.
+Para que as pessoas não me pegassem...
+...
+É sobre a gagueira?
+Então reparaste...
+Desculpe, deve parecer-lhe muito irritante...
+Tolice.
+Se tivesses ouvido a minha voz quando era adolescente.
+Os valentões tiveram um dia cheio com aquele.
+Nem pensar!
+Foi intimidado?
+Como é que...?
+Lidar com isso?
+Claro que sempre me disseram para rir.
+Mas a vida não é assim tão simples.
+No final, você precisa aprender a se defender.
+De uma forma ou de outra.
+...!
+...
+Porque está rindo?
+É mesmo forte, Lillie.
+...
+... ... ...
+Está bem?
+A sua cara virou-se de repente!
+Está tudo bem!
+(Oh, Deus, Deus, Deus, Deus.)
+(Ela era tão bonita todo esse tempo?!)
+Talvez deva ensinar-te alguns movimentos quando acabarmos com esta confusão.
+Sério?
+Tem certeza que eu consigo?
+Tudo é possível com um pouco de treino.
+Quem sabe, talvez sejas natural por detrás dessa franja.
+Duvido...
+Mas agradeço a oferta.
+...
+Ainda bem que te pude conhecer, Lillie...
+Se nos tivéssemos conhecido antes...
+Do que está falando?
+Estamos longe de acabar.
+Sim.
+
+Obrigado, Lillie.
+Posso ficar de olho, se te sentires cansado.
+Tenho certeza que com o descanso suficiente, vai descobrir a solução!
+
+[A mulher tímida acena para você, sorrindo]
+[...]
+[Sua cara começa a virar *** novamente]
+
+Demasiado brega para o seu gosto?
+
+Até logo.
+
+Este chão está uma confusão...
+Provavelmente seria muito mais fácil sozinho...
+...
+Obrigado por torceres a faca.
+Ack!
+
+Cuidado!
+Aquele castor gigante continua a seguir-te!
+...
+(... isso não se parece nada com um castor.)
+
+Aquela coisa...
+O que é isso?
+Não faço ideia...
+Mas se ele se soltar, vai estar no meu rabo num instante.
+Parece doloroso...
+(Você sabe que isso é apenas uma expressão, certo?)
+
+Outro desses!
+Eles não sabem quando desistir.
+Pelo menos não parece estar interessado em ti.
+Na verdade, pode ser útil para este trabalho...
+Se eu puder ajudar de alguma forma, é só dizer.
+...
+Desde que não me empurres!
+
+Aquelas estátuas outra vez...
+O que foi?
+Parece que não gostam quando uso esta equipe à volta deles...
+Tem de ter cuidado.
+Você consegue!
+
+Este quarto não parece muito mau.
+Não gosto...
+É o mais suspeito possível.
+Devíamos continuar a andar.
+
+Ainda está aguentando-te?
+De alguma forma.
+Fica calmo.
+
+Lillie!
+Pensei que te tinha perdido...
+Desculpa por isso...
+Está bem?
+Muito melhor, agora que está aqui.
+
+Não estas estátuas outra vez...
+Cuidado!
+
+Ack!
+Aquele perseguidor move-se como você!
+Eles são muito assustadores...
+Mas devo ser capaz de enganá-lo.
+Só preciso de uma coisa...
+Ou alguém.
+Por favor, seja gentil!
+
+Outra vez não...
+Não é permitido diversão.
+Talvez devesses dar um bom empurrão àquelas estátuas?
+Isso pode funcionar.
+E eu a pensar que eras só um idiota.
+... ... ...
+É uma piada!
+
+Precisa de uma pausa?
+Estou bem, obrigado.
+Avisa-me se for rápido demais.
+
+Isto é complicado...
+Se precisares de ajuda...
+Posso apertar-te o botão!
+(... Isso realmente funcionaria?)
+
+Um perseguidor e uma estátua...
+Que sorte a minha.
+Tenho certeza que consegue lidar com os dois!
+
+Hmm...
+Não consigo chegar à saída sem activar os painéis do chão...
+Se o e-exit estivesse deste lado...
+
+Cuidado, não há muito espaço para mover.
+...
+Ninnie?
+Ack!
+(O que ela estava olhando...)
+
+Cuidado!
+Eu sei!
+Não há maneira de contornar esta.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SONHO DE LILLIE VII
+Tem certeza?
+Pela milésima vez, sim.
+...
+Qual é a demora?
+E a sua mãe?
+Ela aceita isto?
+Não te preocupes com ela.
+Agora, tira a cabeça!
+
+Cheguei!
+Demorou muito...
+O jantar está quase pronto.
+...
+O que...
+O que aconteceu com seu cabelo?!
+Ehehehe...
+Reparaste?
+Explique-se, menina.
+A Sonia disse que queria praticar...
+Então eu ofereci-me!
+Ela não poderia pedir por mais ninguém?!
+Tem crescido o cabelo desde pequeno!
+Talvez nunca mais cresça!
+Que azar.
+A escritura está feita.
+
+Porque não disseste nada antes?
+Porque sabia que ias ficar fumegante e dizer-me não.
+Tenho idade para decidir o que quero fazer com o meu cabelo.
+Claramente não.
+O que quer dizer com isso?
+Não ouviste que a variedade é a especiaria da vida?
+Além disso, o cabelo curto agora é a moda.
+Os rapazes também gostam.
+Então, cortaste o cabelo só por uma moda passageira...
+Para impressionar uns punks sem cérebro?
+Não sabe o que dizem sobre mulheres de cabelo curto?
+Bem-vinda ao século 21, avó.
+Porque não cortas o cabelo também?
+Quem sabe, talvez dessa forma você possa ter alguma ação entre essas suas pernas tensas e relaxar um pouco.
+
+....!
+Não vou ouvir tal conversa de ninguém nesta casa.
+Como é que se tornou uma mulher tão orgulhosa...
+É pior que a sua mãe!
+... ... ...?
+!!!
+Mãe?
+Sai.
+Não suporto olhar para ti assim.
+Mas...
+Sai!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REUNIÃO COM O VELHO
+...!
+Porque é que aquele velhote está olhando para mim?
+Mais um truque?
+Seus demônios...
+A sua malevolência não tem limites...
+Desculpa, há algum problema aqui?
+Desaparece, demónio!
+!!!
+(Talvez eu deva deixá-lo em paz...)
+... ... ...
+Hmm.
+Posso tê-lo confundido com outra pessoa.
+
+O que faz uma garota num lugar como este?
+E o que aconteceu ao seu cabelo?
+Algum tipo de acidente, talvez?
+O meu cabelo tudo bem, obrigado.
+E não me chateies!
+É assim que deve falar com as senhoras?
+Ou fugiu de um asilo, velhote?
+Que mulher sem vergonha.
+Fazes ideia com quem está falando?
+Pode ser o imperador de Whaddhacallit, por mim,
+Mas isso não quer dizer que eu vá ficar com essa sua atitude mais santa do que você.
+...
+...
+Bwahahahaha!
+(Ele perdeu completamente?)
+Então foi isto que o mundo se transformou...
+Talvez eu tenha errado desde o início.
+...?
+Esquece-me, menina.
+Aconselho-o a continuar a sua viagem.
+Há muito pouco que este velho possa fazer para te ajudar.
+
+O velho encoraja-te a seguir em frente.
+[...]
+Que velho estranho!
+
+
+
+
+
+
+
+
+
+
+
+FIM DE VOID (GRAY)
+Os seus desejos...
+[Por que você está aqui?]
+[Nomes e rostos que uma vez ficaram na sua mente...]
+[Você não pode mais se lembrar deles]
+Não pode deixar de sentir que perdeste alguma coisa.
+[Algo muito importante]
+
+Que pena.
+Mas, no fim, não pode ser evitado.
+Pois a devoção sem propósito é mera tolice.
+Não tenha medo, estranho.
+Voltaremos a encontrar-nos.
+Tenho certeza.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MEMORIAS DE GRAY
+Estou?
+Freya?
+Como conseguiste este número...
+Não, não, isto foi só um pouco repentino.
+Aconteceu alguma coisa?
+... ... ...
+... 
+Sim, ainda estou aqui.
+Podia...
+Posso ligar-te depois?
+Obrigado.
+
+Freya.
+Como é que você e o Gray se conheceram?
+Porque está perguntando isso do nada?
+Sabe porquê.
+Você...
+Conheceste o meu pai?
+Lillie, eu...
+Já não sou uma criança.
+Por favor, diz-me.
+...
+Acho que mereces uma explicação.
+
+Foi há anos, mas ainda me lembro bem.
+Na altura, quase não dormia.
+Então eu saí da cama cedo para ver um eclipse solar.
+Quando acabou, vi uma mulher estranha coberta de roupas esfarrapadas no meio da rua.
+Estava ali deitada, calmamente, a segurar algo entre as mãos.
+Quase como se tivesse aparecido do nada.
+Aquela mulher era o Gray?
+Sim.
+
+Quando cheguei mais perto, nossos olhos se encontraram.
+Nunca vi olhos tão escuros como os dela.
+Ela estava à beira das lágrimas.
+Quando ela finalmente começou a falar, não consegui entendê-la.
+Mas era evidente como ela estava assustada.
+Depois vi o que...
+Que ela estava amontoando.
+
+Um bebé tão pequeno e frágil.
+Quase como uma boneca.
+Pensei que estava sonhando.
+Mas lá estavas você, Lillie.
+E depois?
+Não podia deixá-los lá.
+Por isso, acolhi-te.
+
+Depois da poeira assentar, levámo-lo a um check-up.
+Já te tinhas tornado num bebé perfeitamente saudável.
+Gray, no entanto...
+Foi difícil dizer de relance, mas o corpo estava coberto de velhas contusões e cicatrizes.
+O médico também notou algo anormal.
+O útero e os ovários desapareceram, como se tivessem sido removidos.
+No entanto, não havia sinais de cirurgia de qualquer tipo, apesar de todos os outros danos que seus órgãos internos tinham sofrido.
+Ela nunca poderia ter dado à luz, isso era muito certo.
+...
+Então, acho que está resolvido.
+Não parece surpreendido.
+Tinha as minhas dúvidas.
+Por mais tempo do que gostaria de admitir.
+
+E os meus pais verdadeiros?
+O Gray não te falou deles?
+Não muito.
+Quando perguntei sobre o seu pai, ela disse-me que ele morreu há muito tempo.
+E a sua mãe...
+A Gray nunca disse nada sobre ela.
+Mas sempre que tentei falar nisso...
+O Gray não o admitiria, mas vi que abriu feridas muito mais profundas do que as da pele dela.
+Devo ter pena dela agora?
+Lillie...
+Não posso fingir perceber o que está passando.
+Mas sei que a Gray sempre cuidou de ti como se fosse dela.
+Ela amava-te mais do que tudo.
+
+Amado?
+
+Já tive o suficiente...
+Apenas...
+Acaba com tudo.
+
+Outra morde o pó!
+E eles demoraram muito.
+Bem.
+Pelo menos acabaram por se tornar um bocado suculento.
+Estranho.
+Não sabia que estas coisas podiam brilhar.
+WWWHUUAAAAAAAAAT????!!
+O quê?
+Gray?
+...
+Que hora e lugar para apareceres.
+Porque demoraste tanto?
+Começaste a sentir a minha falta enquanto estive fora?
+
+Acho que o gato comeu-te a língua.
+Outra vez.
+Ainda está zangado com o cabelo, pois não?
+Depois de cortá-lo, eu tentei tingí-lo em um ponto também.
+Pena que a cor não ficou bem.
+Adorava ver a sua reacção.
+
+Lá vamos nós outra vez com aquele juiz...
+Começo a lembrar-me porque saí.
+Por mais que eu tente...
+Simplesmente nunca fui suficientemente bom para ti.
+Quase como se...
+Como se esperasses que eu crescesse completamente noutra pessoa.
+Mesmo que tudo o que sempre quis fosse tornar-me mais como...
+Você.
+
+
+Porquê?
+Porque não me disseste nada?
+Se me ressentias assim tanto, devias ter-me abandonado quando era pequena.
+Teria-nos poupado o trabalho.
+
+Apenas...
+Diz alguma coisa, velha bruxa!
+Não ajas como depois de todos estes anos...
+Não tem nada a dizer em sua defesa!
+Pensei que fosses melhor do que isto!
+É a pessoa mais forte que já conheci!
+Não um falhado que cai morto sem aviso!
+Eu olhei para você toda a minha vida para nada?!
+
+Por favor...
+Responde-me...
+
+Ainda estou zangada com você.
+Só gostava que estivesses aqui para ouvir isso.
+
+Adeus...
+Mãe.
+
+[Dentro do envelope está um pequeno pingente, juntamente com uma carta escrita à mão]
+[... você deve lê-lo?]
+
+Não pertences aqui, pequenino.
+
+Parece que falta um.
+O que lhes aconteceu?
+Não faço ideia.
+...
+Que desenvolvimento interessante.
+
+Estranho.
+Chegar até aqui deve ser louvável...
+Mas DIS não pode detectar uma forte devoção dentro de você.
+Em circunstâncias normais, uma alma sem rumo desapareceria lentamente nas profundezas deste composto.
+Mas aqui está você diante de nós.
+Esta situação é pouco ortodoxa...
+Não podemos deixar que fiques aqui.
+Desde que saias em paz...
+A DIS está disposta a fazer um contrato consigo.
+Então diz-nos.
+O que é que desejas?
+
+Desejo?
+Não sei se alguma vez pensei bem nisso.
+
+Certamente há algo que sua alma deseja.
+Poder?
+Riqueza?
+Amor?
+Ou talvez...
+Algo que perdeste.
+Algo muito importante.
+
+... ... ...
+Consegue realmente realizar algo assim?
+Quem...
+Ou quem é você, exactamente?
+Demónios?
+Deuses?
+Respostas a tais perguntas não teriam sentido para si, estranho.
+Mas vou dizer isto.
+Nenhum desejo, não importa quão grande, está além do domínio das possibilidades.
+...!
+
+Há algum problema?
+Estou bem agora.
+Estava sentindo-me um pouco tonto por um momento.
+Se pudesse desejar uma coisa...
+
+Quero que a minha mãe saiba que por mais que me tenha escolhido...
+Sou grato por tudo.
+Por favor, deixa-a em paz.
+...
+Pffft...
+Ah ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha!
+
+Bem dito, estranho!
+
+Então...
+O que acha?
+...
+Para ser perfeitamente honesto, Vossa Alteza...
+Acho-o demasiado sofisticado para o meu gosto.
+Nunca pise palavras, como de costume.
+Há muito tempo, as pessoas deram esse nome à estrela mais brilhante do céu.
+Quem me dera que um dia ela brilhasse tão bem.
+Até lá...
+Por favor, toma conta dela.
+
+Desculpa...
+Por seres tão cabeça quente...
+Não devia ter falado assim com você naquela altura.
+Se eu soubesse...
+
+Ou acha mesmo que vim até aqui só por merdas e risos?!
+Não foi fácil!
+Percebes...
+Porque voltei?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EPILOGUE
+Sério?
+É suposto eu viver nesta cabana?
+
+Bem, desculpe-me, Vossa Excelência...
+Não havia palácios vagos disponíveis.
+Nunca imaginei que fosses tão mimada...
+É assim que se deve dirigir aos mais velhos?
+Trata-me por mãe.
+Nem pensar!
+Isto já é demasiado estranho!
+De qualquer forma, talvez pudéssemos pagar outro lugar se encontrasses um emprego...
+O que é isto?
+(Não me ignores assim, seu preguiçoso...)
+
+Chamam-se fotos, certo?
+Que giro!
+O Gray tirou isto?
+Sim, há um álbum inteiro deles.
+Ela nunca gostou muito de tecnologia...
+Mas ela gostava muito de usar uma câmara.
+Talvez ela esperasse partilhar essas fotos com você um dia...
+
+Por falar nisso...
+O que foi?
+Esqueci-me completamente...
+Devia ter-te dado isto há algum tempo.
+Toma.
+
+Uma carta, para mim?
+Mas por que já foi aberto?
+Eis uma coisa engraçada...
+Encontrei-o no meu quarto e pensei que era para mim.
+Então abri-a e...
+Não conseguia entender uma única palavra.
+Gray deve ter escrito numa daquelas línguas antigas que ela costumava estudar.
+Mas agora que está aqui...
+Achei que ela o tinha deixado para ti.
+...
+Ainda não.
+Isto é para nós os dois.
+...
+Sai!
+O que diz?!
+Vejamos...
+
+Sabe que não devias meter-te na carta de outra pessoa.
+Ainda está de olho neles?
+Do que está falando?
+O seu péssimo disfarce pode ter enganado a DIS...
+Mas sei que os tem vigiado há muito tempo.
+Ou aquela criança acabou aqui por mero acidente, só para finalmente conhecer a mãe?
+...
+Isso é o que o Add iria querer.
+Devia-lhes isso.
+Além disso, só lhes dei um empurrãozinho.
+Claro.
+Não te preocupes.
+O seu segredo está seguro comigo.
+Hmph.
+
+Cumpri a minha parte do acordo.
+Agora, estranho...
+Já acabaste a sua pesquisa?
+
+
+Quem ou o que é DIS?
+
+... ... ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+...
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mais ou menos.
+Então, presumo que partirá em breve.
+Então responde-me.
+
+Quem ou o que é DIS?
+... ... ...
+
+Suponho que este lugar era originalmente uma espécie de centro de pesquisa governado por uma entidade conhecida como DIS.
+Infelizmente, nem eu consigo aceder às verdadeiras profundezas deste complexo, por isso os detalhes permanecem obscuros.
+O servidor principal está trancado atrás de áreas vigiadas mecanicamente.
+Se eu tivesse que adivinhar, diria que nenhuma alma viva entrou neles em poucos milênios.
+E provavelmente nunca mais o fará.
+...
+No entanto, havia algumas unidades de memória remotas que consegui aceder.
+A maioria deles foram dilapidados sem reparação.
+Mas mesmo apenas uma fração de seus dados conta uma história bastante contadora.
+Notas de pesquisa dispersas sobre viagens espaciais quânticas, tecnologia de Warp, divisão de genes...
+Ainda mais curioso é o fato de que todos esses registros terminam abruptamente no mesmo ponto no tempo.
+Isso foi há mais de 70000 anos.
+Algum tipo de evento cataclísmico deve ter acontecido aqui há muito tempo.
+Uma experiência saiu pela culatra?
+Ou talvez uma guerra começou?
+Seja qual for o caso, parece que o manusya deste planeta quase foi exterminado.
+
+Por que ainda estamos aqui?
+Qual é o nosso propósito?
+Também não tenho resposta para isso.
+Talvez a DIS ainda esteja a tentar cumprir o papel original desta instalação.
+Seja lá o que for.
+...
+É só uma maneira chique de insinuar que somos meros cobaias, certo?
+Desculpa.
+Deve ter sido difícil para ti e para as suas irmãs, todos estes anos...
+Não me interpretes mal.
+O tempo que merecíamos foi há muito tempo.
+Considerando todas as coisas que fizemos parte...
+Só desejei um encerramento.
+
+Antes de ires...
+Posso perguntar-te outra coisa?
+Porque estavas tão interessado na princesa?
+... ... ... 
+Hmm...
+Isto vai parecer-te bastante estúpido, mas...
+Ela fez-me lembrar alguém, só isso.
+Acho que estamos no mesmo barco.
+
+Vou-me embora.
+Espero que um dia encontres as respostas que procuras.
+Até lá...
+Cuida-te, Cif.
+
+. . . . . . . 
+Esqueci-me completamente da Bee.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CIF REUNIÃO COM O TAIL
+Sentes...
+Familiar?
+
+Cif?
+É você?
+Há quanto tempo, Tail.
+De fato.
+Quanto tempo passou?
+Dois, trezentos anos?
+Espero não te ter irritado...
+Acalma-te.
+Não estou atrás de ti.
+Por falar nisso...
+
+Viu o Bee por aqui?
+Eles vieram aqui e disseram-me para não falar com estranhos.
+Mas isso foi há muito tempo.
+Desapareceram?
+Não te preocupes.
+Vou encontrá-los eventualmente.
+
+Talvez o Gor saiba alguma coisa?
+Duvido.
+Devem estar a dormir, como sempre.
+Hmm...
+
+Mais alguma coisa?
+Não sei se isto te ajuda, mas...
+Alguém passou por aqui há pouco.
+O que tem?
+Foi o Mon.
+Mon?
+Tem certeza?
+Não os vi bem.
+Estavam apalpando as minhas escamas.
+Não me importo assim tanto.
+No entanto, algo no toque deles me fez sentir desconfortável.
+Como se eu tivesse sentido algo parecido antes.
+É certamente o Mon.
+...
+Falaram com você?
+Não, mas estavam murmurando alguma coisa.
+Sobre ir em direcção ao Sétimo Círculo.
+O território do Lev...
+Parece preocupado.
+O Mon devia estar morto.
+Lev-se matou-os naquela altura...
+Foi o que pensei.
+Algo não bate certo.
+
+...
+Preocupar-nos faz-nos pouco bem.
+Mantém-te vigilante por agora.
+Farei o meu melhor...
+
+Boa sorte com a sua busca, Cif.
+
+[Estas escamas são bastante brilhantes]
+[Se você olhar de perto o suficiente, você pode ver o seu reflexo sobre eles]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BATALHA COM A abelha
+Bem, bem, bem...
+Agora superaste-te mesmo, mortal.
+Não sei nem me interessa como conseguiste chegar aqui, mas tenho as minhas ordens.
+Nada pessoal.
+Que tal uma revanche?
+Até mais, Feeble Mortal!
+
+Como é que uma barata como você chegou aqui?
+É a primeira vez que me convocam tão fundo.
+Talvez faça uma visita guiada...
+Depois de ter acabado com você, miserável insecto!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CIF REUNIÃO COM GOR
+Eles estão dormindo...
+A dormir outra vez...
+Hngghh...
+E agora?
+...
+Zzzzzzz...
+
+Por favor, Gor.
+Prefiro não perder tempo.
+É o grande Lorde Cif...
+Não reparei em ti...
+Que bom ver-te aqui em cima...
+Poupe o fôlego.
+Sei que é um tiro no escuro, mas...
+Estou aqui para falar.
+Espera.
+Não está aqui para me atormentar?
+Porque faria isso?
+Fez alguma coisa que me desse uma razão?
+Não, absolutamente não...
+Responde à minha pergunta e deixo-te em paz.
+Viu o Bee?
+Aquele fracote?
+Não os vejo há algum tempo.
+...
+Imaginei.
+Obrigado na mesma.
+De nada, acho eu...
+
+Por acaso não tem gafanhotos de reserva com você?
+Urgh...
+Não pode saltar para o próximo Brane sozinho, espertalhão?
+Só Add tinha poder para o fazer.
+O resto de nós joga pelas regras.
+Espera!
+Tenho uma ideia!
+Que tal matares-me com esse seu palito, já que estou bloqueando o caminho e tudo isso?
+...
+Não vou.
+Porque não?
+Parecias muito ansioso da última vez que me arrastaste para a sua estúpida confusão...
+Gor.
+Sobre o que aconteceu naquela altura... Desculpa.
+...
+Acha que te vou perdoar, punk?
+Não sou assim tão presunçoso.
+Mas queria dizer-te isto, cara a cara.
+Um dia vou compensar as coisas que fizemos.
+...
+Você mudaste, Cif.
+Suspiro...
+Eu...
+Estou tão cansada.
+... ... ...
+Toma.
+Pegue seu gafanhoto e saia.
+
+Mais uma coisa.
+Viu o Mon?
+Mon?
+O Lev não os matou naquela altura?
+Também achei.
+No entanto, parece que ainda estão vivos.
+Eu também não os vi...
+Mas achei estranho como Mon ficou do lado de Eus...
+Desde que a cabeça deles estava sempre no rabo do Lev.
+O que lhes aconteceu?
+... ... ...
+Vou chegar ao fundo disto.
+Não te preocupes.
+
+Sério?
+Cara a cara?
+Desculpe!
+Não quis dizer isso!
+Estava só a brincar.
+Afinal, é só uma expressão.
+... ... ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BATALHA COM MON
+Encontrei-te, finalmente.
+Ksi Shi Shi Shi Shi Shi...
+Vê onde balanças esse seu canivete.
+Alguém pode magoar-se.
+Mon...
+Então é você.
+Parece que viu um fantasma.
+
+Onde estiveste este tempo todo?
+Como conseguiu esconder a sua presença da DIS?
+Francamente, isso não é da sua conta...
+Mas considerando que o meu disfarce foi descoberto, posso dizer-te...
+Por um preço, claro.
+Não, obrigado.
+Em vez disso, vou bater-te nas respostas.
+Hoo?
+Adorava ver-te tentar.
+Não me lembro de teres lutado muito antes.
+Ksi Shi Shi Shi...
+Pensavas que eu estava levando sério na altura?
+Aquela charada fazia parte do nosso plano!
+O nosso plano?
+...!
+Assim é como eu pensava.
+Um sicofante como você não conseguia inventar algo tão complicado por conta própria.
+...
+Ksi Shi...
+KSI SHI SHI SHI SHI SHI SHI SHI SHI SHI SHI!
+Um simples corte da língua não te vai levar a lado nenhum.
+
+Os meus olhos...
+Os meus olhos brilhantes...
+Culpa o seu destino.
+Agora, se desejar um fim rápido e misericordioso...
+Fala.
+O que é que você e o Lev querem?
+...
+Finalmente descobriste...
+KSI...
+Faça comigo o que quiser...
+Mas sabe isto...
+O verdadeiro Senhor do Void um dia voltará...
+E aqueles que os opõem...
+... virá a arrepender-se da sua existência...
+Perdoe-me, querida irmã...
+Eu tenho...
+Falhou-te...
+
+
+REUNIÃO COM A abelha
+UUAAAAAAAAAAAAAHHHH!!!!
+. . . . .
+Irmã...?
+É você?
+Olá.
+SIIIIIIIIIIIS!!!
+Tinha tanto medo!
+Controla-te...
+Você não entendes!
+Vi o Lorde Add!
+Depois de todos estes anos...
+Mas depois eles...
+Isso não é possível.
+O Add está morto.
+Não...
+Não!
+Isto deve ser um truque!
+Aquele Mortal...
+Deve ter sido o trabalho deles!
+Bee...
+Vou encontrá-los...
+Então, vou acabar com eles!
+Mangela-os!
+Arrancou-os!
+Amarrem-nos de limbo!
+Grund seus ossos em pó bom!
+Então, vou cortar-lhes os orgãos...
+Espalhar o fígado e beber o sangue...
+O resto vai para o pot...
+Stir e Fritar durante 45 minutos...
+E Presto!
+Perfeito snack de meia noite!
+
+Ainda bem que está bem.
+Nunca mais me assustes assim, ouviste?
+Eu...
+Está tudo bem, mana?
+
+Sim.
+Estou bem agora.
+Tem certeza?
+Então o que aconteceu ao seu cabelo?
+Não gostas?
+Muito pelo contrário!
+Combina perfeitamente com os seus chifres gordos.
+... 
+Seu burro.
+Como é que me encontrou?
+É uma longa história...
+Talvez noutra altura.
+Preciso de descansar agora.
+Você e eu!
+Rodar créditos!
+O quê?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BATALHA COM CIF
+...
+Chegou aqui.
+Isso significa que o Bee já está...
+... ... ...
+Adicionar...
+
+
+
+
+
+
+
+
+
+É assim que quer acabar com tudo?
+...
+Não me lembro da última vez que a DIS nos chamou assim tão fundo.
+Traz-te de volta...
+Mas não penses que vou ser brando com você por sentimentalismo.
+
+DIS.
+O nível de ameaça é muito maior do que o esperado.
+A este ritmo, os servidores principais serão violados.
+Solicitando liberação temporal da grade principal para unir nossas defesas.
+
+Isto não vai acabar...
+Até um de nós se queimar.
+
+
+
+Esta criança...
+E pensar que também os transformarias no seu peão.
+Deve estar desesperado.
+
+Não vou permitir isso.
+Se deixasses aquela criança morrer com você...
+Todos os seus sacrifícios teriam sido em vão.
+
+
+
+
+
+
+Não consegui arder tão brilhante como você.
+Hah...
+
+...
+Obrigado pelas boas recordações.
+Adeus, Add.
+
+
+Não te preocupes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+... ... ...
+
+
+
+
+
+
+... ... ...
+Não.
+
+
+
+
+
+Muito bem, mortal.
+Demoraste muito.
+Por um momento pensei que nunca conseguirias.
+Mas finalmente.
+Aqui estamos nós, no coração da DIS.
+...
+Acabei de perceber.
+Nunca me apresentei adequadamente.
+
+Finalmente.
+
+
+... ... ...
+
+
+
+
+
+Alto!
+Não sei o que está planeando e gostava de não ter de interferir...
+Mas tem de parar!
+A verdadeira natureza da DIS está muito além de sua compreensão.
+Não posso deixar que entres em contato com ele!
+Morre.
+
+Hmm?
+Interessante.
+Este transmissor pode converter ondas de rádio em padrões de fala.
+Desculpa o incómodo.
+Agora que me consegue ouvir, mortal.
+Há duas coisas que gostaria de te dizer.
+Obrigado.
+Sim.
+Morre.
+
+Mon.
+Qual é a situação?
+É como previu, meu senhor.
+O mortal desviou quase todas as firewalls.
+Em breve a DIS estará completamente à sua mercê!
+Muito bem, Mon.
+Sem os gafanhotos ídolos que recolheste, a minha ressurreição teria sido inviável.
+Agora que o seu trabalho está feito, há duas coisas que gostaria de lhe dizer.
+Eh?
+Não está falando sério, irmã...?
+
+Interessante.
+Falhei?
+Não.
+... 
+Mostra-te.
+Adicionar.
+
+Lev...
+Finalmente decidiste revelar a sua mão.
+Igualmente.
+Estou impressionado.
+Deve ter suspeitado de mim o tempo todo.
+Considerando que nem me confiavas o seu pessoal depois de desapareceres.
+Senti-me melhor.
+Qual é a palavra...
+''Angery'' quando encontrei aquele baú vazio no meu quarto.
+Por outro lado, armazenar partes da sua consciência em estados de memória foi um movimento brilhante.
+Chega.
+Quando acabar com você...
+Vou levar o DIS comigo!
+Não tão depressa.
+Sabe, graças aos seus esforços.
+A DIS está num estado bastante vulnerável.
+E como precaução, nós, Senhores, recebemos alguns direitos de administrador.
+Assim, até eu posso acessar livremente estados de memória.
+Tal como este.
+
+...!
+Bateste num nervo?
+Nunca entendi o que a DIS viu nestes sacos inúteis de carne e ossos.
+No entanto, tivemos de continuar as nossas experiências intermináveis com eles, vez após vez.
+Quando começaste a sentir pena deles?
+Foi por causa daquele idiota do Eus?
+Verme patético.
+Deixa-os fora disto.
+
+Que tal uma troca?
+Tenho andado à procura, mas não consigo encontrar o primeiro estado de memória.
+O momento da nossa criação.
+Está a segurá-lo, não está?
+Dá-mo e pode ficar com a sua preciosa pilha de carne.
+
+... ... ...
+Toma.
+
+Gray!
+
+
+Que adorável.
+Receio que este será o fim da vossa reunião.
+Pelo menos posso assegurar-vos que os momentos finais da vossa existência miserável serão verdadeiramente magníficos.
+Levanta-te, Devanam Indra Sakra!
+
+
+
+
+
+
+
+
+
+Está bem?
+Acho que sim...
+Você...
+É o Gray, certo?
+Embora estejas diferente...
+...
+Desculpa ter-te metido nesta confusão.
+
+
+
+Fala por ti!
+
+O quê?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Sussurro celestial Lev se aproxima de você]
+Enquanto as estrelas queimam...
+Enquanto o calor se torna frio...
+Como criadores encontram o seu fim pelas suas criações...
+Quando uma criança mata os pais...
+[Você também deixará de existir]
+Este sentimento...
+[Sabe muito bem]
+
+[Foi isso que você desejou?]
+[Não há outra maneira?]
+[É tudo o que você pode fazer?]
+
+Vou impedir-te.
+Mesmo que eu...
+Não me deixas alternativa.
+Isto tem de acabar.
+Temos de acabar...
+Lev!
+[Uma criação de sua própria imagem]
+
+Campo de Anti-Gravidade.
+ABRAHAM-LORENTZ FORCE.
+Protostar.
+Estrela massiva.
+XXX SUPERGIANTE.
+Supernova.
+Buraco negro.
+
+Parem, os dois!
+
+Quem...
+Quem é você?
+Parece-me familiar...
+
+O que pensa que está fazendo?
+Raios.
+Na verdade, parou.
+Como é que o paraste?
+Rejeição.
+O quê?
+A DIS não foi concebida para nós, Lev.
+Todo este tempo, esteve à procura de algo...
+Ou alguém.
+E agora, finalmente, ela acordou...
+...
+Não.
+Não me digas.
+Que este macaco nu vale a pena?
+Não vou aceitar!
+Vou apagar a sua própria existência!
+Vou acabar com a sua história!
+Pois eu sou o novo governador dos céus!
+
+Foram-se embora...?
+Receio que não.
+Mesmo em seu estado louco, Lev foi capaz de criar uma distorção maciça dentro do tempo e espaço.
+Não se sabe o que vai acontecer se forem deixados à sua disposição.
+
+Devo segui-los e acabar com o que comecei.
+Já cheguei até aqui.
+
+Desculpa ter-te metido nesta confusão.
+Tudo isto deve ser difícil de aceitar e gostava de ter tempo para te contar tudo...
+Mas o tempo é essencial neste momento.
+Pelo menos, pude ver-te uma última vez.
+Posso finalmente seguir em frente sem arrependimentos.
+Adeus, Lily.
+
+Fala por ti!
+Caramba.
+Seguiste-me até ao fim do mundo...
+E agora já planeias deixar-me neste poço e fazer um discurso sem sentido?
+Tem muita coragem, isso é certo.
+Ummm...
+Acho que não entende a gravidade da situação...
+Eu sei disso!
+DIS isso, Lev aquilo, tempo e espaço que...
+Não faço ideia!
+
+Mesmo assim...
+Quando estava à sua espera...
+Estava vendo um sonho sem fim.
+Um sonho que não era meu.
+Gray, ou quem quer que sejas...
+Foi mesmo duro, não foi?
+Quaisquer que tenham sido as vossas razões...
+Obrigado por ficar ao meu lado este tempo todo.
+Agora deixe-me retribuir o favor.
+Vamos, juntos!
+
+E agora vê o quão baixo te rebaixaste.
+Combinando a sua alma com o corpo imundo daquele mortal.
+Dá-me nojo.
+Cuidado com o tom.
+
+Quando penso que finalmente estou sendo salvo desta vala...
+O meu salvador está prestes a largar-me como um mau hábito.
+Pensei que a Gray ao menos mandaria alguém mais confiável em seu lugar...
+
+Quando estava à espera do Gray...
+Gray...
+Ela não vem, pois não?
+Tenho certeza que ela tentou o seu melhor.
+Cuidar de ti...
+O que quer que te tenha feito chegar até aqui...
+Quero ir com você!
+É a minha única forma de retribuir o favor ao Gray.
+
+
+O que nos espera além deste ponto, não há garantia de regresso.
+Não que eu possa fazer-te mudar de ideias neste momento.
+Quando estiveres pronto...
+
+Está pronto?
+Muito bem.
+Lily...
+Empresta-me a sua força!
+Conseguiste!
+
+Mais uma coisa.
+Já faz algum tempo desde a última vez que voei.
+Então tenta aguentar-te.
+...
+Voou?
+
+Ou planeavas enfrentar o Lev sozinho?
+Pareciam muito fortes.
+Não sei como o fiz...
+Mas se eu fosse capaz de segurá-los apenas por um momento, seria certamente uma grande ajuda!
+Deixa de ser tão melodramático e deixa-me ajudar-te, seu idiota.
+
+Mesmo depois de todo este tempo...
+Continuo a subestimar o quão teimoso é...
+Ainda pior do que eu.
+Lily.
+Estou feliz por te ter conhecido.
+É preciso um burro para conhecer um.
+A vida teria sido muito chata sem ti por perto.
+Mas esta quantidade de excitação está empurrando...
+É isso mesmo.
+Igualmente.
+Pelo menos pude ver-te saudável e segura...
+Tenho certeza que o Gray ficaria feliz.
+
+Acho que ambos lhe devemos muito.
+Ela nunca desistiu de nenhum de nós.
+Mesmo que às vezes essa decisão pesasse sobre ela insuportavelmente...
+A Gray sempre acreditou que um dia, de alguma forma, ela ainda te podia salvar.
+Se ela estava disposta a acreditar em ti, eu também!
+Não te vai arrepender!
+Embora tenha de admitir, é muito estranho falar com você assim...
+Vamos pôr a conversa em dia quando acabarmos, tudo bem?
+Sim.
+
+Por favor, depressa!
+
+. . . . . . . .
+Há algum problema?
+Por um momento, senti uma terrível sensação de afundamento no estômago.
+Como se algo muito, muito, muito mau estivesse prestes a acontecer.
+Arrepios na minha espinha.
+Acalma-te.
+Você consegue.
+
+Porque paraste?
+... ... ...
+Este ato banal de seguir passos predeterminados em uníssono.
+Este é o tipo de memórias que você valoriza?
+É tudo o que há?
+Desculpe desapontá-lo.
+...
+Se houvesse uma maneira de escaparmos ao nosso karma.
+Se os nossos parentes pudessem alcançar a verdadeira felicidade...
+Gostaria que este momento nunca acabasse.
+
+Pequena...
+Está quase lá.
+Por mais difícil que as coisas possam ficar...
+Eu acredito em ti.
+[Estas palavras enchem-te de calor]
+[Você pode fazer isso!]
+
+Já tiveste a sua parte?
+
+Ouvi dizer que pode ganhar pontos extras se os deixares arrastar as esferas para um certo lugar...
+Lillie, Lev!
+O jantar está quase pronto!
+Tudo bem, mãe!
+...
+Foi assim tão mau?
+Acho que me venceste!
+Podemos tentar outra coisa, se quiseres.
+Nunca me diverti tanto.
+Sério?
+Acho que não jogaste tantos jogos...
+Não é só isso...
+Obrigado por partilhares as suas memórias comigo, Lillie.
+
+Sim.
+Também tive de aprender da maneira mais difícil.
+Promete...
+Promete que ela vai voltar em segurança, tudo bem?
+Não sei que sensação é esta, mas...
+Procurei-o durante muito tempo.
+Agora que o encontrei...
+Sei que não me pertence.
+E mesmo que quisesse proteger este momento para sempre...
+Eu sei que não posso.
+
+
+
+
+OUTROS
+Aqui está o domínio esquecido...
+O rasto de traidores...
+O caminho para o coração da DIS...
+Está mesmo pronto...
+
+
+
+
+
+Aquela sanguessuga, aquele olho preguiçoso, aquele verme...
+Agentes de traidores que andam por aqui...
+Ouve-me, alcança-os, mata-os...
+E assim provarás a sua coragem...
+
+Estas paredes ainda estão intactas...
+Ainda assim, ser arranhado suave...
+Pelos desesperados...
+
+Evite o olhar avarento...
+Não pode escapar ao julgamento...
+Para todos manusya deve desejar...
+
+Aquele ídolo...
+Dificilmente se move...
+Que chatice, como dizem...
+
+Está aproximando-te...
+Mesmo que te sintas preso...
+Ouve...
+Lembra-te...
+
+Que frágil...
+Cuidado onde pisas...
+E não deixar nada para trás...
+
+Não consigo alcançá-lo...
+Acho que...
+Ou pode...
+Vou esperar que descubras...
+
+Há outro quarto...
+Assim como este...
+Não me lembro...
+O que parecia...
+
+Estavas sempre lá...
+Que estranho...
+Está tudo tão diferente...
+Isso importa...
+
+Que a lâmina de começar a cortar as sanguessugas...
+Que o relâmpago sempre vigilante derrube as larvas...
+Que o nada reclame os olhos preguiçosos...
+Como os senhores traidores foram derrotados há muito tempo...
+A sua lâmina...
+As suas asas...
+As suas memórias...
+Quanto os valorizas...
+
+Consegue ouvir-me...
+Desculpe o incómodo, não tenho nada a dizer...
+...
+Não desistas...
+
+Para acabar com este caminho sem fim...
+Os Senhores Vazios devem descer, um após o outro, do princípio ao fim...
+Mas para perceberes que está fora do seu alcance...
+Sigam-me até ao vazio e voltarão para onde começaram...
+
+Não desistas.
+Você consegue.
+Dá o seu melhor!
+Confia em ti.
+Continua!
+Nada é impossível.
+Eu acredito em ti.
+Vai conseguir.
+
+Muito bem!
+É imparável!
+Eu sabia que ias conseguir!
+Parabéns!
+Muito bem!
+Fantástico!
+Continuem o bom trabalho!
+Incrível!
+
+A prática faz a perfeição.
+Hora do verdadeiro negócio!
+
+Consegue mesmo fazer isto?
+Isto é demais...
+Nem pensar...
+Isto é sério...
+Isto não pode estar a acontecer...
+Impossível...
+Perdeste.
+Mas que raio?
+
+Obrigado.
+
+Não pode usar essa.
+Receio que esse já esteja em uso, pequenino.
+Arranja o seu, barata.
+Este pode ser muito caro, até para ti!
+Deixa-me em paz.
+Que incómodo.
+Negado.
+Não pode usar essa.
+Há sempre alguma coisa.
+Mantenha para baixo por seis segundos na tela de título para iniciar um novo desafio.
+Boa sorte!
+
+Procura o que resta do primeiro senhor traidor.
+Empurrar o ídolo lorn guardando sua fraqueza 23 vezes, então permanecer parado e esperar e esperar...
+O primeiro selo será cortado...
+
+
+
+
+
+Procura o que resta do terceiro senhor traidor.
+Entregai-vos ao seu pedido e trazei-lhes paz.
+O terceiro selo será cortado...
+
+Costumava haver um selo aqui...
+Um dia simplesmente desapareceu...
+Estranho...
+
+Então, a cabeça grande finalmente conseguiu o seu desejo...
+...
+Fez o que tinhas de fazer...
+
+A cabeça grande ainda está viva, consigo senti-la...
+Embora eles esperem que não...
+Lamento dizer isto, mas acho que nunca os encontrará...
+Podem estar em qualquer lugar...
+
+Algo cheira mal...
+De onde vem...
+Ugh...
+Por favor, faça alguma coisa...
+
+Tem certeza?
+Espero que saibas o que está fazendo.
+
+...
+Lev...?
+Está vivo...
+E o pessoal que traz...
+
+Não me interpretes mal.
+
+Por alguma razão...
+Ver esse seu olhar condescendente mais uma vez faz-me sentir...
+Aliviado.
+Embora só tenha confiado em Add...
+Serás sempre uma querida irmã mais velha para mim.
+E só por essa razão...
+Não te deixo passar, aconteça o que acontecer.
+
+E assim, sem o conhecimento de qualquer alma viva...
+Uma batalha cruel começou...
+Em que estes dois seres miseráveis permaneceriam, eternamente...
+Olá.
+Querida!
+Cuidado onde pisas.
+Que rude!
+Mas dois podem jogar esse jogo.
+Nunca me apanharás agora, querida!
+Não há nada para ver aqui, juro!
+Lembrar
+
+Bem, vou-me embora agora...
+Liga se acontecer alguma coisa.
+Relaxa!
+Eu trato das coisas aqui, por isso não te preocupes e diverte-te uma vez.
+Mãe!
+O que foi, querida?
+Quero tirar-te uma foto antes de ires!
+Porque de repente...
+Excelente ideia!
+Afinal, uma ocasião tão importante tem de ser imortalizada.
+Já me arrependo disto...
+Que tal fazeres pose com a sua mãe, Lillie?
+Posso tirar a fotografia.
+Sim!
+Muito bem, aproximem-se mais...
+E agora é hora de um grande sorriso!
+
+[Uma carcaça gigante]
+Um uivo aborrecido escapa das suas fendas em decomposição.
+[Não vai parar]
+[Um sino toca para você]
+[Aceitará o seu chamado?]
+Aceitar?
+E então vai deixar este mundo acordado.
+
+Bem-vindos!
+Acho que nunca nos conhecemos.
+
+Já nos conhecemos antes?
+Oh, é você.
+...
+Não sais assim tantas vezes, pois não?
+
+Já que está aqui...
+Presumo que já saibas o que se passa.
+Mas no caso de teres entrado por acaso antes de acabares o jogo...
+Por favor, use as escadas à direita para sair.
+Considere isto o seu último e único aviso.
+
+Está tudo bem?
+Óptimo!
+Nesta zona de fantasia, você vai encontrar todos os tipos de coisas que não acabaram no jogo final por uma razão ou outra.
+Incluindo eu.
+A maioria está incompleta ou quebrada de alguma forma, então as coisas podem ficar um pouco confusas.
+Ainda assim, espero que encontres algo que te interesse.
+
+Aqui temos algumas ilustrações não utilizadas de Gray.
+Embora estes não tenham sido tão bons, desenhar ela sempre foi divertido.
+Agora que penso nisso, a criação de Gray pôs todo o projeto em movimento.
+Ela foi desenhada primeiro, mesmo antes de haver qualquer mecânica de jogo concreto ou história definida em pedra.
+Por falar em pôr o carrinho à frente do cavalo!
+Mas, por outro lado, a inspiração pode muitas vezes atacar quando menos se espera.
+Como personagem, Gray lembra-me Moominmamma de Moomins e Gally de Gunnm.
+Olhando para trás, há certamente coisas no seu design que eu gostaria de melhorar, especialmente agora que eu sei como a história termina...
+Independentemente disso, estou contente por ter sido capaz de ver como a personagem dela evoluiu durante todo o jogo.
+Espero que ela consiga se destacar na sua mente também.
+
+Estes deveriam ser desenhos de fundo para preencher o espaço negativo em salas de quebra-cabeça.
+Mas, uma vez colocado, algo sobre eles parecia estranho.
+Como se todo o clima tivesse mudado drasticamente.
+Assim foram desmantelados.
+
+Este é um esboço de teste muito cedo para me acostumar a este novo estilo de arte pixel.
+Essas personagens parecem-me familiares...
+Como eu tinha que aprender algumas novas habilidades para este projeto, eu decidi logo para diminuir a fidelidade gráfica, a fim de manter a carga de trabalho controlável.
+Encaixar - se em qualquer prova ser surpreendentemente difícil.
+Mesmo no jogo final, os pequenos personagens sprites tendem a olhar um pouco muito ocupado para o seu próprio bem.
+É por isso que os retratos de diálogo são muito maiores.
+Uma vez que você vê corretamente como um personagem é ''suposto'' para olhar...
+A sua mente preenche o resto!
+
+A maioria destes conceitos inimigos não foram muito longe.
+Os seus desenhos são bastante convencionais, não acha?
+Só que o cabeça de aranha foi realmente codificado, mas o seu comportamento complicado não ficou bem com outros inimigos.
+Pode tentar jogar com ele, mas não posso prometer que não vai estragar o jogo.
+Por falar em inimigos...
+Há oito inimigos regulares no jogo final.
+Cada um age como um agente para um dos Senhores Vazios.
+Consegue adivinhar qual deles vai juntos?
+
+Tenho certeza que conheces o clima.
+Sentado num ônibus ou num trem, a olhar pela janela e a pensar...
+...
+É engraçado.
+Lillie não existia até que o desenvolvimento da primeira metade do jogo já estava terminado.
+Na verdade, pensei que o jogo estava quase a acabar.
+Mas a minha mulher disse-me que não ia testar os puzzles mais difíceis se não houvesse conteúdo novo.
+Dizer que o alcance do jogo veio de lá seria...
+Um eufemismo.
+E eu esperava que este projecto fosse rápido!
+Mesmo assim...
+A Lillie acabou por ser a minha personagem favorita, por isso equilibra as coisas.
+
+E aqui estamos nós.
+No final da nossa longa viagem.
+Muitas vezes me pergunto que tipo de futuro nos espera.
+À medida que o nosso mundo envelhece...
+Tudo parece cada vez menos estável.
+Apesar de estar mais ligado do que nunca...
+Não podemos mais chegar um ao outro, mesmo quando queremos desesperadamente ser ouvidos, ser compreendidos.
+Lutei muito com este sentimento.
+Sentir que o meu trabalho não tem sentido.
+Talvez, só talvez...
+O fato de teres chegado até aqui significa que sentes o mesmo desejo que eu.
+Consegue ouvir-me agora?
+Consigo ouvir-te.
+Espero que te tenhas divertido.
+Obrigado por jogar e pelo seu tempo!
+Vejo você na próxima aventura!
+
+Seu pequeno...
+Saíste por sua conta outra vez!
+Hmph!
+Não é assim que se deve falar com uma princesa.
+Que se lixe!
+O meu rabo é erva se te acontecer alguma coisa!
+Hag!
+O que me chamaste?
+Foi você que começaste!
+Juro que um dia vou lavar essa sua boca...!
+Porque tem de desaparecer assim...
+Eu visitei a mãe.
+A esta hora?
+Pensei que veria a estrela dela se procurasse bem.
+Mas há demasiados!
+Não consigo distingui-los!
+...
+Da próxima vez...
+Da próxima vez, ajudo-te a encontrá-lo.
+Sério?
+Juro.
+Não fujas mais assim.
+Tudo bem...
+Mais alguma coisa?
+Pode contar essa história antes de dormir?
+Que história?
+A história das estrelas!
+Está ficando demasiado tarde para isso...
+Depois digo ao pai que me chamaste "peixe".
+...
+Tudo bem.
+Anda cá, pequeno idiota.
+No início, quando o céu e a terra ainda eram um e o mesmo...
+Uma flor deu flores, iluminando o espaço com estrelas...
+
+Quieto!
+Afaste-se da consola!
+
+Hmph.
+A carregar ordens enquanto estou trabalhando...
+Não têm nada melhor para fazer?
+Não voltaremos a avisar-te!
+Faça o que dissermos ou abriremos fogo!
+Não me faças rir.
+Considerando que conseguiu entrar aqui e que ainda estou vivo...
+Quem deu as suas ordens deve estar muito alto e quer que eu fique ileso, certo?
+...
+Deixe-me falar com ela.
+Sei que ela deve estar a ouvir.
+Dra. Lily.
+Gostava que esta escalada tivesse sido evitada.
+Mas a sua teimosa deixou-nos poucas opções.
+Quais são as minhas escolhas?
+Porque não me dás um tiro?
+Seria muito conveniente para si.
+Ainda não localizámos a caixa preta que roubaste.
+Entrega-o.
+Não até terminar a minha pesquisa.
+O governo declarou o seu conteúdo altamente confidencial.
+Qualquer transgressão adicional será julgada em conformidade.
+Não te posso proteger muito mais tempo.
+Então, quem julgará aqueles tolos famintos de poder que continuam adulterando a tecnologia que eles não entendem ao mínimo?!
+... ... ...
+A descoberta da nave alienígena e o aparecimento súbito do cometa devem estar ligados.
+E se os dados da caixa preta da nave forem um pouco precisos...
+Bem, essas ogivas a chover nas nossas instalações em breve será a menor das nossas preocupações.
+Chega, Dra. Lily.
+Não nos deixa outra escolha...
+
+
+...
+Quem é você?
+
+Desculpa, estranho...
+O que procuras...
+Não se pode encontrar aqui...
+
+Porque não acataste o meu aviso...
+Ou talvez não me conseguisses ouvir antes...
+...
+Há muito que vigio estes corredores...
+Guiando, ponderando, lembrando...
+A sua viagem ainda não acabou...
+Não perguntes como sei...
+A minha memória...
+Posso mandar-te de volta...
+E leva todo o seu fardo...
+As suas escolhas...
+Longe...
+Aceitas...?
+Começar de novo?
+(Isto irá reiniciar o seu progresso)
+Muito bem...
+Fica calma...
+Não te preocupes...
+Mesmo quando as estrelas morrem...
+As nossas memórias...
+Faça a luz deles...
+Sem fim.
+
+GRASS
+Nós fizemos grama
+Como se sente?
+AGORA PARA FAZER
+TREAS
+COMO FAZER TREES
+
+Está
+NÃO FRESCO
+COMO SER
+NÃO FRESCO
+
+CRADLE
+Fizemos uma série de sonhos.
+TREAS
+Eles são os mesmos
+
+Já conheceste o AdD?
+DE SUA PRÓPRIA CARNE DESEXO CRIARAM MUITOS SERES
+Apenas alguns sobreviveram
+E até mesmo alguns
+SEGUINTE
+
+Estava tão perto.
+Mas depois me jogou para longe.
+EUS
+Era suposto eu ter esse nome.
+Eu não era bom o suficiente.
+CURSE QUE MULHER
+Devolve-me o meu nome.
+
+A abelha está sempre com fome.
+ADD fez deles um ser simples
+Muito simples
+Eles não podem nadar
+Veja como eu mergulho
+NÃO NECESSIDADE DE CAÇAR
+Talvez.
+ADID NÃO QUER MAIS SE SENTIR HUNGER
+
+Mesmo depois de aprenderem a criar uma vida consciente
+ADD NÃO ESTAVA APENAS COM OS SEUS RESULTADOS
+Então eles mudaram a sua abordagem
+Não sabemos o que fizeram diferentemente.
+Mas até mesmo adivinhou que algo estava errado.
+QUANDO CRIARAM MON
+E mesmo quando o ADD iria voltar a este método
+A maioria ainda diria
+Aquele mon permaneceu o mais repugnante de todos aqueles que foram criados
+
+Por favor, não se incomode.
+Eles querem dizer, sem danos.
+Eles simplesmente não se dão bem com outros.
+Provavelmente não acredita em mim.
+Mas eu posso dizer
+No fundo, são um ser gentil.
+Não os magoarias.
+DIREITA
+
+GOR FOI O SEGUNDO SER
+SER CRIADO COM MEIOS PROIBIDOS
+ADD tentou ter cuidado desta vez.
+MUITO CUIDADO
+GOR TOMOU-SE QUASE IMOÇÃO
+SLUGISH E INDECISIVO
+NÃO SOU MUITO
+
+LEV
+TERCEIRO E FINAL
+NASCIDO POR MEIOS PROIBIDOS
+Falar foi difícil para o LEV
+"Tus Ad deu todos eles chifres"
+Para que ouvissem o Leve falar
+LEV era tão grato
+Se o ADD tivesse parado lá
+COM O TEMPO
+Mesmo a mais recente gratituidade
+CRESCER
+RESENTAÇÃO SILENTE
+SER SEM CORAÇÃO
+
+Finalmente
+DEPOIS DE HOONING suas habilidades por tanto tempo
+O ADD chegou mais perto do que nunca.
+Eles deram o nascimento a um ser frágil
+FALANDO EM FORÇA
+IMPERFEITO EM MUITOS CAMINHOS
+Assim como ADD tinha esperado
+UMA MANUSIA ARTIFICIAL
+SER CAPÁVEL DE ILUMINAÇÃO
+SEU VERDADEIRO NOME
+Como todos os outros
+É LONGO ESQUECENDO
+Mas as irmãs chamavam-lhes
+CIF
+
+[Uma criatura estranha]
+É melhor deixar estar.
+
+Vamos encontrar-nos quando acabarem!
+Falta um pouco...
+
+KEYBOARD
+CONTROLADOR
+
+...
+Já tentou paletas diferentes?
+Alguns deles fazem-me doer os olhos...
+...
+Aquele buraco...
+Não digite...
+Vai arrepender-te...
+Uma...
+Um permanece...
+Nenhum...
+Nenhum permanece...
+CRÉDITO
+APRESENTADO POR
+JOGO POR
+MÚSICA POR
+GRÁFICOS POR
+CRIADOS COM
+BIBLIOTECAS DE ÁUDIO
+TESTADORES
+ARTISTA DE CARACTERÍSTICAS
+CARACTERÍSTICA DOS CONSELHEIROS
+ARTIST
+TRADUÇÃO
+& REVISÃO
+Agradecimentos especiais
+
+Eero Lahtinen
+Eero Lahtinen
+Antti Ukkola
+Antti Ukkola
+
+Ceigar
+Ceigar
+Setzeri
+Setzeri
+Tregalia
+Tregalia
+xaerock
+xaerock
+
+Som livre
+Som livre
+freesound.org
+Juhani Junkala
+Juhani Junkala
+O Retro Essencial
+Jogo de Vídeo
+Efeitos sonoros
+Colecção
+Taira Komori
+Taira Komori
+taira-komori.jpn.org
+Laboratório de efeitos sonoros
+Laboratório de efeitos sonoros
+soundeffect-lab.info
+
+Audácia
+Audácia
+Bfxr
+Estúdio FL
+Estúdio FL
+GameMaker
+MS Paint
+MS Paint
+sfxr
+
+TRADUÇÃO E REVISÃO
+INGLÊS/FINLANDÊS
+Inglês/finlandês
+Lotta Leppälä
+Lotta Leppälä
+Muste Criativo
+Muste Criativo
+Lotta Leppälä/Muste Creative
+Lotta Leppälä/Muste Creative
+CONSELHEIRO
+CARACTER
+ARTIST
+
+Borracha do Sistema
+Borracha do Sistema
+
+ESTRANGEIRO DE VOID
+VOID
+ESTRANHO
+
+PASSOS
+VAZIOS
+USOS
+ABERTO
+HITS
+QUEDAS
+EATEN
+COLECÇÃO
+TEMPO
+
+TOTAL
+RECORDS
+
+Agradecimentos especiais
+Você!
+
+Até à próxima!
+Ad meliora
+
+AlexMdle
+Flan
+Garoslaw
+Kettu
+Maunuri
+Laranja
+PureQuestion
+
+tomi
+Xilitol
+
+VOIDA
+MELODIA E VOCALOS
+Eevamari
+
+
+
+
+
+
+
