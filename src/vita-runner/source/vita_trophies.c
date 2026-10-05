@@ -119,7 +119,7 @@ bool VitaTrophies_init(void) {
     lastStage = "pack_open";
     lastResult = 0;
     trophyLogMsg("TROPHY=pack_open_before");
-    SceUID pack = sceIoOpen("app0:sce_sys/trophy/DELT00001_01/TROPHY.TRP", SCE_O_RDONLY, 0);
+    SceUID pack = sceIoOpen("app0:sce_sys/trophy/VSTR00001_00/TROPHY.TRP", SCE_O_RDONLY, 0);
     trophyLogStage("pack_open_after", pack);
     if (pack < 0) return trophyFail("pack_missing", pack);
     sceIoClose(pack);
@@ -129,12 +129,12 @@ bool VitaTrophies_init(void) {
     char communicationIdText[16] = {0};
     unsigned char communicationId[12] = {0};
     // sceAppMgr exposes the SceNpCommunicationId structure, not the textual
-    // SFO spelling. "DELT00001_00" therefore arrives as the nine-byte ID,
+    // SFO spelling. "VSTR00001_00" therefore arrives as the nine-byte ID,
     // a NUL terminator, set number 0 and one reserved byte.
-    // 12-byte SceNpCommunicationId: 9-byte base "DELT00001", NUL terminator,
-    // set number, reserved. Set number is 1 (=> DELT00001_01).
+    // 12-byte SceNpCommunicationId: 9-byte base "VSTR00001", NUL terminator,
+    // set number, reserved. Set number is 0 (=> VSTR00001_00).
     static const unsigned char expectedId[12] = {
-        'D','E','L','T','0','0','0','0','1','\0',1,0
+        'V','S','T','R','0','0','0','0','1','\0',0,0
     };
     char signature[160] = {0xb9, 0xdd, 0xe1, 0x3b, 0x01, 0x00};
     trophyLogMsg("TROPHY=app_param_before");
@@ -161,7 +161,7 @@ bool VitaTrophies_init(void) {
     // (ACGC00001_01) and Cuphead (CUPH44444_00) ports. Do NOT abort on an empty
     // SFO comm id.
     memcpy(communicationId, expectedId, sizeof(communicationId));
-    trophyLogMsg("TROPHY=comm_id_source=hardcoded value=DELT00001_01");
+    trophyLogMsg("TROPHY=comm_id_source=hardcoded value=VSTR00001_00");
     trophyLogMsg("TROPHY=load_np_trophy_before");
     result = sceSysmoduleLoadModule(SCE_SYSMODULE_NP_TROPHY);
     trophyLogStage("load_np_trophy_after", result);
@@ -241,50 +241,61 @@ bool VitaTrophies_init(void) {
     trophyLogStage("setup_dialog_init_after", result);
     if (result < 0) { sceAppUtilShutdown(); return trophyFail("setup_dialog_init", result); }
 
+    bool setupTimedOut = false;
+    int setupGetResult = 0;
+    int setupDialogResult = 0;
+    SceCommonDialogStatus setupStatus = SCE_COMMON_DIALOG_STATUS_RUNNING;
     trophyLogMsg("TROPHY=dialog_loop_enter");
     {
         int guard = 0;
-        SceCommonDialogStatus st = SCE_COMMON_DIALOG_STATUS_RUNNING;
-        while ((st = sceNpTrophySetupDialogGetStatus()) == SCE_COMMON_DIALOG_STATUS_RUNNING) {
-            if ((guard % 60) == 0) trophyLogStage("dialog_loop_running status", (int)st);
+        while ((setupStatus = sceNpTrophySetupDialogGetStatus()) == SCE_COMMON_DIALOG_STATUS_RUNNING) {
+            if ((guard % 60) == 0) trophyLogStage("dialog_loop_running status", (int)setupStatus);
             glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
             vglSwapBuffers(GL_TRUE);
-            if (++guard > 3600) {  // ~60-120s cap so a stuck dialog logs a clear TIMEOUT
+            if (++guard > 3600) {
+                setupTimedOut = true;
                 trophyLogMsg("TROPHY=dialog_loop_TIMEOUT_breaking");
                 break;
             }
         }
-        trophyLogStage("dialog_loop_exit status", (int)st);
+        trophyLogStage("dialog_loop_exit status", (int)setupStatus);
     }
-    {
+    if (!setupTimedOut) {
         SceNpTrophySetupDialogResultDiag dres;
         memset(&dres, 0, sizeof(dres));
-        int gr = sceNpTrophySetupDialogGetResult(&dres);
+        setupGetResult = sceNpTrophySetupDialogGetResult(&dres);
+        setupDialogResult = dres.result;
         char rbuf[160];
         snprintf(rbuf, sizeof(rbuf),
                  "TROPHY=setup_dialog_result getresult=0x%08X dialog_result=0x%08X",
-                 (unsigned int)gr, (unsigned int)dres.result);
+                 (unsigned int)setupGetResult, (unsigned int)setupDialogResult);
         trophyLogMsg(rbuf);
     }
     sceNpTrophySetupDialogTerm();
     sceAppUtilShutdown();
     trophyLogMsg("TROPHY=setup_dialog_term_done");
+    if (setupTimedOut)
+        return trophyFail("setup_dialog_timeout", (int)0x80551612);
+    if (setupGetResult < 0)
+        return trophyFail("setup_dialog_get_result", setupGetResult);
+    if (setupDialogResult < 0)
+        return trophyFail("setup_dialog_result", setupDialogResult);
 
     int handle = -1;
     unsigned int count = 0;
     trophyLogMsg("TROPHY=create_handle_before");
     int hres = sceNpTrophyCreateHandle(&handle);
     trophyLogStage("create_handle_after", hres);
-    if (hres >= 0) {
-        int gus = sceNpTrophyGetTrophyUnlockState(trophyContext, handle, &unlockState, &count);
-        trophyLogStage("get_unlock_state", gus);
-        sceNpTrophyDestroyHandle(handle);
-    }
+    if (hres < 0) return trophyFail("create_handle", hres);
+    int gus = sceNpTrophyGetTrophyUnlockState(trophyContext, handle, &unlockState, &count);
+    trophyLogStage("get_unlock_state", gus);
+    sceNpTrophyDestroyHandle(handle);
+    if (gus < 0) return trophyFail("get_unlock_state", gus);
     memset(&pendingState, 0, sizeof(pendingState));
-    unlockSemaphore = sceKernelCreateSema("deltarune trophy queue", 0, 0, 32, NULL);
+    unlockSemaphore = sceKernelCreateSema("voidstranger trophy queue", 0, 0, 32, NULL);
     if (unlockSemaphore < 0) return trophyFail("create_semaphore", unlockSemaphore);
-    unlockThread = sceKernelCreateThread("deltarune trophy unlocker", trophyUnlockWorker,
+    unlockThread = sceKernelCreateThread("voidstranger trophy unlocker", trophyUnlockWorker,
                                          0x10000100, 0x10000, 0, 0, NULL);
     available = true;
     if (unlockThread < 0 || sceKernelStartThread(unlockThread, 0, NULL) < 0) {
@@ -297,8 +308,14 @@ bool VitaTrophies_init(void) {
     return true;
 }
 
+bool VitaTrophies_isUnlocked(int id) {
+    if (id < 0 || id >= 30) return false;
+    unsigned int mask = 1U << (id & 31);
+    return ((unlockState.bits[id >> 5] | pendingState.bits[id >> 5]) & mask) != 0;
+}
+
 void VitaTrophies_unlock(int id) {
-    if (!available || id < 0 || id >= 30) return;
+    if (!available || id <= 0 || id >= 30) return;
     unsigned int mask = 1U << (id & 31);
     if (((unlockState.bits[id >> 5] | pendingState.bits[id >> 5]) & mask) != 0) return;
     unsigned int write = queueWrite;
@@ -313,7 +330,7 @@ void VitaTrophies_unlock(int id) {
 unsigned int VitaTrophies_syncMask(uint32_t unlockedMask) {
     if (!available) return 0;
     unsigned int queued = 0;
-    for (int id = 0; id < 30; ++id) {
+    for (int id = 1; id < 30; ++id) {
         unsigned int mask = 1U << (id & 31);
         if ((unlockedMask & (1U << id)) == 0 ||
             ((unlockState.bits[id >> 5] | pendingState.bits[id >> 5]) & mask) != 0)

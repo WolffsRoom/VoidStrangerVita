@@ -57,7 +57,27 @@ function scrScript()
     if (is_array(vita_source) && vita_index >= 0 && vita_index < array_length(vita_source))
         vita_value = vita_source[vita_index];
 
-    if ((!is_string(vita_value) || vita_value == ""undefined"") && vita_lang != 0)
+    var vita_missing = (!is_string(vita_value) || vita_value == """" || vita_value == ""undefined"");
+
+    // EN and FI have a packed original column. Sparse external language files
+    // intentionally leave some entries empty, so an empty string means
+    // "fall back", not "display an empty dialogue page".
+    if (vita_missing && vita_id > 0 && vita_lang <= 1)
+    {
+        if (!variable_global_exists(""vita_original_script_grid"") ||
+            !is_array(global.vita_original_script_grid) ||
+            array_length(global.vita_original_script_grid) < 2)
+            global.vita_original_script_grid = csv_to_grid(""voidstranger_data.csv"");
+
+        var vita_packed_source = global.vita_original_script_grid[vita_lang];
+        if (is_array(vita_packed_source) && vita_index >= 0 && vita_index < array_length(vita_packed_source))
+            vita_value = vita_packed_source[vita_index];
+        vita_missing = (!is_string(vita_value) || vita_value == """" || vita_value == ""undefined"");
+    }
+
+    // External translations are sparse. Fall back to English external text
+    // first, then to the packed original English CSV below.
+    if (vita_missing && vita_lang != 0)
     {
         if (is_undefined(global.script_array[0][1]) || !is_array(global.script_array[0][1]))
             global.script_array[0][1] = txt_to_array(global.script_array[0][0], ""included"");
@@ -71,9 +91,23 @@ function scrScript()
 
         if (is_array(vita_source) && vita_index >= 0 && vita_index < array_length(vita_source))
             vita_value = vita_source[vita_index];
+        vita_missing = (!is_string(vita_value) || vita_value == """" || vita_value == ""undefined"");
     }
 
-    if (!is_string(vita_value) || vita_value == ""undefined"")
+    if (vita_missing && vita_id > 0)
+    {
+        if (!variable_global_exists(""vita_original_script_grid"") ||
+            !is_array(global.vita_original_script_grid) ||
+            array_length(global.vita_original_script_grid) < 2)
+            global.vita_original_script_grid = csv_to_grid(""voidstranger_data.csv"");
+
+        var vita_english_source = global.vita_original_script_grid[0];
+        if (is_array(vita_english_source) && vita_index >= 0 && vita_index < array_length(vita_english_source))
+            vita_value = vita_english_source[vita_index];
+        vita_missing = (!is_string(vita_value) || vita_value == """" || vita_value == ""undefined"");
+    }
+
+    if (vita_missing)
         return """";
     return vita_value;
 }

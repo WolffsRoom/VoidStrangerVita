@@ -125,6 +125,7 @@ static bool vitaFloweryBattleMemoryMode = false;
 static bool vitaChapter3TvMemoryMode = false;
 static bool vitaNativeVideoMemoryMode = false;
 static bool vitaCouchOverworldMemoryMode = false;
+static bool vitaVoidTailRoomMemoryMode = false;
 static bool vitaCh2CyberIntroMemoryMode = false;
 static bool vitaCh2KeyboardMemoryMode = false;
 static bool vitaCh2BattleMemoryMode = false;
@@ -1102,6 +1103,37 @@ static void vitaDrawQuad(const Vita2DVertex vertices[4]) {
     vitaDisable2DVertexArrays();
 }
 
+// Fixed-function coloured primitives on Vita must not depend on the auxiliary
+// 1x1 white texture.  draw_rectangle[_color] is used for Room fades, menu
+// backdrops and prompt bars; drawing colour-only vertices also matches the
+// GameMaker primitive semantics when no custom shader is active.
+static void vitaDrawColorQuad(const Vita2DVertex vertices[4]) {
+    if (vitaCustomShaderAttribsActive) {
+        // A user shader may sample gm_BaseTexture, so keep the white-texture
+        // modulation path while a custom shader is explicitly active.
+        vitaDrawQuad(vertices);
+        return;
+    }
+
+    static bool logged = false;
+    glActiveTexture(GL_TEXTURE0);
+    glDisable(GL_TEXTURE_2D);
+    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    glEnableClientState(GL_COLOR_ARRAY);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glColorPointer(4, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].r);
+    glVertexPointer(2, GL_FLOAT, sizeof(Vita2DVertex), &vertices[0].x);
+    glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_COLOR_ARRAY);
+    glEnable(GL_TEXTURE_2D);
+
+    if (!logged) {
+        vitaRenderLog("VITA_PRIMITIVE=colour_quad_untextured");
+        logged = true;
+    }
+}
+
 #define VITA_IMMEDIATE_MAX_VERTICES 262144
 static Vita2DVertex vitaImmediateVertices[VITA_IMMEDIATE_MAX_VERTICES];
 static GLsizei vitaImmediateCount;
@@ -2033,7 +2065,14 @@ static uint16_t* vitaCpuTextureCacheStore(GLLegacyRenderer* gl, uint32_t pageId,
         }
     }
     if (slot < 0) return pixels;
-    free(gl->cpuTextureCachePixels[slot]);
+    if (gl->cpuTextureCachePixels[slot] != nullptr) {
+        // VitaGL may still be consuming the client buffer after glTexImage2D
+        // returns. With a one-slot CPU cache the next atlas used to free/reuse
+        // the previous upload source immediately, producing intermittent
+        // fragments from unrelated sprites (notably Cif in rm_cif_end).
+        glFinish();
+        free(gl->cpuTextureCachePixels[slot]);
+    }
     gl->cpuTextureCachePixels[slot] = pixels;
     gl->cpuTextureCachePage[slot] = pageId;
     gl->cpuTextureCacheWidth[slot] = w;
@@ -2057,7 +2096,13 @@ static void vitaReleasePreparedPixels(GLLegacyRenderer* gl, uint16_t* pixels) {
         glFinish();
         return;
     }
-    if (!vitaCpuTextureCacheOwns(gl, pixels)) free(pixels);
+    if (!vitaCpuTextureCacheOwns(gl, pixels)) {
+        // Non-cached malloc buffers have the same lifetime requirement as the
+        // persistent staging block: fence before returning their storage to
+        // the allocator, otherwise a following upload can overwrite it.
+        glFinish();
+        free(pixels);
+    }
 }
 
 static bool vitaTextureNeedsFullColor(GLLegacyRenderer* gl, uint32_t pageId) {
@@ -2655,9 +2700,20 @@ bool GLLegacyRenderer_ensureTextureLoaded(GLLegacyRenderer* gl, uint32_t pageId)
         pixels = nullptr;
     } else {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, gpuW, gpuH, 0, GL_RGBA, GL_UNSIGNED_SHORT_4_4_4_4, gpuPackedPixels);
-        if (gpuPackedPixels != packedPixels) free(gpuPackedPixels);
-        if (pixels != nullptr) free(pixels);
-        else vitaReleasePreparedPixels(gl, packedPixels);
+        if (gpuPackedPixels != packedPixels) {
+            // The resampled buffer is never retained by the CPU cache. Fence
+            // its asynchronous upload before freeing it.
+            glFinish();
+            free(gpuPackedPixels);
+        }
+        if (pixels != nullptr) {
+            // When packing happened in-place, pixels is also the GL upload
+            // source. A separate gpuPackedPixels path has already fenced above.
+            if (gpuPackedPixels == packedPixels) glFinish();
+            free(pixels);
+        } else {
+            vitaReleasePreparedPixels(gl, packedPixels);
+        }
         pixels = nullptr;
         packedPixels = nullptr;
         gpuPackedPixels = nullptr;
@@ -3058,6 +3114,8 @@ void GLLegacyRenderer_prepareRoomTextureSet(GLLegacyRenderer* gl, Room* room) {
     vitaFloweryBattleMemoryMode = vitaChapter5FloweryBattle;
     vitaChapter3TvMemoryMode = vitaChapter3TvBoard;
     vitaCouchOverworldMemoryMode = g_vitaActiveChapter == 3 && vitaCouchOverworld;
+    vitaVoidTailRoomMemoryMode = room->name != nullptr &&
+        strcmp(room->name, "rm_0029") == 0;
     vitaNativeVideoMemoryMode = g_vitaActiveChapter == 3 && room->name != nullptr &&
         strcmp(room->name, "room_dw_couch_video") == 0;
     gl->vitaSevereRoomTextures = room->name != nullptr &&
@@ -3206,7 +3264,78 @@ void GLLegacyRenderer_prepareRoomTextureSet(GLLegacyRenderer* gl, Room* room) {
         vitaMarkSpritePagesByName(gl, "spr_dw_three_petals", true);
     }
 
+    // Void Stranger B030/rm_0029 composes Tail from several independent
+    // small sprite pages. The object-default manifest is appended after the
+    // preload snapshot, so these floor/body pages could arrive only on first
+    // Draw (or remain absent if the room transition consumed the upload window).
+    // Promote them by resource name so repacked translations use their own IDs.
+    if (vitaVoidTailRoomMemoryMode) {
+        vitaMarkSpritePagesByName(gl, "spr_tail_floor", true);
+        vitaMarkSpritePagesByName(gl, "spr_tail_upperbody", true);
+        vitaMarkSpritePagesByName(gl, "spr_tail_lowerbody", true);
+        vitaMarkSpritePagesByName(gl, "spr_tail_tail", true);
+        vitaMarkSpritePagesByName(gl, "spr_floor", true);
+    }
+
+    // Void Stranger selects enemy direction sprites during Create/Room Start.
+    // The Steam atlas keeps each direction family together, while the Vita
+    // repack may split left/right or up/down onto different texture pages.
+    // Preload both directions whenever the corresponding enemy type is present.
+    bool vitaHasEnemyCL = false;
+    bool vitaHasEnemyCC = false;
     DataWin* dw = gl->base.dataWin;
+    for (uint32_t i = 0; i < room->gameObjectCount; ++i) {
+        int32_t objectIndex = room->gameObjects[i].objectDefinition;
+        if (objectIndex < 0 || (uint32_t)objectIndex >= dw->objt.count) continue;
+        const char* objectName = dw->objt.objects[objectIndex].name;
+        if (objectName == nullptr) continue;
+        if (strcmp(objectName, "obj_enemy_cl") == 0) vitaHasEnemyCL = true;
+        else if (strcmp(objectName, "obj_enemy_cc") == 0) vitaHasEnemyCC = true;
+    }
+    if (vitaHasEnemyCL) {
+        vitaMarkSpritePagesByName(gl, "spr_cl_right", true);
+        vitaMarkSpritePagesByName(gl, "spr_cl_left", true);
+    }
+    if (vitaHasEnemyCC) {
+        vitaMarkSpritePagesByName(gl, "spr_cc_down", true);
+        vitaMarkSpritePagesByName(gl, "spr_cc_up", true);
+    }
+
+    // Void Stranger's pause menu chooses its backdrop/illustration dynamically
+    // from DS grids and obj_menu is persistent, so it may not appear in the
+    // destination room's static object list. Keep these few UI pages ready for
+    // every Void Stranger room to avoid a blank first frame on menu selection.
+    if (g_vitaActiveChapter == 1) {
+        vitaMarkSpritePagesByName(gl, "spr_black_screen", true);
+        vitaMarkSpritePagesByName(gl, "spr_menu_continue", true);
+        vitaMarkSpritePagesByName(gl, "spr_menu_burdens", true);
+        vitaMarkSpritePagesByName(gl, "spr_menu_memories", true);
+        vitaMarkSpritePagesByName(gl, "spr_menu_settings", true);
+        vitaMarkSpritePagesByName(gl, "spr_menu_exit_001", true);
+        // Album art is selected from numeric sprite IDs at runtime and is not
+        // discoverable through the destination room's static object list.
+        vitaMarkSpritePagesByName(gl, "spr_memories_icons_a2", true);
+        vitaMarkSpritePagesByName(gl, "spr_memories_icons_b2", true);
+        vitaMarkSpritePagesByName(gl, "spr_memories_album", true);
+        vitaMarkSpritePagesByName(gl, "spr_memories_lock", true);
+        vitaMarkSpritePagesByName(gl, "spr_memento_stone_b", true);
+        vitaMarkSpritePagesByName(gl, "spr_soulglow_med", true);
+        vitaMarkSpritePagesByName(gl, "spr_soulglow_medsma", true);
+        vitaMarkSpritePagesByName(gl, "spr_soulglow_sma", true);
+    }
+    // rm_fb_006 composes its elevator tile from sprites chosen only at runtime.
+    // obj_elevator_activate has no default sprite, so these resources are not
+    // discoverable by the static manifest and could appear one frame too late.
+    if (g_vitaActiveChapter == 1 && room->name != nullptr &&
+        strcmp(room->name, "rm_fb_006") == 0) {
+        vitaMarkSpritePagesByName(gl, "spr_floor_alpha", true);
+        vitaMarkSpritePagesByName(gl, "spr_floor", true);
+        vitaMarkSpritePagesByName(gl, "spr_player_up", true);
+        vitaMarkSpritePagesByName(gl, "spr_player_down", true);
+        vitaMarkSpritePagesByName(gl, "spr_lil_up", true);
+        vitaMarkSpritePagesByName(gl, "spr_lil_down", true);
+    }
+
     for (uint32_t i = 0; i < room->gameObjectCount; ++i) {
         int32_t objectIndex = room->gameObjects[i].objectDefinition;
         if (objectIndex >= 0 && (uint32_t)objectIndex < dw->objt.count)
@@ -3264,6 +3393,13 @@ uint32_t GLLegacyRenderer_preloadRoomTextureSet(GLLegacyRenderer* gl) {
     // font/subtitle pages; static room pages would consume the contiguous
     // decoder reserve without contributing to the presented frame.
     if (vitaNativeVideoMemoryMode) return loaded;
+    if (vitaVoidTailRoomMemoryMode) {
+        loaded += vitaEnsureSpritePagesByName(gl, "spr_tail_floor");
+        loaded += vitaEnsureSpritePagesByName(gl, "spr_tail_upperbody");
+        loaded += vitaEnsureSpritePagesByName(gl, "spr_tail_lowerbody");
+        loaded += vitaEnsureSpritePagesByName(gl, "spr_tail_tail");
+        loaded += vitaEnsureSpritePagesByName(gl, "spr_floor");
+    }
     // The first slide dynamically switches five character/effect atlases that
     // are not part of the room's static manifest. Upload them while the room
     // loading transition is still visible instead of stalling the collision
@@ -3329,6 +3465,16 @@ static int vitaClassifyCameraQuad(Renderer* renderer,
                                   float x2, float y2, float x3, float y3) {
 #ifdef PLATFORM_VITA
     extern int g_vitaActiveChapter;
+    const char* roomName = (renderer != nullptr && renderer->runner != nullptr &&
+                            renderer->runner->currentRoom != nullptr)
+        ? renderer->runner->currentRoom->name : nullptr;
+    // rm_0029 pans above the normal board to reveal Tail. Legacy view_yview
+    // updates can temporarily diverge from the camera object used by this
+    // optimization, so a valid spr_tail_floor quad at y=-64 was classified as
+    // off-camera on Vita even though its texture was resident. Keep the PC/GM
+    // behavior for this single scripted room.
+    if (roomName != nullptr && strcmp(roomName, "rm_0029") == 0)
+        return 2;
     // Match v0.68-3 for Chapter 2 by default. Some cutscenes transform or
     // reposition sprites before the camera catches up, so global culling hid
     // valid characters. The two measured Cyber City rooms below are safe:
@@ -3336,9 +3482,6 @@ static int vitaClassifyCameraQuad(Renderer* renderer,
     // and traffic quads. Restrict culling to those rooms instead of changing
     // the rendering behaviour of the whole chapter.
     if (g_vitaActiveChapter == 2) {
-        const char* roomName = (renderer != nullptr && renderer->runner != nullptr &&
-                                renderer->runner->currentRoom != nullptr)
-            ? renderer->runner->currentRoom->name : nullptr;
         bool safeCityCull = roomName != nullptr &&
             (strcmp(roomName, "room_dw_city_traffic_3_2Entrances") == 0 ||
              strcmp(roomName, "room_dw_cyber_post_music_boss_slide") == 0 ||
@@ -3439,6 +3582,41 @@ static bool vitaPrepareCameraTexture(GLLegacyRenderer* gl, uint32_t pageId,
     return GLLegacyRenderer_ensureTextureLoaded(gl, pageId);
 }
 
+static void glLegacyApplyFogColor(const GLLegacyRenderer* gl, float* r, float* g, float* b) {
+    if (gl == nullptr || !gl->fogEnable) return;
+    *r = (float)BGR_R(gl->fogColor) / 255.0f;
+    *g = (float)BGR_G(gl->fogColor) / 255.0f;
+    *b = (float)BGR_B(gl->fogColor) / 255.0f;
+}
+
+static void glGpuSetFog(Renderer* renderer, bool enable, uint32_t color) {
+    GLLegacyRenderer* gl = (GLLegacyRenderer*)renderer;
+    if (gl == nullptr) return;
+    gl->fogEnable = enable;
+    gl->fogColor = color;
+
+}
+
+#ifdef PLATFORM_VITA
+static void vitaFogTextureBegin(const GLLegacyRenderer* gl) {
+    if (gl == nullptr || !gl->fogEnable) return;
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_COMBINE);
+    glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_RGB, GL_REPLACE);
+    glTexEnvi(GL_TEXTURE_ENV, GL_SRC0_RGB, GL_PRIMARY_COLOR);
+    glTexEnvi(GL_TEXTURE_ENV, GL_OPERAND0_RGB, GL_SRC_COLOR);
+    glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_ALPHA, GL_MODULATE);
+    glTexEnvi(GL_TEXTURE_ENV, GL_SRC0_ALPHA, GL_TEXTURE);
+    glTexEnvi(GL_TEXTURE_ENV, GL_OPERAND0_ALPHA, GL_SRC_ALPHA);
+    glTexEnvi(GL_TEXTURE_ENV, GL_SRC1_ALPHA, GL_PRIMARY_COLOR);
+    glTexEnvi(GL_TEXTURE_ENV, GL_OPERAND1_ALPHA, GL_SRC_ALPHA);
+}
+
+static void vitaFogTextureEnd(const GLLegacyRenderer* gl) {
+    if (gl == nullptr || !gl->fogEnable) return;
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+}
+#endif
+
 static void glDrawSprite(Renderer* renderer, int32_t tpagIndex, float x, float y, float originX, float originY, float xscale, float yscale, float angleDeg, uint32_t color, float alpha) {
     GLLegacyRenderer* gl = (GLLegacyRenderer*) renderer;
     DataWin* dw = renderer->dataWin;
@@ -3490,6 +3668,7 @@ static void glDrawSprite(Renderer* renderer, int32_t tpagIndex, float x, float y
     float r = (float) BGR_R(color) / 255.0f;
     float g = (float) BGR_G(color) / 255.0f;
     float b = (float) BGR_B(color) / 255.0f;
+    glLegacyApplyFogColor(gl, &r, &g, &b);
 
 #ifdef PLATFORM_VITA
     const Vita2DVertex vertices[4] = {
@@ -3498,7 +3677,9 @@ static void glDrawSprite(Renderer* renderer, int32_t tpagIndex, float x, float y
         {u1, v1, r, g, b, alpha, x2, y2},
         {u0, v1, r, g, b, alpha, x3, y3},
     };
+    vitaFogTextureBegin(gl);
     vitaDrawQuad(vertices);
+    vitaFogTextureEnd(gl);
 #else
     glBegin(GL_QUADS);
         // Vertex 0: top-left
@@ -3607,6 +3788,7 @@ static void glDrawSpriteTiled(Renderer* renderer, int32_t tpagIndex, float origi
     float r = (float) BGR_R(color) / 255.0f;
     float g = (float) BGR_G(color) / 255.0f;
     float b = (float) BGR_B(color) / 255.0f;
+    glLegacyApplyFogColor(gl, &r, &g, &b);
 
     // Emit the entire tile grid in a single glBegin -> glEnd
     glBindTexture(GL_TEXTURE_2D, texId);
@@ -3656,20 +3838,22 @@ static void glDrawSpritePos(Renderer* renderer, int32_t tpagIndex, float x1, flo
     float u1 = (float) (tpag->sourceX + tpag->sourceWidth) / (float) texW;
     float v1 = (float) (tpag->sourceY + tpag->sourceHeight) / (float) texH;
 
+    float pr = 1.0f, pg = 1.0f, pb = 1.0f;
+    glLegacyApplyFogColor(gl, &pr, &pg, &pb);
     glBegin(GL_QUADS);
-        glColor4f(1.0f, 1.0f, 1.0f, alpha);
+        glColor4f(pr, pg, pb, alpha);
         glTexCoord2f(u0, v0);
         glVertex2f(x1, y1);
 
-        glColor4f(1.0f, 1.0f, 1.0f, alpha);
+        glColor4f(pr, pg, pb, alpha);
         glTexCoord2f(u1, v0);
         glVertex2f(x2, y2);
 
-        glColor4f(1.0f, 1.0f, 1.0f, alpha);
+        glColor4f(pr, pg, pb, alpha);
         glTexCoord2f(u1, v1);
         glVertex2f(x3, y3);
 
-        glColor4f(1.0f, 1.0f, 1.0f, alpha);
+        glColor4f(pr, pg, pb, alpha);
         glTexCoord2f(u0, v1);
         glVertex2f(x4, y4);
     glEnd();
@@ -3689,6 +3873,7 @@ static void glDrawSpritePart(Renderer* renderer, int32_t tpagIndex, int32_t srcO
     float r = (float) BGR_R(color) / 255.0f;
     float g = (float) BGR_G(color) / 255.0f;
     float b = (float) BGR_B(color) / 255.0f;
+    glLegacyApplyFogColor(gl, &r, &g, &b);
 
     // Quad corners (no origin offset - draw_sprite_part ignores sprite origin)
     float cx0, cy0, cx1, cy1, cx2, cy2, cx3, cy3;
@@ -3755,7 +3940,7 @@ static void emitColoredQuad(GLLegacyRenderer* gl, float x0, float y0, float x1, 
         {0.5f, 0.5f, r, g, b, a, x1, y1},
         {0.5f, 0.5f, r, g, b, a, x0, y1},
     };
-    vitaDrawQuad(vertices);
+    vitaDrawColorQuad(vertices);
 #else
     glBegin(GL_QUADS);
         // All UVs point to (0.5, 0.5) center of the 1x1 white texture
@@ -3830,31 +4015,43 @@ static void glDrawRectangleColor(Renderer* renderer, float x1, float y1, float x
         glDrawLineColor(renderer, x2, y2, x1, y2, 1.0, color3, color4, alpha);
         glDrawLineColor(renderer, x1, y2, x1, y1, 1.0, color4, color1, alpha);
     } else {
-        // Filled rectangle: GML adds +1 to width/height for filled rects
-
+        // Filled rectangle: GML adds +1 to width/height for filled rects.
+        // Vita must not use vitaGL's legacy glBegin/glVertex path here: the
+        // immediate-mode pool is not guaranteed to exist and transition
+        // overlays such as obj_darkness would silently disappear or fault.
+#ifdef PLATFORM_VITA
+        // GameMaker accepts rectangles whose endpoints are reversed. The old
+        // immediate-mode path tolerated that winding, while Vita's array path
+        // can cull it. Normalize both axes and move each corner colour with it.
+        float vx1 = x1, vy1 = y1, vx2 = x2 + 1.0f, vy2 = y2 + 1.0f;
+#define SWAPF(a,b) do { float _tmp = (a); (a) = (b); (b) = _tmp; } while (0)
+        if (vx1 > vx2) {
+            SWAPF(vx1, vx2);
+            SWAPF(r1, r2); SWAPF(g1, g2); SWAPF(b1, b2);
+            SWAPF(r4, r3); SWAPF(g4, g3); SWAPF(b4, b3);
+        }
+        if (vy1 > vy2) {
+            SWAPF(vy1, vy2);
+            SWAPF(r1, r4); SWAPF(g1, g4); SWAPF(b1, b4);
+            SWAPF(r2, r3); SWAPF(g2, g3); SWAPF(b2, b3);
+        }
+#undef SWAPF
+        const Vita2DVertex vertices[4] = {
+            {0.5f, 0.5f, r1, g1, b1, alpha, vx1, vy1},
+            {0.5f, 0.5f, r2, g2, b2, alpha, vx2, vy1},
+            {0.5f, 0.5f, r3, g3, b3, alpha, vx2, vy2},
+            {0.5f, 0.5f, r4, g4, b4, alpha, vx1, vy2},
+        };
+        vitaDrawColorQuad(vertices);
+#else
         // All UVs point to (0.5, 0.5) center of the 1x1 white texture
         glBegin(GL_QUADS);
-            // Vertex 0: top-left
-            glColor4f(r1, g1, b1, alpha);
-            glTexCoord2f(0.5f, 0.5f);
-            glVertex2f(x1, y1); 
-
-            // Vertex 1: top-right
-            glColor4f(r2, g2, b2, alpha);
-            glTexCoord2f(0.5f, 0.5f);
-            glVertex2f(x2+1, y1);
-
-            // Vertex 2: bottom-right
-            glColor4f(r3, g3, b3, alpha);
-            glTexCoord2f(0.5f, 0.5f);
-            glVertex2f(x2+1, y2+1);
-
-            // Vertex 3: bottom-left
-            glColor4f(r4, g4, b4, alpha);
-            glTexCoord2f(0.5f, 0.5f);
-            glVertex2f(x1, y2+1); 
-
+            glColor4f(r1, g1, b1, alpha); glTexCoord2f(0.5f, 0.5f); glVertex2f(x1,     y1);
+            glColor4f(r2, g2, b2, alpha); glTexCoord2f(0.5f, 0.5f); glVertex2f(x2 + 1, y1);
+            glColor4f(r3, g3, b3, alpha); glTexCoord2f(0.5f, 0.5f); glVertex2f(x2 + 1, y2 + 1);
+            glColor4f(r4, g4, b4, alpha); glTexCoord2f(0.5f, 0.5f); glVertex2f(x1,     y2 + 1);
         glEnd();
+#endif
     }
 }
 
@@ -4863,45 +5060,77 @@ static void glLegacyDrawSurface(Renderer* renderer, int32_t surfaceId, int32_t s
     // Expand only the complete application_surface presentation; ordinary
     // user surfaces and partial surface effects keep their original geometry.
     Runner* runner = renderer->runner;
-    if (runner != nullptr && (surfaceId == APPLICATION_SURFACE_ID || surfaceId == runner->applicationSurfaceId) &&
+    bool vitaWholeApplicationSurface = runner != nullptr &&
+        (surfaceId == APPLICATION_SURFACE_ID || surfaceId == runner->applicationSurfaceId) &&
         srcLeft == 0 && srcTop == 0 && angleDeg == 0.0f &&
-        (xscale >= 2.0f || (x == 144.0f && y == 56.0f))) {
+        ((srcWidth == 896 && srcHeight == 576) ||
+         (srcWidth == 448 && srcHeight == 288) ||
+         (srcWidth == 224 && srcHeight == 144));
+
+    // Draw Post already calculates the intended Vita presentation:
+    //   INTEGER -> uniform integer scale (224x144 => 672x432)
+    //   FIT     -> maximum uniform fit     (=> about 846x544)
+    //   STRETCH -> independent X/Y scales (=> 960x544)
+    // Preserve those semantics in the host framebuffer instead of forcing
+    // every mode back to FIT.  A non-uniform request is also used by the
+    // dedicated Graphics page so that menu alone fills the Vita screen.
+    float vitaRequestedXScale = xscale;
+    float vitaRequestedYScale = yscale;
+    bool vitaRequestedFullStretch = fabsf(vitaRequestedXScale - vitaRequestedYScale) > 0.01f;
+    bool vitaFinalHostPass = vitaWholeApplicationSurface && runner->inGuiPass &&
+        runner->guiPassTarget == RENDER_TARGET_HOST_FRAMEBUFFER;
+
+    if (vitaFinalHostPass) {
+        float fitScale = fminf((float)gl->windowW / (float)srcWidth,
+                               (float)gl->windowH / (float)srcHeight);
+        if (vitaRequestedFullStretch) {
+            x = 0.0f;
+            y = 0.0f;
+            xscale = (float)gl->windowW / (float)srcWidth;
+            yscale = (float)gl->windowH / (float)srcHeight;
+#ifdef PLATFORM_VITA
+            static bool loggedFullStretch = false;
+            if (!loggedFullStretch) {
+                char line[192];
+                snprintf(line, sizeof(line),
+                         "FINAL_SURFACE_STRETCH src=%dx%d dst=%dx%d host=%dx%d",
+                         srcWidth, srcHeight, gl->windowW, gl->windowH, gl->windowW, gl->windowH);
+                vitaRenderLog(line);
+                loggedFullStretch = true;
+            }
+#endif
+        } else {
+            float finalScale = vitaRequestedXScale;
+            // Some legacy paths arrive with the Steam scale already stripped.
+            // In that case retain the previous safe FIT fallback.
+            if (finalScale < 2.0f || finalScale > fitScale + 0.05f)
+                finalScale = fitScale;
+            x = ((float)gl->windowW - (float)srcWidth * finalScale) * 0.5f;
+            y = ((float)gl->windowH - (float)srcHeight * finalScale) * 0.5f;
+            xscale = finalScale;
+            yscale = finalScale;
+#ifdef PLATFORM_VITA
+            static bool loggedUniformScale = false;
+            if (!loggedUniformScale) {
+                char line[192];
+                const char* mode = fabsf(finalScale - roundf(finalScale)) < 0.01f ? "INTEGER" : "FIT";
+                snprintf(line, sizeof(line),
+                         "FINAL_SURFACE_%s src=%dx%d dst=%.1fx%.1f pos=%.1f,%.1f host=%dx%d",
+                         mode, srcWidth, srcHeight, (float)srcWidth * finalScale,
+                         (float)srcHeight * finalScale, x, y, gl->windowW, gl->windowH);
+                vitaRenderLog(line);
+                loggedUniformScale = true;
+            }
+#endif
+        }
+    } else if (vitaWholeApplicationSurface &&
+               (xscale >= 2.0f || yscale >= 2.0f || (x == 144.0f && y == 56.0f))) {
+        // Non-host passes still use the native logical surface geometry.
         x = 0.0f;
         y = 0.0f;
         xscale = 1.0f;
         yscale = 1.0f;
         angleDeg = 0.0f;
-    }
-    // Void Stranger's Draw Post presents a dedicated final surface. The
-    // Steam GML scale is lost after its surface target is popped on Vita, so
-    // perform the final aspect-fit here, directly in the 960x544 host pass.
-    // 224:144 becomes 846.22x544 with equal scaling and centered side bars.
-    if (runner != nullptr && runner->inGuiPass &&
-        runner->guiPassTarget == RENDER_TARGET_HOST_FRAMEBUFFER &&
-        srcLeft == 0 && srcTop == 0 &&
-        ((srcWidth == 896 && srcHeight == 576) ||
-         (srcWidth == 448 && srcHeight == 288) ||
-         (srcWidth == 224 && srcHeight == 144)) &&
-        angleDeg == 0.0f) {
-        float finalScale = fminf((float)gl->windowW / (float)srcWidth,
-                                 (float)gl->windowH / (float)srcHeight);
-        x = ((float)gl->windowW - (float)srcWidth * finalScale) * 0.5f;
-        y = ((float)gl->windowH - (float)srcHeight * finalScale) * 0.5f;
-        xscale = finalScale;
-        yscale = finalScale;
-#ifdef PLATFORM_VITA
-        static bool loggedFinalFit = false;
-        if (!loggedFinalFit) {
-            char line[192];
-            snprintf(line, sizeof(line),
-                     "FINAL_SURFACE_FIT src=%dx%d dst=%.1fx%.1f pos=%.1f,%.1f host=%dx%d",
-                     srcWidth, srcHeight, (float)srcWidth * finalScale,
-                     (float)srcHeight * finalScale, x, y,
-                     gl->windowW, gl->windowH);
-            vitaRenderLog(line);
-            loggedFinalFit = true;
-        }
-#endif
     }
 #endif
 
@@ -4944,19 +5173,13 @@ static void glLegacyDrawSurfaceColor(Renderer* renderer, int32_t surfaceId, int3
     GLuint texId; int32_t texW, texH;
     if (!resolveSurfaceTexture(gl, surfaceId, &texId, &texW, &texH)) return;
     if (srcWidth < 0) { srcLeft = srcTop = 0; srcWidth = gl->surfaceWidth[surfaceId]; srcHeight = gl->surfaceHeight[surfaceId]; }
-#if defined(VOIDSTRANGER_VITA) && (defined(PLATFORM_VITA) || defined(VOIDSTRANGER_LOCAL_TEST))
-    Runner* runner = renderer->runner;
-    if (runner != nullptr && surfaceId == runner->applicationSurfaceId &&
-        runner->inGuiPass && runner->guiPassTarget == RENDER_TARGET_HOST_FRAMEBUFFER &&
-        srcLeft == 0 && srcTop == 0 &&
-        srcWidth == gl->surfaceWidth[surfaceId] && srcHeight == gl->surfaceHeight[surfaceId]) {
-        x = 0.0f;
-        y = 0.0f;
-        xscale = (float)gl->windowW / (float)srcWidth;
-        yscale = (float)gl->windowH / (float)srcHeight;
-        angleDeg = 0.0f;
+    // Uniform four-corner tint is semantically draw_surface_ext. Delegate it
+    // to the regular presenter so FIT/STRETCH geometry is not forced fullscreen.
+    if (c1 == c2 && c2 == c3 && c3 == c4) {
+        glLegacyDrawSurface(renderer, surfaceId, srcLeft, srcTop, srcWidth, srcHeight,
+                            x, y, xscale, yscale, angleDeg, c1, alpha);
+        return;
     }
-#endif
     float u0 = (float) srcLeft / texW, u1 = (float) (srcLeft + srcWidth) / texW;
     float v0 = (float) srcTop / texH, v1 = (float) (srcTop + srcHeight) / texH;
     Matrix4f transform;
@@ -5270,7 +5493,7 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
             "precision mediump float; uniform sampler2D gm_BaseTexture; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
             "uniform vec3 cBl; uniform vec3 cG0; uniform vec3 cG1; uniform vec3 cWh;\n"
             "void main(){ vec4 t=texture2D(gm_BaseTexture,v_vTexcoord); vec3 p;"
-            "if(t.r<0.51) p=(t.r<0.25)?cBl:cG0; else p=(t.r<0.76)?cG1:cWh;"
+            "if(t.r<0.625) p=(t.r<0.25)?cBl:cG0; else p=(t.r<0.875)?cG1:cWh;"
             "gl_FragColor=vec4(p*v_vColour.rgb,t.a*v_vColour.a); }\n";
         if (strcmp(shaderName, "shd_hue") == 0) { vsrc=hueVertexVita; fsrc=hueFragmentVita; }
         else if (strcmp(shaderName, "shader_palette") == 0) { vsrc=paletteVertexVita; fsrc=paletteFragmentVita; }
@@ -5284,7 +5507,7 @@ static void glCompileAllShaders(GLLegacyRenderer* gl) {
             "uniform sampler2D gm_BaseTexture; varying vec2 v_vTexcoord; varying vec4 v_vColour;\n"
             "uniform vec3 cBl; uniform vec3 cG0; uniform vec3 cG1; uniform vec3 cWh;\n"
             "void main(){ vec4 t=texture2D(gm_BaseTexture,v_vTexcoord); vec3 p;"
-            "if(t.r<0.51) p=(t.r<0.25)?cBl:cG0; else p=(t.r<0.76)?cG1:cWh;"
+            "if(t.r<0.625) p=(t.r<0.25)?cBl:cG0; else p=(t.r<0.875)?cG1:cWh;"
             "gl_FragColor=vec4(p*v_vColour.rgb,t.a*v_vColour.a); }\n";
         if (strcmp(shaderName, "shd_hue") == 0) { vsrc=hueVertexDesktop; fsrc=hueFragmentDesktop; }
         else if (strcmp(shaderName, "shader_palette") == 0) { vsrc=paletteVertexDesktop; fsrc=paletteFragmentDesktop; }
@@ -5654,6 +5877,7 @@ Renderer* GLLegacyRenderer_create(void) {
     glVtable.gpuSetAlphaTestRef = glGpuSetAlphaTestRef;
     glVtable.gpuSetColorWriteEnable = glGpuSetColorWriteEnable;
     glVtable.gpuGetColorWriteEnable = glGpuGetColorWriteEnable;
+    glVtable.gpuSetFog = glGpuSetFog;
     glVtable.gpuGetBlendEnable = glGpuGetBlendEnable;
     glVtable.drawTile = nullptr;
     glVtable.drawSpriteTiled = glDrawSpriteTiled;
@@ -5695,6 +5919,8 @@ Renderer* GLLegacyRenderer_create(void) {
     gl->colorWriteG = true;
     gl->colorWriteB = true;
     gl->colorWriteA = true;
+    gl->fogEnable = false;
+    gl->fogColor = 0;
 
     return (Renderer*) gl;
 }

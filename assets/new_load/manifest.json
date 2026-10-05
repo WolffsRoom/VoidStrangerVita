@@ -1,0 +1,56 @@
+{
+  "source_data_win": "C:\\Users\\wolff\\Documents\\SDKVita\\VoidStranger\\data\\prepared\\voidstranger\\data.win",
+  "source_sha256": "9CE2BAB66D6EDB3FB6506BEDEFC634BCB354AD034D828F8BA3DC679777C6E00A",
+  "room_reference": "rm_rest_area",
+  "animation": {
+    "order": "void_rod_places_block_then_gray_walks_onto_it",
+    "cells": 12,
+    "floor_cells": 11,
+    "progress_per_cell": "exact target_cell * 100 / FLOOR_COUNT"
+  },
+  "completion": {
+    "sequence": [
+      "front",
+      "edge_approach",
+      "fall",
+      "complete_hold",
+      "fadeout"
+    ],
+    "front_sprite": "spr_player_down",
+    "fall_sprite": "spr_player_fall",
+    "edge_effect_sprite": "spr_sweat",
+    "final_player_cell": 11,
+    "edge_direction": "down",
+    "edge_logical_step_game_px": 16,
+    "edge_initial_slide_game_px": -8,
+    "edge_slide_per_frame_game_px": 0.16,
+    "edge_slide_frames": 47,
+    "state23_total_frames": 60,
+    "fall_spawn_after_state8_frames": 4,
+    "text": "Loading complete!",
+    "front_hold_ms": 120,
+    "fall_game_frames": 40,
+    "fall_image_speed_step": 0.15,
+    "fall_y_step_game_px": 0.1,
+    "fall_ms": 680,
+    "hold_ms": 840,
+    "fadeout_ms": 700
+  },
+  "runtime_assets": {
+    "sprites": [
+      "spr_stairs",
+      "spr_floor",
+      "spr_player_right",
+      "spr_player_attack_r",
+      "spr_player_down",
+      "spr_player_fall",
+      "spr_sweat",
+      "spr_void_rod",
+      "spr_player_swipe",
+      "spr_sparkle"
+    ],
+    "audio": [
+      "snd_voidrod_place.wav"
+    ]
+  }
+}

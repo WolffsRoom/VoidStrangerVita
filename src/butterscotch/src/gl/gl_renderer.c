@@ -1511,7 +1511,9 @@ void GLRenderer_trimTextureCacheForRoomChange(GLRenderer* gl, uint64_t targetByt
 
 bool GLRenderer_ensureTextureLoaded(GLRenderer* gl, uint32_t pageId) {
     if (gl->textureLoaded[pageId]) {
+#ifdef __vita__
         if (pageId < gl->originalTexturePageCount) gl->textureLastUsedFrame[pageId] = gl->textureFrame;
+#endif
         return (gl->textureWidths[pageId] != 0);
     }
 #ifdef __vita__

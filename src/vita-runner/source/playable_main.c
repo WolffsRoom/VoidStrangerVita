@@ -17,10 +17,14 @@ int _newlib_heap_size_user = 256 * 1024 * 1024;
 #include <psp2/sysmodule.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <vitaGL.h>
+
+// Present in the bundled vitaGL fork but absent from the installed public header.
+void vglPhycontMemLazyInit(size_t size);
 
 #include "data_win.h"
 #include "collision.h"
@@ -42,13 +46,19 @@ int _newlib_heap_size_user = 256 * 1024 * 1024;
 #include "vm_builtins.h"
 #include "profiler.h"
 #include "stb_image.h"
+#include "loading_animation.h"
+#include "fruit_touch.h"
+#include "dev_room_nav.h"
+#include "voidstranger_audio_ids.h"
+#include "missing_data_scene.h"
 
 #define DATA_ROOT "ux0:data/voidstranger/"
 #define SAVE_PATH "ux0:data/voidstranger/saves/"
 #define LOG_PATH DATA_ROOT "butterscotch-probe.log"
+#define COMPAT_LOG_PATH DATA_ROOT "compat-diagnostics.log"
 #define NEXT_CHAPTER_PATH DATA_ROOT "next-chapter.txt"
 #define DEV_LOG_ROOT DATA_ROOT "devlogs"
-#define PORT_BUILD_VERSION "v1.0 (Runtime Cache + Vita Settings + Palette)"
+#define PORT_BUILD_VERSION "v2.0"
 #define VITA_CDIALOG_MEMORY_SIZE 0x8C6000
 
 // Read by the Vita renderer to apply chapter-specific memory safety policies.
@@ -62,20 +72,58 @@ int g_vitaProbeLoggingEnabled = 0;
 bool g_vitaModernGlActive = false;
 extern int g_vitaGameVsyncEnabled;
 
+static SceUID probe_log_fd = -1;
 static SceUID dev_log_fd = -1;
 static char* dev_log_buffer = NULL;
 static size_t dev_log_buffer_size = 0;
 static size_t dev_log_buffer_capacity = 0;
-static GLuint loading_overlay_texture = 0;
-static GLuint generating_overlay_texture = 0;
-static GLuint loading_textures_tex = 0;
-static GLuint loading_frame_textures[4] = {0};
+enum {
+    LOADING_LANG_ENGLISH = 0,
+    LOADING_LANG_PTBR,
+    LOADING_LANG_SPANISH,
+    LOADING_LANG_ITALIAN,
+    LOADING_LANG_TURKISH,
+    LOADING_LANG_COUNT
+};
+
+#define LOADING_FLOOR_COUNT 11
+#define LOADING_EDGE_SLIDE_FRAMES 47
+#define LOADING_STATE23_TOTAL_FRAMES 60
+#define LOADING_FALL_DELAY_FRAMES 4
+#define LOADING_FALL_GAME_FRAMES 40
+#define LOADING_COMPLETE_HOLD_US 840000ULL
+#define LOADING_FADEOUT_US 700000ULL
+
+static GLuint loading_sprite_atlas = 0;
+static GLuint loading_digits_texture = 0;
+static GLuint loading_prefix_textures[LOADING_LANG_COUNT] = {0};
+static GLuint loading_complete_textures[LOADING_LANG_COUNT] = {0};
+static int loading_language = LOADING_LANG_ENGLISH;
+
+typedef struct {
+    int currentCell;
+    int targetCell;
+    bool stepActive;
+    uint64_t stepStartedUs;
+    float ratio;
+    int labelType;
+} LoadingAnimationRuntime;
+
+static LoadingAnimationRuntime loading_animation = {0};
+static AudioSystem* loading_audio_system = NULL;
+
+static GLuint startup_skip_texture = 0;
+static GLuint startup_black_texture = 0;
+static bool startup_long_skipped = false;
+static bool startup_long_watched = false;
 static void log_line(const char *text);
 static void dev_log_write(const char* text);
 static void loading_screen_init(void);
 static void loading_screen_shutdown(void);
+static void loading_screen_set_language(const char* language);
 static void draw_loading_screen(bool showProgress, float ratio, int labelType);
-static void draw_post_loading_screen(bool showTitle);
+static void play_loading_complete_sequence(void);
+static bool play_startup_video_sequence(void);
 
 // Lightweight CRT presentation filter.  It draws sparse one-pixel dark lines
 // into the host framebuffer after the game and Vita overlays are composed.
@@ -360,6 +408,20 @@ static void log_puzzle_diagnostics(Runner* runner) {
 
 typedef struct { GLfloat u, v, x, y; } LoadingVertex;
 
+typedef struct {
+    int loadingW, loadingH;
+    int completeW, completeH;
+    const char* code;
+} LoadingLanguageInfo;
+
+static const LoadingLanguageInfo kLoadingLanguageInfo[LOADING_LANG_COUNT] = {
+    {368, 47, 341, 47, "en"},
+    {444, 47, 470, 47, "ptbr"},
+    {406, 47, 319, 47, "es"},
+    {428, 42, 463, 47, "it"},
+    {412, 47, 401, 47, "tr"},
+};
+
 static GLuint load_loading_texture(const char* path) {
     SceUID fd = sceIoOpen(path, SCE_O_RDONLY, 0);
     if (fd < 0) return 0;
@@ -387,45 +449,76 @@ static GLuint load_loading_texture(const char* path) {
     return texture;
 }
 
+static GLuint create_solid_texture_rgba(unsigned char r, unsigned char g,
+                                        unsigned char b, unsigned char a) {
+    const unsigned char pixel[4] = { r, g, b, a };
+    GLuint texture = 0;
+    glGenTextures(1, &texture);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1, 1, 0, GL_RGBA, GL_UNSIGNED_BYTE, pixel);
+    return texture;
+}
+
+static void loading_screen_set_language(const char* language) {
+    loading_language = LOADING_LANG_ENGLISH;
+    if (language == NULL) return;
+    if (strcmp(language, "Portuguese-BR") == 0) loading_language = LOADING_LANG_PTBR;
+    else if (strcmp(language, "Spanish") == 0) loading_language = LOADING_LANG_SPANISH;
+    else if (strcmp(language, "Italian") == 0) loading_language = LOADING_LANG_ITALIAN;
+    else if (strcmp(language, "Turkish") == 0) loading_language = LOADING_LANG_TURKISH;
+}
+
 static void loading_screen_init(void) {
-    char path[96];
-    for (int i = 0; i < 2; ++i) {
-        snprintf(path, sizeof(path), "app0:assets/loading/frame%d.png", i);
-        loading_frame_textures[i] = load_loading_texture(path);
+    if (loading_sprite_atlas != 0) return;
+    loading_sprite_atlas = load_loading_texture("app0:assets/loading/loading_sprites.png");
+    loading_digits_texture = load_loading_texture("app0:assets/loading/loading_digits.png");
+    char path[128];
+    for (int i = 0; i < LOADING_LANG_COUNT; ++i) {
+        snprintf(path, sizeof(path), "app0:assets/loading/loading_%s.png", kLoadingLanguageInfo[i].code);
+        loading_prefix_textures[i] = load_loading_texture(path);
+        snprintf(path, sizeof(path), "app0:assets/loading/complete_%s.png", kLoadingLanguageInfo[i].code);
+        loading_complete_textures[i] = load_loading_texture(path);
     }
-    loading_frame_textures[2] = load_loading_texture("app0:assets/loading/frame3-final.png");
-    loading_frame_textures[3] = load_loading_texture("app0:assets/loading/frame4-final.png");
     char line[192];
-    snprintf(line, sizeof(line),
-             "LOADING_ASSETS frames=%u,%u final=%u,%u interval_ms=500",
-             loading_frame_textures[0], loading_frame_textures[1],
-             loading_frame_textures[2], loading_frame_textures[3]);
+    snprintf(line, sizeof(line), "LOADING_ASSETS sprite=%u digits=%u language=%d font_px=51",
+             loading_sprite_atlas, loading_digits_texture, loading_language);
     log_line(line);
 }
 
 static void loading_screen_shutdown(void) {
-    if (loading_overlay_texture != 0) glDeleteTextures(1, &loading_overlay_texture);
-    if (generating_overlay_texture != 0) glDeleteTextures(1, &generating_overlay_texture);
-    if (loading_textures_tex != 0) glDeleteTextures(1, &loading_textures_tex);
-    for (int i = 0; i < 4; i++) {
-        if (loading_frame_textures[i] != 0) glDeleteTextures(1, &loading_frame_textures[i]);
+    if (loading_sprite_atlas != 0) glDeleteTextures(1, &loading_sprite_atlas);
+    if (loading_digits_texture != 0) glDeleteTextures(1, &loading_digits_texture);
+    for (int i = 0; i < LOADING_LANG_COUNT; ++i) {
+        if (loading_prefix_textures[i] != 0) glDeleteTextures(1, &loading_prefix_textures[i]);
+        if (loading_complete_textures[i] != 0) glDeleteTextures(1, &loading_complete_textures[i]);
+        loading_prefix_textures[i] = 0;
+        loading_complete_textures[i] = 0;
     }
-    loading_overlay_texture = 0;
-    generating_overlay_texture = 0;
-    loading_textures_tex = 0;
-    memset(loading_frame_textures, 0, sizeof(loading_frame_textures));
+    loading_sprite_atlas = 0;
+    loading_digits_texture = 0;
 }
 
-static void draw_loading_texture(GLuint texture, float left, float top, float right, float bottom) {
-    if (texture == 0) return;
+static void draw_loading_region(GLuint texture, int texW, int texH,
+                                float srcX, float srcY, float srcW, float srcH,
+                                float left, float top, float right, float bottom,
+                                float alpha) {
+    if (texture == 0 || texW <= 0 || texH <= 0 || alpha <= 0.0f) return;
     float x0 = left / 480.0f - 1.0f, x1 = right / 480.0f - 1.0f;
     float y0 = 1.0f - top / 272.0f, y1 = 1.0f - bottom / 272.0f;
+    float u0 = srcX / (float)texW, u1 = (srcX + srcW) / (float)texW;
+    float v0 = srcY / (float)texH, v1 = (srcY + srcH) / (float)texH;
     const LoadingVertex vertices[4] = {
-        {0, 0, x0, y0}, {1, 0, x1, y0}, {1, 1, x1, y1}, {0, 1, x0, y1}
+        {u0, v0, x0, y0}, {u1, v0, x1, y0},
+        {u1, v1, x1, y1}, {u0, v1, x0, y1}
     };
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glColor4f(1.0f, 1.0f, 1.0f, alpha);
     glBindTexture(GL_TEXTURE_2D, texture);
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
     glEnableClientState(GL_VERTEX_ARRAY);
@@ -434,6 +527,62 @@ static void draw_loading_texture(GLuint texture, float left, float top, float ri
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
     glDisableClientState(GL_VERTEX_ARRAY);
     glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+}
+
+static void draw_loading_sprite(int srcX, int srcY, int srcW, int srcH,
+                                float centerX, float centerY, float scale, float alpha) {
+    float w = srcW * scale, h = srcH * scale;
+    draw_loading_region(loading_sprite_atlas, 256, 64,
+                        (float)srcX, (float)srcY, (float)srcW, (float)srcH,
+                        centerX - w * 0.5f, centerY - h * 0.5f,
+                        centerX + w * 0.5f, centerY + h * 0.5f, alpha);
+}
+
+static int loading_percent_from_ratio(float ratio) {
+    float clampedRatio = ratio < 0.0f ? 0.0f : (ratio > 1.0f ? 1.0f : ratio);
+    if (clampedRatio >= 1.0f) return 100;
+    return (int)floorf(clampedRatio * 100.0f);
+}
+
+static int loading_digit_index(char ch) {
+    if (ch >= '0' && ch <= '9') return ch - '0';
+    return ch == '%' ? 10 : -1;
+}
+
+static void draw_loading_progress_text(float ratio, float alpha) {
+    const LoadingLanguageInfo* info = &kLoadingLanguageInfo[loading_language];
+    int percent = loading_percent_from_ratio(ratio);
+    char number[8];
+    snprintf(number, sizeof(number), "%d%%", percent);
+    int chars = (int)strlen(number);
+    const float digitW = 40.0f, digitH = 64.0f, gap = 8.0f;
+    float totalW = (float)info->loadingW + gap + digitW * chars;
+    float left = (960.0f - totalW) * 0.5f;
+    float top = 382.0f;
+    float labelTop = top + (64.0f - info->loadingH) * 0.5f;
+    draw_loading_region(loading_prefix_textures[loading_language], info->loadingW, info->loadingH,
+                        0, 0, (float)info->loadingW, (float)info->loadingH,
+                        left, labelTop, left + info->loadingW, labelTop + info->loadingH, alpha);
+    float x = left + info->loadingW + gap;
+    for (int i = 0; i < chars; ++i) {
+        int index = loading_digit_index(number[i]);
+        if (index >= 0) {
+            draw_loading_region(loading_digits_texture, 440, 64,
+                                (float)(index * 40), 0, 40, 64,
+                                x, top, x + digitW, top + digitH, alpha);
+        }
+        x += digitW;
+    }
+}
+
+static void draw_loading_complete_text(float alpha) {
+    const LoadingLanguageInfo* info = &kLoadingLanguageInfo[loading_language];
+    float left = (960.0f - info->completeW) * 0.5f;
+    float top = 382.0f + (64.0f - info->completeH) * 0.5f;
+    draw_loading_region(loading_complete_textures[loading_language], info->completeW, info->completeH,
+                        0, 0, (float)info->completeW, (float)info->completeH,
+                        left, top, left + info->completeW, top + info->completeH, alpha);
 }
 
 static void dev_log_write(const char* text) {
@@ -654,12 +803,14 @@ static const KeyMap KEY_MAP[] = {
 };
 
 static void log_line(const char *text) {
-    if (!g_vitaProbeLoggingEnabled || text == NULL) return;
-    SceUID fd = sceIoOpen(LOG_PATH, SCE_O_WRONLY | SCE_O_CREAT | SCE_O_APPEND, 0666);
-    if (fd >= 0) {
-        sceIoWrite(fd, text, strlen(text));
-        sceIoWrite(fd, "\n", 1);
-        sceIoClose(fd);
+    if (text == NULL) return;
+    // Essential probe logging is always enabled, but uses one persistent FD so
+    // room/perf/settings diagnostics do not repeatedly open the memory card.
+    if (probe_log_fd < 0)
+        probe_log_fd = sceIoOpen(LOG_PATH, SCE_O_WRONLY | SCE_O_CREAT | SCE_O_APPEND, 0666);
+    if (probe_log_fd >= 0) {
+        sceIoWrite(probe_log_fd, text, strlen(text));
+        sceIoWrite(probe_log_fd, "\n", 1);
     }
 }
 
@@ -760,6 +911,19 @@ void VitaProbe_logLine(const char *text) {
     log_line(text);
 }
 
+// Tiny always-on compatibility trace for isolated room-specific regressions.
+// Unlike butterscotch-probe.log this is never called from the per-frame hot
+// path except for the first three rm_e_022 steps.
+void VitaCompat_logLine(const char *text) {
+    if (text == NULL) return;
+    SceUID fd = sceIoOpen(COMPAT_LOG_PATH,
+                          SCE_O_WRONLY | SCE_O_CREAT | SCE_O_APPEND, 0666);
+    if (fd < 0) return;
+    sceIoWrite(fd, text, strlen(text));
+    sceIoWrite(fd, "\n", 1);
+    sceIoClose(fd);
+}
+
 static void progress(const char *chunk, int index, int total, DataWin *dw, void *user) {
     (void)dw; (void)user;
     char line[96];
@@ -768,16 +932,11 @@ static void progress(const char *chunk, int index, int total, DataWin *dw, void 
     sceKernelDelayThread(1000);
 }
 
-static void draw_loading_screen(bool showProgress, float ratio, int labelType) {
+static void loading_begin_frame(void) {
     glViewport(0, 0, 960, 544);
     glDisable(GL_SCISSOR_TEST);
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
-    // Runner_initFirstRoom configures GameMaker's 640x480 projection and can
-    // leave the current fixed-pipeline colour black.  Loading vertices are
-    // already expressed in normalized host coordinates; inheriting that game
-    // state places the PNG outside the viewport or modulates it to invisible.
-    // Give this small overlay its own identity matrices and neutral colour.
     glMatrixMode(GL_PROJECTION);
     glPushMatrix();
     glLoadIdentity();
@@ -787,65 +946,309 @@ static void draw_loading_screen(bool showProgress, float ratio, int labelType) {
     glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
-    (void)labelType;
-    int animationFrame = (int)((sceKernelGetProcessTimeWide() / 500000ULL) % 2ULL);
-    draw_loading_texture(loading_frame_textures[animationFrame], 0, 0, 960, 544);
-    if (showProgress) {
-        // A loading bar made with glBegin triggers VitaGL's fixed-pipeline
-        // shader compiler before the first normal frame. Scissored clears draw
-        // the same bar without creating another shader.
-        glEnable(GL_SCISSOR_TEST);
-        int fill = (int)(480.0f * ratio);
-        if (fill < 1) fill = 1;
-        if (fill > 480) fill = 480;
-        glScissor(240, 268, fill, 8);
-        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        glDisable(GL_SCISSOR_TEST);
-    }
+}
+
+static void loading_end_frame(void) {
     vglSwapBuffers(GL_FALSE);
     glMatrixMode(GL_MODELVIEW);
     glPopMatrix();
     glMatrixMode(GL_PROJECTION);
     glPopMatrix();
     glMatrixMode(GL_MODELVIEW);
+}
+
+static float loading_cell_x(int cell) { return 128.0f + (float)cell * 64.0f; }
+
+static void draw_loading_floor(int fullFloors, bool targetVisible, float alpha) {
+    const float y = 248.0f;
+    draw_loading_sprite(0, 0, 16, 16, loading_cell_x(0), y, 4.0f, alpha);
+    draw_loading_sprite(32, 0, 16, 16, loading_cell_x(0), y + 64.0f, 4.0f, alpha);
+    for (int i = 1; i <= fullFloors && i <= LOADING_FLOOR_COUNT; ++i) {
+        draw_loading_sprite(16, 0, 16, 16, loading_cell_x(i), y, 4.0f, alpha);
+        draw_loading_sprite(32, 0, 16, 16, loading_cell_x(i), y + 64.0f, 4.0f, alpha);
+    }
+    if (targetVisible && fullFloors < LOADING_FLOOR_COUNT) {
+        int i = fullFloors + 1;
+        draw_loading_sprite(16, 0, 16, 16, loading_cell_x(i), y, 4.0f, alpha);
+        draw_loading_sprite(32, 0, 16, 16, loading_cell_x(i), y + 64.0f, 4.0f, alpha);
+    }
+}
+
+static void draw_loading_swipe(int frame, float playerX, float playerY, float alpha) {
+    frame %= 10;
+    int sx = frame < 8 ? frame * 32 : (frame - 8) * 32;
+    int sy = frame < 8 ? 32 : 48;
+    draw_loading_sprite(sx, sy, 32, 16, playerX + 32.0f, playerY + 32.0f, 4.0f, alpha);
+}
+
+static void loading_animation_reset(void) {
+    memset(&loading_animation, 0, sizeof(loading_animation));
+}
+
+static void loading_play_place_sound(void) {
+    if (loading_audio_system == NULL || loading_audio_system->vtable == NULL ||
+        loading_audio_system->vtable->playSound == NULL) return;
+    loading_audio_system->vtable->playSound(loading_audio_system,
+        VOIDSTRANGER_LOADING_PLACE_SOUND_ID, 1, false);
+}
+
+static void loading_play_fall_sound(void) {
+    if (loading_audio_system == NULL || loading_audio_system->vtable == NULL ||
+        loading_audio_system->vtable->playSound == NULL) return;
+    loading_audio_system->vtable->playSound(loading_audio_system,
+        VOIDSTRANGER_LOADING_FALL_SOUND_ID, 1, false);
+}
+
+static int32_t loading_play_stairs_sound(void) {
+    if (loading_audio_system == NULL || loading_audio_system->vtable == NULL ||
+        loading_audio_system->vtable->playSound == NULL) return -1;
+    return loading_audio_system->vtable->playSound(loading_audio_system,
+        VOIDSTRANGER_LOADING_STAIRS_SOUND_ID, 1, false);
+}
+
+static void loading_wait_for_sound(int32_t instanceId) {
+    if (instanceId < 0 || loading_audio_system == NULL ||
+        loading_audio_system->vtable == NULL ||
+        loading_audio_system->vtable->isPlaying == NULL) return;
+    const uint64_t timeoutUs = 3000000ULL;
+    uint64_t startedUs = sceKernelGetProcessTimeWide();
+    while (loading_audio_system->vtable->isPlaying(loading_audio_system, instanceId) &&
+           sceKernelGetProcessTimeWide() - startedUs < timeoutUs) {
+        sceKernelDelayThread(1000);
+    }
+}
+
+static void draw_loading_intro_frame(float alpha) {
+    loading_begin_frame();
+    draw_loading_floor(0, false, alpha);
+    loading_end_frame();
+}
+
+static void play_loading_intro_fade(void) {
+    uint64_t startedUs = sceKernelGetProcessTimeWide();
+    for (;;) {
+        uint64_t elapsedUs = sceKernelGetProcessTimeWide() - startedUs;
+        draw_loading_intro_frame(loading_intro_fade_alpha(elapsedUs));
+        if (elapsedUs >= LOADING_INTRO_FADE_US) break;
+        sceKernelDelayThread(16667);
+    }
+}
+
+static void loading_set_progress(float ratio, int labelType) {
+    float clamped = ratio < 0.0f ? 0.0f : (ratio > 1.0f ? 1.0f : ratio);
+    loading_animation.ratio = clamped;
+    loading_animation.labelType = labelType;
+    int percent = loading_percent_from_ratio(clamped);
+    int target = loading_target_cell_for_percent(percent, LOADING_FLOOR_COUNT);
+    if (target > loading_animation.targetCell) loading_animation.targetCell = target;
+}
+
+static void loading_start_next_step(uint64_t nowUs) {
+    if (loading_animation.stepActive ||
+        loading_animation.currentCell >= loading_animation.targetCell ||
+        loading_animation.currentCell >= LOADING_FLOOR_COUNT) return;
+    loading_animation.stepActive = true;
+    loading_animation.stepStartedUs = nowUs;
+    loading_play_place_sound();
+}
+
+static bool loading_draw_animation_frame(bool showProgress) {
+    uint64_t nowUs = sceKernelGetProcessTimeWide();
+    if (loading_animation.stepActive) {
+        uint64_t elapsed = nowUs - loading_animation.stepStartedUs;
+        if (loading_step_phase(elapsed) == LOADING_STEP_DONE) {
+            if (loading_animation.currentCell < LOADING_FLOOR_COUNT)
+                loading_animation.currentCell++;
+            loading_animation.stepActive = false;
+        }
+    }
+    loading_start_next_step(nowUs);
+    if (loading_animation.labelType == 0) {
+        uint64_t visualStepElapsed = loading_animation.stepActive ?
+            nowUs - loading_animation.stepStartedUs : 0ULL;
+        loading_animation.ratio = loading_visual_ratio(
+            loading_animation.currentCell, loading_animation.stepActive,
+            visualStepElapsed, LOADING_FLOOR_COUNT);
+    }
+
+    loading_begin_frame();
+    const float playerY = 248.0f;
+    int cell = loading_animation.currentCell;
+    if (cell < 0) cell = 0;
+    if (cell > LOADING_FLOOR_COUNT) cell = LOADING_FLOOR_COUNT;
+
+    if (!loading_animation.stepActive || cell >= LOADING_FLOOR_COUNT) {
+        draw_loading_floor(cell, false, 1.0f);
+        draw_loading_sprite(48, 0, 16, 16, loading_cell_x(cell), playerY, 4.0f, 1.0f);
+    } else {
+        uint64_t elapsed = nowUs - loading_animation.stepStartedUs;
+        LoadingStepPhase phase = loading_step_phase(elapsed);
+        float playerX = loading_cell_x(cell);
+        float targetX = loading_cell_x(cell + 1);
+        if (phase == LOADING_STEP_PLACE) {
+            bool targetVisible = elapsed >= (LOADING_PLACE_DURATION_US * 3ULL) / 5ULL;
+            draw_loading_floor(cell, targetVisible, 1.0f);
+            int actionFrame = (int)(elapsed / 16667ULL);
+            draw_loading_sprite(80 + (actionFrame & 1) * 16, 0, 16, 16,
+                                playerX, playerY, 4.0f, 1.0f);
+            draw_loading_sprite(144, 0, 16, 16, targetX, playerY, 4.0f, 1.0f);
+            draw_loading_swipe(actionFrame, playerX, playerY, 1.0f);
+            int sparkleFrame = (actionFrame * 2) & 7;
+            draw_loading_sprite(sparkleFrame * 16, 16, 16, 16,
+                                targetX, playerY, 4.0f, 1.0f);
+        } else {
+            draw_loading_floor(cell + 1, false, 1.0f);
+            float t = loading_walk_progress(elapsed);
+            playerX += 64.0f * t;
+            int walkFrame = ((int)((elapsed - LOADING_PLACE_DURATION_US) / 70000ULL)) & 1;
+            draw_loading_sprite(48 + walkFrame * 16, 0, 16, 16,
+                                playerX, playerY, 4.0f, 1.0f);
+        }
+    }
+    if (showProgress) draw_loading_progress_text(loading_animation.ratio, 1.0f);
+    loading_end_frame();
+    return !loading_animation.stepActive &&
+           loading_animation.currentCell >= loading_animation.targetCell;
+}
+
+static void loading_run_to_target(bool showProgress) {
+    while (!loading_draw_animation_frame(showProgress))
+        sceKernelDelayThread(16667);
+}
+
+static void draw_loading_screen(bool showProgress, float ratio, int labelType) {
+    loading_set_progress(ratio, labelType);
+    loading_draw_animation_frame(showProgress);
 }
 
 static void texture_loading_progress(uint32_t current, uint32_t total, void *user) {
     (void)user;
     float ratio = total > 0 ? (float)current / (float)total : 1.0f;
-    draw_loading_screen(true, ratio, 1);
+    // Texture preparation is followed by the chapter battle core preload.
+    // Keep the displayed percentage below 100 until that work is complete.
+    if (ratio >= 1.0f) ratio = 0.99f;
+    int oldTarget = loading_animation.targetCell;
+    loading_set_progress(ratio, 1);
+    if (loading_animation.targetCell > oldTarget)
+        loading_run_to_target(true);
+    else
+        loading_draw_animation_frame(true);
 }
 
 static void texture_existing_progress(uint32_t current, uint32_t total, void *user) {
+    /* Existing cache validation is usually much faster than the animation.
+       Never expose that 0 -> 100 I/O jump to the player: Gray's place/walk
+       sequence owns the visible percentage in this mode. */
+    (void)current;
+    (void)total;
     (void)user;
-    float ratio = total > 0 ? (float)current / (float)total : 1.0f;
-    draw_loading_screen(true, ratio, 0);
+    loading_animation.labelType = 0;
+    loading_animation.targetCell = LOADING_FLOOR_COUNT;
+    loading_draw_animation_frame(true);
 }
 
-static void draw_post_loading_screen(bool showTitle) {
-    glViewport(0, 0, 960, 544);
-    glDisable(GL_SCISSOR_TEST);
-    glDisable(GL_DEPTH_TEST);
-    glDisable(GL_CULL_FACE);
-    glMatrixMode(GL_PROJECTION);
-    glPushMatrix();
-    glLoadIdentity();
-    glMatrixMode(GL_MODELVIEW);
-    glPushMatrix();
-    glLoadIdentity();
-    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-    draw_loading_texture(loading_frame_textures[2], 0, 0, 960, 544);
-    if (showTitle)
-        draw_loading_texture(loading_frame_textures[3], 0, 0, 960, 544);
-    vglSwapBuffers(GL_FALSE);
-    glMatrixMode(GL_MODELVIEW);
-    glPopMatrix();
-    glMatrixMode(GL_PROJECTION);
-    glPopMatrix();
-    glMatrixMode(GL_MODELVIEW);
+static void loading_finish_progress_animation(int labelType) {
+    loading_animation.targetCell = LOADING_FLOOR_COUNT;
+    if (labelType == 0) {
+        loading_animation.labelType = 0;
+        loading_run_to_target(true);
+        loading_animation.ratio = 1.0f;
+    } else {
+        loading_set_progress(1.0f, labelType);
+        loading_run_to_target(true);
+    }
+}
+
+static void draw_loading_final_frame(uint64_t elapsedUs) {
+    const uint64_t frontUs = 120000ULL;
+    const uint64_t edgeUs = (uint64_t)LOADING_STATE23_TOTAL_FRAMES * 16667ULL;
+    const uint64_t delayUs = (uint64_t)LOADING_FALL_DELAY_FRAMES * 16667ULL;
+    const uint64_t fallUs = (uint64_t)LOADING_FALL_GAME_FRAMES * 16667ULL;
+    const uint64_t completeStart = frontUs + edgeUs + delayUs + fallUs;
+    const uint64_t fadeStart = completeStart + LOADING_COMPLETE_HOLD_US;
+    const uint64_t finish = fadeStart + LOADING_FADEOUT_US;
+    float alpha = 1.0f;
+    if (elapsedUs >= fadeStart) {
+        alpha = 1.0f - (float)(elapsedUs - fadeStart) / (float)LOADING_FADEOUT_US;
+        if (alpha < 0.0f) alpha = 0.0f;
+    }
+
+    loading_begin_frame();
+    draw_loading_floor(LOADING_FLOOR_COUNT, false, alpha);
+    const float x = loading_cell_x(LOADING_FLOOR_COUNT);
+    const float y = 248.0f;
+
+    if (elapsedUs < frontUs) {
+        int frame = (int)(elapsedUs / 60000ULL) & 1;
+        draw_loading_sprite(112 + frame * 16, 0, 16, 16, x, y, 4.0f, alpha);
+        draw_loading_progress_text(1.0f, alpha);
+    } else if (elapsedUs < frontUs + edgeUs) {
+        uint64_t localUs = elapsedUs - frontUs;
+        int counter = (int)(localUs / 16667ULL);
+        if (counter > LOADING_STATE23_TOTAL_FRAMES) counter = LOADING_STATE23_TOTAL_FRAMES;
+        int moved = counter < LOADING_EDGE_SLIDE_FRAMES ? counter : LOADING_EDGE_SLIDE_FRAMES;
+        float slideGamePx = -8.0f + (float)moved * 0.16f;
+        float pitY = y + 16.0f * 4.0f;
+        float py = pitY + slideGamePx * 4.0f;
+        int frontFrame = (counter / 5) & 1;
+        draw_loading_sprite(112 + frontFrame * 16, 0, 16, 16, x, py, 4.0f, alpha);
+        if (counter >= 1) {
+            int sweatFrame = ((int)(counter * 0.4f)) % 5;
+            draw_loading_sprite(128 + sweatFrame * 16, 16, 16, 16,
+                                x + 32.0f, py - 32.0f, 4.0f, alpha);
+        }
+        draw_loading_progress_text(1.0f, alpha);
+    } else if (elapsedUs < frontUs + edgeUs + delayUs) {
+        uint64_t localUs = elapsedUs - frontUs - edgeUs;
+        int counter = (int)(localUs / 16667ULL) + 1;
+        float pitY = y + 64.0f;
+        // state 8 retains the -0.48 game-pixel slide left by state 23 until
+        // obj_player_fall is spawned at the logical pit center on counter 4.
+        float playerY = pitY - 0.48f * 4.0f;
+        draw_loading_sprite(112 + (counter & 1) * 16, 0, 16, 16, x, playerY, 4.0f, alpha);
+        if (counter < LOADING_FALL_DELAY_FRAMES) {
+            int sweatFrame = ((int)((LOADING_STATE23_TOTAL_FRAMES + counter) * 0.4f)) % 5;
+            draw_loading_sprite(128 + sweatFrame * 16, 16, 16, 16,
+                                x + 32.0f, playerY - 32.0f, 4.0f, alpha);
+        }
+        draw_loading_progress_text(1.0f, alpha);
+    } else if (elapsedUs < completeStart) {
+        uint64_t localUs = elapsedUs - frontUs - edgeUs - delayUs;
+        int gameFrame = (int)(localUs / 16667ULL);
+        if (gameFrame >= LOADING_FALL_GAME_FRAMES) gameFrame = LOADING_FALL_GAME_FRAMES - 1;
+        float imageSpeed = (float)gameFrame * 0.15f;
+        int spriteFrame = (int)imageSpeed;
+        if (spriteFrame > 5) spriteFrame = 5;
+        float py = y + 64.0f + (float)gameFrame * 0.1f * 4.0f;
+        draw_loading_sprite(160 + spriteFrame * 16, 0, 16, 16, x, py, 4.0f, alpha);
+        draw_loading_progress_text(1.0f, alpha);
+    } else {
+        draw_loading_complete_text(alpha);
+    }
+    loading_end_frame();
+    (void)finish;
+}
+
+static void play_loading_complete_sequence(void) {
+    const uint64_t fallStartUs = 120000ULL +
+        (uint64_t)LOADING_STATE23_TOTAL_FRAMES * 16667ULL +
+        (uint64_t)LOADING_FALL_DELAY_FRAMES * 16667ULL;
+    const uint64_t totalUs = fallStartUs +
+        (uint64_t)LOADING_FALL_GAME_FRAMES * 16667ULL +
+        LOADING_COMPLETE_HOLD_US + LOADING_FADEOUT_US;
+    bool fallSoundPlayed = false;
+    uint64_t started = sceKernelGetProcessTimeWide();
+    do {
+        uint64_t elapsed = sceKernelGetProcessTimeWide() - started;
+        if (!fallSoundPlayed && elapsed >= fallStartUs) {
+            loading_play_fall_sound();
+            fallSoundPlayed = true;
+        }
+        draw_loading_final_frame(elapsed);
+        sceKernelDelayThread(16667);
+    } while (sceKernelGetProcessTimeWide() - started < totalUs);
+    if (!fallSoundPlayed) loading_play_fall_sound();
+    draw_loading_final_frame(totalUs);
 }
 
 static void set_key(RunnerKeyboardState *kb, int key, bool down, bool *previous) {
@@ -928,6 +1331,210 @@ static void migrate_old_saves(void) {
     migrate_save_directory("ux0:data/deltarune/");
 }
 
+static void trophy_event_unlock(int id, const char* name, const char* source) {
+    char line[192];
+    snprintf(line, sizeof(line), "TROPHY_EVENT id=%d name=%s source=%s",
+             id, name != NULL ? name : "<null>", source != NULL ? source : "<null>");
+    log_line(line);
+    VitaTrophies_unlock(id);
+}
+
+static Instance* runner_find_active_object(Runner* runner, const char* name) {
+    if (runner == NULL || name == NULL || runner->assetsByName == NULL ||
+        runner->instancesByObject == NULL) return NULL;
+    ptrdiff_t assetSlot = shgeti(runner->assetsByName, (char*)name);
+    if (assetSlot < 0) return NULL;
+    int32_t objectIndex = runner->assetsByName[assetSlot].value;
+    if (objectIndex < 0 || (uint32_t)objectIndex >= runner->dataWin->objt.count) return NULL;
+    Instance** bucket = runner->instancesByObject[objectIndex];
+    for (ptrdiff_t i = 0; i < arrlen(bucket); ++i) {
+        Instance* inst = bucket[i];
+        if (inst != NULL && inst->active && !inst->destroyed) return inst;
+    }
+    return NULL;
+}
+
+static bool runner_object_bool_variable(Runner* runner, const char* objectName,
+                                        const char* variableName) {
+    Instance* inst = runner_find_active_object(runner, objectName);
+    if (inst == NULL || runner->vmContext == NULL ||
+        runner->vmContext->varNameMap == NULL || variableName == NULL) return false;
+    ptrdiff_t varSlot = shgeti(runner->vmContext->varNameMap, (char*)variableName);
+    if (varSlot < 0) return false;
+    int32_t varId = runner->vmContext->varNameMap[varSlot].value;
+    return RValue_toBool(Instance_getSelfVar(inst, varId));
+}
+
+static bool runner_has_active_object(Runner* runner, const char* name) {
+    return runner_find_active_object(runner, name) != NULL;
+}
+
+static bool play_startup_video_file(const char* path, const char* label,
+                                    bool skippable, uint64_t timeoutUs) {
+    VitaVideo_setLooping(false);
+    VitaVideo_setVolume(1.0f);
+    int openResult = VitaVideo_open(path);
+    if (openResult < 0) {
+        char line[192];
+        snprintf(line, sizeof(line), "STARTUP_VIDEO=%s open_failed result=0x%08X path=%s",
+                 label, (unsigned int)openResult, path);
+        log_line(line);
+        return false;
+    }
+
+    const uint64_t openedAt = sceKernelGetProcessTimeWide();
+    uint64_t firstPresentedAt = 0;
+    uint64_t skipFadeStartedAt = 0;
+    const uint64_t skipFadeDurationUs = 500000ULL;
+    bool presented = false;
+    bool skipped = false;
+    bool skipFading = false;
+    bool timedOut = false;
+    SceCtrlData pad;
+    memset(&pad, 0, sizeof(pad));
+    sceCtrlPeekBufferPositive(0, &pad, 1);
+    bool previousCross = (pad.buttons & SCE_CTRL_CROSS) != 0;
+
+    for (;;) {
+        bool active = VitaVideo_updateFrame();
+        (void)VitaVideo_consumeEvent();
+        uint64_t now = sceKernelGetProcessTimeWide();
+
+        if (skippable && !skipFading) {
+            memset(&pad, 0, sizeof(pad));
+            sceCtrlPeekBufferPositive(0, &pad, 1);
+            bool cross = (pad.buttons & SCE_CTRL_CROSS) != 0;
+            // Require a fresh X press; holding X while launching the game must
+            // not skip the long intro accidentally.
+            if (presented && cross && !previousCross) {
+                skipped = true;
+                skipFading = true;
+                skipFadeStartedAt = now;
+                char line[160];
+                snprintf(line, sizeof(line), "STARTUP_VIDEO=%s skip_requested elapsed_us=%llu",
+                         label, (unsigned long long)(now - openedAt));
+                log_line(line);
+            }
+            previousCross = cross;
+        }
+
+        bool haveFrame = VitaVideo_hasDecodedFrame();
+        if (haveFrame) {
+            presented = true;
+            if (firstPresentedAt == 0) firstPresentedAt = now;
+            VitaVideo_drawHost(0.0f, 0.0f, 960.0f, 544.0f);
+
+            // LongVideo skip hint: invisible for the first second, 1s fade-in,
+            // three seconds fully visible, then a 1s fade-out ending at 6s.
+            if (skippable && startup_skip_texture != 0 && firstPresentedAt != 0 && !skipFading) {
+                uint64_t visibleUs = now - firstPresentedAt;
+                float hintAlpha = 0.0f;
+                if (visibleUs >= 1000000ULL && visibleUs < 2000000ULL)
+                    hintAlpha = (float)(visibleUs - 1000000ULL) / 1000000.0f;
+                else if (visibleUs >= 2000000ULL && visibleUs < 5000000ULL)
+                    hintAlpha = 1.0f;
+                else if (visibleUs >= 5000000ULL && visibleUs < 6000000ULL)
+                    hintAlpha = 1.0f - (float)(visibleUs - 5000000ULL) / 1000000.0f;
+                if (hintAlpha > 0.0f)
+                    VitaVideo_drawTextureHost(startup_skip_texture, 0.0f, 0.0f, 960.0f, 544.0f, hintAlpha);
+            }
+        } else if (!presented && !skipFading) {
+            // Keep the system-provided pic0 visible until a real decoded frame
+            // exists. A broken/corrupt file must not stall startup forever.
+            if (now - openedAt >= 5000000ULL) {
+                timedOut = true;
+                break;
+            }
+            sceKernelDelayThread(1000);
+        }
+
+        // A skip never tears SceAvPlayer down on top of a visible movie frame.
+        // Keep decoding/presenting while fading picture + audio to black, then
+        // leave the last swapped framebuffer fully black before Close/Join.
+        if (skipFading) {
+            uint64_t fadeUs = now - skipFadeStartedAt;
+            float fade = (float)fadeUs / (float)skipFadeDurationUs;
+            if (fade < 0.0f) fade = 0.0f;
+            if (fade > 1.0f) fade = 1.0f;
+            VitaVideo_setVolume(1.0f - fade);
+            if (startup_black_texture != 0)
+                VitaVideo_drawTextureHost(startup_black_texture, 0.0f, 0.0f, 960.0f, 544.0f, fade);
+            vglSwapBuffers(GL_FALSE);
+            if (fadeUs >= skipFadeDurationUs) {
+                char line[128];
+                snprintf(line, sizeof(line), "STARTUP_VIDEO=%s skip_fade_complete", label);
+                log_line(line);
+                break;
+            }
+            // Do not evaluate normal end/timeout while the visual skip fade is running.
+            continue;
+        }
+
+        if (haveFrame) vglSwapBuffers(GL_FALSE);
+
+        if (!active || VitaVideo_getStatus() == VITA_VIDEO_STATUS_NONE)
+            break;
+        if (now - openedAt >= timeoutUs) {
+            timedOut = true;
+            break;
+        }
+    }
+
+    const uint64_t elapsed = sceKernelGetProcessTimeWide() - openedAt;
+    if (strcmp(label, "long") == 0 && presented && !timedOut) {
+        if (skipped) startup_long_skipped = true;
+        else startup_long_watched = true;
+    }
+    if (skipped) VitaVideo_setVolume(0.0f);
+    VitaVideo_close();
+    VitaVideo_setVolume(1.0f);
+    char line[224];
+    snprintf(line, sizeof(line),
+             "STARTUP_VIDEO=%s complete presented=%d skipped=%d timeout=%d elapsed_us=%llu",
+             label, presented ? 1 : 0, skipped ? 1 : 0, timedOut ? 1 : 0,
+             (unsigned long long)elapsed);
+    log_line(line);
+    return presented && !timedOut;
+}
+
+static bool play_startup_video_sequence(void) {
+    int initResult = VitaVideo_init();
+    if (initResult < 0) {
+        char line[128];
+        snprintf(line, sizeof(line), "STARTUP_VIDEO=init_failed result=0x%08X",
+                 (unsigned int)initResult);
+        log_line(line);
+        VitaVideo_shutdown();
+        return false;
+    }
+
+    // pic0.png is owned by the Vita shell. Startup movies live in external
+    // Vita data so they can be updated without reinstalling the VPK.
+    const char* introPath = "ux0:data/voidstranger/intro/IntroVoidStranger.mp4";
+    const char* longPath = "ux0:data/voidstranger/intro/LongVideo.mp4";
+
+    bool introOk = play_startup_video_file(introPath,
+                                           "intro", false, 15000000ULL);
+
+    startup_skip_texture = load_loading_texture("ux0:data/voidstranger/intro/skip.png");
+    startup_black_texture = create_solid_texture_rgba(0, 0, 0, 255);
+    {
+        char line[192];
+        snprintf(line, sizeof(line),
+                 "STARTUP_SKIP_OVERLAY loaded=%d texture=%u path=ux0:data/voidstranger/intro/skip.png",
+                 startup_skip_texture != 0 ? 1 : 0, (unsigned)startup_skip_texture);
+        log_line(line);
+    }
+
+    bool longOk = play_startup_video_file(longPath,
+                                          "long", true, 50000000ULL);
+    if (startup_skip_texture != 0) glDeleteTextures(1, &startup_skip_texture);
+    if (startup_black_texture != 0) glDeleteTextures(1, &startup_black_texture);
+    startup_skip_texture = 0;
+    startup_black_texture = 0;
+    VitaVideo_shutdown();
+    return introOk && longOk;
+}
 int main(void) {
     setvbuf(stdout, NULL, _IONBF, 0);
     setvbuf(stderr, NULL, _IONBF, 0);
@@ -942,10 +1549,12 @@ int main(void) {
     sceIoMkdir(DATA_ROOT, 0777);
     sceIoMkdir(SAVE_PATH, 0777);
     /* Saves are isolated; never migrate or alter another port's files. */
-    /* Keep bring-up diagnostics enabled independently of Deltarune's removed
-       Game Settings/dev-mode switch. */
-    g_vitaProbeLoggingEnabled = 1;
+    /* Probe logging is intentionally opt-in. Repeated memory-card writes from
+       Draw/Step diagnostics materially disturb frame pacing on real hardware.
+       Set devmode=1 in ux0:data/voidstranger/config.ini when a trace is needed. */
+    g_vitaProbeLoggingEnabled = config_devmode_enabled();
     sceIoRemove(LOG_PATH);
+    sceIoRemove(COMPAT_LOG_PATH);
     /* Void Stranger is a single-game port. Keep 1 only as the runtime profile. */
     int active_chapter = 1;
     g_vitaActiveChapter = active_chapter;
@@ -1005,9 +1614,10 @@ int main(void) {
                          preInitMemory.size_cdram - 16U * 1024U * 1024U :
                          preInitMemory.size_cdram / 2U;
     if (cdramPool > 96U * 1024U * 1024U) cdramPool = 96U * 1024U * 1024U;
-    uint32_t phyPool = preInitMemory.size_phycont > 4U * 1024U * 1024U ?
-                       preInitMemory.size_phycont - 2U * 1024U * 1024U : 0;
-    if (phyPool > 26U * 1024U * 1024U) phyPool = 26U * 1024U * 1024U;
+    // Keep PHYCONT mostly outside VitaGL so SceAvPlayer can allocate its
+    // decoded 960x544 YUV frames from dedicated contiguous blocks. The former
+    // 26 MiB reservation starved the hardware decoder before its first frame.
+    uint32_t phyPool = 0;
     char vitaglInitLog[192];
     snprintf(vitaglInitLog, sizeof(vitaglInitLog),
              "VITAGL=init_begin fixed ram=%u cdram=%u phy=%u free_user=%u free_cdram=%u free_phy=%u",
@@ -1020,11 +1630,77 @@ int main(void) {
                            SCE_GXM_MULTISAMPLE_NONE);
     log_line("VITAGL=init_complete");
 
+    // The video presentation path itself still needs a small VitaGL PHYCONT
+    // heap. Eight MiB leaves the majority of contiguous memory available to
+    // SceAvPlayer while remaining useful for the rest of this single-process
+    // port after the startup movies finish.
+    uint32_t startupPhyPool = preInitMemory.size_phycont >= 4U * 1024U * 1024U ?
+                              4U * 1024U * 1024U : (uint32_t)preInitMemory.size_phycont;
+    if (startupPhyPool > 0) {
+        vglPhycontMemLazyInit(startupPhyPool);
+        char phyLog[128];
+        snprintf(phyLog, sizeof(phyLog),
+                 "VITAGL=startup_phycont size=%u free_slow=%u",
+                 (unsigned int)startupPhyPool, (unsigned int)vglMemFree(VGL_MEM_SLOW));
+        log_line(phyLog);
+    }
+
+    // Vita shell pic0 -> mandatory short intro -> skippable long intro -> game.
+    (void)play_startup_video_sequence();
+
+    // The commercial game data is intentionally not bundled in the VPK. If
+    // the required external files are absent, reproduce the Sera-style prompt
+    // using VPK-owned assets before the runner starts parsing data.win.
+    MissingDataInspection dataInspection;
+    MissingDataLayoutState dataLayout = MissingDataScene_inspect(&dataInspection);
+    if (dataLayout == MISSING_DATA_LAYOUT_ORGANIZABLE ||
+        dataLayout == MISSING_DATA_LAYOUT_AMBIGUOUS) {
+        char organizeLine[128];
+        snprintf(organizeLine, sizeof(organizeLine),
+                 "MISSING_DATA_ORGANIZATION=begin layout=%d missing=0x%X misplaced=0x%X duplicate=0x%X",
+                 (int)dataLayout, (unsigned)dataInspection.rootMissingMask,
+                 (unsigned)dataInspection.misplacedMask, (unsigned)dataInspection.duplicateMask);
+        log_line(organizeLine);
+        int organizeResult = MissingDataScene_runOrganization(&dataInspection);
+        if (organizeResult == 0) {
+            log_line("MISSING_DATA_ORGANIZATION=user_exit");
+            sceKernelExitProcess(0);
+            return 0;
+        }
+        if (organizeResult < 0) {
+            log_line("MISSING_DATA_ORGANIZATION=failed");
+            show_startup_error_and_exit("The game files were found, but their folder structure could not be fixed safely.", DATA_ROOT);
+        }
+        log_line("MISSING_DATA_ORGANIZATION=fixed");
+        dataLayout = MissingDataScene_inspect(&dataInspection);
+    }
+
+    if (dataLayout != MISSING_DATA_LAYOUT_READY) {
+        uint32_t missingDataMask = dataInspection.rootMissingMask;
+        char missingLine[96];
+        snprintf(missingLine, sizeof(missingLine), "MISSING_DATA_SCENE=begin mask=0x%X", (unsigned)missingDataMask);
+        log_line(missingLine);
+        int sceneResult = MissingDataScene_run(missingDataMask);
+        if (sceneResult == 0) {
+            log_line("MISSING_DATA_SCENE=user_exit");
+            sceKernelExitProcess(0);
+            return 0;
+        }
+        if (sceneResult < 0) {
+            log_line("MISSING_DATA_SCENE=asset_or_runtime_failure");
+            show_startup_error_and_exit("Required game data is missing and the install-help scene could not be loaded.", DATA_ROOT);
+        }
+        log_line("MISSING_DATA_SCENE=data_ready_after_recheck");
+    }
     // Feature 2: fail fast with a readable report if the game data is not
     // installed, instead of proceeding and crashing later in the boot path.
     /* The direct data.win check below is sufficient for this single-game layout. */
 
     bool nativeTrophies = VitaTrophies_init();
+    if (nativeTrophies) {
+        if (startup_long_watched) trophy_event_unlock(2, "The Long Way", "startup_long_watched");
+        if (startup_long_skipped) trophy_event_unlock(5, "Cut to the Chase", "startup_long_skipped");
+    }
     char trophyLog[192];
     snprintf(trophyLog, sizeof(trophyLog),
              "TROPHIES_NATIVE=%s stage=%s result=0x%08X %s",
@@ -1036,11 +1712,15 @@ int main(void) {
 
     VitaSettings settings;
     VitaSettings_load(&settings);
+    loading_screen_set_language(settings.activeLanguage);
     /* The inherited Game Settings UI is Deltarune-specific. Retain only its
        internal defaults used by audio/input/rendering; never expose the UI. */
     settings.showSettings = false;
     settings.open = false;
-    settings.devMode = false;
+    // Keep devmode from ux0:data/voidstranger/config.ini. The previous forced
+    // false made every Dev Mode shortcut unreachable even with devmode=1.
+    settings.touchEnabled = false;
+    log_line("TOUCH_MODE=fruit_scene_only physical_cross_preserved");
     // This port has no Deltarune Game Settings overlay, so an old/default
     // fps_mode=0 silently locked Void Stranger to 30 FPS. Always pace the
     // Vita build at the game's intended 60 Hz; frames that genuinely exceed
@@ -1212,6 +1892,7 @@ int main(void) {
 
     log_line("RUNNER=create_begin");
     Runner *runner = Runner_create(dw, vm, renderer, (FileSystem *)fs, audio);
+    loading_audio_system = audio;
     log_line("RUNNER=create_returned");
     const bool spanishModActive = settings.modIndex > 0 && settings.modIndex < settings.modCount &&
                                   strcmp(settings.modNames[settings.modIndex], "Spanish") == 0;
@@ -1261,13 +1942,21 @@ int main(void) {
         // Chapter bootstrap can create and replace a music stream before the
         // first playable/menu room is presented. Keep that work inaudible;
         // otherwise the loading screen exposes a short start/stop/start pop.
-        AlAudioSystem_setCategoryGains((AlAudioSystem*)audio, 0.0f, 0.0f);
-        log_line("STARTUP_AUDIO=muted_until_first_presented_frame");
+        AlAudioSystem_setCategoryGains((AlAudioSystem*)audio, 0.0f,
+            (float)settings.sfxVolume / 10.0f);
+        log_line("STARTUP_AUDIO=music_muted_loading_sfx_enabled_until_first_presented_frame");
         // Always replace the black chapter-start gap with the loading artwork.
         // The progress bar remains exclusive to actual cache preparation.
         if (!g_vitaModernGlActive) {
             loading_screen_init();
+            log_line("LOADING_INTRO=stairs_sfx_begin sound=snd_stairs id=110");
+            int32_t stairsSoundInstance = loading_play_stairs_sound();
+            loading_wait_for_sound(stairsSoundInstance);
+            log_line("LOADING_INTRO=stairs_sfx_complete first_block_fade_begin");
+            play_loading_intro_fade();
+            loading_animation_reset();
             draw_loading_screen(false, 0.0f, 0);
+            log_line("LOADING_INTRO=first_block_fade_complete");
             log_line("CHAPTER_LOADING=visible bar=hidden renderer=legacy-gl");
         } else {
             // The custom loader uses fixed-pipeline matrices/client arrays and
@@ -1334,10 +2023,18 @@ int main(void) {
         bool textureCacheComplete = !g_vitaModernGlActive &&
             GLLegacyRenderer_textureCacheIsComplete(dw);
         bool textureGenerationRequired = !g_vitaModernGlActive &&
-            !g_vitaBc3OnlyEnabled && !textureCacheComplete;
+            !textureCacheComplete;
+        char textureModeLine[112];
+        snprintf(textureModeLine, sizeof(textureModeLine),
+                 "TEXTURE_PRELOAD=mode %s cache_complete=%d bc3_only=%d",
+                 textureGenerationRequired ? "generating" : "loading",
+                 textureCacheComplete ? 1 : 0, g_vitaBc3OnlyEnabled ? 1 : 0);
+        log_line(textureModeLine);
         uint64_t textureLoadingStartedUs = sceKernelGetProcessTimeWide();
-        if (!g_vitaModernGlActive)
+        if (!g_vitaModernGlActive) {
+            loading_animation_reset();
             draw_loading_screen(true, 0.0f, textureGenerationRequired ? 1 : 0);
+        }
         
         VitaTexturePrepareProgress textureProgress = g_vitaModernGlActive ? NULL :
             (textureGenerationRequired ? texture_loading_progress : texture_existing_progress);
@@ -1373,24 +2070,19 @@ int main(void) {
         // second, otherwise the user sees only a black transition and never
         // has time to read the state label.
         if (!g_vitaModernGlActive) {
+            // Cache validation can finish almost instantly. The loading scene is
+            // intentionally allowed to finish all queued 8%% steps at normal speed
+            // before the edge/fall sequence, rather than stretching movement over
+            // the raw 0..100%% cache ratio.
+            loading_finish_progress_animation(textureGenerationRequired ? 1 : 0);
             const uint64_t minimumLoadingUs = 1000000ULL;
-            do {
-                draw_loading_screen(true, 1.0f, textureGenerationRequired ? 1 : 0);
+            while (sceKernelGetProcessTimeWide() - textureLoadingStartedUs < minimumLoadingUs) {
+                loading_draw_animation_frame(true);
                 sceKernelDelayThread(16667);
-            } while (sceKernelGetProcessTimeWide() - textureLoadingStartedUs < minimumLoadingUs);
+            }
 
-            uint64_t finalFrameStartedUs = sceKernelGetProcessTimeWide();
-            do {
-                draw_post_loading_screen(false);
-                sceKernelDelayThread(16667);
-            } while (sceKernelGetProcessTimeWide() - finalFrameStartedUs < 1000000ULL);
-
-            uint64_t titleFrameStartedUs = sceKernelGetProcessTimeWide();
-            do {
-                draw_post_loading_screen(true);
-                sceKernelDelayThread(16667);
-            } while (sceKernelGetProcessTimeWide() - titleFrameStartedUs < 2000000ULL);
-            log_line("LOADING_FINAL_SEQUENCE=frame3_1s frame4_overlay_2s");
+            play_loading_complete_sequence();
+            log_line("LOADING_FINAL_SEQUENCE=front edge_approach fall complete fadeout");
             loading_screen_shutdown();
         }
     }
@@ -1422,6 +2114,7 @@ int main(void) {
     int audio_present_wait_frames = active_chapter > 0 ? 1 : 0;
     if (audio_present_wait_frames > 0) log_line("STARTUP_AUDIO_FADE=waiting_for_presented_frame");
     bool border_cycle_dpad_held = false;
+    bool dev_room_shortcut_held = false;
     bool dev_room_nav_held = false;
     bool settings_touch_held = false;
     float settings_touch_last_y = 0.0f;
@@ -1431,16 +2124,21 @@ int main(void) {
     bool failure_exit_held = false;
     bool gameplay_input_armed = false;
     uint32_t gameplay_input_neutral_frames = 0;
+    bool trophy_first_move = false;
+    bool trophy_first_room_change = false;
+    bool trophy_memories_opened = false;
+    bool fruit_touch_held = false;
 
     while (!exit_requested && !runner->shouldExit) {
         RunnerKeyboard_beginFrame(runner->keyboard);
         RunnerGamepad_beginFrame(runner->gamepads);
-        // Void Stranger's Steam build mixes keyboard and controller branches
-        // when both are active. Feeding both for one Vita press made the rod
-        // action execute twice in the same step (pick up, then undo). Expose a
-        // single keyboard-compatible input source for deterministic controls.
-        runner->gamepads->connectedCount = 0;
-        runner->gamepads->slots[0].connected = false;
+        // Expose the Vita as a real GameMaker gamepad. The game uses direct
+        // gamepad_* calls for controller discovery/remapping and the title UI.
+        // Keyboard compatibility is still fed below for the few keyboard-only
+        // Steam code paths, while obj_game prioritizes the gamepad branch so a
+        // Vita press is counted only once by the normal input state machine.
+        runner->gamepads->connectedCount = 1;
+        runner->gamepads->slots[0].connected = true;
         strcpy(runner->gamepads->slots[0].description, "Sony DualShock 4");
         RunnerMouse_beginFrame(runner->mouse);
         SceCtrlData pad = {0};
@@ -1556,6 +2254,42 @@ int main(void) {
             settings_touch_held = touching;
         } else {
             settings_touch_held = false;
+        }
+
+        // Dev Mode quick room navigation: devmode=1 is enough. Hold Circle
+        // and tap L/R to move through the real GEN8 room order, matching the
+        // desktop debug runner's previous/next room semantics. Consume the
+        // full combo so Circle/PageUp/PageDown never leak into game input.
+        bool circle_room_nav = (pad.buttons & SCE_CTRL_CIRCLE) != 0 &&
+                               ((pad.buttons & SCE_CTRL_LTRIGGER) != 0 ||
+                                (pad.buttons & SCE_CTRL_RTRIGGER) != 0);
+        if (!settings.open && settings.devMode && circle_room_nav) {
+            bool l = (pad.buttons & SCE_CTRL_LTRIGGER) != 0;
+            bool r = (pad.buttons & SCE_CTRL_RTRIGGER) != 0;
+            if (!dev_room_shortcut_held && l != r && runner->pendingRoom == -1) {
+                int direction = l ? -1 : 1;
+                int32_t targetOrderPosition = vita_dev_room_order_target(
+                    runner->currentRoomOrderPosition, dw->gen8.roomOrderCount, direction);
+                if (targetOrderPosition >= 0) {
+                    int32_t targetRoom = dw->gen8.roomOrder[targetOrderPosition];
+                    if (targetRoom >= 0 && (uint32_t)targetRoom < dw->room.count) {
+                        const char* targetName = dw->room.rooms[targetRoom].name;
+                        char jump[256];
+                        snprintf(jump, sizeof(jump),
+                                 "DEV_ROOM_SHORTCUT combo=O+%c from=%d to=%d name=%s order=%d->%d",
+                                 l ? 'L' : 'R', runner->currentRoomIndex, targetRoom,
+                                 targetName != NULL ? targetName : "<null>",
+                                 runner->currentRoomOrderPosition, targetOrderPosition);
+                        log_line(jump);
+                        dev_log_write(jump);
+                        runner->pendingRoom = targetRoom;
+                    }
+                }
+            }
+            dev_room_shortcut_held = true;
+            pad.buttons &= ~(SCE_CTRL_CIRCLE | SCE_CTRL_LTRIGGER | SCE_CTRL_RTRIGGER);
+        } else {
+            dev_room_shortcut_held = false;
         }
 
         if (!settings.open && settings.devMode && settings.devRoomNavEnabled) {
@@ -1686,6 +2420,16 @@ int main(void) {
             }
         }
         int dx = (int)pad.lx - 128, dy = (int)pad.ly - 128;
+        bool fruit_can_eat = !settings.open &&
+            runner_object_bool_variable(runner, "obj_orange", "can_eat");
+        SceTouchData fruit_touch = {0};
+        bool fruit_touching = false;
+        if (fruit_can_eat && sceTouchPeek(SCE_TOUCH_PORT_FRONT, &fruit_touch, 1) > 0)
+            fruit_touching = fruit_touch.reportNum > 0;
+        bool fruit_touch_confirm = fruit_touch_should_pulse(
+            fruit_can_eat, fruit_touching, fruit_touch_held);
+        fruit_touch_held = fruit_can_eat ? fruit_touching : false;
+
         SceTouchData touch = {0};
         bool touch_up = false, touch_down = false, touch_left = false, touch_right = false;
         float touch_axis_x = 0.0f, touch_axis_y = 0.0f;
@@ -1787,12 +2531,17 @@ int main(void) {
         bool gp_down = controls_enabled && !dev_force_move && ((pad.buttons & SCE_CTRL_DOWN) || dy > 48 || touch_down);
         bool gp_left = controls_enabled && !dev_force_move && ((pad.buttons & SCE_CTRL_LEFT) || dx < -48 || touch_left);
         bool gp_right = controls_enabled && !dev_force_move && ((pad.buttons & SCE_CTRL_RIGHT) || dx > 48 || touch_right);
+        if (!trophy_first_move && (gp_up || gp_down || gp_left || gp_right)) {
+            trophy_first_move = true;
+            trophy_event_unlock(6, "First Steps", "first movement");
+        }
         RunnerGamepad_setButton(runner->gamepads, 0, GP_PADU, gp_up, &gp_previous[0]);
         RunnerGamepad_setButton(runner->gamepads, 0, GP_PADD, gp_down, &gp_previous[1]);
         RunnerGamepad_setButton(runner->gamepads, 0, GP_PADL, gp_left, &gp_previous[2]);
         RunnerGamepad_setButton(runner->gamepads, 0, GP_PADR, gp_right, &gp_previous[3]);
         
-        bool gp_cross = controls_enabled && ((pad.buttons & (SCE_CTRL_CROSS | SCE_CTRL_CIRCLE)) || touch_confirm);
+        bool gp_cross = controls_enabled &&
+            ((pad.buttons & SCE_CTRL_CROSS) || touch_confirm || fruit_touch_confirm);
         RunnerGamepad_setButton(runner->gamepads, 0, GP_FACE1, gp_cross, &gp_previous[4]);
         
         bool gp_circle = controls_enabled && ((pad.buttons & SCE_CTRL_CIRCLE) || touch_cancel);
@@ -1816,10 +2565,42 @@ int main(void) {
         RunnerGamepad_setAxis(runner->gamepads, 0, GP_AXIS_LH, visual_x);
         RunnerGamepad_setAxis(runner->gamepads, 0, GP_AXIS_LV, visual_y);
 
+        // Void Stranger still has keyboard-only movement paths in a few rooms
+        // and menu states. Mirror the unified Vita direction state to arrows as
+        // a compatibility fallback, while the GML controller path remains the
+        // preferred source and keeps the UI in controller mode.
         set_key(runner->keyboard, VK_UP, gp_up, &previous[0]);
         set_key(runner->keyboard, VK_DOWN, gp_down, &previous[1]);
         set_key(runner->keyboard, VK_LEFT, gp_left, &previous[2]);
-        set_key(runner->keyboard, VK_RIGHT, gp_right, &previous[3]);
+        set_key(runner->keyboard, VK_RIGHT, gp_right, &previous[3]);        // Log only movement state transitions. This is intentionally not a
+        // per-frame trace, so it remains useful on retail hardware without
+        // recreating the old probe-I/O frametime regression.
+        {
+            static uint32_t lastMoveButtons = UINT32_MAX;
+            static int lastAnalogX = 99;
+            static int lastAnalogY = 99;
+            uint32_t moveButtons = pad.buttons &
+                (SCE_CTRL_UP | SCE_CTRL_DOWN | SCE_CTRL_LEFT | SCE_CTRL_RIGHT);
+            int analogX = dx < -48 ? -1 : (dx > 48 ? 1 : 0);
+            int analogY = dy < -48 ? -1 : (dy > 48 ? 1 : 0);
+            if (moveButtons != lastMoveButtons || analogX != lastAnalogX || analogY != lastAnalogY) {
+                char inputLog[256];
+                snprintf(inputLog, sizeof(inputLog),
+                         "INPUT_RAW dpad=0x%08X analog=%d,%d gp=%d%d%d%d axis=%.2f,%.2f key=%d%d%d%d",
+                         (unsigned int)moveButtons, analogX, analogY,
+                         RunnerGamepad_buttonCheck(runner->gamepads, 0, GP_PADU) ? 1 : 0,
+                         RunnerGamepad_buttonCheck(runner->gamepads, 0, GP_PADD) ? 1 : 0,
+                         RunnerGamepad_buttonCheck(runner->gamepads, 0, GP_PADL) ? 1 : 0,
+                         RunnerGamepad_buttonCheck(runner->gamepads, 0, GP_PADR) ? 1 : 0,
+                         RunnerGamepad_axisValue(runner->gamepads, 0, GP_AXIS_LH),
+                         RunnerGamepad_axisValue(runner->gamepads, 0, GP_AXIS_LV),
+                         gp_up ? 1 : 0, gp_down ? 1 : 0, gp_left ? 1 : 0, gp_right ? 1 : 0);
+                log_line(inputLog);
+                lastMoveButtons = moveButtons;
+                lastAnalogX = analogX;
+                lastAnalogY = analogY;
+            }
+        }
         // Both Vita face-button assignments confirm reliably. Square remains
         // the distinct X/staff action and Select remains Esc/back.
         set_key(runner->keyboard, 'Z', gp_cross, &previous[4]);
@@ -2055,6 +2836,9 @@ int main(void) {
         // Apply after the game, GUI and console border have been composited,
         // but before Game Settings so the brightness control remains readable.
         VitaSettings_drawBrightness(&settings, renderer);
+        bool fruit_hint_visible_now = fruit_touch_hint_visible(
+            runner_object_bool_variable(runner, "obj_orange", "can_eat"));
+        VitaSettings_drawFruitTouchHint(&settings, renderer, fruit_hint_visible_now);
         VitaSettings_drawTouchControls(&settings, renderer);
         VitaSettings_updateTrophies(&settings);
         VitaSettings_drawTrophyNotification(&settings, renderer);
@@ -2215,6 +2999,10 @@ int main(void) {
             log_line("ROOM_AUDIO=hold_delegated_to_runner");
         }
         Runner_handlePendingRoomChange(runner);
+        if (!trophy_memories_opened && runner_has_active_object(runner, "obj_memories_album")) {
+            trophy_memories_opened = true;
+            trophy_event_unlock(19, "Memory Lane", "obj_memories_album");
+        }
         // Runner_handlePendingRoomChange keeps destination streams queued
         // until two complete frames of the new room have reached the display.
         // Releasing here made music play during late texture uploads, underrun
@@ -2256,6 +3044,10 @@ int main(void) {
         if (work_us > 40000) perf_drops++;
         if (work_us > 80000) perf_severe++;
         if (runner->currentRoomIndex != logged_room_index) {
+            if (logged_room_index != -999 && !trophy_first_room_change) {
+                trophy_first_room_change = true;
+                trophy_event_unlock(18, "First Descent", "ROOM_CHANGE");
+            }
             char room_change[192];
             snprintf(room_change, sizeof(room_change), "ROOM_CHANGE frame=%u from=%d to=%d name=%s work_us=%llu",
                      frame, logged_room_index, runner->currentRoomIndex,
@@ -2436,8 +3228,11 @@ int main(void) {
     VM_free(vm);
     DataWin_free(dw);
     log_line("PROCESS=exit_clean");
+    if (probe_log_fd >= 0) {
+        sceIoClose(probe_log_fd);
+        probe_log_fd = -1;
+    }
     sceKernelExitProcess(0);
     return 0;
 }
-
 

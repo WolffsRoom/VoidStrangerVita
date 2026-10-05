@@ -15,6 +15,7 @@ file(GLOB BS_COMMON_SOURCES ../butterscotch/src/*.c)
 file(GLOB BS_GL_SOURCES ../butterscotch/src/gl/*.c ../butterscotch/src/gl_common/*.c ../butterscotch/src/gl_legacy/*.c ../butterscotch/src/image/*.c)
 add_executable(${PROJECT_NAME}
   source/playable_main.c source/vita_settings.c source/vita_borders.c
+  source/missing_data_scene.c
   source/vita_video.c source/vita_trophies.c ${BS_COMMON_SOURCES} ${BS_GL_SOURCES}
   ../butterscotch/src/audio/openal/al_audio_system.c
   ../butterscotch/src/audio/openal/wave.c ../butterscotch/src/android/stb_impl.c
@@ -43,17 +44,73 @@ target_link_libraries(${PROJECT_NAME}
   SceCommonDialog_stub SceCtrl_stub SceDisplay_stub SceGxm_stub
   SceKernelDmacMgr_stub ScePower_stub SceRtc_stub SceSysmem_stub SceTouch_stub
   kubridge_stub mathneon openal pthread SceAudio_stub SceAudioIn_stub
-  SceAppUtil_stub SceNpTrophy_stub SceAvPlayer_stub z m)
+  SceAppUtil_stub SceNpTrophy_stub SceAvPlayer_stub crypto z m)
+
+# Package the in-game PS Vita manual under sce_sys/manual.
+# CONFIGURE_DEPENDS keeps future numbered pages in assets/manual/manual
+# included automatically without editing this CMakeLists again.
+file(GLOB VITA_MANUAL_FILES CONFIGURE_DEPENDS
+  "${CMAKE_SOURCE_DIR}/../../assets/manual/manual/*")
+set(VITA_MANUAL_VPK_FILES)
+foreach(MANUAL_FILE IN LISTS VITA_MANUAL_FILES)
+  if(NOT IS_DIRECTORY "${MANUAL_FILE}")
+    get_filename_component(MANUAL_NAME "${MANUAL_FILE}" NAME)
+    list(APPEND VITA_MANUAL_VPK_FILES
+      "${MANUAL_FILE}" "sce_sys/manual/${MANUAL_NAME}")
+  endif()
+endforeach()
+
 vita_create_self(eboot.bin ${PROJECT_NAME} UNSAFE)
 vita_create_vpk(VoidStranger.vpk VSTR00001 eboot.bin
-  VERSION 01.00 NAME "Void Stranger"
+  VERSION 02.00 NAME "Void Stranger"
   FILE
+    ${VITA_MANUAL_VPK_FILES}
     ${CMAKE_SOURCE_DIR}/../../assets/icon0.png sce_sys/icon0.png
     ${CMAKE_SOURCE_DIR}/../../assets/pic0.png sce_sys/pic0.png
     ${CMAKE_SOURCE_DIR}/../../assets/startup.png sce_sys/livearea/contents/startup.png
     ${CMAKE_SOURCE_DIR}/../../assets/bg0.png sce_sys/livearea/contents/bg0.png
     ${CMAKE_SOURCE_DIR}/../../assets/template.xml sce_sys/livearea/contents/template.xml
-    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/frame0.png assets/loading/frame0.png
-    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/frame1.png assets/loading/frame1.png
-    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/frame3-final.png assets/loading/frame3-final.png
-    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/frame4-final.png assets/loading/frame4-final.png)
+    ${CMAKE_SOURCE_DIR}/../../Trophy/void_stranger/TROPHY.TRP sce_sys/trophy/VSTR00001_00/TROPHY.TRP
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/loading_sprites.png assets/loading/loading_sprites.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/loading_digits.png assets/loading/loading_digits.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/loading_en.png assets/loading/loading_en.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/complete_en.png assets/loading/complete_en.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/loading_ptbr.png assets/loading/loading_ptbr.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/complete_ptbr.png assets/loading/complete_ptbr.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/loading_es.png assets/loading/loading_es.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/complete_es.png assets/loading/complete_es.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/loading_it.png assets/loading/loading_it.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/complete_it.png assets/loading/complete_it.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/loading_tr.png assets/loading/loading_tr.png
+    ${CMAKE_SOURCE_DIR}/../../assets/load_assets/complete_tr.png assets/loading/complete_tr.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/background/background.png assets/info_load/background/background.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/background/effect.png assets/info_load/background/effect.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/character/spr_sera_000.png assets/info_load/character/spr_sera_000.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/character/spr_sera_001.png assets/info_load/character/spr_sera_001.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/character/spr_sera_002.png assets/info_load/character/spr_sera_002.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/character/spr_sera_003.png assets/info_load/character/spr_sera_003.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/portrait/spr_sera_port_neutral_000.png assets/info_load/portrait/spr_sera_port_neutral_000.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/portrait/spr_sera_port_happy.png assets/info_load/portrait/spr_sera_port_happy.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/portrait/spr_sera_port_sigh.png assets/info_load/portrait/spr_sera_port_sigh.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/ui/textbox.png assets/info_load/ui/textbox.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/sound/snd_lev.wav assets/info_load/sound/snd_lev.wav
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/sound/snd_lev_vita.wav assets/info_load/sound/snd_lev_vita.wav
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_hello.png assets/info_load/generated/dialog_hello.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_need.png assets/info_load/generated/dialog_need.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_yes_place.png assets/info_load/generated/dialog_yes_place.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_yes_check.png assets/info_load/generated/dialog_yes_check.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_missing.png assets/info_load/generated/dialog_missing.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_prepare.png assets/info_load/generated/dialog_prepare.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_help1.png assets/info_load/generated/dialog_help1.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_help2.png assets/info_load/generated/dialog_help2.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_final_exit.png assets/info_load/generated/dialog_final_exit.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/organize_question_yes.png assets/info_load/generated/organize_question_yes.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/organize_question_no.png assets/info_load/generated/organize_question_no.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_organize_decline.png assets/info_load/generated/dialog_organize_decline.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/dialog_organize_manual.png assets/info_load/generated/dialog_organize_manual.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/question_yes.png assets/info_load/generated/question_yes.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/question_no.png assets/info_load/generated/question_no.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/github_qr.png assets/info_load/generated/github_qr.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/github_url.png assets/info_load/generated/github_url.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/alkhemikal_dialog_atlas.png assets/info_load/generated/alkhemikal_dialog_atlas.png
+    ${CMAKE_SOURCE_DIR}/../../assets/info_load/generated/textbox_crop.png assets/info_load/generated/textbox_crop.png)

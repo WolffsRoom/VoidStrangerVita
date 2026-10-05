@@ -54,6 +54,21 @@ $languages = Join-Path $root 'mods\Languages'
 if (-not $OriginalData -and (Test-Path -LiteralPath $languages)) {
   Copy-Item -LiteralPath $languages -Destination $OutputRoot -Recurse -Force
 }
+
+# Startup movies are external Vita data so they can be replaced independently
+# from the VPK. Mirror assets/intro -> voidstranger/intro in every prepared build.
+$introAssets = Join-Path $root 'assets\intro'
+if (-not $OriginalData -and (Test-Path -LiteralPath $introAssets)) {
+  $introOutput = Join-Path $OutputRoot 'intro'
+  New-Item -ItemType Directory -Force $introOutput | Out-Null
+  Get-ChildItem -LiteralPath $introAssets -File -Filter '*.mp4' | ForEach-Object {
+    Copy-Item -LiteralPath $_.FullName -Destination (Join-Path $introOutput $_.Name) -Force
+  }
+  $skipOverlay = Join-Path $root 'data\intro\skip.png'
+  if (Test-Path -LiteralPath $skipOverlay) {
+    Copy-Item -LiteralPath $skipOverlay -Destination (Join-Path $introOutput 'skip.png') -Force
+  }
+}
 # Texture caches are intentionally NOT copied from the PC build.
 # On Vita, the active data.win is decoded once and the runtime creates:
 #   texture-cache/*.r444 for lossless/UI pages

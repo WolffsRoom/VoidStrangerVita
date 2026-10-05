@@ -670,12 +670,25 @@ void glClear(GLbitfield mask) {
 	sceGxmSetVertexProgram(gxm_context, clear_vertex_program_patched);
 	sceGxmSetFragmentProgram(gxm_context, is_fbo_float ? clear_fragment_program_float_patched : clear_fragment_program_patched);
 
-	sceGxmReserveVertexDefaultUniformBuffer(gxm_context, &vbuffer);
-	sceGxmSetUniformDataF(vbuffer, clear_position, 0, 4, &clear_vertices->x);
-	sceGxmSetUniformDataF(vbuffer, clear_depth, 0, 1, &clear_depth_value);
+	// Keep internal clear uniforms out of GXM's finite parameter-buffer
+	// reservation path. Void Stranger switches FBOs frequently and could
+	// exhaust that path after several room transitions; the unchecked reserve
+	// then fed an invalid pointer to sceGxmSetUniformDataF. vitaGL already owns
+	// a mapped circular uniform pool for exactly these transient uniforms.
+	const SceGxmProgram *clear_v_program = sceGxmVertexProgramGetProgram(clear_vertex_program_patched);
+	uint32_t clear_v_size = sceGxmProgramGetDefaultUniformBufferSize(clear_v_program);
+	vbuffer = vglReserveVertexUniformBuffer(clear_v_size);
+	if (vbuffer) {
+		sceGxmSetUniformDataF(vbuffer, clear_position, 0, 4, &clear_vertices->x);
+		sceGxmSetUniformDataF(vbuffer, clear_depth, 0, 1, &clear_depth_value);
+	}
 
-	sceGxmReserveFragmentDefaultUniformBuffer(gxm_context, &fbuffer);
-	sceGxmSetUniformDataF(fbuffer, clear_color, 0, 4, &clear_rgba_val.r);
+	SceGxmFragmentProgram *active_clear_fragment = is_fbo_float ? clear_fragment_program_float_patched : clear_fragment_program_patched;
+	const SceGxmProgram *clear_f_program = sceGxmFragmentProgramGetProgram(active_clear_fragment);
+	uint32_t clear_f_size = sceGxmProgramGetDefaultUniformBufferSize(clear_f_program);
+	fbuffer = vglReserveFragmentUniformBuffer(clear_f_size);
+	if (fbuffer)
+		sceGxmSetUniformDataF(fbuffer, clear_color, 0, 4, &clear_rgba_val.r);
 
 	// Disable fragment program if not clearing color buffer. Depth and stencil clears are unaffected.
 	if (!(mask & GL_COLOR_BUFFER_BIT)) {

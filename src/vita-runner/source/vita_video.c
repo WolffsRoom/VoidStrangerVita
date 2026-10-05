@@ -21,11 +21,20 @@ typedef struct VideoTrackedAllocation {
 
 static VideoTrackedAllocation g_cpu_allocations[VIDEO_TRACKED_ALLOCS];
 static VideoTrackedAllocation g_gpu_allocations[VIDEO_TRACKED_ALLOCS];
+typedef struct VideoRawGpuAllocation {
+    void* address;
+    SceUID uid;
+    uint32_t size;
+    int mapped;
+} VideoRawGpuAllocation;
+static VideoRawGpuAllocation g_raw_gpu_allocations[VIDEO_TRACKED_ALLOCS];
 static volatile int g_memory_lock = 0;
 static uint64_t g_video_cpu_bytes = 0;
 static uint64_t g_video_cpu_peak = 0;
 static uint64_t g_video_gpu_bytes = 0;
 static uint64_t g_video_gpu_peak = 0;
+
+static void video_log(const char* state, const char* path, int result);
 
 static void video_memory_lock(void) {
     while (__sync_lock_test_and_set(&g_memory_lock, 1)) sceKernelDelayThread(50);
@@ -66,15 +75,29 @@ static void video_untrack_allocation(VideoTrackedAllocation* entries,
     video_memory_unlock();
 }
 
+static int video_raw_gpu_free(void* address) {
+    if (address == NULL) return 0;
+    for (int i = 0; i < VIDEO_TRACKED_ALLOCS; ++i) {
+        if (g_raw_gpu_allocations[i].address != address) continue;
+        if (g_raw_gpu_allocations[i].mapped)
+            sceGxmUnmapMemory(address);
+        if (g_raw_gpu_allocations[i].uid >= 0)
+            sceKernelFreeMemBlock(g_raw_gpu_allocations[i].uid);
+        g_raw_gpu_allocations[i].address = NULL;
+        g_raw_gpu_allocations[i].uid = -1;
+        g_raw_gpu_allocations[i].size = 0;
+        g_raw_gpu_allocations[i].mapped = 0;
+        return 1;
+    }
+    return 0;
+}
+
 static void video_release_failed_init_allocations(void) {
-    // sceAvPlayerInit may return an error without calling the replacement
-    // deallocators. Release those orphaned blocks before GML/fallback retries
-    // the open, otherwise every attempt permanently consumes several MiB.
     for (int i = 0; i < VIDEO_TRACKED_ALLOCS; ++i) {
         void* address = g_gpu_allocations[i].address;
         if (address != NULL) {
             video_untrack_allocation(g_gpu_allocations, address, &g_video_gpu_bytes);
-            vglFree(address);
+            video_raw_gpu_free(address);
         }
     }
     for (int i = 0; i < VIDEO_TRACKED_ALLOCS; ++i) {
@@ -103,21 +126,48 @@ static void* avp_alloc_gpu(void* p, uint32_t align, uint32_t size) {
     (void)p;
     if (align < VIDEO_MEM_ALIGNMENT) align = VIDEO_MEM_ALIGNMENT;
     size = ALIGN_MEM(size, align);
-    // Match YoYo Loader's proven SceAvPlayer path. PHYCONT only has a few MiB
-    // left after VitaGL and made sceAvPlayerInit fail before producing a frame.
-    // VGL_MEM_SLOW can spill into the much larger user-RAM pool and still
-    // returns memory suitable for the decoder/GXM texture.
-    void* res = vglAlloc(size, VGL_MEM_SLOW);
-    if (res == NULL) return NULL;
-    video_track_allocation(g_gpu_allocations, res, size,
+    uint32_t blockSize = ALIGN_MEM(size, 0x100000u);
+    SceUID uid = sceKernelAllocMemBlock("voidstranger_avp_phy",
+        SCE_KERNEL_MEMBLOCK_TYPE_USER_MAIN_PHYCONT_NC_RW, blockSize, NULL);
+    if (uid < 0) {
+        char detail[128];
+        snprintf(detail, sizeof(detail), "align=%u size=%u block=%u",
+                 (unsigned)align, (unsigned)size, (unsigned)blockSize);
+        video_log("alloc_gpu_raw_failed", detail, uid);
+        return NULL;
+    }
+    void* res = NULL;
+    int baseResult = sceKernelGetMemBlockBase(uid, &res);
+    if (baseResult < 0 || res == NULL) {
+        sceKernelFreeMemBlock(uid);
+        video_log("alloc_gpu_raw_base_failed", "sceKernelGetMemBlockBase", baseResult);
+        return NULL;
+    }
+    int mapResult = sceGxmMapMemory(res, blockSize, SCE_GXM_MEMORY_ATTRIB_RW);
+    if (mapResult < 0) {
+        sceKernelFreeMemBlock(uid);
+        video_log("alloc_gpu_raw_map_failed", "sceGxmMapMemory", mapResult);
+        return NULL;
+    }
+    for (int i = 0; i < VIDEO_TRACKED_ALLOCS; ++i) {
+        if (g_raw_gpu_allocations[i].address != NULL) continue;
+        g_raw_gpu_allocations[i].address = res;
+        g_raw_gpu_allocations[i].uid = uid;
+        g_raw_gpu_allocations[i].size = blockSize;
+        g_raw_gpu_allocations[i].mapped = 1;
+        break;
+    }
+    video_track_allocation(g_gpu_allocations, res, blockSize,
                            &g_video_gpu_bytes, &g_video_gpu_peak);
     return res;
 }
 static void avp_free_gpu(void* p, void* addr) {
     (void)p;
+    if (addr == NULL) return;
     glFinish();
     video_untrack_allocation(g_gpu_allocations, addr, &g_video_gpu_bytes);
-    vglFree(addr);
+    if (!video_raw_gpu_free(addr))
+        video_log("free_gpu_raw_unknown", "untracked pointer", (int)(uintptr_t)addr);
 }
 
 // ===[ Video state ]===
@@ -138,6 +188,10 @@ static int                 g_audio_old_mode  = 0;
 
 static GLuint           g_frame_tex[VIDEO_BUFFERS];
 static SceGxmTexture*   g_frame_gxm[VIDEO_BUFFERS];
+static GLuint           g_movie_vs              = 0;
+static GLuint           g_movie_fs              = 0;
+static GLuint           g_movie_program         = 0;
+static GLint            g_movie_opacity_uniform = -1;
 static int              g_frame_idx            = 0;
 static int              g_first_frame_decoded  = 0;
 static int              g_initialized          = 0;
@@ -176,12 +230,14 @@ static bool video_player_handle_valid(SceAvPlayerHandle handle) {
 }
 
 static void video_log(const char* state, const char* path, int result) {
-    extern int g_vitaProbeLoggingEnabled;
-    if (!g_vitaProbeLoggingEnabled) return;
-    FILE* f = fopen("ux0:data/voidstranger/butterscotch-probe.log", "a");
+    char line[512];
+    snprintf(line, sizeof(line), "VIDEO=%s result=0x%08X path=%s", state,
+             (unsigned)result, path != NULL ? path : "<null>");
+    extern void VitaProbe_logLine(const char* text);
+    VitaProbe_logLine(line);
+    FILE* f = fopen("ux0:data/voidstranger/compat-diagnostics.log", "a");
     if (f != NULL) {
-        fprintf(f, "VIDEO=%s result=0x%08X path=%s\n", state,
-                (unsigned)result, path != NULL ? path : "<null>");
+        fprintf(f, "%s\n", line);
         fclose(f);
     }
 }
@@ -281,7 +337,57 @@ static int audio_thread_func(SceSize args, void* argp) {
                                   (SceAudioOutMode)g_audio_old_mode);
         g_audio_port = -1;
     }
-    return sceKernelExitDeleteThread(0);
+    // Keep the thread object joinable. The main thread waits for it and then
+    // deletes the kernel thread explicitly before destroying SceAvPlayer.
+    return 0;
+}
+
+static bool video_stop_avplayer_workers(const char* reason) {
+    g_state = VS_INACTIVE;
+
+    if (g_audio_thread_id >= 0) {
+        SceUID audioThread = g_audio_thread_id;
+        video_log("audio_thread_join_begin", reason, audioThread);
+        int waitResult = sceKernelWaitThreadEnd(audioThread, NULL, NULL);
+        if (waitResult < 0) {
+            video_log("audio_thread_join_failed", reason, waitResult);
+            return false;
+        }
+        int deleteResult = sceKernelDeleteThread(audioThread);
+        g_audio_thread_id = -1;
+        video_log("audio_thread_joined", reason, waitResult);
+        if (deleteResult < 0) video_log("audio_thread_delete_failed", reason, deleteResult);
+    }
+
+    if (video_player_handle_valid(g_player)) {
+        video_log("player_close_begin", reason, 0);
+        int stopResult = sceAvPlayerStop(g_player);
+        int closeResult = sceAvPlayerClose(g_player);
+        g_player = (SceAvPlayerHandle)0;
+        char detail[128];
+        snprintf(detail, sizeof(detail), "%s stop=0x%08X close=0x%08X",
+                 reason != NULL ? reason : "unknown",
+                 (unsigned)stopResult, (unsigned)closeResult);
+        video_log("player_close_complete", detail, closeResult);
+    }
+    return true;
+}
+
+static GLuint compileVideoShader(GLenum type, const char* source) {
+    GLuint shader = glCreateShader(type);
+    if (shader == 0) return 0;
+    glShaderSource(shader, 1, &source, NULL);
+    glCompileShader(shader);
+    GLint compiled = GL_FALSE;
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &compiled);
+    if (!compiled) {
+        char info[512] = {0};
+        glGetShaderInfoLog(shader, sizeof(info) - 1, NULL, info);
+        video_log("shader_compile_failed", info, (int)type);
+        glDeleteShader(shader);
+        return 0;
+    }
+    return shader;
 }
 
 // ===[ Public API ]===
@@ -292,11 +398,70 @@ int VitaVideo_init(void) {
     glGenTextures(VIDEO_BUFFERS, g_frame_tex);
     for (int i = 0; i < VIDEO_BUFFERS; i++) {
         glBindTexture(GL_TEXTURE_2D, g_frame_tex[i]);
-        // Allocate a tiny placeholder; the actual data pointer will come from sceAvPlayer
+        // Allocate a tiny placeholder; the actual data pointer will come from sceAvPlayer.
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 8, 8, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
         g_frame_gxm[i] = vglGetGxmTexture(GL_TEXTURE_2D);
         vglFree(vglGetTexDataPointer(GL_TEXTURE_2D));
     }
+
+    static const char* vertexSource =
+        "#version 100\n"
+        "attribute vec2 inPos;\n"
+        "attribute vec2 inTex;\n"
+        "varying vec2 texcoord;\n"
+        "void main() {\n"
+        "    texcoord = inTex;\n"
+        "    gl_Position = vec4(inPos, 0.0, 1.0);\n"
+        "}\n";
+    static const char* fragmentSource =
+        "#version 100\n"
+        "precision mediump float;\n"
+        "varying vec2 texcoord;\n"
+        "uniform sampler2D tex;\n"
+        "uniform float opacity;\n"
+        "void main() {\n"
+        "    vec4 color = texture2D(tex, texcoord);\n"
+        "    gl_FragColor = vec4(color.rgb, color.a * opacity);\n"
+        "}\n";
+
+    g_movie_vs = compileVideoShader(GL_VERTEX_SHADER, vertexSource);
+    g_movie_fs = compileVideoShader(GL_FRAGMENT_SHADER, fragmentSource);
+    if (g_movie_vs == 0 || g_movie_fs == 0) {
+        video_log("shader_create_failed", "sceAvPlayer", -1);
+        if (g_movie_vs != 0) { glDeleteShader(g_movie_vs); g_movie_vs = 0; }
+        if (g_movie_fs != 0) { glDeleteShader(g_movie_fs); g_movie_fs = 0; }
+        glDeleteTextures(VIDEO_BUFFERS, g_frame_tex);
+        return -1;
+    }
+
+    g_movie_program = glCreateProgram();
+    glAttachShader(g_movie_program, g_movie_vs);
+    glAttachShader(g_movie_program, g_movie_fs);
+    glBindAttribLocation(g_movie_program, 0, "inPos");
+    glBindAttribLocation(g_movie_program, 1, "inTex");
+    glLinkProgram(g_movie_program);
+    glDeleteShader(g_movie_vs);
+    glDeleteShader(g_movie_fs);
+    g_movie_vs = g_movie_fs = 0;
+
+    GLint linked = GL_FALSE;
+    glGetProgramiv(g_movie_program, GL_LINK_STATUS, &linked);
+    if (!linked) {
+        char info[512] = {0};
+        glGetProgramInfoLog(g_movie_program, sizeof(info) - 1, NULL, info);
+        video_log("program_link_failed", info, -1);
+        glDeleteProgram(g_movie_program);
+        g_movie_program = 0;
+        glDeleteTextures(VIDEO_BUFFERS, g_frame_tex);
+        return -1;
+    }
+
+    glUseProgram(g_movie_program);
+    glUniform1i(glGetUniformLocation(g_movie_program, "tex"), 0);
+    g_movie_opacity_uniform = glGetUniformLocation(g_movie_program, "opacity");
+    if (g_movie_opacity_uniform >= 0) glUniform1f(g_movie_opacity_uniform, 1.0f);
+    glUseProgram(0);
+    video_log("presentation_shader_ready", "sceAvPlayer", (int)g_movie_program);
     g_initialized = 1;
     return 0;
 }
@@ -304,6 +469,10 @@ int VitaVideo_init(void) {
 void VitaVideo_shutdown(void) {
     VitaVideo_close();
     if (g_initialized) {
+        if (g_movie_program != 0) glDeleteProgram(g_movie_program);
+        if (g_movie_vs != 0) glDeleteShader(g_movie_vs);
+        if (g_movie_fs != 0) glDeleteShader(g_movie_fs);
+        g_movie_program = g_movie_vs = g_movie_fs = 0;
         glDeleteTextures(VIDEO_BUFFERS, g_frame_tex);
         g_initialized = 0;
     }
@@ -448,10 +617,10 @@ bool VitaVideo_updateFrame(void) {
                 g_decoder_wait_logged = 1;
             }
         } else if (g_first_frame_decoded) {
-            // Video finished
-            sceAvPlayerStop(g_player);
-            sceAvPlayerClose(g_player);
-            g_state = VS_INACTIVE;
+            // Video finished. The audio worker can still be inside AVPlayer,
+            // so it must be joined before Stop/Close destroys the controller.
+            video_log("playback_complete_begin", "end_of_stream", 0);
+            video_stop_avplayer_workers("end_of_stream");
             g_pending_event = VITA_VIDEO_EVENT_END;
             return false;
         } else if (!g_decoder_wait_logged &&
@@ -471,20 +640,68 @@ bool VitaVideo_hasDecodedFrame(void) {
     return g_state != VS_INACTIVE && g_first_frame_decoded != 0;
 }
 
-void VitaVideo_draw(float x, float y, float w, float h) {
-    if (g_state == VS_INACTIVE || !g_initialized || !g_first_frame_decoded) return;
+static void video_draw_texture_shader(GLuint texture, float x, float y, float w, float h,
+                                      float opacity, bool blended) {
+    if (!g_initialized || g_movie_program == 0 || texture == 0 || opacity <= 0.0f) return;
+    if (opacity > 1.0f) opacity = 1.0f;
 
-    // Draw the last decoded frame as a full-screen quad inside the given rect
+    GLint viewport[4];
+    glGetIntegerv(GL_VIEWPORT, viewport);
+    float vw = viewport[2] > 0 ? (float)viewport[2] : 960.0f;
+    float vh = viewport[3] > 0 ? (float)viewport[3] : 544.0f;
+    float left   = (x / vw) * 2.0f - 1.0f;
+    float right  = ((x + w) / vw) * 2.0f - 1.0f;
+    float top    = 1.0f - (y / vh) * 2.0f;
+    float bottom = 1.0f - ((y + h) / vh) * 2.0f;
+    const float positions[8] = {
+        left,  top,
+        left,  bottom,
+        right, top,
+        right, bottom
+    };
+    const float texcoords[8] = {
+        0.0f, 0.0f,
+        0.0f, 1.0f,
+        1.0f, 0.0f,
+        1.0f, 1.0f
+    };
+
     glEnable(GL_TEXTURE_2D);
-    glDisable(GL_BLEND);
-    glBindTexture(GL_TEXTURE_2D, g_frame_tex[g_frame_idx]);
-    glBegin(GL_TRIANGLE_STRIP);
-        glTexCoord2f(0.0f, 0.0f); glVertex2f(x,     y    );
-        glTexCoord2f(1.0f, 0.0f); glVertex2f(x + w, y    );
-        glTexCoord2f(0.0f, 1.0f); glVertex2f(x,     y + h);
-        glTexCoord2f(1.0f, 1.0f); glVertex2f(x + w, y + h);
-    glEnd();
+    if (blended || opacity < 0.999f) {
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    } else {
+        glDisable(GL_BLEND);
+    }
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    glUseProgram(g_movie_program);
+    if (g_movie_opacity_uniform >= 0) glUniform1f(g_movie_opacity_uniform, opacity);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, positions);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, texcoords);
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    glDisableVertexAttribArray(1);
+    glDisableVertexAttribArray(0);
+    if (g_movie_opacity_uniform >= 0) glUniform1f(g_movie_opacity_uniform, 1.0f);
+    glUseProgram(0);
     glEnable(GL_BLEND);
+}
+
+void VitaVideo_draw(float x, float y, float w, float h) {
+    if (g_state == VS_INACTIVE || !g_initialized || !g_first_frame_decoded ||
+        g_movie_program == 0) return;
+
+    // Hardware-validated shader/attribute path shared with DeltaruneVita.
+    video_draw_texture_shader(g_frame_tex[g_frame_idx], x, y, w, h, 1.0f, false);
+
+    if (!g_first_draw_logged) {
+        video_log("first_frame_presented", "shader_draw_arrays", 0);
+        g_first_draw_logged = 1;
+    }
 }
 
 void VitaVideo_drawHost(float x, float y, float w, float h) {
@@ -515,18 +732,20 @@ void VitaVideo_drawHost(float x, float y, float w, float h) {
     }
 }
 
+void VitaVideo_drawTextureHost(unsigned int texture, float x, float y, float w, float h,
+                               float opacity) {
+    if (!g_initialized || g_movie_program == 0 || texture == 0 || opacity <= 0.0f) return;
+    glViewport(0, 0, 960, 544);
+    glDisable(GL_SCISSOR_TEST);
+    glDisable(GL_DEPTH_TEST);
+    glDisable(GL_CULL_FACE);
+    video_draw_texture_shader((GLuint)texture, x, y, w, h, opacity, true);
+}
+
 void VitaVideo_close(void) {
-    if (g_state == VS_INACTIVE) return;
-    g_state = VS_INACTIVE; // signals audio thread to stop
-    if (g_audio_thread_id >= 0) {
-        SceUInt timeout = 3000000;
-        sceKernelWaitThreadEnd(g_audio_thread_id, NULL, &timeout);
-        g_audio_thread_id = -1;
-    }
-    if (video_player_handle_valid(g_player)) {
-        sceAvPlayerStop(g_player);
-        sceAvPlayerClose(g_player);
-    }
+    if (g_state == VS_INACTIVE && g_audio_thread_id < 0 &&
+        !video_player_handle_valid(g_player)) return;
+    video_stop_avplayer_workers("explicit_close");
     g_first_frame_decoded = 0;
 }
 

@@ -26,6 +26,9 @@
 #include "collision.h"
 #include "ini.h"
 #include "audio_system.h"
+#ifdef PLATFORM_VITA
+#include "audio/openal/al_audio_system.h"
+#endif
 #include "file_system.h"
 #include "md5.h"
 #include "sha1.h"
@@ -1787,6 +1790,12 @@ static RValue builtin_show_debug_message(MAYBE_UNUSED VMContext* ctx, RValue* ar
 
     char* val = RValue_toString(args[0]);
     printf("Game: %s\n", val);
+#ifdef PLATFORM_VITA
+    if (val != nullptr && strncmp(val, "VITA_", 5) == 0) {
+        extern void VitaProbe_logLine(const char* text);
+        VitaProbe_logLine(val);
+    }
+#endif
     free(val);
 
     return RValue_makeUndefined();
@@ -4300,6 +4309,9 @@ static inline ptrdiff_t getValueIndexInMap(DsMapEntry** mapPtr, RValue keyRvalue
 }
 
 static RValue builtin_ds_exists(VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    if (argCount < 2 || args[0].type == RVALUE_UNDEFINED || args[1].type == RVALUE_UNDEFINED)
+        return RValue_makeBool(false);
+
     Runner* runner = ctx->runner;
     int32_t index = RValue_toInt32(args[0]);
     int32_t dsType = RValue_toInt32(args[1]);
@@ -6693,9 +6705,59 @@ static RValue builtin_mp_potential_settings(VMContext* ctx, RValue* args, MAYBE_
 
 // ===[ Steam ]===
 
-// Steam stubs
+#ifdef PLATFORM_VITA
+#include "../../vita-runner/source/vita_trophies.h"
+
+static bool vitaSteamPendantName(RValue* args, int32_t argCount) {
+    if (argCount < 1 || args[0].type != RVALUE_STRING || args[0].string == nullptr) return false;
+    char* name = RValue_toString(args[0]);
+    bool match = name != nullptr && strcmp(name, "VS_PENDANT") == 0;
+    free(name);
+    return match;
+}
+
+static RValue builtin_steam_initialised(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeBool(true);
+}
+static RValue builtin_steam_stats_ready(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeBool(true);
+}
+static RValue builtin_steam_get_achievement(MAYBE_UNUSED VMContext* ctx, RValue* args, int32_t argCount) {
+    if (!vitaSteamPendantName(args, argCount)) return RValue_makeBool(false);
+    return RValue_makeBool(VitaTrophies_isUnlocked(1));
+}
+static RValue builtin_steam_set_achievement(MAYBE_UNUSED VMContext* ctx, RValue* args, int32_t argCount) {
+    if (!vitaSteamPendantName(args, argCount)) return RValue_makeBool(false);
+    VitaTrophies_unlock(1);
+    extern void VitaProbe_logLine(const char* text);
+    VitaProbe_logLine("TROPHY_STEAM_SET name=VS_PENDANT id=1");
+    return RValue_makeBool(true);
+}
+static RValue builtin_steam_clear_achievement(MAYBE_UNUSED VMContext* ctx, RValue* args, int32_t argCount) {
+    // Vita trophies cannot be re-locked after they are awarded. Before unlock,
+    // there is nothing to clear; after unlock, keep Steam semantics stable by
+    // reporting success while leaving the native trophy intact.
+    return RValue_makeBool(vitaSteamPendantName(args, argCount));
+}
+static RValue builtin_steam_is_screenshot_requested(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeBool(false);
+}
+static RValue builtin_steam_send_screenshot(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeUndefined();
+}
+static RValue builtin_steam_shutdown(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
+    return RValue_makeUndefined();
+}
+#else
 STUB_RETURN_ZERO(steam_initialised)
 STUB_RETURN_ZERO(steam_stats_ready)
+static RValue builtin_steam_get_achievement(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) { return RValue_makeBool(false); }
+static RValue builtin_steam_set_achievement(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) { return RValue_makeBool(false); }
+static RValue builtin_steam_clear_achievement(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) { return RValue_makeBool(false); }
+static RValue builtin_steam_is_screenshot_requested(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) { return RValue_makeBool(false); }
+static RValue builtin_steam_send_screenshot(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) { return RValue_makeUndefined(); }
+static RValue builtin_steam_shutdown(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) { return RValue_makeUndefined(); }
+#endif
 STUB_RETURN_ZERO(steam_file_exists)
 STUB_RETURN_UNDEFINED(steam_file_write)
 STUB_RETURN_UNDEFINED(steam_file_read)
@@ -6933,6 +6995,21 @@ static RValue builtin_audio_group_load(VMContext* ctx, RValue* args, MAYBE_UNUSE
     if (audio == nullptr) return RValue_makeUndefined();
     int32_t groupIndex = RValue_toInt32(args[0]);
     audio->vtable->groupLoad(audio, groupIndex);
+    return RValue_makeUndefined();
+}
+
+static RValue builtin_audio_group_set_gain(VMContext* ctx, RValue* args, int32_t argCount) {
+    if (argCount < 2) return RValue_makeUndefined();
+    AudioSystem* audio = getAudioSystem(ctx);
+    if (audio == nullptr) return RValue_makeUndefined();
+    int32_t groupIndex = RValue_toInt32(args[0]);
+    float gain = (float)RValue_toReal(args[1]);
+#ifdef PLATFORM_VITA
+    AlAudioSystem_setGameGroupGain((AlAudioSystem*)audio, groupIndex, gain);
+#else
+    (void)groupIndex;
+    (void)gain;
+#endif
     return RValue_makeUndefined();
 }
 
@@ -7419,9 +7496,23 @@ static RValue builtin_ini_write_real(VMContext* ctx, RValue* args, int32_t argCo
     const char* section = (args[0].type == RVALUE_STRING ? args[0].string : "");
     const char* key = (args[1].type == RVALUE_STRING ? args[1].string : "");
     char* valueStr = RValue_toString(args[2]);
+    const char* previousValue = Ini_getString(runner->currentIni, section, key);
+    bool changedExistingValue = previousValue != nullptr && strcmp(previousValue, valueStr) != 0;
 
     Ini_setString(runner->currentIni, section, key, valueStr);
     runner->currentIniDirty = true;
+#ifdef PLATFORM_VITA
+    if (changedExistingValue && strcmp(section, "Graphics") == 0) {
+        extern void VitaProbe_logLine(const char* text);
+        if (strcmp(key, "Palette") == 0) {
+            VitaProbe_logLine("TROPHY_EVENT id=20 name=A New Shade source=Graphics/Palette");
+            VitaTrophies_unlock(20);
+        } else if (strcmp(key, "Stretch") == 0) {
+            VitaProbe_logLine("TROPHY_EVENT id=7 name=Fill the Screen source=Graphics/Stretch");
+            VitaTrophies_unlock(7);
+        }
+    }
+#endif
     free(valueStr);
     return RValue_makeUndefined();
 }
@@ -7825,6 +7916,23 @@ static RValue builtin_file_delete(VMContext* ctx, RValue* args, int32_t argCount
     if (1 > argCount) return RValue_makeUndefined();
     const char* path = (args[0].type == RVALUE_STRING ? args[0].string : "");
     Runner* runner = ctx->runner;
+
+    // GameMaker treats a deleted INI as gone immediately. Butterscotch keeps the
+    // most recently closed INI in memory, so deleting and reopening the same path
+    // could otherwise resurrect stale settings instead of reading/creating the file.
+    if (runner->currentIniPath != nullptr && strcmp(runner->currentIniPath, path) == 0) {
+        if (runner->currentIni != nullptr) {
+            Ini_free(runner->currentIni);
+            runner->currentIni = nullptr;
+        }
+        free(runner->currentIniPath);
+        runner->currentIniPath = nullptr;
+        runner->currentIniDirty = false;
+    }
+    if (runner->cachedIniPath != nullptr && strcmp(runner->cachedIniPath, path) == 0) {
+        discardIniCache(runner);
+    }
+
     FileSystem* fs = runner->fileSystem;
     fs->vtable->deleteFile(fs, path);
     return RValue_makeUndefined();
@@ -17345,6 +17453,63 @@ static RValue builtin_date_current_datetime(MAYBE_UNUSED VMContext* ctx, MAYBE_U
     return RValue_makeReal((GMLReal) days);
 }
 
+// GameMaker datetimes use a serial day count where 25569.0 is 1970-01-01.
+// Convert the integral date portion without relying on platform-specific time APIs;
+// this keeps desktop and Vita behavior identical.
+static void gmDateSerialToYmd(GMLReal serial, int32_t* yearOut, int32_t* monthOut, int32_t* dayOut) {
+    int64_t z = (int64_t)floor((double)serial) - 25569;
+    z += 719468;
+    int64_t era = (z >= 0 ? z : z - 146096) / 146097;
+    uint32_t doe = (uint32_t)(z - era * 146097);
+    uint32_t yoe = (doe - doe / 1460 + doe / 36524 - doe / 146096) / 365;
+    int32_t y = (int32_t)yoe + (int32_t)(era * 400);
+    uint32_t doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
+    uint32_t mp = (5 * doy + 2) / 153;
+    uint32_t d = doy - (153 * mp + 2) / 5 + 1;
+    int32_t m = (int32_t)mp + (mp < 10 ? 3 : -9);
+    y += (m <= 2);
+    if (yearOut != nullptr) *yearOut = y;
+    if (monthOut != nullptr) *monthOut = (int32_t)m;
+    if (dayOut != nullptr) *dayOut = (int32_t)d;
+}
+
+static RValue builtin_date_get_day(MAYBE_UNUSED VMContext* ctx, RValue* args, int32_t argCount) {
+    if (argCount < 1) return RValue_makeUndefined();
+    int32_t day = 0;
+    gmDateSerialToYmd(RValue_toReal(args[0]), nullptr, nullptr, &day);
+    return RValue_makeReal((GMLReal)day);
+}
+
+static RValue builtin_date_get_month(MAYBE_UNUSED VMContext* ctx, RValue* args, int32_t argCount) {
+    if (argCount < 1) return RValue_makeUndefined();
+    int32_t month = 0;
+    gmDateSerialToYmd(RValue_toReal(args[0]), nullptr, &month, nullptr);
+    return RValue_makeReal((GMLReal)month);
+}
+
+static RValue builtin_date_get_year(MAYBE_UNUSED VMContext* ctx, RValue* args, int32_t argCount) {
+    if (argCount < 1) return RValue_makeUndefined();
+    int32_t year = 0;
+    gmDateSerialToYmd(RValue_toReal(args[0]), &year, nullptr, nullptr);
+    return RValue_makeReal((GMLReal)year);
+}
+
+static RValue builtin_date_date_string(MAYBE_UNUSED VMContext* ctx, RValue* args, int32_t argCount) {
+    if (argCount < 1) return RValue_makeUndefined();
+    int32_t year = 0, month = 0, day = 0;
+    gmDateSerialToYmd(RValue_toReal(args[0]), &year, &month, &day);
+    char text[32];
+    snprintf(text, sizeof(text), "%02d/%02d/%04d", day, month, year);
+    return RValue_makeOwnedString(safeStrdup(text));
+}
+
+static RValue builtin_date_minute_span(MAYBE_UNUSED VMContext* ctx, RValue* args, int32_t argCount) {
+    if (argCount < 2) return RValue_makeUndefined();
+    GMLReal delta = RValue_toReal(args[0]) - RValue_toReal(args[1]);
+    if (delta < 0) delta = -delta;
+    return RValue_makeReal(delta * (GMLReal)1440.0);
+}
+
 static RValue builtin_array_sort(MAYBE_UNUSED VMContext* ctx, MAYBE_UNUSED RValue* args, MAYBE_UNUSED int32_t argCount) {
     return RValue_makeUndefined();
 }
@@ -17397,6 +17562,11 @@ void VMBuiltins_registerAll(VMContext* ctx) {
     VM_registerBuiltin(ctx, "show_debug_message", builtin_show_debug_message);
     VM_registerBuiltin(ctx, "font_exists", builtin_font_exists);
     VM_registerBuiltin(ctx, "date_current_datetime", builtin_date_current_datetime);
+    VM_registerBuiltin(ctx, "date_date_string", builtin_date_date_string);
+    VM_registerBuiltin(ctx, "date_get_day", builtin_date_get_day);
+    VM_registerBuiltin(ctx, "date_get_month", builtin_date_get_month);
+    VM_registerBuiltin(ctx, "date_get_year", builtin_date_get_year);
+    VM_registerBuiltin(ctx, "date_minute_span", builtin_date_minute_span);
     VM_registerBuiltin(ctx, "buffer_peek", builtin_buffer_peek);
     VM_registerBuiltin(ctx, "array_sort", builtin_array_sort);
     VM_registerBuiltin(ctx, "sprite_prefetch", builtin_sprite_prefetch);
@@ -17755,6 +17925,12 @@ void VMBuiltins_registerAll(VMContext* ctx) {
     VM_registerBuiltin(ctx, "steam_file_write", builtin_steam_file_write);
     VM_registerBuiltin(ctx, "steam_file_read", builtin_steam_file_read);
     VM_registerBuiltin(ctx, "steam_get_persona_name", builtin_steam_get_persona_name);
+    VM_registerBuiltin(ctx, "steam_get_achievement", builtin_steam_get_achievement);
+    VM_registerBuiltin(ctx, "steam_set_achievement", builtin_steam_set_achievement);
+    VM_registerBuiltin(ctx, "steam_clear_achievement", builtin_steam_clear_achievement);
+    VM_registerBuiltin(ctx, "steam_is_screenshot_requested", builtin_steam_is_screenshot_requested);
+    VM_registerBuiltin(ctx, "steam_send_screenshot", builtin_steam_send_screenshot);
+    VM_registerBuiltin(ctx, "steam_shutdown", builtin_steam_shutdown);
 
     // Audio
     VM_registerBuiltin(ctx, "audio_system_is_available", builtin_audio_system_is_available);
@@ -17774,6 +17950,7 @@ void VMBuiltins_registerAll(VMContext* ctx) {
     VM_registerBuiltin(ctx, "audio_master_gain", builtin_audio_master_gain);
     VM_registerBuiltin(ctx, "audio_set_master_gain", builtin_audio_set_master_gain);
     VM_registerBuiltin(ctx, "audio_group_load", builtin_audio_group_load);
+    VM_registerBuiltin(ctx, "audio_group_set_gain", builtin_audio_group_set_gain);
     VM_registerBuiltin(ctx, "audio_group_is_loaded", builtin_audio_group_is_loaded);
     if (!isGMS2) {
         VM_registerBuiltin(ctx, "audio_play_music", builtin_audio_play_music);

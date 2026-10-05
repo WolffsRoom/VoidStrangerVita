@@ -114,6 +114,7 @@ uint32_t VitaSettings_syncGameTrophies(VitaSettings* settings, const bool unlock
 void VitaSettings_drawTrophyNotification(VitaSettings* settings, Renderer* renderer);
 void VitaSettings_drawBrightness(VitaSettings* settings, Renderer* renderer);
 void VitaSettings_drawTouchControls(VitaSettings* settings, Renderer* renderer);
+void VitaSettings_drawFruitTouchHint(VitaSettings* settings, Renderer* renderer, bool visible);
 void VitaSettings_drawCalibration(VitaSettings* settings, Renderer* renderer);
 void VitaSettings_drawDevOverlay(VitaSettings* settings, Renderer* renderer,
                                  const char* room, float fps, uint64_t stepUs,

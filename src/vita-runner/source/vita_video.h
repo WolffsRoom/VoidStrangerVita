@@ -35,6 +35,8 @@ bool VitaVideo_hasDecodedFrame(void);
 // Draw the latest decoded frame into the rectangle.
 void VitaVideo_draw(float x, float y, float w, float h);
 void VitaVideo_drawHost(float x, float y, float w, float h);
+// Draw an ordinary RGBA GL texture over the host framebuffer using the same safe shader path.
+void VitaVideo_drawTextureHost(unsigned int texture, float x, float y, float w, float h, float opacity);
 float VitaVideo_getWidth(void);
 float VitaVideo_getHeight(void);
 // Stop and release.

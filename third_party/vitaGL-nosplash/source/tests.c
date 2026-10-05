@@ -294,7 +294,13 @@ void update_scissor_test() {
 		vector4f_convert_to_local_space(scissor_test_vertices, region.x, region.y, region.w, region.h);
 
 		void *vertex_buffer;
-		sceGxmReserveVertexDefaultUniformBuffer(gxm_context, &vertex_buffer);
+		const SceGxmProgram *scissor_v_program = sceGxmVertexProgramGetProgram(clear_vertex_program_patched);
+		uint32_t scissor_v_size = sceGxmProgramGetDefaultUniformBufferSize(scissor_v_program);
+		vertex_buffer = vglReserveVertexUniformBuffer(scissor_v_size);
+		if (!vertex_buffer) {
+			dirty_scissor_state = GL_TRUE;
+			return;
+		}
 		sceGxmSetUniformDataF(vertex_buffer, clear_position, 0, 4, &clear_vertices->x);
 		sceGxmSetUniformDataF(vertex_buffer, clear_depth, 0, 1, &scissor_depth);
 
@@ -329,7 +335,13 @@ void update_scissor_test() {
 		0, 0);
 
 	void *vertex_buffer;
-	sceGxmReserveVertexDefaultUniformBuffer(gxm_context, &vertex_buffer);
+	const SceGxmProgram *scissor_v_program_final = sceGxmVertexProgramGetProgram(clear_vertex_program_patched);
+	uint32_t scissor_v_size_final = sceGxmProgramGetDefaultUniformBufferSize(scissor_v_program_final);
+	vertex_buffer = vglReserveVertexUniformBuffer(scissor_v_size_final);
+	if (!vertex_buffer) {
+		dirty_scissor_state = GL_TRUE;
+		return;
+	}
 	sceGxmSetUniformDataF(vertex_buffer, clear_position, 0, 4, scissor_test_state ? &scissor_test_vertices->x : &clear_vertices->x);
 	sceGxmSetUniformDataF(vertex_buffer, clear_depth, 0, 1, &scissor_depth);
 

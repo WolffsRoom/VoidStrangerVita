@@ -131,6 +131,8 @@ typedef struct {
     uint32_t originalSpriteCount;
 
     bool colorWriteR, colorWriteG, colorWriteB, colorWriteA;
+    bool fogEnable;
+    uint32_t fogColor;
 
     // GML surfaces (each is an FBO with a backing color texture)
     GLuint* surfaces;

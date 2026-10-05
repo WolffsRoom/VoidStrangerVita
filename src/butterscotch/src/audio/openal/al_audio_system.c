@@ -9,6 +9,9 @@
 #include "data_win.h"
 #include "utils.h"
 #include "wave.h"
+#include "audio_gain_policy.h"
+#include "embedded_music_policy.h"
+#include "audio_stream_refill_policy.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -96,6 +99,9 @@ static void releaseInstance(SoundInstance* inst) {
         }
         free(inst->decodeScratch);
         inst->decodeScratch = nullptr;
+        free(inst->streamMemory);
+        inst->streamMemory = nullptr;
+        inst->streamMemorySize = 0;
         inst->streaming = false;
     } else {
         if (!inst->sharedBuffer) alDeleteBuffers(1, &inst->alBuffer);
@@ -278,7 +284,9 @@ static char* resolveExternalPath(AlAudioSystem* ma, Sound* sound) {
 }
 
 static float instanceCategoryGain(AlAudioSystem* ma, SoundInstance* inst) {
-    return inst->music ? ma->musicGain : ma->sfxGain;
+    return audio_combined_category_gain(inst->music ? 1 : 0,
+                                        ma->musicGain, ma->sfxGain,
+                                        ma->gameMusicGain, ma->gameSfxGain);
 }
 
 // ===[ Vtable Implementations ]===
@@ -330,6 +338,11 @@ static void maInit(AudioSystem* audio, DataWin* dataWin, FileSystem* fileSystem)
     memset(ma->instances, 0, sizeof(ma->instances));
     ma->musicGain = 1.0f;
     ma->sfxGain = 1.0f;
+    ma->gameMusicGain = 1.0f;
+    ma->gameSfxGain = 1.0f;
+    ma->gameMasterGain = 1.0f;
+    ma->vitaMasterGain = 1.0f;
+    alListenerf(AL_GAIN, audio_combined_master_gain(ma->gameMasterGain, ma->vitaMasterGain));
     ma->nextInstanceCounter = 0;
 
     fprintf(stderr, "Audio: OpenAL engine initialized\n");
@@ -379,14 +392,6 @@ static void maUpdate(AudioSystem* audio, float deltaTime) {
     AlAudioSystem* ma = (AlAudioSystem*) audio;
     if (ma->disabled) return;
 
-#ifdef PLATFORM_VITA
-    // One refill is enough at 60 FPS. At 20 FPS or below a 2048-sample block
-    // can be consumed faster than it is replaced, so allow a second refill
-    // before the queue drains and forces the much more expensive synchronous
-    // underrun recovery path.
-    int vitaStreamRefillsRemaining = deltaTime >= 0.05f ? 2 : 1;
-#endif
-
     repeat(MAX_SOUND_INSTANCES, i) {
         SoundInstance* inst = &ma->instances[i];
         if (!inst->active) continue;
@@ -405,6 +410,13 @@ static void maUpdate(AudioSystem* audio, float deltaTime) {
         }
 
         if (inst->streaming) {
+#ifdef PLATFORM_VITA
+            // Budget refills per stream, not once for the whole audio engine.
+            // Void Stranger can keep music + ambience/chant active together; a
+            // single global token let the first slot starve every later stream,
+            // eventually forcing repeated AL_STOPPED recovery/restarts.
+            int vitaStreamRefillsRemaining = audio_stream_refill_budget(deltaTime);
+#endif
             // Recycle any buffers AL has finished with: count their samples toward the play position, then refill from the decoder and re-queue at the tail.
             ALint processed = 0;
             alGetSourcei(inst->alSource, AL_BUFFERS_PROCESSED, &processed);
@@ -772,7 +784,73 @@ static int32_t maPlaySound(AudioSystem* audio, int32_t soundIndex, int32_t prior
                 fprintf(stderr, "Audio: Missing AUDO data for sound '%s'\n", sound->name);
                 return -1;
             }
-            if (entry->dataSize >= 4 && memcmp(audioData, "OggS", 4) == 0) {
+            if (audio_should_stream_embedded_music(slot->music ? 1 : 0, audioData, entry->dataSize)) {
+                // Void Stranger stores its music inside audiogroup1.dat. Decoding an
+                // 80+ second track to one PCM buffer costs several MiB and can exhaust
+                // Vita user RAM during room construction. Keep the compressed OGG bytes
+                // alive and stream them through the same small-buffer queue used by
+                // external music instead.
+                if (transientData != nullptr) {
+                    slot->streamMemory = transientData;
+                    transientData = nullptr;
+                } else {
+                    slot->streamMemory = (uint8_t*)safeMalloc(entry->dataSize);
+                    memcpy(slot->streamMemory, audioData, entry->dataSize);
+                }
+                slot->streamMemorySize = entry->dataSize;
+                int err = 0;
+                stb_vorbis* v = stb_vorbis_open_memory(slot->streamMemory, (int)slot->streamMemorySize, &err, nullptr);
+                if (v == nullptr) {
+                    free(slot->streamMemory);
+                    slot->streamMemory = nullptr;
+                    slot->streamMemorySize = 0;
+                    alDeleteBuffers(1, &slot->alBuffer);
+#ifdef PLATFORM_VITA
+                    vitaAudioLog("embedded_music_stream_open_failed", sound->name, nullptr);
+#endif
+                    fprintf(stderr, "Audio: Failed embedded music stream open for sound '%s' (err %d)\n", sound->name, err);
+                    return -1;
+                }
+                stb_vorbis_info info = stb_vorbis_get_info(v);
+                alDeleteBuffers(1, &slot->alBuffer);
+                slot->alBuffer = 0;
+                slot->streaming = true;
+                slot->loop = loop;
+                slot->vorbis = v;
+                slot->streamChannels = info.channels;
+                slot->streamSampleRate = (int)info.sample_rate;
+                slot->streamFormat = info.channels == 2 ? AL_FORMAT_STEREO16 : AL_FORMAT_MONO16;
+                slot->streamLengthSeconds = stb_vorbis_stream_length_in_seconds(v);
+                slot->streamBufferTarget = 64;
+                slot->decodeScratch = (int16_t*)safeMalloc(AL_STREAM_BUFFER_SAMPLES * info.channels * sizeof(int16_t));
+                alGenBuffers(AL_STREAM_BUFFER_COUNT, slot->streamBuffers);
+                int primed = 0;
+                const int initialStreamBuffers = ma->transitionHold ? 16 : 8;
+                for (int i = 0; i < initialStreamBuffers; ++i) {
+                    if (!streamFillBuffer(slot, slot->streamBuffers[i])) break;
+                    alSourceQueueBuffers(slot->alSource, 1, &slot->streamBuffers[i]);
+                    primed++;
+                }
+                if (primed == 0) {
+                    alDeleteBuffers(AL_STREAM_BUFFER_COUNT, slot->streamBuffers);
+                    stb_vorbis_close(v);
+                    free(slot->decodeScratch);
+                    free(slot->streamMemory);
+                    slot->decodeScratch = nullptr;
+                    slot->streamMemory = nullptr;
+                    slot->streamMemorySize = 0;
+                    slot->vorbis = nullptr;
+                    slot->streaming = false;
+#ifdef PLATFORM_VITA
+                    vitaAudioLog("embedded_music_stream_prime_failed", sound->name, nullptr);
+#endif
+                    return -1;
+                }
+                slot->streamPrimedCount = primed;
+#ifdef PLATFORM_VITA
+                vitaAudioLog("embedded_music_stream_ready", sound->name, "audiogroup");
+#endif
+            } else if (entry->dataSize >= 4 && memcmp(audioData, "OggS", 4) == 0) {
                 int channels = 0, sampleRate = 0;
                 short* pcm = nullptr;
                 int samples = stb_vorbis_decode_memory(audioData, (int)entry->dataSize, &channels, &sampleRate, &pcm);
@@ -809,9 +887,11 @@ static int32_t maPlaySound(AudioSystem* audio, int32_t soundIndex, int32_t prior
                 alBufferData(slot->alBuffer, format, wav.data, wav.data_length, wav.header.sample_rate);
                 if (wav.data != nullptr) free(wav.data);
             }
-            alSourcei(slot->alSource, AL_BUFFER, slot->alBuffer);
-            if (!slot->music && cacheSfxBuffer(ma, soundIndex, slot->alBuffer))
-                slot->sharedBuffer = true;
+            if (!slot->streaming) {
+                alSourcei(slot->alSource, AL_BUFFER, slot->alBuffer);
+                if (!slot->music && cacheSfxBuffer(ma, soundIndex, slot->alBuffer))
+                    slot->sharedBuffer = true;
+            }
             free(transientData);
         } else {
             // External OGG music is streamed on Vita. Decoding an entire track on the
@@ -1421,14 +1501,16 @@ static float maGetSoundLength(AudioSystem* audio, int32_t soundOrInstance) {
 }
 
 static void maSetMasterGainForListener(AudioSystem* audio, float gain, int32_t id) {
-    (void)audio;
+    AlAudioSystem* ma = (AlAudioSystem*)audio;
     (void)id;
-    alListenerf(AL_GAIN, gain);
+    ma->gameMasterGain = gain;
+    alListenerf(AL_GAIN, audio_combined_master_gain(ma->gameMasterGain, ma->vitaMasterGain));
 }
 
 static void maSetMasterGain(AudioSystem* audio, float gain) {
-    (void)audio;
-    alListenerf(AL_GAIN, gain);
+    AlAudioSystem* ma = (AlAudioSystem*)audio;
+    ma->gameMasterGain = gain;
+    alListenerf(AL_GAIN, audio_combined_master_gain(ma->gameMasterGain, ma->vitaMasterGain));
 }
 
 static void maSetChannelCount(MAYBE_UNUSED AudioSystem* audio, MAYBE_UNUSED int32_t count) {
@@ -1628,6 +1710,25 @@ uint32_t AlAudioSystem_preloadChapterSfx(AlAudioSystem* ma, bool preloadBuffers)
     for (int i = 0; i < 32; ++i)
         if (ma->instances[i].alSource == 0) alGenSources(1, &ma->instances[i].alSource);
     return prepared;
+}
+
+void AlAudioSystem_setVitaMasterGain(AlAudioSystem* ma, float gain) {
+    if (ma == nullptr) return;
+    ma->vitaMasterGain = gain;
+    alListenerf(AL_GAIN, audio_combined_master_gain(ma->gameMasterGain, ma->vitaMasterGain));
+}
+
+void AlAudioSystem_setGameGroupGain(AlAudioSystem* ma, int groupIndex, float gain) {
+    if (ma == nullptr) return;
+    AudioGroupCategory category = audio_group_category(groupIndex);
+    if (category == AUDIO_GROUP_CATEGORY_MUSIC) ma->gameMusicGain = gain;
+    else if (category == AUDIO_GROUP_CATEGORY_SFX) ma->gameSfxGain = gain;
+    else return;
+    repeat(MAX_SOUND_INSTANCES, i) {
+        SoundInstance* inst = &ma->instances[i];
+        if (inst->active && inst->alSource != 0 && alIsSource(inst->alSource))
+            alSourcef(inst->alSource, AL_GAIN, inst->currentGain * instanceCategoryGain(ma, inst));
+    }
 }
 
 void AlAudioSystem_setCategoryGains(AlAudioSystem* ma, float musicGain, float sfxGain) {

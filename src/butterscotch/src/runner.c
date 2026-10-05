@@ -555,15 +555,7 @@ static void Runner_executeResolvedEvent(Runner* runner, Instance* instance, int3
     }
 #endif
 
-    uint64_t ev_start = nowNanos();
     executeCode(runner, instance, codeId);
-    uint64_t ev_end = nowNanos();
-    uint64_t dur = (ev_end - ev_start) / 1000;
-    if (dur >= 2500) {
-        const char* eventName = Runner_getEventName(eventType, eventSubtype);
-        const char* objectName = runner->dataWin->objt.objects[instance->objectIndex].name;
-        printf("PERF_EVENT_SLOW obj=%s inst=%d evt=%s sub=%d dur_us=%llu\n", objectName, instance->instanceId, eventName, (int)eventSubtype, (unsigned long long)dur);
-    }
     vm->currentEventType = savedEventType;
     vm->currentEventSubtype = savedEventSubtype;
     vm->currentEventObjectIndex = savedEventObjectIndex;
@@ -1003,6 +995,29 @@ void Runner_draw(Runner* runner) {
 
     rebuildDrawableCacheIfDirty(runner);
     int32_t drawableCount = (int32_t) arrlen(runner->cachedDrawables);
+
+#if defined(PLATFORM_VITA) && defined(VOIDSTRANGER_VITA)
+    // Temporary B030 probe: distinguish missing floor instances from a
+    // compositing error beneath Tail's crossed arms.
+    static int b030ProbeTick = 0;
+    if (room != nullptr && room->name != nullptr && strcmp(room->name, "rm_0029") == 0) {
+        if ((b030ProbeTick++ % 120) == 0) {
+            for (int32_t pi = 0; pi < (int32_t)arrlen(runner->instances); ++pi) {
+                Instance* probe = runner->instances[pi];
+                if ((probe->instanceId < 101445 || probe->instanceId > 101454) &&
+                    probe->instanceId != 101389 && probe->instanceId != 101403) continue;
+                fprintf(stderr,
+                        "B030_DRAW_PROBE id=%d obj=%d xy=%.0f,%.0f active=%d visible=%d depth=%d sprite=%d image_speed=%.2f image_index=%.2f alpha=%.2f\n",
+                        probe->instanceId, probe->objectIndex, probe->x, probe->y,
+                        probe->active, probe->visible, probe->depth,
+                        probe->spriteIndex, probe->imageSpeed, probe->imageIndex,
+                        probe->imageAlpha);
+            }
+        }
+    } else {
+        b030ProbeTick = 0;
+    }
+#endif
 
     // Draw non-foreground backgrounds (behind everything)
     if (!DataWin_isVersionAtLeast(runner->dataWin, 2, 0, 0, 0))
@@ -1558,9 +1573,11 @@ static Instance** takePersistentInstances(Runner* runner) {
             }
 #endif
 
+            // A room change destroys every non-persistent instance. Use the
+            // same lifecycle as instance_destroy so Destroy handlers can
+            // release surfaces/resources before Clean Up and final free.
+            Runner_destroyInstance(runner, inst, true);
             hmdel(runner->instancesById, inst->instanceId);
-            Runner_executeEvent(runner, inst, EVENT_CLEANUP, 0);
-            Runner_removeInstanceFromObjectLists(runner, inst);
             Instance_free(inst);
         }
     }
@@ -3914,6 +3931,13 @@ void Runner_handlePendingRoomChange(Runner* runner) {
              (oldCh1TownArea && newCh1TownArea) ||
              (strncmp(oldRoomName, "room_dark", 9) == 0 &&
               strncmp(newRoomName, "room_dark", 9) == 0));
+        // Void Stranger also uses the Chapter 1 runtime profile, but its rooms
+        // are named rm_* rather than Deltarune's room_* families. Treat those
+        // transitions separately so the generic non-shared path does not purge
+        // the complete texture working set at every staircase/door.
+        bool vitaVoidStrangerTransition = g_vitaActiveChapter == 1 &&
+            strncmp(oldRoomName, "rm_", 3) == 0 &&
+            strncmp(newRoomName, "rm_", 3) == 0;
         // Chapter 2 is split into large atlas families. Preserve pages while
         // moving inside one family, but leave 16 MiB of headroom when crossing
         // Castle/Cyber/Mansion boundaries so the destination does not defer
@@ -4013,6 +4037,11 @@ void Runner_handlePendingRoomChange(Runner* runner) {
              vitaCh2HeavyCyberDestination ? 68ULL :
              vitaCh2HeavyCastleDestination ? 76ULL :
              vitaSharedCh2AreaTransition ? 104ULL : 80ULL) :
+            // Void Stranger's measured room working sets are typically 10-17
+            // MiB. Retain up to 24 MiB across rm_* transitions so common UI,
+            // floor and enemy atlases survive, while leaving ample headroom for
+            // the incoming room and the VitaGL render-target pool.
+            vitaVoidStrangerTransition ? 24ULL :
             (vitaSharedTransition ?
             (g_vitaActiveChapter == 5 ?
              // Flowery creates roughly 21 MiB of render surfaces and needs
@@ -4031,7 +4060,8 @@ void Runner_handlePendingRoomChange(Runner* runner) {
         GLLegacyRenderer_trimTextureCacheForRoomChange(
             (GLLegacyRenderer*)runner->renderer,
             vitaTrimMiB * 1024ULL * 1024ULL,
-            g_vitaActiveChapter == 2 ? false : !vitaSharedTransition);
+            g_vitaActiveChapter == 2 ? false :
+            (vitaVoidStrangerTransition ? false : !vitaSharedTransition));
         GLLegacyRenderer_collectRetiredTexturesForRoomChange(
             (GLLegacyRenderer*)runner->renderer);
         uint32_t vitaPreloadedPages = GLLegacyRenderer_preloadRoomTextureSet(
@@ -4069,6 +4099,29 @@ void Runner_handlePendingRoomChange(Runner* runner) {
         phaseBegin = nowNanos();
         Runner_executeEventForAll(runner, EVENT_OTHER, OTHER_ROOM_START);
         runner->profRoomStartEventsUs = (nowNanos() - phaseBegin) / 1000ULL;
+#ifdef PLATFORM_VITA
+        extern void VitaCompat_logLine(const char* text);
+        // Diagnostic-only snapshot for the one reported rm_e_022 spawn mismatch.
+        // No gameplay state is modified; the log tells us whether the Vita chose
+        // the wrong sprite or whether a cached texture is being rendered wrong.
+        if (strcmp(newRoomName, "rm_e_022") == 0) {
+            int32_t diagCount = (int32_t)arrlen(runner->instances);
+            repeat(diagCount, diagIndex) {
+                Instance* diagInst = runner->instances[diagIndex];
+                if (diagInst == nullptr || !diagInst->active || diagInst->objectIndex < 0 ||
+                    (uint32_t)diagInst->objectIndex >= runner->dataWin->objt.count) continue;
+                const char* diagName = runner->dataWin->objt.objects[diagInst->objectIndex].name;
+                if (diagName == nullptr ||
+                    (strcmp(diagName, "obj_enemy_cl") != 0 && strcmp(diagName, "obj_enemy_cc") != 0)) continue;
+                char enemyLine[192];
+                snprintf(enemyLine, sizeof(enemyLine),
+                         "E022_ENEMY_STATE obj=%s inst=%d x=%.2f y=%.2f sprite=%d",
+                         diagName, diagInst->instanceId, (double)diagInst->x, (double)diagInst->y,
+                         diagInst->spriteIndex);
+                VitaCompat_logLine(enemyLine);
+            }
+        }
+#endif
 
         phaseBegin = nowNanos();
         Runner_cleanupDestroyedInstances(runner);
@@ -4319,7 +4372,7 @@ static void vitaCityMiceSoftlockGuard(Runner* runner) {
 
     // Between waves obj_noelle_scared persists with stale 'con' (e.g. con=4 from the landing phase).
     // When the next wave of mice arrives and a holemouse hits Noelle, the Collision handler fires
-    // alarm[0]=1 correctly, but Alarm_0 checks 'con == 0' before starting the jump — so if 'con'
+    // alarm[0]=1 correctly, but Alarm_0 checks 'con == 0' before starting the jump â€” so if 'con'
     // is left non-zero from the previous wave the jump animation is silently skipped.
     // Fix: while mice are spawning/active and Noelle is NOT mid-jump (con != 1/2/3), reset the
     // scared Noelle instance back to its ready state so the next collision works properly.
@@ -4338,8 +4391,8 @@ static void vitaCityMiceSoftlockGuard(Runner* runner) {
                 !noelleInst->active || noelleInst->destroyed) continue;
 
             int32_t con = conVarId >= 0 ? RValue_toInt32(Instance_getSelfVar(noelleInst, conVarId)) : 0;
-            // con==1: running to mouse, con==2: jumping up, con==3: falling down — do NOT interrupt.
-            // con==0: idle/waiting, con==4+: post-landing states — safe to reset between waves.
+            // con==1: running to mouse, con==2: jumping up, con==3: falling down â€” do NOT interrupt.
+            // con==0: idle/waiting, con==4+: post-landing states â€” safe to reset between waves.
             bool midJump = (con >= 1 && con <= 3);
             if (!midJump && mouseCount > 0) {
                 // Reset to idle so the Collision handler and Alarm_0 work on the next hit.
@@ -4393,6 +4446,39 @@ static void vitaCityMiceSoftlockGuard(Runner* runner) {
 #endif
 
 void Runner_step(Runner* runner) {
+#ifdef PLATFORM_VITA
+    // Capture only the first three simulation steps in the one room with the
+    // reported maggot mismatch. This is intentionally bounded and does not
+    // re-enable the expensive generic event profiler.
+    static int32_t vitaE022LastRoom = -1;
+    static int vitaE022StepsLogged = 0;
+    int32_t vitaCurrentRoom = runner->currentRoomIndex;
+    if (vitaCurrentRoom != vitaE022LastRoom) {
+        vitaE022LastRoom = vitaCurrentRoom;
+        vitaE022StepsLogged = 0;
+    }
+    if (runner->currentRoom != nullptr && runner->currentRoom->name != nullptr &&
+        strcmp(runner->currentRoom->name, "rm_e_022") == 0 && vitaE022StepsLogged < 3) {
+        extern void VitaCompat_logLine(const char* text);
+        int32_t diagCount = (int32_t)arrlen(runner->instances);
+        repeat(diagCount, diagIndex) {
+            Instance* diagInst = runner->instances[diagIndex];
+            if (diagInst == nullptr || !diagInst->active || diagInst->objectIndex < 0 ||
+                (uint32_t)diagInst->objectIndex >= runner->dataWin->objt.count) continue;
+            const char* diagName = runner->dataWin->objt.objects[diagInst->objectIndex].name;
+            if (diagName == nullptr ||
+                (strcmp(diagName, "obj_enemy_cl") != 0 && strcmp(diagName, "obj_enemy_cc") != 0)) continue;
+            char enemyLine[208];
+            snprintf(enemyLine, sizeof(enemyLine),
+                     "E022_STEP_STATE step=%d obj=%s inst=%d x=%.2f y=%.2f sprite=%d image=%.3f",
+                     vitaE022StepsLogged, diagName, diagInst->instanceId,
+                     (double)diagInst->x, (double)diagInst->y, diagInst->spriteIndex,
+                     (double)diagInst->imageIndex);
+            VitaCompat_logLine(enemyLine);
+        }
+        vitaE022StepsLogged++;
+    }
+#endif
     uint64_t stepStartNanos = nowNanos();
     runner->profStepEventsUs = 0;
     runner->profStepAlarmsUs = 0;

@@ -10,17 +10,17 @@
 #include <ctype.h>
 
 #include "stb_image.h"
-#include <AL/al.h>
-#include <AL/alc.h>
 
 #include "runner.h"
 #include "audio/openal/al_audio_system.h"
 #include "vita_borders.h"
 #include "text_utils.h"
 #include "gl/gl_renderer.h"
+#include "voidstranger_audio_ids.h"
 
 extern bool g_vitaModernGlActive;
 static Renderer* activeSettingsRenderer = NULL;
+static AudioSystem* settingsAudioSystem = NULL;
 
 static void drawTextAndIconsExt(Renderer* r, const char* fmt, float x, float y, float scale, uint32_t color, bool center);
 static void drawCenteredText(Renderer* r, const char* text, float centerX, float y,
@@ -38,6 +38,14 @@ static const char* settingsText(const VitaSettings* s, const char* en, const cha
     if (strcmp(s->activeLanguage, "Portuguese-BR") == 0) return pt;
     if (strcmp(s->activeLanguage, "Spanish") == 0) return es;
     return en;
+}
+
+static const char* fruitTouchHintText(const VitaSettings* s) {
+    if (s != NULL && strcmp(s->activeLanguage, "Portuguese-BR") == 0) return "Toque para comer";
+    if (s != NULL && strcmp(s->activeLanguage, "Spanish") == 0) return "Toca para comer";
+    if (s != NULL && strcmp(s->activeLanguage, "Italian") == 0) return "Tocca per mangiare";
+    if (s != NULL && strcmp(s->activeLanguage, "Turkish") == 0) return "Yemek için dokun";
+    return "Touch to eat";
 }
 
 static const char* restartWarningText(const VitaSettings* s) {
@@ -661,7 +669,8 @@ void VitaSettings_load(VitaSettings* s) {
 }
 
 void VitaSettings_applyAudio(VitaSettings* s, AudioSystem* audio) {
-    audio->vtable->setMasterGain(audio, (float)s->masterVolume / 10.0f);
+    settingsAudioSystem = audio;
+    AlAudioSystem_setVitaMasterGain((AlAudioSystem*)audio, (float)s->masterVolume / 10.0f);
     AlAudioSystem_setCategoryGains((AlAudioSystem*)audio, (float)s->musicVolume / 10.0f, (float)s->sfxVolume / 10.0f);
     AlAudioSystem_setDisabled((AlAudioSystem*)audio, s->audioDisabled);
 }
@@ -687,107 +696,13 @@ void VitaSettings_setSliderFromTouch(VitaSettings* s, AudioSystem* audio,
     }
 }
 
-// Native WAV parsing types matching butterscotch's wave.h
-typedef struct {
-  char riff_id[5];
-  uint32_t file_size;
-  char wave_id[5];
-  char fmt_id[5];
-  uint32_t fmt_size;
-  uint16_t audio_format;
-  uint16_t number_of_channels;
-  uint32_t sample_rate;
-  uint32_t byte_rate;
-  uint16_t block_align;
-  uint16_t bits_per_sample;
-  char data_id[5];
-  uint32_t data_size;
-} NativeWAVHeader;
-
-typedef struct {
-  NativeWAVHeader header;
-  uint8_t* data;
-  uint32_t data_length;
-} NativeWAVFile;
-
-extern int stb_vorbis_decode_filename(const char *filename, int *channels, int *sample_rate, short **output);
-extern NativeWAVFile WAV_ParseFileData(uint8_t const* data);
-
-static ALuint native_al_buffers[3] = {0};
-static ALuint native_al_sources[3] = {0};
-
-static ALuint loadNativeWAV(const char* path) {
-    FILE* f = fopen(path, "rb");
-    if (!f) return 0;
-    fseek(f, 0, SEEK_END);
-    long size = ftell(f);
-    fseek(f, 0, SEEK_SET);
-    if (size < 44) { fclose(f); return 0; }
-    uint8_t* fileData = (uint8_t*)malloc(size);
-    if (!fileData) { fclose(f); return 0; }
-    fread(fileData, 1, size, f);
-    fclose(f);
-    
-    NativeWAVFile wav = WAV_ParseFileData(fileData);
-    free(fileData);
-    if (!wav.data) return 0;
-    
-    ALuint buf = 0;
-    alGenBuffers(1, &buf);
-    ALenum format = AL_FORMAT_MONO16;
-    if (wav.header.number_of_channels == 1) {
-        format = wav.header.bits_per_sample == 8 ? AL_FORMAT_MONO8 : AL_FORMAT_MONO16;
-    } else {
-        format = wav.header.bits_per_sample == 8 ? AL_FORMAT_STEREO8 : AL_FORMAT_STEREO16;
-    }
-    alBufferData(buf, format, wav.data, wav.data_length, wav.header.sample_rate);
-    free(wav.data);
-    return buf;
-}
-
-static ALuint loadNativeOGG(const char* path) {
-    int channels = 0, sampleRate = 0;
-    short* pcm = nullptr;
-    int samples = stb_vorbis_decode_filename(path, &channels, &sampleRate, &pcm);
-    if (samples <= 0 || !pcm) return 0;
-    
-    ALuint buf = 0;
-    alGenBuffers(1, &buf);
-    ALenum format = (channels == 2) ? AL_FORMAT_STEREO16 : AL_FORMAT_MONO16;
-    alBufferData(buf, format, pcm, samples * channels * sizeof(short), sampleRate);
-    free(pcm);
-    return buf;
-}
-
-static void initNativeSounds() {
-    if (native_al_sources[0] != 0) return;
-    native_al_buffers[0] = loadNativeOGG("app0:assets/sounds/snd_menumove.ogg");
-    native_al_buffers[1] = loadNativeOGG("app0:assets/sounds/snd-select.ogg");
-    native_al_buffers[2] = loadNativeOGG("app0:assets/sounds/snd_swing.ogg");
-    if (native_al_buffers[0] == 0) native_al_buffers[0] = loadNativeOGG("ux0:data/voidstranger/sounds/snd_menumove.wav");
-    if (native_al_buffers[1] == 0) native_al_buffers[1] = loadNativeOGG("ux0:data/voidstranger/sounds/snd-select.ogg");
-    if (native_al_buffers[2] == 0) native_al_buffers[2] = loadNativeOGG("ux0:data/voidstranger/sounds/snd_swing.wav");
-    alGenSources(3, native_al_sources);
-    for (int i = 0; i < 3; ++i) {
-        if (native_al_sources[i] != 0 && native_al_buffers[i] != 0)
-            alSourcei(native_al_sources[i], AL_BUFFER, native_al_buffers[i]);
-    }
-}
-
 static void playSettingSound(VitaSettings* s, int type) {
-    initNativeSounds();
-    if (type < 0 || type >= 3 || native_al_sources[type] == 0 ||
-        !alIsSource(native_al_sources[type])) return;
-    ALuint buf = native_al_buffers[type];
-    if (buf == 0) return;
-    ALuint source = native_al_sources[type];
-    alSourceStop(source);
-    float gain = 1.0f;
-    if (s) {
-        gain = ((float)s->sfxVolume / 10.0f) * ((float)s->masterVolume / 10.0f);
-    }
-    alSourcef(source, AL_GAIN, gain);
-    alSourcePlay(source);
+    (void)s;
+    if (settingsAudioSystem == NULL || settingsAudioSystem->vtable == NULL ||
+        settingsAudioSystem->vtable->playSound == NULL) return;
+    int soundId = voidstranger_settings_sound_id(type);
+    if (soundId < 0) return;
+    settingsAudioSystem->vtable->playSound(settingsAudioSystem, soundId, 1, false);
 }
 
 bool VitaSettings_handleInput(VitaSettings* s, const SceCtrlData* pad, AudioSystem* audio) {
@@ -2315,6 +2230,26 @@ static void drawControlEditorFooter(Renderer* r, VitaSettings* s) {
     drawBundledControl("button_psv_R", 273.0f, iconY, 27.0f, 1.0f);
     drawBundledControl("button_ps4_cross_0", 414.0f, iconY, 25.0f, 1.0f);
     drawBundledControl("button_ps4_triangle_0", 580.0f, iconY, 25.0f, 1.0f);
+}
+
+void VitaSettings_drawFruitTouchHint(VitaSettings* s, Renderer* r, bool visible) {
+    if (!visible || s == NULL || r == NULL || s->open || s->adjustMode) return;
+    int oldFont = r->drawFont;
+    r->drawFont = findSettingsFont(r, strcmp(s->activeLanguage, "English") != 0);
+    if (r->drawFont < 0 || (uint32_t)r->drawFont >= r->dataWin->font.count) {
+        r->drawFont = oldFont;
+        return;
+    }
+    int previousOverlayMode = g_vitaPortOverlayFullScreen;
+    g_vitaPortOverlayFullScreen = 1;
+    r->vtable->beginGUI(r, 960, 544, 0, 0, 960, 544, RENDER_TARGET_HOST_FRAMEBUFFER);
+    /* A tiny shadow keeps the instruction legible without turning it into a UI
+       panel; it should feel like part of the fruit scene. */
+    drawCenteredText(r, fruitTouchHintText(s), 482.0f, 493.0f, 3.05f, 0x000000);
+    drawCenteredText(r, fruitTouchHintText(s), 480.0f, 491.0f, 3.05f, 0xFFFFFF);
+    r->vtable->endGUI(r);
+    g_vitaPortOverlayFullScreen = previousOverlayMode;
+    r->drawFont = oldFont;
 }
 
 void VitaSettings_drawTouchControls(VitaSettings* s, Renderer* r) {

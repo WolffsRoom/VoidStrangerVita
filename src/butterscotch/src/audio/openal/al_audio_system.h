@@ -58,6 +58,8 @@ typedef struct {
     int streamPrimedCount;
     int streamBufferTarget;
     int16_t* decodeScratch; // sized for AL_STREAM_BUFFER_SAMPLES * streamChannels shorts
+    uint8_t* streamMemory; // owned compressed OGG bytes for embedded music streams
+    size_t streamMemorySize;
     int streamChannels;
     int streamSampleRate;
     ALenum streamFormat;
@@ -87,6 +89,10 @@ typedef struct {
     SfxBufferCacheEntry sfxBufferCache[MAX_SFX_BUFFER_CACHE];
     float musicGain;
     float sfxGain;
+    float gameMusicGain;
+    float gameSfxGain;
+    float gameMasterGain;
+    float vitaMasterGain;
     bool disabled;
     // Queue new sounds during a room transition without submitting them to
     // the Vita playback thread until the destination has presented a frame.
@@ -95,6 +101,8 @@ typedef struct {
 
 AlAudioSystem* AlAudioSystem_create(void);
 void AlAudioSystem_setCategoryGains(AlAudioSystem* audio, float musicGain, float sfxGain);
+void AlAudioSystem_setVitaMasterGain(AlAudioSystem* audio, float gain);
+void AlAudioSystem_setGameGroupGain(AlAudioSystem* audio, int groupIndex, float gain);
 void AlAudioSystem_setDisabled(AlAudioSystem* audio, bool disabled);
 void AlAudioSystem_setTransitionHold(AlAudioSystem* audio, bool held);
 uint32_t AlAudioSystem_preloadChapterSfx(AlAudioSystem* audio, bool preloadBuffers);

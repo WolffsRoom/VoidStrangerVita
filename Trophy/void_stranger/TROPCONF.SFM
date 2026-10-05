@@ -1,0 +1,36 @@
+<!--Sce-Np-Trophy-Signature: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+<trophyconf version="1.1" platform="psp2" policy="large">
+ <npcommid>VSTR00001_00</npcommid>
+ <trophyset-version>01.00</trophyset-version>
+ <parental-level license-area="default">0</parental-level>
+ <trophy id="000" hidden="no" ttype="P" pid="-1"/>
+ <trophy id="001" hidden="no" ttype="G" pid="000"/>
+ <trophy id="002" hidden="no" ttype="G" pid="000"/>
+ <trophy id="003" hidden="no" ttype="G" pid="000"/>
+ <trophy id="004" hidden="no" ttype="G" pid="000"/>
+ <trophy id="005" hidden="no" ttype="B" pid="000"/>
+ <trophy id="006" hidden="no" ttype="B" pid="000"/>
+ <trophy id="007" hidden="no" ttype="B" pid="000"/>
+ <trophy id="008" hidden="no" ttype="B" pid="000"/>
+ <trophy id="009" hidden="no" ttype="B" pid="000"/>
+ <trophy id="010" hidden="no" ttype="B" pid="000"/>
+ <trophy id="011" hidden="no" ttype="B" pid="000"/>
+ <trophy id="012" hidden="no" ttype="B" pid="000"/>
+ <trophy id="013" hidden="no" ttype="B" pid="000"/>
+ <trophy id="014" hidden="no" ttype="B" pid="000"/>
+ <trophy id="015" hidden="no" ttype="B" pid="000"/>
+ <trophy id="016" hidden="no" ttype="B" pid="000"/>
+ <trophy id="017" hidden="no" ttype="B" pid="000"/>
+ <trophy id="018" hidden="no" ttype="S" pid="000"/>
+ <trophy id="019" hidden="no" ttype="S" pid="000"/>
+ <trophy id="020" hidden="no" ttype="S" pid="000"/>
+ <trophy id="021" hidden="no" ttype="S" pid="000"/>
+ <trophy id="022" hidden="no" ttype="S" pid="000"/>
+ <trophy id="023" hidden="no" ttype="S" pid="000"/>
+ <trophy id="024" hidden="no" ttype="S" pid="000"/>
+ <trophy id="025" hidden="no" ttype="S" pid="000"/>
+ <trophy id="026" hidden="no" ttype="B" pid="000"/>
+ <trophy id="027" hidden="no" ttype="G" pid="000"/>
+ <trophy id="028" hidden="no" ttype="S" pid="000"/>
+ <trophy id="029" hidden="no" ttype="S" pid="000"/>
+</trophyconf>

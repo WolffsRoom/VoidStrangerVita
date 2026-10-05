@@ -26,3 +26,6 @@ Desktop.ini
 **/__pycache__/
 *.pre-*
 
+# Local font files used only to regenerate pre-rendered UI atlases
+/assets/info_load/font/*.ttf
+/assets/new_load/*.ttf
