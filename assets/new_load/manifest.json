@@ -1,6 +1,6 @@
 {
-  "source_data_win": "C:\\Users\\wolff\\Documents\\SDKVita\\VoidStranger\\data\\prepared\\voidstranger\\data.win",
-  "source_sha256": "9CE2BAB66D6EDB3FB6506BEDEFC634BCB354AD034D828F8BA3DC679777C6E00A",
+  "source_data_win": "C:\\Users\\wolff\\Documents\\SDKVita\\VoidStranger\\artifacts\\v1.3\\VoidStranger-v1.3-3-data-fix\\voidstranger\\data.win",
+  "source_sha256": "841211AE9B699589461F27F0B4AFD6F95551F1D51D94AA4447D20B887EF9C50A",
   "room_reference": "rm_rest_area",
   "animation": {
     "order": "void_rod_places_block_then_gray_walks_onto_it",

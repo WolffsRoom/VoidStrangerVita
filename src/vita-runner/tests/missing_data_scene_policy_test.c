@@ -65,8 +65,8 @@ int main(void) {
     assert(missing_data_candidate_name_is_win("data.win"));
     assert(missing_data_candidate_name_is_win("voidstranger-vita.win"));
     assert(!missing_data_candidate_name_is_win("data.winx"));
-    assert(missing_data_sha256_hex_is_current("9CE2BAB66D6EDB3FB6506BEDEFC634BCB354AD034D828F8BA3DC679777C6E00A"));
-    assert(missing_data_sha256_hex_is_current("9ce2bab66d6edb3fb6506bedefc634bcb354ad034d828f8ba3dc679777c6e00a"));
+    assert(missing_data_sha256_hex_is_current("841211AE9B699589461F27F0B4AFD6F95551F1D51D94AA4447D20B887EF9C50A"));
+    assert(missing_data_sha256_hex_is_current("841211ae9b699589461f27f0b4afd6f95551f1d51d94aa4447d20b887ef9c50a"));
     assert(!missing_data_sha256_hex_is_current("0CE2BAB66D6EDB3FB6506BEDEFC634BCB354AD034D828F8BA3DC679777C6E00A"));
     puts("missing_data_scene_policy_test: ok");
     return 0;
