@@ -62,7 +62,7 @@ endforeach()
 
 vita_create_self(eboot.bin ${PROJECT_NAME} UNSAFE)
 vita_create_vpk(VoidStranger.vpk VSTR00001 eboot.bin
-  VERSION 02.00 NAME "Void Stranger"
+  VERSION 02.10 NAME "Void Stranger"
   FILE
     ${VITA_MANUAL_VPK_FILES}
     ${CMAKE_SOURCE_DIR}/../../assets/icon0.png sce_sys/icon0.png

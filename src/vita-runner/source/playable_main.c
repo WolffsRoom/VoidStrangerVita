@@ -58,7 +58,7 @@ void vglPhycontMemLazyInit(size_t size);
 #define COMPAT_LOG_PATH DATA_ROOT "compat-diagnostics.log"
 #define NEXT_CHAPTER_PATH DATA_ROOT "next-chapter.txt"
 #define DEV_LOG_ROOT DATA_ROOT "devlogs"
-#define PORT_BUILD_VERSION "v2.0"
+#define PORT_BUILD_VERSION "v2.1"
 #define VITA_CDIALOG_MEMORY_SIZE 0x8C6000
 
 // Read by the Vita renderer to apply chapter-specific memory safety policies.

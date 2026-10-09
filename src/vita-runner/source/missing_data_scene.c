@@ -1,4 +1,4 @@
-﻿#include "missing_data_scene.h"
+#include "missing_data_scene.h"
 #include "missing_data_scene_policy.h"
 #include "missing_data_font_metrics.h"
 
@@ -10,7 +10,6 @@
 #include <psp2/kernel/processmgr.h>
 #include <psp2/kernel/threadmgr.h>
 #include <vitaGL.h>
-#include <openssl/sha.h>
 #include <math.h>
 #include <stdbool.h>
 #include <stdint.h>
@@ -80,64 +79,62 @@ static bool mds_file_stat(const char* path, SceIoStat* st) {
     return sceIoGetstat(path, st) >= 0 && SCE_S_ISREG(st->st_mode);
 }
 
-static bool mds_sha256_file_hex(const char* path, char outHex[65]) {
-    if (path == NULL || outHex == NULL) return false;
+static bool mds_contains_token(const char* path, const char* token) {
+    if (path == NULL || token == NULL || token[0] == '\0') return false;
     SceUID fd = sceIoOpen(path, SCE_O_RDONLY, 0);
     if (fd < 0) return false;
-    SHA256_CTX ctx;
-    if (SHA256_Init(&ctx) != 1) {
-        sceIoClose(fd);
-        return false;
-    }
-    unsigned char buffer[64 * 1024];
+    const size_t tokenLen = strlen(token);
+    unsigned char buffer[64 * 1024 + 32];
+    size_t carry = 0;
+    bool found = false;
     for (;;) {
-        int got = sceIoRead(fd, buffer, sizeof(buffer));
-        if (got < 0) { sceIoClose(fd); return false; }
-        if (got == 0) break;
-        if (SHA256_Update(&ctx, buffer, (size_t)got) != 1) {
-            sceIoClose(fd);
-            return false;
+        int got = sceIoRead(fd, buffer + carry, (unsigned int)(64 * 1024));
+        if (got <= 0) break;
+        size_t total = carry + (size_t)got;
+        if (total >= tokenLen) {
+            for (size_t i = 0; i + tokenLen <= total; ++i) {
+                if (memcmp(buffer + i, token, tokenLen) == 0) {
+                    found = true;
+                    break;
+                }
+            }
         }
+        if (found) break;
+        carry = tokenLen > 1 ? tokenLen - 1 : 0;
+        if (carry > total) carry = total;
+        if (carry > 0) memmove(buffer, buffer + total - carry, carry);
     }
     sceIoClose(fd);
-    unsigned char digest[SHA256_DIGEST_LENGTH];
-    if (SHA256_Final(digest, &ctx) != 1) return false;
-    static const char hex[] = "0123456789ABCDEF";
-    for (int i = 0; i < SHA256_DIGEST_LENGTH; ++i) {
-        outHex[i * 2] = hex[(digest[i] >> 4) & 0x0F];
-        outHex[i * 2 + 1] = hex[digest[i] & 0x0F];
-    }
-    outHex[64] = '\0';
-    return true;
+    return found;
 }
 
-static bool mds_is_current_data_win(const char* path) {
-    SceIoStat st;
-    if (!mds_file_stat(path, &st)) return false;
-    if ((uint64_t)st.st_size != MISSING_DATA_CURRENT_DATA_WIN_SIZE) return false;
-    char digest[65];
-    return mds_sha256_file_hex(path, digest) &&
-           missing_data_sha256_hex_is_current(digest);
+static bool mds_has_void_stranger_marker(const char* path) {
+    return mds_contains_token(path, "void_stranger") ||
+           mds_contains_token(path, "Void Stranger") ||
+           mds_contains_token(path, "voidstranger");
 }
 
 static bool mds_is_game_data_win_candidate(const char* path) {
+    /* Do not gate .win files on FORM/ASCH/chunk layout, exact size or SHA-256.
+       A regular non-empty .win is enough. The internal Void Stranger marker is
+       only a diagnostic hint for renamed files; the actual loader remains the
+       authority on whether the file contents are usable. */
     SceIoStat st;
-    if (!mds_file_stat(path, &st) || st.st_size < 1024) return false;
-    SceUID fd = sceIoOpen(path, SCE_O_RDONLY, 0);
-    if (fd < 0) return false;
-    unsigned char header[4] = {0, 0, 0, 0};
-    int got = sceIoRead(fd, header, sizeof(header));
-    sceIoClose(fd);
-    return got == 4 && memcmp(header, "FORM", 4) == 0;
+    if (!mds_file_stat(path, &st) || st.st_size <= 0) return false;
+    if (mds_has_void_stranger_marker(path))
+        printf("MDS_WIN candidate=void_stranger path=%s\n", path);
+    else
+        printf("MDS_WIN candidate=generic_win path=%s\n", path);
+    return true;
 }
+
 uint32_t MissingDataScene_requiredMask(void) {
     SceIoStat dataWin, audio1, audio2, csv;
     bool hasData = mds_file_stat(MDS_ROOT "data.win", &dataWin);
-    bool dataHashOk = hasData && mds_is_current_data_win(MDS_ROOT "data.win");
     bool hasAudio1 = mds_file_stat(MDS_ROOT "audiogroup1.dat", &audio1);
     bool hasAudio2 = mds_file_stat(MDS_ROOT "audiogroup2.dat", &audio2);
     bool hasCsv = mds_file_stat(MDS_ROOT "voidstranger_data.csv", &csv);
-    return missing_data_required_mask(hasData, dataHashOk, hasAudio1, hasAudio2, hasCsv);
+    return missing_data_required_mask(hasData, true, hasAudio1, hasAudio2, hasCsv);
 }
 static const char* kMdsRequiredNames[MISSING_DATA_REQUIRED_COUNT] = {
     "data.win", "audiogroup1.dat", "audiogroup2.dat", "voidstranger_data.csv"
@@ -172,9 +169,8 @@ static void mds_scan_directory_recursive(const char* directory, int depth,
                 uint32_t bit = kMdsRequiredBits[i];
                 if ((inspection->rootMissingMask & bit) == 0u) continue;
                 if (bit == MISSING_DATA_REQ_DATA_WIN) {
-                    /* An invalid data.win already at the correct root is a version/hash
-                       problem, not an organization problem. Only alternate .win paths
-                       are candidates for automatic normalization. */
+                    /* data.win at the root is accepted by presence alone. Only alternate
+                       .win paths are candidates for automatic normalization. */
                     if (strcmp(child, MDS_ROOT "data.win") == 0) continue;
                     if (!missing_data_candidate_name_is_win(name) ||
                         !mds_is_game_data_win_candidate(child)) continue;

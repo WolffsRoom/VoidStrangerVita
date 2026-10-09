@@ -60,7 +60,7 @@ ux0:tai/fd_fix.skprx
 
 ### HOW TO APPLY THE PATCH:
 
-The **Void Stranger Vita Patcher v2.0** requires an official, unmodified Steam installation of **Void Stranger 1.1.3**.
+The **Void Stranger Vita Patcher v2.1** requires an official, unmodified Steam installation of **Void Stranger 1.1.3**.
 
 1. Purchase and install [Void Stranger on Steam](https://store.steampowered.com/app/2121980/Void_Stranger/).
 2. Download `VoidStranger-vX.X.vpk` and `Void Stranger Vita Patcher vX.X.zip` from the [latest release](https://github.com/WolffsRoom/VoidStrangerVita/releases/latest).
@@ -113,7 +113,7 @@ After the first boot, the Vita creates its own `pvr/`, `texture-cache/` and save
       <h3>Sera installation assistant</h3>
       <img src="assets/info_load/preview/missing_files_scene_preview.gif" alt="Sera missing-files installation assistant" width="360">
       <br><br>
-      When required data is missing or misplaced, the v2.0 assistant checks <code>ux0:data/voidstranger/</code>, helps organize unambiguous files and points the player to the patcher when a clean data set is required.
+      When required data is missing or misplaced, the v2.1 assistant checks <code>ux0:data/voidstranger/</code>, helps organize unambiguous files and points the player to the patcher when a clean data set is required.
     </td>
   </tr>
 </table>
@@ -229,7 +229,7 @@ The Vita build uses the controller graphics stored in `assets/controls/`, matchi
 
 ### Touch support
 
-The front touchscreen is used contextually rather than replacing the physical controls. In v2.0:
+The front touchscreen is used contextually rather than replacing the physical controls. In v2.1:
 
 - menus and the in-game trophy browser accept touch input for selection and scrolling;
 - the special fruit/orange interaction can be confirmed by a fresh touch on the front panel when `obj_orange.can_eat` is active;
@@ -274,7 +274,7 @@ The VPK includes an eleven-page PS Vita manual. Small previews are shown below; 
 
 ## Native Trophies
 
-Void Stranger Vita v2.0 includes a **30-entry trophy set** with native PS Vita trophy support, an in-game trophy browser and unlock notifications.
+Void Stranger Vita v2.1 includes a **30-entry trophy set** with native PS Vita trophy support, an in-game trophy browser and unlock notifications.
 
 Native trophies use communication ID `VSTR00001_00`.
 
@@ -318,12 +318,12 @@ If your active taiHEN configuration is on `ux0:tai/`, use `ux0:tai/NoTrpDrm.supr
   <tr>
     <td align="center">
       <img src="assets/prints/2026-10-04-210132-640041.png"
-           alt="Void Stranger Vita - v2.0 gameplay"
+           alt="Void Stranger Vita - v2.1 gameplay"
            width="100%">
     </td>
     <td align="center">
       <img src="assets/prints/2026-10-04-210139-079717.png"
-           alt="Void Stranger Vita - v2.0 Vita interface"
+           alt="Void Stranger Vita - v2.1 Vita interface"
            width="100%">
     </td>
   </tr>
@@ -331,7 +331,7 @@ If your active taiHEN configuration is on `ux0:tai/`, use `ux0:tai/NoTrpDrm.supr
   <tr>
     <td align="center">
       <img src="assets/prints/2026-10-04-210145-302476.png"
-           alt="Void Stranger Vita - v2.0 gameplay scene"
+           alt="Void Stranger Vita - v2.1 gameplay scene"
            width="100%">
     </td>
     <td align="center">

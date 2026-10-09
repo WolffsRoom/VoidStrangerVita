@@ -52,9 +52,6 @@ typedef struct MissingDataTypewriter {
     int pauseTicks;
 } MissingDataTypewriter;
 
-#define MISSING_DATA_CURRENT_DATA_WIN_SHA256 "841211AE9B699589461F27F0B4AFD6F95551F1D51D94AA4447D20B887EF9C50A"
-#define MISSING_DATA_CURRENT_DATA_WIN_SIZE 46703980ULL
-
 static inline void missing_data_typewriter_reset(MissingDataTypewriter* state) {
     if (state == NULL) return;
     state->halfCounter = 0;
@@ -104,18 +101,6 @@ static inline bool missing_data_candidate_name_is_win(const char* name) {
            (ext[3] == 'n' || ext[3] == 'N');
 }
 
-static inline bool missing_data_sha256_hex_is_current(const char* hex) {
-    if (hex == NULL || strlen(hex) != 64) return false;
-    const char* expected = MISSING_DATA_CURRENT_DATA_WIN_SHA256;
-    for (int i = 0; i < 64; ++i) {
-        char a = hex[i];
-        char b = expected[i];
-        if (a >= 'a' && a <= 'f') a = (char)(a - 'a' + 'A');
-        if (b >= 'a' && b <= 'f') b = (char)(b - 'a' + 'A');
-        if (a != b) return false;
-    }
-    return true;
-}
 typedef enum MissingDataAction {
     MISSING_DATA_ACTION_NONE = 0,
     MISSING_DATA_ACTION_CONFIRM,
@@ -126,12 +111,13 @@ typedef enum MissingDataAction {
 } MissingDataAction;
 
 static inline uint32_t missing_data_required_mask(bool dataWinExists,
-                                                  bool dataWinSizeValid,
+                                                  bool dataWinMetadataValid,
                                                   bool audio1Exists,
                                                   bool audio2Exists,
                                                   bool csvExists) {
+    (void)dataWinMetadataValid; /* Presence is intentionally sufficient for .win. */
     uint32_t mask = 0u;
-    if (!dataWinExists || !dataWinSizeValid) mask |= MISSING_DATA_REQ_DATA_WIN;
+    if (!dataWinExists) mask |= MISSING_DATA_REQ_DATA_WIN;
     if (!audio1Exists) mask |= MISSING_DATA_REQ_AUDIOGROUP1;
     if (!audio2Exists) mask |= MISSING_DATA_REQ_AUDIOGROUP2;
     if (!csvExists) mask |= MISSING_DATA_REQ_CSV;

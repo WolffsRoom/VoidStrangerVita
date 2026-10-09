@@ -12,7 +12,8 @@ int main(void) {
 
     assert(missing_data_required_mask(true, true, true, true, true) == 0u);
     assert((missing_data_required_mask(false, true, true, true, true) & MISSING_DATA_REQ_DATA_WIN) != 0u);
-    assert((missing_data_required_mask(true, false, true, true, true) & MISSING_DATA_REQ_DATA_WIN) != 0u);
+    /* A present .win is enough; build/hash/chunk validation must not mark it missing. */
+    assert(missing_data_required_mask(true, false, true, true, true) == 0u);
     assert((missing_data_required_mask(true, true, false, true, true) & MISSING_DATA_REQ_AUDIOGROUP1) != 0u);
     assert((missing_data_required_mask(true, true, true, false, true) & MISSING_DATA_REQ_AUDIOGROUP2) != 0u);
     assert((missing_data_required_mask(true, true, true, true, false) & MISSING_DATA_REQ_CSV) != 0u);
@@ -65,9 +66,6 @@ int main(void) {
     assert(missing_data_candidate_name_is_win("data.win"));
     assert(missing_data_candidate_name_is_win("voidstranger-vita.win"));
     assert(!missing_data_candidate_name_is_win("data.winx"));
-    assert(missing_data_sha256_hex_is_current("841211AE9B699589461F27F0B4AFD6F95551F1D51D94AA4447D20B887EF9C50A"));
-    assert(missing_data_sha256_hex_is_current("841211ae9b699589461f27f0b4afd6f95551f1d51d94aa4447d20b887ef9c50a"));
-    assert(!missing_data_sha256_hex_is_current("0CE2BAB66D6EDB3FB6506BEDEFC634BCB354AD034D828F8BA3DC679777C6E00A"));
     puts("missing_data_scene_policy_test: ok");
     return 0;
 }
